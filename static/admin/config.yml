@@ -15,8 +15,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", pattern: [".{10,}", "Should have more than 30 characters and less than 160"]}
-      - {label: "Description", name: "description", widget: "text", pattern: [".{30,160}", "Should have more than 30 characters and less than 160"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", default: ""}
       # - {label: "Image Alt", name: "image_alt", widget: "string", required: false}
       - {label: "Text", name: "date", widget: "string", default: ""}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
