@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: wangsongiam/songwang.io 
+  branch: master 
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/uploads"
+public_folder: "public"
+
+collections:
+  - name: "blog"
+    folder: "src/pages/blog"
+    label: "Blog"
+    create: true
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Text", name: "date", widget: "string", default: ""}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}

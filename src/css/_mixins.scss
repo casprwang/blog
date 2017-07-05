@@ -1,0 +1,46 @@
+@mixin padding-offset($padding-left, $padding-right: $padding-left) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+@mixin margin-offset($margin-left, $margin-right: $margin-left) {
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+@mixin heading {
+  font-size: 360%;
+  font-weight: bold;
+  letter-spacing: $heading-letter-spacing;
+}
+
+@mixin cf() {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin sub-heading() {
+  font-size: 72%;
+  font-weight: normal;
+  opacity: .5;
+}
+
+@mixin spliter() {
+
+  &::before {
+    display: block;
+    content: '';
+    width: 3px;
+    height: 3px;
+    margin: 2em auto;
+    border-radius: 50%;
+    background: $text-color;
+    box-shadow: (3px * 8) 0 0 0 $text-color, (3px * -8) 0 0 0 $text-color;
+  }
+}

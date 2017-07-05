@@ -1,0 +1,34 @@
+{
+  "name": "blog",
+  "description": "'My blog'",
+  "version": "0.0.1",
+  "author": "Song Wang <wangsongiam@gmail.com>",
+  "scripts": {
+    "format": "prettier --no-semi --trailing-comma es5 --write 'src/**/*.js'"
+  },
+  "dependencies": {
+    "babel-plugin-lodash": "^3.2.11",
+    "bluebird": "^3.4.7",
+    "es6-object-assign": "^1.0.3",
+    "gatsby": "next",
+    "gatsby-link": "next",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-postcss-sass": "^1.0.0-beta.6",
+    "gatsby-plugin-preact": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sharp": "next",
+    "gatsby-remark-copy-linked-files": "next",
+    "gatsby-remark-prismjs": "next",
+    "gatsby-remark-responsive-iframe": "next",
+    "gatsby-remark-responsive-image": "next",
+    "gatsby-remark-smartypants": "next",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "next",
+    "gatsby-transformer-sharp": "next",
+    "lodash": "^4.17.4",
+    "lodash-webpack-plugin": "^0.11.2",
+    "prettier": "^1.5.1"
+  }
+}
