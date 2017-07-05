@@ -33,6 +33,28 @@ class BlogPostRoute extends React.Component {
       )
     }
 
+    if (post.frontmatter.layout === 'page') {
+      return (
+        <div>
+          <Helmet
+            title={`${post.frontmatter.title}`}
+            meta={[{ name: 'description', content: post.excerpt }]}
+          />
+          <div className="content">
+            <header>
+              <h1>
+                {post.frontmatter.title}
+              </h1>
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <hr />
+            {tagsSection}
+          </div>
+        </div>
+      )
+
+    }
+
     return (
       <div>
         <Helmet
@@ -41,7 +63,9 @@ class BlogPostRoute extends React.Component {
         />
         <div className="content">
           <header>
-            <h1>{post.frontmatter.title}</h1>
+            <h1>
+              {post.frontmatter.title}
+            </h1>
             <small>
               {post.frontmatter.date}
             </small>
@@ -73,6 +97,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        layout
         tags
         date(formatString: "MMMM DD, YYYY")
       }

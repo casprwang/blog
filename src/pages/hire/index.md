@@ -2,7 +2,6 @@
 title: Hire me
 date: "2016-05-06"
 layout: page
-path: "/hire/"
 ---
 
 I am a grad student at [Stevens](https://www.stevens.edu/), majored in Computer Science.
