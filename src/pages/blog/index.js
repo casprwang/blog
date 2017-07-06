@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from "react-helmet"
 
 export default props => {
   const posts = props.data.allMarkdownRemark.edges
@@ -27,6 +28,10 @@ export default props => {
 
   return (
     <div className='content'>
+      <Helmet
+        title={`Writing`}
+        meta={[{ name: 'description', content: "Song Wang's Writings" }]}
+      />
       <header>
         <h1>Writing</h1>
         <small>TL;DR</small>
