@@ -85,22 +85,22 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     const slug = `/${parsedFilePath.dir}/`
     const nakedSlug = path.join(slug, `/${parsedFilePath.name}/`)
 
-    createNodeField({ node, fieldName: `slug`, fieldValue: slug })
-    createNodeField({ node, fieldName: `nakedSlug`, fieldValue: nakedSlug })
+    createNodeField({ node, name: `slug`, value: slug })
+    createNodeField({ node, name: `nakedSlug`, value: nakedSlug })
   } else if (node.internal.type === `MarkdownRemark`) {
     if (getNode(node.parent).name !== 'index'){
       let fileNode = getNode(node.parent)
       createNodeField({
         node,
-        fieldName: `slug`,
-        fieldValue: fileNode.fields.nakedSlug,
+        name: `slug`,
+        value: fileNode.fields.nakedSlug,
       })
     } else {
     let fileNode = getNode(node.parent)
       createNodeField({
         node,
-        fieldName: `slug`,
-        fieldValue: fileNode.fields.slug,
+        name: `slug`,
+        value: fileNode.fields.slug,
       })
     }
 
@@ -108,7 +108,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       const tagSlugs = node.frontmatter.tags.map(
         tag => `/tags/${_.kebabCase(tag)}/`
       )
-      createNodeField({ node, fieldName: `tagSlugs`, fieldValue: tagSlugs })
+      createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
     }
 
   }

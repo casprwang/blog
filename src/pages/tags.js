@@ -16,9 +16,7 @@ class TagsPageRoute extends React.Component {
           <ul>
             {allTags.map(tag =>
               <li key={tag.fieldValue}>
-                <Link
-                  to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                >
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>
               </li>
@@ -40,8 +38,8 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 2000,
-      filter: { frontmatter: { draft: { ne: true } } },
+      limit: 2000
+      filter: { frontmatter: { draft: { ne: true } } }
     ) {
       group(field: frontmatter___tags) {
         fieldValue

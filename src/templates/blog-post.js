@@ -1,6 +1,6 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import React from "react"
+import Helmet from "react-helmet"
+import Link from "gatsby-link"
 
 class BlogPostRoute extends React.Component {
   render() {
@@ -15,7 +15,7 @@ class BlogPostRoute extends React.Component {
         const divider =
           i < tagsArray.length - 1 &&
           <span>
-            {' | '}
+            {" | "}
           </span>
         return (
           <span key={tag}>
@@ -33,12 +33,12 @@ class BlogPostRoute extends React.Component {
       )
     }
 
-    if (post.frontmatter.layout === 'page') {
+    if (post.frontmatter.layout === "page") {
       return (
         <div>
           <Helmet
             title={`${post.frontmatter.title}`}
-            meta={[{ name: 'description', content: post.excerpt }]}
+            meta={[{ name: "description", content: post.excerpt }]}
           />
           <div className="content">
             <header>
@@ -52,14 +52,13 @@ class BlogPostRoute extends React.Component {
           </div>
         </div>
       )
-
     }
 
     return (
       <div>
         <Helmet
           title={`${post.frontmatter.title}`}
-          meta={[{ name: 'description', content: post.excerpt }]}
+          meta={[{ name: "description", content: post.excerpt }]}
         />
         <div className="content">
           <header>

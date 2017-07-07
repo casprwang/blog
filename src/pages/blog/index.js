@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react"
+import Link from "gatsby-link"
 import Helmet from "react-helmet"
 
 export default props => {
@@ -9,10 +9,10 @@ export default props => {
   const rows = []
 
   posts.forEach(post => {
-    if (post.node.frontmatter.layout !== 'page') {
-      if (post.node.frontmatter.draft === false ) {
+    if (post.node.frontmatter.layout !== "page") {
+      if (post.node.frontmatter.draft === false) {
         rows.push(
-          <section className='list' key={post.node.fields.slug}>
+          <section className="list" key={post.node.fields.slug}>
             <h1>
               <Link to={post.node.fields.slug}>
                 {post.node.frontmatter.title}
@@ -20,17 +20,15 @@ export default props => {
             </h1>
           </section>
         )
-
       }
     }
   })
 
-
   return (
-    <div className='content'>
+    <div className="content">
       <Helmet
         title={`Writing`}
-        meta={[{ name: 'description', content: "Song Wang's Writings" }]}
+        meta={[{ name: "description", content: "Song Wang's Writings" }]}
       />
       <header>
         <h1>Writing</h1>
@@ -44,40 +42,36 @@ export default props => {
 }
 
 export const pageQuery = graphql`
-query BlogQuery {
-  allSitePage {
-    edges {
-      node {
-        path
+  query BlogQuery {
+    allSitePage {
+      edges {
+        node {
+          path
+        }
       }
     }
-  }
-  site {
-    siteMetadata {
-      title
+    site {
+      siteMetadata {
+        title
+      }
     }
-  }
-  allMarkdownRemark (
-    limit: 1000,
-    sort: {
-      fields: [frontmatter___date]
-      order: DESC
-    },
-  )
-  {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          date
-          draft
-          layout
+    allMarkdownRemark(
+      limit: 1000
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            draft
+            layout
+          }
         }
       }
     }
   }
-}
 `
