@@ -33,6 +33,7 @@ collections:
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", default: ""}
+      - {label: "Link", name: "link", widget: "string", default: ""}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Date", name: "date", widget: "string", default: ""}
       # - {label: "Image Alt", name: "image_alt", widget: "string", required: false}
