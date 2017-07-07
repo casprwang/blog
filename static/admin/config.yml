@@ -25,6 +25,22 @@ collections:
       - {label: "Author", name: "author", widget: "string", default: "Song Wang"}
       # - {label: "Featured Image", name: "image", widget: "image", required: false}
       # - {label: "Publish Date", name: "publishdate", widget: "string"}
+  - name: "links"
+    folder: "src/pages/links"
+    label: "Links"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    create: true
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", default: ""}
+      # - {label: "Image Alt", name: "image_alt", widget: "string", required: false}
+      - {label: "Text", name: "date", widget: "string", default: ""}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Author", name: "author", widget: "string", default: "Song Wang"}
+      # - {label: "Featured Image", name: "image", widget: "image", required: false}
+      # - {label: "Publish Date", name: "publishdate", widget: "string"}
   - name: "about"
     folder: "src/pages/about"
     label: "About"
