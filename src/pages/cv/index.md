@@ -10,7 +10,7 @@ layout: page
 Master - Computer Science  GPA 3.71
 
 University of Electronic Science and Technology of China 
-Bachelor Computer Engineering
+Bachelor Computer 
 
 
 ## Experience
@@ -19,8 +19,16 @@ Bachelor Computer Engineering
 * [wangsup.com](https://wangsup.netlify.com)
 * Jekyll-starter
 * Gatsby.js
-* vim-git-it
 * wangsup-jekyll-tachyons
 * wangsup-gatsby-0
 * wangsup-postcss-gatsby-0
 * [wangsup-topography](https://wangsup-archive.netlify.com/)
+
+I work with these technologies:
+* Node.js
+* Babel & ES6/7
+* React, GraphQL, Relay
+* Webpack, Gulp
+* Express
+* PostCSS, SASS, Tachyons
+* Jest, Jasmine
