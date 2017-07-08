@@ -10,7 +10,7 @@ class Wrapper extends React.Component {
   render() {
     return (
       <div>
-        <Nav {...this.props} />
+        <Nav />
         {this.props.children()}
         <Footer />
       </div>
