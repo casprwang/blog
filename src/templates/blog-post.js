@@ -58,7 +58,7 @@ class BlogPostRoute extends React.Component {
       <div>
         <Helmet
           title={`${post.frontmatter.title}`}
-          meta={[{ name: "description", content: post.excerpt }]}
+          meta={[{ name: "description", content: post.excerpt || post.frontmatter.description }]}
         />
         <div className="content">
           <header>

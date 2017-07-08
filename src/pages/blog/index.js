@@ -15,7 +15,7 @@ export default props => {
 
   posts.forEach(post => {
     if (post.node.frontmatter.layout !== "page") {
-      if (post.node.frontmatter.draft === false && !isLink(post.node.fields.slug)) {
+      if (!isLink(post.node.fields.slug)) {
         rows.push(
           <section className="list" key={post.node.fields.slug}>
             <h1>
@@ -87,7 +87,6 @@ export const pageQuery = graphql`
             link
             tags
             date
-            draft
             layout
           }
         }
