@@ -36,10 +36,7 @@ collections:
       - {label: "Link", name: "link", widget: "string", default: ""}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Date", name: "date", widget: "string", default: ""}
-      # - {label: "Image Alt", name: "image_alt", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
-      # - {label: "Featured Image", name: "image", widget: "image", required: false}
-      # - {label: "Publish Date", name: "publishdate", widget: "string"}
   - name: "about"
     folder: "src/pages/about"
     label: "About"

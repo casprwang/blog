@@ -16,7 +16,7 @@ nav {
   padding-bottom: $nav-padding;
   margin-left: $nav-item-space;
   margin-right: $nav-item-space;
-  font-size: 60%;
+  font-size: 80%;
   font-weight: bold;
   letter-spacing: .45em;
   text-transform: uppercase;
@@ -37,7 +37,7 @@ nav {
   }
 }
 
-// Main content
+// Main
 .content {
   margin-bottom: 16vmin;
 
@@ -77,17 +77,17 @@ nav {
     }
   }
 
+  .blog-content {
+    > *:first-child {
+      margin-top:0;
+    }
+    h2,h3 {
+      margin: 5vmin 0 .5rem;
+    }
+  }
 
   a {
     font-weight: bold;
-
-    // TODO: Fixes wrong underline color for inline `code` within `a` links.
-    // However no browser supports this feature at the time of writing.
-    // More info: http://caniuse.com/#feat=css-has
-    // Date: Dec 10, 2016, 5:59 PM
-    // &:has(>code) {
-    //   text-decoration-color: @code-color;
-    // }
   }
 
 
@@ -98,7 +98,7 @@ nav {
 
   header {
     display: flex;
-    min-height: calc(100vh - (#{$nav-padding * 4}) - 5ex);
+    min-height: calc(50vh - (#{$nav-padding * 4}) - 5ex);
 
     // Additional padding for content inside `header` are higher than `header`
     // container
