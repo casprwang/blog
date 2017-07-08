@@ -16,7 +16,7 @@ nav {
   padding-bottom: $nav-padding;
   margin-left: $nav-item-space;
   margin-right: $nav-item-space;
-  font-size: 80%;
+  font-size: 70%;
   font-weight: bold;
   letter-spacing: .45em;
   text-transform: uppercase;
@@ -98,7 +98,7 @@ nav {
 
   header {
     display: flex;
-    min-height: calc(50vh - (#{$nav-padding * 4}) - 5ex);
+    min-height: calc(70vh - (#{$nav-padding * 4}) - 5ex);
 
     // Additional padding for content inside `header` are higher than `header`
     // container
@@ -588,7 +588,7 @@ table {
       &:after {
         padding: 0 $nav-item-space;
         content: " / ";
-        opacity: .3;
+        opacity: .2;
       }
 
       &:last-child {
