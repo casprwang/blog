@@ -98,7 +98,7 @@ nav {
 
   header {
     display: flex;
-    min-height: calc(70vh - (#{$nav-padding * 4}) - 5ex);
+    min-height: calc(60vh - (#{$nav-padding * 4}) - 5ex);
 
     // Additional padding for content inside `header` are higher than `header`
     // container
