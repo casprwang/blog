@@ -9,20 +9,22 @@ class TagRoute extends React.Component {
     const title = this.props.data.site.siteMetadata.title
     const postLinks = posts.map(post => {
       return (
-        <li key={post.node.fields.slug}>
+        <h1 key={post.node.fields.slug}>
           <Link to={post.node.fields.slug}>
             {post.node.frontmatter.title}
           </Link>
-        </li>
+        </h1>
       )
     })
 
     return (
-      <div>
+      <div className="content">
         <Helmet title={title} />
-        <h2>
+        <header>
+        <h1>
           {this.props.data.allMarkdownRemark.totalCount} posts tagged with “{this.props.pathContext.tag}”
-        </h2>
+        </h1>
+        </header>
         <ul>
           {postLinks}
         </ul>
