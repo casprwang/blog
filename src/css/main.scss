@@ -147,13 +147,14 @@ nav {
 
       @media (max-width: $breakpoint-sm) {
         // Override viewport units defined in post.html
-        font-size: 280%;
+        font-size: 200%;
       }
     }
 
     // Reset subheading in page title (used by AMSF atm)
     h2 {
-      margin: 1.2vmin 0 0;
+      margin: 1.2vmin 1vmin 0;
+      @include sub-title;
     }
 
     small {

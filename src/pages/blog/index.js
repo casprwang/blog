@@ -48,7 +48,7 @@ export default props => {
       <header
       >
         <h1>Writing</h1>
-        <small>TL;DR</small>
+        <h2>TL;DR</h2>
       </header>
       <div className="blog-content">
         <h3>Today I learned</h3>
