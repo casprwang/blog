@@ -1,8 +1,8 @@
 ---
-title: A example markdown file
-description: This page show's the typography of this site.
 date: '2017-07-08T14:59:04-04:00'
+description: This page show's the typography of this site.
 draft: false
+title: A example markdown file
 tags:
   - markdown
   - example
@@ -140,4 +140,5 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
 Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a>
 
 [^fn-sample_footnote]: Handy! Now click the return link to go back.
+
 
