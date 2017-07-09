@@ -9,10 +9,12 @@ class TagsPageRoute extends React.Component {
     const allTags = this.props.data.allMarkdownRemark.group
 
     return (
-      <div>
+      <div className='content'>
         <Helmet title={title} />
         <div>
-          <h1>Tags</h1>
+          <header>
+            <h1>Tags</h1>
+          </header>
           <ul>
             {allTags.map(tag =>
               <li key={tag.fieldValue}>
