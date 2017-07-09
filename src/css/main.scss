@@ -12,12 +12,12 @@ $nav-padding: 1.4vmax;
 $nav-item-space: 1vmax;
 
 nav {
+  font-size: 70%;
+  font-weight: bold;
   padding-top: $nav-padding;
   padding-bottom: $nav-padding;
   margin-left: $nav-item-space;
   margin-right: $nav-item-space;
-  font-size: 70%;
-  font-weight: bold;
   letter-spacing: .45em;
   text-transform: uppercase;
 
@@ -25,9 +25,17 @@ nav {
     display: inline-block;
     line-height: 2;
     list-style: none;
+    &:first-child {
+
+      // padding: 0.5em 1vmax 0.5em 0;
+    }
 
     a {
       padding: 0.5em $nav-item-space;
+      // &:first-child {
+      //   // padding: 0.5em 1vmax 0.5em 0;
+      //   // display: none;
+      // }
 
       &:hover, &:focus {
         color: $link-color;
