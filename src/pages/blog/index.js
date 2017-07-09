@@ -2,9 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
 
-
-const isLink = url => url.slice(0,7) === '/links/'
-
+const isLink = url => url.slice(0, 7) === "/links/"
 
 export default props => {
   const posts = props.data.allMarkdownRemark.edges
@@ -45,8 +43,7 @@ export default props => {
         title={`Writing`}
         meta={[{ name: "description", content: "Song Wang's Writings" }]}
       />
-      <header
-      >
+      <header>
         <h1>Writing</h1>
         <h2>TL;DR</h2>
       </header>

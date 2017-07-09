@@ -21,9 +21,9 @@ class TagRoute extends React.Component {
       <div className="content">
         <Helmet title={title} />
         <header>
-        <h1>
-          {this.props.data.allMarkdownRemark.totalCount} posts tagged with “{this.props.pathContext.tag}”
-        </h1>
+          <h1>
+            {this.props.data.allMarkdownRemark.totalCount} posts tagged with “{this.props.pathContext.tag}”
+          </h1>
         </header>
         <ul>
           {postLinks}
