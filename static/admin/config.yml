@@ -29,6 +29,16 @@ collections:
       - {label: "Date", name: "date", widget: "string", default: ""}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "notes"
+    folder: "src/pages/notes"
+    label: "Notes"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "string", default: ""}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "links"
     folder: "src/pages/links"
     label: "Links"
