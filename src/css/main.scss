@@ -26,14 +26,13 @@ nav {
     line-height: 2;
     list-style: none;
     &:first-child {
-
-      // padding: 0.5em 1vmax 0.5em 0;
     }
 
     a {
       padding: 0.5em $nav-item-space;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $link-color;
         text-decoration: none;
       }
@@ -71,7 +70,6 @@ nav {
 
   .post-content,
   .page-content {
-
     > *:first-child {
       margin-top: 0;
 
@@ -83,9 +81,10 @@ nav {
 
   .blog-content {
     > *:first-child {
-      margin-top:0;
+      margin-top: 0;
     }
-    h2,h3 {
+    h2,
+    h3 {
       margin: 5vmin 0 .5rem;
     }
   }
@@ -93,7 +92,6 @@ nav {
   a {
     font-weight: bold;
   }
-
 
   p {
     margin-bottom: 1.6rem;
@@ -158,17 +156,21 @@ nav {
       margin-top: 2vmin;
       margin-left: 1vmin;
     }
-
   }
 
-  h2, h3, h4, h5, h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 10vmin 0 1rem;
 
     @include sub-heading;
   }
 
   // LISTING
-  ul, ol {
+  ul,
+  ol {
     margin-bottom: 1.8rem;
     list-style: none;
     counter-reset: list;
@@ -193,7 +195,8 @@ nav {
         pointer-events: none;
       }
 
-      > ul, > ol {
+      > ul,
+      > ol {
         margin-left: 1em;
         margin-bottom: 0;
       }
@@ -235,10 +238,9 @@ nav {
     }
   }
 
-
   img,
   video,
-  iframe,{
+  iframe {
     display: block;
     width: calc(100% + (#{ $space-md } * 2));
     margin: 0 -$space-md 1.8rem;
@@ -254,100 +256,6 @@ nav {
     }
   }
 
-
-
-  // .browser {
-  //   display: block;
-  //   width: calc(100% + (#{ $space-md } * 2));
-  //   margin: 0 -$space-md 1.8rem;
-
-  //   @media (max-width: $breakpoint-md) {
-  //     width: calc(100% + (#{ $space-md } * 2));
-  //     @include margin-offset(-$space-md);
-  //   }
-
-  //   @media (max-width: $breakpoint-sm) {
-  //     width: calc(100% + (#{ $space-sm } * 2));
-  //     @include margin-offset(-$space-sm);
-  //   }
-
-  //   // avoid images with `.no-enlarge` stretched by global img styles
-  //   &.size-fit,
-  //   &.no-enlarge {
-  //     margin-left: 0;
-  //     margin-right: 0;
-  //     max-width: 100%;
-  //     width: auto;
-  //   }
-
-  //   // Full width image
-  //   &.size-large {
-  //     width: calc(100% + (#{ $space-lg } * 2));
-  //     @include margin-offset(-$space-lg);
-
-  //     @media (max-width: $breakpoint-md) {
-  //       width: calc(100% + (#{$space-md} * 2));
-  //       @include margin-offset(-$space-md);
-  //     }
-
-  //     @media (max-width: $breakpoint-sm) {
-  //       width: calc(100% + (#{ $space-sm } * 2));
-  //       @include margin-offset(-$space-sm);
-  //     }
-  //   }
-
-  //   &.size-small {
-  //     width: calc(100% + (#{ $space-xs } * 2));
-  //     @include margin-offset(-$space-xs);
-
-  //     @media (max-width: $breakpoint-md) {
-  //       width: calc(100% + (#{ $space-md  }* 2));
-  //       @include margin-offset(-$space-md);
-  //     }
-
-  //     @media (max-width: $breakpoint-sm) {
-  //       width: calc(100% + (#{ $space-sm } * 2));
-  //       @include margin-offset(-$space-sm);
-  //     }
-  //   }
-
-  //   &.size-left {
-  //     float: left;
-  //     max-width: 36vw;
-  //     margin-top: ($space-xs / 2);
-  //     margin-right: $space-xs;
-  //     margin-bottom: ($space-xs / 2);
-
-  //     @media (max-width: $breakpoint-md) {
-  //       float: none;
-  //       max-width: none;
-  //       margin-top: auto;
-  //       margin-right: auto;
-  //       margin-bottom: auto;
-  //     }
-  //   }
-
-  //   &.size-right {
-  //     float: right;
-  //     max-width: 36vw;
-  //     margin-top: ($space-xs / 2);
-  //     margin-left: $space-xs;
-  //     margin-bottom: ($space-xs / 2);
-
-  //     @media (max-width: $breakpoint-md) {
-  //       float: none;
-  //       max-width: none;
-  //       margin-top: auto;
-  //       margin-left: auto;
-  //       margin-bottom: auto;
-  //     }
-  //   }
-  // }
-
-
-
-
-
   blockquote {
     position: relative;
     margin-bottom: 2.8rem;
@@ -362,17 +270,11 @@ nav {
       padding-left: $space-xs;
       border-left: $border-default solid;
 
-      // TODO: Need better solution
-      // We will reset the common margin-bototm to get gapless borders for
-      // blockquotes. This could help fix
-      // https://github.com/amsf/amsf-curtana/issues/4
       padding-bottom: 1.6rem;
 
-      // Now reset default margin button from global define
       margin-bottom: 0;
       opacity: .6;
 
-      // Remove extra padding for the last element, re-apply margin
       &:last-of-type {
         padding-bottom: 0;
         margin-bottom: 1.6rem;
@@ -455,7 +357,6 @@ pre,
   }
 }
 
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -464,20 +365,6 @@ table {
   @include margin-offset(-$space-xs);
   margin-bottom: 1.8rem;
 
-  // TODO: responsive table support
-  // display: inline-block;
-  // overflow-x: auto;
-  // white-space: nowrap;
-
-  // TODO: table shadow support
-  // background-image: radial-gradient(ellipse at left, rgba(0, 0, 0, .02) 0%, rgba(0, 0, 0, 0) 75%),
-  //                   radial-gradient(ellipse at right, rgba(0, 0, 0, .02) 0%, rgba(0, 0, 0, 0) 75%);
-  // background-size: 30px 100%, 30px 100%;
-  // background-position: 0 center, 100% center;
-  // background-attachment: scroll, scroll;
-  // background-repeat: no-repeat;
-
-  // TODO: responsive table support
   @media (max-width: $breakpoint-md) {
     width: calc(100% + (#{ $space-md } * 2));
     @include margin-offset(-$space-md);
@@ -486,11 +373,6 @@ table {
   @media (max-width: $breakpoint-sm) {
     width: calc(100% + (#{ $space-sm } * 2));
     @include margin-offset(-$space-sm);
-
-    // TODO: table shadow support
-    // Darker shadow for mobile devices
-    // background-image: radial-gradient(ellipse at left, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 75%),
-    //                   radial-gradient(ellipse at right, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 75%);
   }
 
   th,
@@ -499,24 +381,13 @@ table {
 
     &:first-child {
       padding-left: $space-xs;
-      // TODO: table shadow support
-      // background-image: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0) 100%);
-      // background-repeat: no-repeat;
-      // background-position: 0 0;
-      // background-size: 50px 100%;
     }
 
     &:last-child {
       padding-right: $space-xs;
-      // TODO: table shadow support
-      // background-image: linear-gradient(to left, #fff 50%, rgba(255, 255, 255, 0) 100%);
-      // background-repeat: no-repeat;
-      // background-position: 100% 0;
-      // background-size: 50px 100%;
     }
 
     @media (max-width: $breakpoint-md) {
-
       &:first-child {
         padding-left: $space-md;
       }
@@ -527,7 +398,6 @@ table {
     }
 
     @media (max-width: $breakpoint-sm) {
-
       &:first-child {
         padding-left: $space-sm;
       }
@@ -543,14 +413,9 @@ table {
     // Override default user agent stylesheet
     text-align: left;
   }
-
-  // td {
-  //   border-top: $border-sm solid fade($text-color, 4%);
-  // }
 }
 
-
-// Post list in "work" and "note"
+// Post list in "work" and "writting"
 .list {
   display: block;
   margin: 0 0 .4rem;
@@ -569,16 +434,7 @@ table {
     }
   }
 
-  .external {
-
-    @media (max-width: $breakpoint-sm) {
-      // Hide external link for post list
-      display: none;
-    }
-  }
 }
-
-
 
 .footer {
   padding: 0 0 16vmin;
@@ -586,7 +442,6 @@ table {
   text-transform: lowercase;
 
   ul {
-
     li {
       display: inline;
 
@@ -597,7 +452,6 @@ table {
       }
 
       &:last-child {
-
         &:after {
           content: none;
         }
@@ -605,4 +459,3 @@ table {
     }
   }
 }
-
