@@ -1,9 +1,9 @@
-import React from "react"
-import Link from "gatsby-link"
-import Helmet from "react-helmet"
+import React from 'react'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
-const isLink = url => url.slice(0, 7) === "/links/"
-const isTIL = url => url.slice(0, 5) === "/til/"
+const isLink = url => url.slice(0, 7) === '/links/'
+const isTIL = url => url.slice(0, 5) === '/til/'
 
 export default props => {
   const posts = props.data.allMarkdownRemark.edges
@@ -14,9 +14,9 @@ export default props => {
   const TILRows = []
 
   posts.forEach(post => {
-    if (post.node.frontmatter.layout !== "page") {
+    if (post.node.frontmatter.layout !== 'page') {
       if (!isLink(post.node.fields.slug)) {
-        if(isTIL(post.node.fields.slug)) {
+        if (isTIL(post.node.fields.slug)) {
           TILRows.push(
             <section className="list" key={post.node.fields.slug}>
               <h1>
@@ -24,18 +24,19 @@ export default props => {
                   {post.node.frontmatter.title}
                 </Link>
               </h1>
-            </section>
+            </section>,
+          )
+        } else {
+          rows.push(
+            <section className="list" key={post.node.fields.slug}>
+              <h1>
+                <Link to={post.node.fields.slug}>
+                  {post.node.frontmatter.title}
+                </Link>
+              </h1>
+            </section>,
           )
         }
-        rows.push(
-          <section className="list" key={post.node.fields.slug}>
-            <h1>
-              <Link to={post.node.fields.slug}>
-                {post.node.frontmatter.title}
-              </Link>
-            </h1>
-          </section>
-        )
       } else if (isLink(post.node.fields.slug)) {
         linkRows.push(
           <section className="list" key={post.node.fields.slug}>
@@ -44,7 +45,7 @@ export default props => {
                 {post.node.frontmatter.title}
               </Link>
             </h1>
-          </section>
+          </section>,
         )
       }
     }
@@ -54,7 +55,7 @@ export default props => {
     <div className="content">
       <Helmet
         title={`Writing`}
-        meta={[{ name: "description", content: "Song Wang's Writings" }]}
+        meta={[{ name: 'description', content: "Song Wang's Writings" }]}
       />
       <header>
         <h1>Writing</h1>
