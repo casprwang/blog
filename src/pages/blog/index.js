@@ -3,6 +3,7 @@ import Link from "gatsby-link"
 import Helmet from "react-helmet"
 
 const isLink = url => url.slice(0, 7) === "/links/"
+const isTIL = url => url.slice(0, 5) === "/til/"
 
 export default props => {
   const posts = props.data.allMarkdownRemark.edges
@@ -10,10 +11,22 @@ export default props => {
   const pathArray = props.data.allSitePage.edges
   const rows = []
   const linkRows = []
+  const TILRows = []
 
   posts.forEach(post => {
     if (post.node.frontmatter.layout !== "page") {
       if (!isLink(post.node.fields.slug)) {
+        if(isTIL(post.node.fields.slug)) {
+          TILRows.push(
+            <section className="list" key={post.node.fields.slug}>
+              <h1>
+                <Link to={post.node.fields.slug}>
+                  {post.node.frontmatter.title}
+                </Link>
+              </h1>
+            </section>
+          )
+        }
         rows.push(
           <section className="list" key={post.node.fields.slug}>
             <h1>
@@ -49,6 +62,8 @@ export default props => {
       </header>
       <div className="blog-content">
         <h3>Today I learned</h3>
+        {TILRows}
+        <h3>Blogs</h3>
         {rows}
         <h3>External Links</h3>
         {linkRows}

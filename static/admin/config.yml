@@ -19,7 +19,16 @@ collections:
       - {label: "Date", name: "date", widget: "string", default: ""}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Author", name: "author", widget: "string", default: "Song Wang"}
+  - name: "til"
+    folder: "src/pages/til"
+    label: "TIL"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "string", default: ""}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "links"
     folder: "src/pages/links"
     label: "Links"
