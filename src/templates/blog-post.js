@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 class BlogPostRoute extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    //console.log(post)
+    const { fields: { slug } } = post
 
     let tags
     let tagsSection
@@ -45,6 +45,39 @@ class BlogPostRoute extends React.Component {
               <h1>
                 {post.frontmatter.title}
               </h1>
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <hr />
+            {tagsSection}
+          </div>
+        </div>
+      )
+    } else if (slug.slice(0, 7) === '/links/') {
+      return (
+        <div>
+          <Helmet
+            title={`${post.frontmatter.title}`}
+            meta={[
+              {
+                name: 'description',
+                content: post.excerpt || post.frontmatter.description,
+              },
+            ]}
+          />
+          <div className="content">
+            <header>
+              <a
+                rel="noopener noreferrer"
+                target="__blank"
+                href={post.frontmatter.link}
+              >
+                <h1>
+                  {post.frontmatter.title}
+                </h1>
+              </a>
+              <small>
+                {post.frontmatter.date}
+              </small>
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
@@ -98,11 +131,13 @@ export const pageQuery = graphql`
       excerpt
       fields {
         tagSlugs
+        slug
       }
       frontmatter {
         title
         layout
         tags
+        link
         date(formatString: "MMMM DD, YYYY")
       }
     }
