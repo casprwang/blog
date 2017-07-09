@@ -45,12 +45,13 @@ export default props => {
         title={`Writing`}
         meta={[{ name: "description", content: "Song Wang's Writings" }]}
       />
-      <header>
+      <header
+      >
         <h1>Writing</h1>
         <small>TL;DR</small>
       </header>
       <div className="blog-content">
-        <h3>Today I learn</h3>
+        <h3>Today I learned</h3>
         {rows}
         <h3>External Links</h3>
         {linkRows}
