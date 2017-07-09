@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const paths = ['/','/about/', '/hire/']
+const paths = ['/','/blog/','/about/', '/hire/']
 
 const Li = props => {
   let style = (props.location === props.current)? {color: '#a212d1'} : {color:'#000'}
