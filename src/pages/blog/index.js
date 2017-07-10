@@ -25,22 +25,31 @@ export default props => {
 	const rows = []
 	const linkRows = []
 	const TILRows = []
+  const notesRows = []
 
+  /*
+     ['til', 'notes', 'links', 'blogs(else)']
+  */
 	posts.forEach(post => {
 		let slug = post.node.fields.slug
 		let title = post.node.frontmatter.title
-
-		if (post.node.frontmatter.layout !== 'page') {
-			if (!isLink(slug)) {
-				if (isTIL(slug)) {
-					TILRows.push(<BlogArray slug={slug} title={title} />)
-				} else {
-					rows.push(<BlogArray slug={slug} title={title} />)
-				}
-			} else if (isLink(slug)) {
-					linkRows.push(<BlogArray slug={slug} title={title} />)
-			}
-		}
+    switch(slug.split('/')[1]){
+      case 'til':
+        TILRows.push(<BlogArray slug={slug} title={title} />)
+        break
+      case 'blog':
+        rows.push(<BlogArray slug={slug} title={title} />)
+        break
+      case 'links':
+        linkRows.push(<BlogArray slug={slug} title={title} />)
+        break
+      case 'notes':
+        console.log('notes')
+        notesRows.push(<BlogArray slug={slug} title={title} />)
+        break
+      default:
+        break
+    }
 	})
 
 	return (
