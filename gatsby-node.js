@@ -44,8 +44,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           path: edge.node.fields.slug, // required
           component: blogPost,
           context: {
-            slug: edge.node.fields.slug,
-          },
+            slug: edge.node.fields.slug
+          }
         })
       })
 
@@ -63,8 +63,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           path: tagPath,
           component: tagPages,
           context: {
-            tag,
-          },
+            tag
+          }
         })
       })
 
@@ -74,7 +74,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 }
 
 //exports.postBuild = require('./post-build')
-
 
 // Add custom slug for blog posts to both File and MarkdownRemark nodes.
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
@@ -87,19 +86,19 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({ node, name: `slug`, value: slug })
     createNodeField({ node, name: `nakedSlug`, value: nakedSlug })
   } else if (node.internal.type === `MarkdownRemark`) {
-    if (getNode(node.parent).name !== 'index'){
+    if (getNode(node.parent).name !== "index") {
       let fileNode = getNode(node.parent)
       createNodeField({
         node,
         name: `slug`,
-        value: fileNode.fields.nakedSlug,
+        value: fileNode.fields.nakedSlug
       })
     } else {
-    let fileNode = getNode(node.parent)
+      let fileNode = getNode(node.parent)
       createNodeField({
         node,
         name: `slug`,
-        value: fileNode.fields.slug,
+        value: fileNode.fields.slug
       })
     }
 
@@ -109,6 +108,5 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       )
       createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
     }
-
   }
 }
