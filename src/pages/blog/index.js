@@ -65,6 +65,8 @@ export default props => {
 			<div className="blog-content">
 				<h3>Today I learned</h3>
 				{TILRows}
+        <h3>Notes</h3>
+        {notesRows}
 				<h3>Blogs</h3>
 				{rows}
 				<h3>External Links</h3>
