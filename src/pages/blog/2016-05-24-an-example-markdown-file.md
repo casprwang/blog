@@ -2,7 +2,7 @@
 date: '2017-07-08T14:59:04-04:00'
 description: This page show's the typography of this site.
 draft: false
-title: A example markdown file
+title: An example markdown file
 tags:
   - markdown
   - example
