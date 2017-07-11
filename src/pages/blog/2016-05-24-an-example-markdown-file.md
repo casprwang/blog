@@ -1,4 +1,5 @@
 ---
+author: Song Wang
 date: '2017-07-08T14:59:04-04:00'
 description: This page show's the typography of this site.
 draft: false
@@ -6,9 +7,8 @@ title: An example markdown file
 tags:
   - markdown
   - example
-author: Song Wang
 ---
-
+![800x400](/../../images/uploads/800x400.png)
 <div class="message">
   Howdy! This is an example blog post that shows several types of HTML content supported in this website.
 </div>
@@ -144,5 +144,6 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
 Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a>
 
 [^fn-sample_footnote]: Handy! Now click the return link to go back.
+
 
 
