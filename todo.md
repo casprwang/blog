@@ -1,2 +1,0 @@
-share 
-tags

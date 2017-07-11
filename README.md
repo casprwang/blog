@@ -27,7 +27,6 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
     │   └── new.js         > script for creating new blog/pages
     └── templates
         ├── blog-post.js   > template for blog post
-        ├── page.js        > template for pages
         └── tag-page.js    > template for tag page
 ```
 
@@ -46,3 +45,6 @@ npm run dev
 - yuppi.es
 - xpchbill.github.io
 
+## License
+This repo is fully under [MIT Lincese](LICENSE), by that you can do almost
+anything you want with it.
