@@ -93,6 +93,7 @@ nav {
     font-weight: bold;
   }
 
+
   p {
     margin-bottom: 1.6rem;
     line-height: ($line-height * 1.2);
@@ -458,4 +459,9 @@ table {
       }
     }
   }
+}
+
+.gatsby-resp-image-link {
+  width: 100%!important;
+  margin: 3rem auto;
 }
