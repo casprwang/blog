@@ -1,5 +1,5 @@
-#  [songwang.io](https://songwang.io)
-Source code for the website about Song Wang at [songwang.io](https://songwang.io).
+#  [songwang.io](songwang.io)
+Source code for the website about Song Wang at [songwang.io](songwang.io).
 
 ### Built with
 * [Gatsby.js](https://www.gatsbyjs.org/)
