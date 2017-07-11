@@ -14,6 +14,7 @@ collections:
     label: "Blog"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
+    searchFields: ["title", "body", "tags"]
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
@@ -24,6 +25,7 @@ collections:
     label: "TIL"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
+    searchFields: ["title", "body", "tags"]
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
@@ -34,6 +36,7 @@ collections:
     label: "Notes"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
+    searchFields: ["title", "body", "tags"]
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
@@ -44,6 +47,7 @@ collections:
     label: "Links"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
+    searchFields: ["title", "body", "tags"]
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string", default: ""}
@@ -52,6 +56,7 @@ collections:
   - name: "about"
     folder: "src/pages/about"
     label: "About"
+    searchFields: ["title", "body", "tags"]
     fields: 
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
@@ -59,7 +64,14 @@ collections:
   - name: "hire"
     folder: "src/pages/hire"
     label: "Hire"
+    searchFields: ["title", "body", "tags"]
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
       - {label: "Body", name: "body", widget: "markdown"}
+
+#     fields:
+#       - {label: "Image Alt", name: "image_alt", widget: "string", required: false}
+#       - {label: "Featured Image", name: "image", widget: "image", required: false}
+#       - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
+#       - {label: "Image", name: "image", widget: "image"}
