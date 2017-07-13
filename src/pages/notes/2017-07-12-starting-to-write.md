@@ -1,5 +1,5 @@
 ---
-title: 'Starting to write '
+title: Starting to write
 date: '2017-07-12T20:32:12-04:00'
 tags:
   - writing
@@ -10,4 +10,5 @@ Today I am self-encouraged to write more, which primarily influenced by the foll
 2. I started reusing [Grammarly](www.grammarly.com/‎) for grammar checking service recently.
 3. I practiced over months for typing, which would be another shame not used by writing. 
 4. Those three reasons' grammar has already annoyed me enough. 
+
 
