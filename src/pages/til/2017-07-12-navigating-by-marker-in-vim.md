@@ -9,15 +9,11 @@ If you use Vim, you would be amazed that you can still find something super usef
 
 Try marking a position with a/b/c... for quick navigation and `''` for jumping back/forward, it's super easy and productive.
 
-normal mode shortcut | usage
 
+
+Shortcuts | Example
 --- | ---
-
-m{mark name} | eg. ma for marking position a
-
-'{mark name] | eg. ma for jumping to position a
-
-
-
+m{mark name} | ma for marking position a
+'{mark name] | ma for jumping to position a
 
 
