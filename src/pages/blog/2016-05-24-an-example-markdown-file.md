@@ -1,9 +1,9 @@
 ---
 author: Song Wang
+draft: false
 title: An example markdown file
 date: '2017-07-08T14:59:04-04:00'
 description: This page show's the typography of this site.
-draft: false
 tags:
   - markdown
   - example
@@ -138,6 +138,17 @@ Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, conse
   </tbody>
 </table>
 
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+Markdown | test
+- | -
+2 | 3
+
+
 Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
 
 -----
@@ -145,6 +156,7 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
 Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a>
 
 [^fn-sample_footnote]: Handy! Now click the return link to go back.
+
 
 
 
