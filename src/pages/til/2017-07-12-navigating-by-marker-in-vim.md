@@ -11,6 +11,7 @@ Try marking a position with a/b/c... for quick navigation and `''`for jumping ba
 
 normal mode shortcut | usage
 -|-
-m{mark name} | e.g. ma for marking position a
-'{mark name]| e.g. ma for jumping to position a
+`m{mark name}` | e.g. `ma` for marking position a
+`'{mark name]`| e.g. `ma` for jumping to position a
+
 
