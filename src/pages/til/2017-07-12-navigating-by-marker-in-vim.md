@@ -11,11 +11,12 @@ Try marking a position with a/b/c... for quick navigation and `''` for jumping b
 
 normal mode shortcut | usage
 
-- | -
+--- | ---
 
 m{mark name} | eg. ma for marking position a
 
 '{mark name] | eg. ma for jumping to position a
+
 
 
 
