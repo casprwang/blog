@@ -5,15 +5,12 @@ tags:
   - Vim
   - Neovim
 ---
-If you use Vim, you would be amazed that you can still find something super useful after a long time. Marker navigation is the same case for me. I've used Vim for over a year, daily, and have a configuration of 800 lines, yet hadn't met that trick. But today is the day.
+If you use Vim, you would be amazed that you can still find something super useful after a long time. Marker navigation is the same case for me.  I've used Vim for over a year, daily, and have a configuration of 800 lines,  yet hadn't met that trick. But today is the day. 
 
-Try marking a position with a/b/c... for quick navigation and `''` for jumping back/forward, it's super easy and productive.
+Try marking a position with a/b/c... for quick navigation and `''`for jumping back/forward; it's super easy and productive.
 
-
-
-Shortcuts | Example
---- | ---
-m{mark name} | ma for marking position a
-'{mark name] | ma for jumping to position a
-
+normal mode shortcut | usage
+-|-
+m{mark name} | e.g. ma for marking position a
+'{mark name]| e.g. ma for jumping to position a
 
