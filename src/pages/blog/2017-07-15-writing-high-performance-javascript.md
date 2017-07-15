@@ -5,4 +5,7 @@ tags:
   - javascript
   - V8
 ---
-http://creativejs.com/resources/requestanimationframe/index.html
+* http://creativejs.com/resources/requestanimationframe/index.html
+* V8 engine to handle type/structure
+
+
