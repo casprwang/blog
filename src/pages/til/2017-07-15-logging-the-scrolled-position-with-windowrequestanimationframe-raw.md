@@ -5,7 +5,11 @@ tags:
   - HTML
   - javascript
 ---
+With `window.requestAnimationFrame` the refreshing frequency will be 60fps, with less GPU usage even.
+
+![logging scrollY](/../../images/uploads/2017-07-15%2017.09.10.gif)
 ```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,3 +51,4 @@ tags:
 </html>
 
 ```
+
