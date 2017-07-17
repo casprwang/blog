@@ -92,7 +92,7 @@ export default class BlogIndex extends React.Component {
             }}
             onClick={() => this._handleClick()}
           >
-            more
+            more...
           </button>{' '}
         </div>
       </div>

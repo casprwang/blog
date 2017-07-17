@@ -1,5 +1,5 @@
 ---
-title: logging the scrolled position with window.requestAnimationFrame Raw
+title: logging the scrolled position smoother
 date: '2017-07-15T17:07:30-04:00'
 tags:
   - HTML

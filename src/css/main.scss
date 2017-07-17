@@ -102,6 +102,7 @@ nav {
     display: flex;
     min-height: calc(60vh - (#{$nav-padding * 4}) - 5ex);
 
+    overflow-wrap: break-word;
     // Additional padding for content inside `header` are higher than `header`
     // container
     padding-top: 10vmin;
@@ -136,6 +137,7 @@ nav {
 
       // visual align left
       margin-left: -2px;
+      overflow-wrap: break-word;
       hyphens: none;
       line-height: 1.1;
 
@@ -243,7 +245,9 @@ nav {
   iframe {
     display: block;
     width: calc(100% + (#{ $space-md } * 2));
-    margin: 0 -$space-md 1.8rem;
+    width: 100%;
+    margin: 0 $space-md 1.8rem;
+
 
     @media (max-width: $breakpoint-md) {
       width: calc(100% + (#{ $space-md } * 2));
@@ -314,6 +318,7 @@ nav {
   code {
     font-family: $fontstack-monospace;
     // background: lighten($text-color, 98%);
+    margin-top: 0;
   }
 
   pre {

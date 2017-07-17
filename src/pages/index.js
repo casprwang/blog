@@ -10,7 +10,7 @@ export default props => {
       <div style={{ marginBottom: "10vmin" }} className="content">
         <header style={{ marginBottom: 0 }}>
           <h1>
-            Song is<br /> looking for a job
+            Hello from Song
           </h1>
         </header>
       </div>
