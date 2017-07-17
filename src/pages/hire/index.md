@@ -5,7 +5,7 @@ layout: page
 ---
 
 I am a grad student at [Stevens](https://www.stevens.edu/), majored in Computer Science.
-        
+
 I code with Javascript, Python, HTML, CSS, Lua, Vim script. 
 
 I contributed 1,500 times last year on [Github](https://github.com/wangsongiam).
