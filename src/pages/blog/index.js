@@ -15,13 +15,15 @@ export default class BlogIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      postsNumber: 4
+      postsNumber: 4,
+      clicked: false      
     }
   }
 
-  _handleClick = () => {
+  _handleClick() {
     this.setState({
-      postsNumber: this.state.postsNumber + 100
+      postsNumber: this.state.postsNumber + 100,
+      clicked: true
     })
   }
 
@@ -80,23 +82,18 @@ export default class BlogIndex extends React.Component {
           {notesRows}
           <h3>Blogs</h3>
           {rows}
-          <h3>
-            External Links{' '}
-          </h3>
-          <div class="row">
-            {linkRows.slice(0, this.state.postsNumber)}
-          </div>
+          <h3>External Links </h3>
+          <div class="row">{linkRows.slice(0, this.state.postsNumber)}</div>
           <button
             style={{
-              display: 'inline',
+              display: this.state.clicked ? 'none': 'inline',
               opacity: '.5',
               fontSize: '92%'
-
             }}
             onClick={() => this._handleClick()}
           >
-          more
-        </button>{' '}
+            more
+          </button>{' '}
         </div>
       </div>
     )
