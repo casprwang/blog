@@ -127,6 +127,7 @@ nav {
     }
 
     @media (max-width: $breakpoint-sm) {
+      min-height: calc(92vh - (#{$nav-padding * 4}) - 5ex);
       @include padding-offset($space-sm);
 
       @include margin-offset(-$space-sm);
@@ -435,7 +436,6 @@ table {
     margin: 0;
 
     @media (max-width: $breakpoint-sm) {
-      // Hide external link for post list
       font-size: 180%;
     }
   }
@@ -445,6 +445,9 @@ table {
   padding: 0 0 16vmin;
   font-size: 75%;
   text-transform: lowercase;
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 0 8vmin;
+  }
 
   ul {
     li {
