@@ -83,7 +83,9 @@ nav {
     > *:first-child {
       margin-top: 0;
     }
-    h2,
+    h2 {
+      font-size: 166%;
+    }
     h3 {
       margin: 5vmin 0 .5rem;
     }
@@ -94,7 +96,7 @@ nav {
   }
 
   p {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
     line-height: ($line-height * 1.2);
   }
 
@@ -161,14 +163,34 @@ nav {
     }
   }
 
+  // h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin: 10vmin 0 1rem;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-weight: 600;
+    line-height: 1.25;
+    text-rendering: optimizeLegibility;
+  }
 
-    @include sub-heading;
+  h2 {
+    font-size: 166%;
+    margin-top: 1em;
+  }
+
+  h3 {
+    margin-top: 1.3em;
+    font-size: 133%;
+  }
+
+  h4,
+  h5,
+  h6 {
+    // margin: 10vmin 0 1rem;
+    // @include sub-heading;
   }
 
   // LISTING
@@ -249,7 +271,6 @@ nav {
     width: calc(100% + (#{ $space-md } * 2));
     width: 100%;
     margin: 0 $space-md 1.8rem;
-
 
     @media (max-width: $breakpoint-md) {
       width: calc(100% + (#{ $space-md } * 2));
@@ -427,16 +448,19 @@ table {
   display: block;
   margin: 0 0 .4rem;
 
-  h1 {
-    @include heading();
-    font-size: 200%;
+  h3 {
+    font-size: 133%;
     line-height: 1.1;
-    // Override heading defines in .content
     opacity: 1;
-    margin: 0;
+    margin: 0 !important;
+
+    a {
+      font-weight: 400;
+      letter-spacing: $heading-letter-spacing;
+    }
 
     @media (max-width: $breakpoint-sm) {
-      font-size: 180%;
+      font-size: 120%;
     }
   }
 }
@@ -445,6 +469,7 @@ table {
   padding: 0 0 16vmin;
   font-size: 75%;
   text-transform: lowercase;
+  float: right;
   @media (max-width: $breakpoint-sm) {
     padding: 0 0 8vmin;
   }
@@ -455,7 +480,7 @@ table {
 
       &:after {
         padding: 0 $nav-item-space;
-        content: " / ";
+        content: " \\ ";
         opacity: .2;
       }
 

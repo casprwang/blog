@@ -9,13 +9,14 @@
 }
 
 @mixin heading {
-  font-size: 360%;
-  font-weight: bold;
+  font-size: 260%;
+  font-weight: 600;
   letter-spacing: $heading-letter-spacing;
 }
 
 @mixin cf() {
-  &:before, &:after {
+  &:before,
+  &:after {
     display: table;
     content: "";
   }
@@ -38,7 +39,6 @@
 }
 
 @mixin spliter() {
-
   &::before {
     display: block;
     content: '';
@@ -47,6 +47,6 @@
     margin: 2em auto;
     border-radius: 50%;
     background: $text-color;
-    box-shadow: (3px * 8) 0 0 0 $text-color, (3px * -8) 0 0 0 $text-color;
+    box-shadow: (2px * 8) 0 0 0 $text-color,  (2px * -8) 0 0 0 $text-color;
   }
 }

@@ -4,11 +4,11 @@ import Helmet from 'react-helmet'
 
 const BlogArray = props =>
   <section className="list" key={props.slug}>
-    <h1>
+    <h3>
       <Link to={props.slug}>
         {props.title}
       </Link>
-    </h1>
+    </h3>
   </section>
 
 export default class BlogIndex extends React.Component {
@@ -16,7 +16,7 @@ export default class BlogIndex extends React.Component {
     super(props)
     this.state = {
       postsNumber: 4,
-      clicked: false      
+      clicked: false
     }
   }
 
@@ -71,22 +71,22 @@ export default class BlogIndex extends React.Component {
           <h2>TL;DR</h2>
         </header>
         <div className="blog-content">
-          <h3>Today I learned</h3>
+          <h2>Today I learned</h2>
           {TILRows}
           <div
             style={{
               backGround: 'red'
             }}
           />
-          <h3>Notes</h3>
+          <h2>Notes</h2>
           {notesRows}
-          <h3>Blogs</h3>
+          <h2>Blogs</h2>
           {rows}
-          <h3>External Links </h3>
+          <h2>External Links </h2>
           <div class="row">{linkRows.slice(0, this.state.postsNumber)}</div>
           <button
             style={{
-              display: this.state.clicked ? 'none': 'inline',
+              display: this.state.clicked ? 'none' : 'inline',
               opacity: '.5',
               fontSize: '92%'
             }}
