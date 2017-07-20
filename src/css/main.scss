@@ -12,8 +12,8 @@ $nav-padding: 1.4vmax;
 $nav-item-space: 1vmax;
 
 nav {
-  font-size: 70%;
-  font-weight: bold;
+  font-size: 80%;
+  font-weight: 600;
   padding-top: $nav-padding;
   padding-bottom: $nav-padding;
   margin-left: $nav-item-space;
@@ -139,7 +139,7 @@ nav {
       @include heading;
 
       // visual align left
-      margin-left: -2px;
+      margin: 0 1vmin 0;
       overflow-wrap: break-word;
       hyphens: none;
       line-height: 1.1;
@@ -153,7 +153,9 @@ nav {
     // Reset subheading in page title (used by AMSF atm)
     h2 {
       margin: 1.2vmin 1vmin 0;
+      padding-left: .2em;
       @include sub-title;
+      opacity: .4;
     }
 
     small {

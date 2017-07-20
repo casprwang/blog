@@ -44,6 +44,8 @@ body {
   }
 }
 
+p {
+}
 // Reset fonts for relevant elements
 input,
 button,
@@ -64,14 +66,17 @@ textarea {
 }
 
 // Reset common elements
-a, button {
+a,
+button {
   color: $text-color;
   text-decoration: none;
-  transition: color .5s ease, border-color .5s ease, background .5s ease, opacity 1.5s ease;
+  transition: color .5s ease, border-color .5s ease, background .5s ease,
+    opacity 1.5s ease;
 
   &:hover,
   &:focus {
-    transition: color .1s ease, border-color .1s ease, background .1s ease, opacity .1s ease;
+    transition: color .1s ease, border-color .1s ease, background .1s ease,
+      opacity .1s ease;
     text-decoration: underline;
     text-decoration-skip: ink;
   }
@@ -91,7 +96,8 @@ button {
   margin-top: .5em;
 }
 
-img, hr {
+img,
+hr {
   border: 0;
 }
 

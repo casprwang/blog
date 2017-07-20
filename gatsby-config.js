@@ -23,6 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-postcss-sass`
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
