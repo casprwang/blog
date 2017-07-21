@@ -8,39 +8,40 @@ class Li extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      hover: false
-      }
+      hover: false,
+      style:
+        this.props.current.split('/')[1] ===
+        this.props.location.slice(1, this.props.location.length - 1)
+          ? '#a212d1'
+          : '#000'
+    }
   }
 
   _toggleHoverEnter() {
     this.setState({
-      hover: true
-      })
-    console.log(this.state.hover)
-    }
+      style: '#a212d1'
+    })
+    console.log(this.state.style)
+  }
 
   _toggleHoverLeave() {
     this.setState({
-      hover: false
-      })
-    console.log(this.state.hover)
-    }
+      style: '#000'
+    })
+    console.log(this.state.style)
+    console.log(this.props.current.split('/')[1] === '')
+  }
 
   render() {
-    let style
-    this.props.current.split('/')[1] ===
-    this.props.location.slice(1, this.props.location.length - 1)
-      ? (style = { color: '#a212d1' })
-      : (style = { color: '#000' })
     if (this.props.location.length > 1) {
       return (
         <li>
           <Link
-            onMouseEnter={()=>this._toggleHoverEnter()}
-            onMouseLeave={()=>this._toggleHoverLeave()}
+            onMouseEnter={() => this._toggleHoverEnter()}
+            onMouseLeave={() => this._toggleHoverLeave()}
             style={{
-              color: this.state.hover ? '#a212d1' : '#000'
-              }}
+              color: this.state.style
+            }}
             activeStyle={{
               color: '#a212d1'
             }}
@@ -53,13 +54,17 @@ class Li extends React.Component {
     } else {
       return (
         <li>
-          <Link 
-            onMouseEnter={()=>this._toggleHoverEnter()}
-            onMouseLeave={()=>this._toggleHoverLeave()}
+          <Link
+            onMouseEnter={() => this._toggleHoverEnter()}
+            onMouseLeave={() => this._toggleHoverLeave()}
             style={{
-              color: style.color
-              }} 
-            to={`${this.props.location}`}>
+              color:
+                this.props.current.split('/')[1] === ''
+                  ? '#a212d1'
+                  : this.state.style
+            }}
+            to={`${this.props.location}`}
+          >
             {'Home'}
           </Link>
         </li>
