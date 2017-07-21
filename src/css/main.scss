@@ -25,15 +25,15 @@ nav {
     display: inline-block;
     line-height: 2;
     list-style: none;
-    &:first-child {
-    }
+    // &:first-child {
+    // }
 
     a {
       padding: 0.5em $nav-item-space;
 
       &:hover,
       &:focus {
-        color: $link-color;
+        color: $link-color!important;
         text-decoration: none;
       }
     }
@@ -512,4 +512,7 @@ table {
       }
     }
   }
+}
+
+.nav-link {
 }

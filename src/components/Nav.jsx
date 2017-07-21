@@ -5,10 +5,19 @@ import styled from 'styled-components'
 const paths = ['/', '/blog/', '/about/', '/hire/']
 
 const Li = props => {
+  let style
+  if (
+    props.current.split('/')[1] ===
+    props.location.slice(1, props.location.length - 1)
+  ) {
+    style = { color: '#a212d1' }
+  } else {
+    style = { color: '#000' }
+  }
   if (props.location.length > 1) {
     return (
       <li>
-        <Link to={`${props.location}`}>
+        <Link style={style} to={`${props.location}`}>
           {props.location.slice(1, props.location.length - 1)}
         </Link>
       </li>
@@ -16,7 +25,7 @@ const Li = props => {
   } else {
     return (
       <li>
-        <Link to={`${props.location}`}>
+        <Link style={style} to={`${props.location}`}>
           {'Home'}
         </Link>
       </li>
