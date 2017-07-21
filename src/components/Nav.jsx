@@ -17,11 +17,6 @@ class Li extends React.Component {
     }
   }
 
-  _toggleHoverEnter() {
-    this.setState({
-      style: '#a212d1'
-    })
-  }
 
   _toggleHoverLeave() {
     this.setState({
@@ -29,13 +24,20 @@ class Li extends React.Component {
     })
   }
 
+  _showMouseOver() {
+    console.log('over!')
+    this.setState({
+      style: '#a212d1'
+      })
+    }
+
   render() {
     if (this.props.location.length > 1) {
       return (
         <li>
           <Link
-            onMouseEnter={() => this._toggleHoverEnter()}
             onMouseLeave={() => this._toggleHoverLeave()}
+            onMouseOver={()=>this._showMouseOver()}
             style={{
               color: this.state.style
             }}
@@ -52,7 +54,7 @@ class Li extends React.Component {
       return (
         <li>
           <Link
-            onMouseEnter={() => this._toggleHoverEnter()}
+            onMouseOver={()=>this._showMouseOver()}
             onMouseLeave={() => this._toggleHoverLeave()}
             style={{
               color:
