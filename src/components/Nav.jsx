@@ -12,10 +12,18 @@ class Li extends React.Component {
       }
   }
 
-  _toggleHover() {
+  _toggleHoverEnter() {
     this.setState({
-      hover: !this.state.hover
+      hover: true
       })
+    console.log(this.state.hover)
+    }
+
+  _toggleHoverLeave() {
+    this.setState({
+      hover: false
+      })
+    console.log(this.state.hover)
     }
 
   render() {
@@ -28,7 +36,11 @@ class Li extends React.Component {
       return (
         <li>
           <Link
-            onMouseEnter={()=>this._toggleHover()}
+            onMouseEnter={()=>this._toggleHoverEnter()}
+            onMouseLeave={()=>this._toggleHoverLeave()}
+            style={{
+              color: this.state.hover ? '#a212d1' : '#000'
+              }}
             activeStyle={{
               color: '#a212d1'
             }}
@@ -42,8 +54,11 @@ class Li extends React.Component {
       return (
         <li>
           <Link 
-            onMouseEnter={()=>this._toggleHover()}
-            style={style} 
+            onMouseEnter={()=>this._toggleHoverEnter()}
+            onMouseLeave={()=>this._toggleHoverLeave()}
+            style={{
+              color: style.color
+              }} 
             to={`${this.props.location}`}>
             {'Home'}
           </Link>
