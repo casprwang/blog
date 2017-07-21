@@ -34,7 +34,7 @@ nav {
       &:hover,
       &:focus {
         color: $link-color!important;
-        text-decoration: none;
+        text-decoration: none!important;
       }
     }
   }
