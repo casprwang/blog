@@ -55,10 +55,7 @@ class Li extends React.Component {
             onMouseOver={() => this._showMouseOver()}
             onMouseLeave={() => this._toggleHoverLeave()}
             style={{
-              color:
-                this.props.current.split('/')[1] === ''
-                  ? '#a212d1'
-                  : this.state.style
+              color: this.state.style
             }}
             to={`${this.props.location}`}
           >
