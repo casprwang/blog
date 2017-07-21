@@ -472,8 +472,12 @@ table {
   font-size: 75%;
   text-transform: lowercase;
   float: right;
+
   @media (max-width: $breakpoint-sm) {
     padding: 0 0 8vmin;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    position: absolute;
   }
 
   ul {

@@ -1,4 +1,4 @@
----
+n---
 title: Resume
 date: '2017-07-05T20:22:31-04:00'
 layout: page
@@ -37,5 +37,5 @@ I work with these technologies:
 * React, GraphQL, Relay
 * Webpack, Gulp
 * Express
-* PostCSS, SASS, Tachyons
-* Jest, Jasmine
+* PostCSS, Styled Components, SCSS, Tachyons
+* Jest, Jasmine...
