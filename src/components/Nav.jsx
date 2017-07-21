@@ -39,7 +39,8 @@ class Li extends React.Component {
           onMouseOver={() => this.onMouseOver()}
           onMouseOut={() => this.onMouseOut()}
           style={{
-            color: finalColor
+            color: finalColor,
+            // transition: 'color 1s ease-in'
           }}
         >
           {this.props.location.slice(1, this.props.location.length - 1) ||
