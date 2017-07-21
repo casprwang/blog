@@ -21,15 +21,12 @@ class Li extends React.Component {
     this.setState({
       style: '#a212d1'
     })
-    console.log(this.state.style)
   }
 
   _toggleHoverLeave() {
     this.setState({
       style: '#000'
     })
-    console.log(this.state.style)
-    console.log(this.props.current.split('/')[1] === '')
   }
 
   render() {
