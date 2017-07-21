@@ -5,65 +5,26 @@ import styled from 'styled-components'
 const paths = ['/', '/blog/', '/about/', '/hire/']
 
 class Li extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      hover: false,
-      style:
-        this.props.current.split('/')[1] ===
-        this.props.location.slice(1, this.props.location.length - 1)
-          ? '#a212d1'
-          : '#000'
-    }
-  }
-
-  _toggleHoverLeave() {
-    this.setState({
-      style: '#000'
-    })
-  }
-
-  _showMouseOver() {
-    this.setState({
-      style: '#a212d1'
-    })
-  }
 
   render() {
-    if (this.props.location.length > 1) {
-      return (
-        <li>
-          <Link
-            onMouseLeave={() => this._toggleHoverLeave()}
-            onMouseOver={() => this._showMouseOver()}
-            style={{
-              color: this.state.style
+  console.log(this.props.location)
+    return (
+      <li>
+        <Link
+          to={`${this.props.location}`}
+          // activeStyle={{
+          //   color: '#a212d1'
+          // }}
+          style= {{
+            color: this.props.current === this.props.location ?
+              '#a212d1': '#000'
             }}
-            activeStyle={{
-              color: '#a212d1'
-            }}
-            to={`${this.props.location}`}
-          >
-            {this.props.location.slice(1, this.props.location.length - 1)}
-          </Link>
-        </li>
-      )
-    } else {
-      return (
-        <li>
-          <Link
-            onMouseOver={() => this._showMouseOver()}
-            onMouseLeave={() => this._toggleHoverLeave()}
-            style={{
-              color: this.state.style
-            }}
-            to={`${this.props.location}`}
-          >
-            {'Home'}
-          </Link>
-        </li>
-      )
-    }
+        >
+          {this.props.location.slice(1, this.props.location.length - 1) ||
+            'Home'}
+        </Link>
+      </li>
+    )
   }
 }
 
