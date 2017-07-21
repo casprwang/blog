@@ -12,10 +12,6 @@ class Li extends React.Component {
     }
   }
 
-  style() {
-    return this.state.hovered ? { color: 'red' } : { color: 'yellow' }
-  }
-
   onMouseOver() {
     this.setState({
       hovered: true
@@ -31,9 +27,9 @@ class Li extends React.Component {
   render() {
     let finalColor
     if (this.props.current === this.props.location || this.state.hovered) {
-      finalColor = 'red'
+      finalColor = '#a212d1'
     } else {
-      finalColor = 'yellow'
+      finalColor = '#000'
     }
 
     return (
