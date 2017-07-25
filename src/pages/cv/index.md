@@ -29,6 +29,9 @@ Bachelor Computer
 * [feed-the-cat](https://github.com/wangsongiam/feed-the-cat)
 * [sushi-jig](https://github.com/wangsongiam/sushiJig)
 * [gatsby-alchemy](https://alchemy.netlify.com/)
+* Hammerspoon config
+* Vim config
+* Atom/Vscode
 
 
 I work with these technologies:
@@ -39,3 +42,4 @@ I work with these technologies:
 * Express
 * PostCSS, Styled Components, SCSS, Tachyons
 * Jest, Jasmine...
+e
