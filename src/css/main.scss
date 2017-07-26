@@ -172,7 +172,6 @@ nav {
   h5,
   h6 {
     margin-top: .5em;
-    margin-bottom: .5em;
     font-weight: 600;
     line-height: 1.25;
     text-rendering: optimizeLegibility;
@@ -272,6 +271,7 @@ nav {
     display: block;
     width: calc(100% + (#{ $space-md } * 2));
     width: 100%;
+    margin: 0.8em 0 3.8rem;
 
     @media (max-width: $breakpoint-md) {
       width: calc(100% + (#{ $space-md } * 2));
