@@ -264,7 +264,7 @@ nav {
       margin-bottom: 1.8rem;
     }
   }
-
+  .gatsby-resp-image-link,
   img,
   figure,
   video,
@@ -272,7 +272,6 @@ nav {
     display: block;
     width: calc(100% + (#{ $space-md } * 2));
     width: 100%;
-    margin: 0 $space-md 1.8rem;
 
     @media (max-width: $breakpoint-md) {
       width: calc(100% + (#{ $space-md } * 2));
@@ -497,11 +496,6 @@ table {
       }
     }
   }
-}
-
-.gatsby-resp-image-link {
-  width: 100% !important;
-  margin: 3rem auto;
 }
 
 .row {

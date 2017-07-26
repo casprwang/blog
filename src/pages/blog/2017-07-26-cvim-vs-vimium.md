@@ -12,7 +12,9 @@ I would say that the default settings from Vimium are more friendly to new in-br
 
 ## Demos
 ### Gif demo
+
 ![Demo](/../../images/uploads/2017-07-26%2014.17.50.gif)
+
 > Open urls in histories, buffers, searching engines, pinning tabs...
 
 ### Open a url
