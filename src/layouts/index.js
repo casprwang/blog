@@ -1,10 +1,9 @@
 import React from "react"
 import Link from "gatsby-link"
-import "../css/main.scss"
 import Nav from "../components/Nav.jsx"
 import Footer from "../components/Footer.jsx"
 import "../css/prism-coy.css"
-import "../css/main.scss"
+import '../theme/global.js'
 
 class Wrapper extends React.Component {
   render() {

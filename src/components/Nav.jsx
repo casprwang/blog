@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import { 
+  Nav,
+  A
+  } from './Nav.style.js'
 
 const paths = ['/', '/blog/', '/about/', '/hire/']
 
@@ -39,7 +42,7 @@ class Li extends React.Component {
           onMouseOver={() => this.onMouseOver()}
           onMouseOut={() => this.onMouseOut()}
           style={{
-            color: finalColor,
+            color: finalColor
             // transition: 'color 1s ease-in'
           }}
         >
@@ -57,10 +60,10 @@ export default props => {
   )
 
   return (
-    <nav>
+    <Nav>
       <ul>
         {links}
       </ul>
-    </nav>
+    </Nav>
   )
 }
