@@ -1,49 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { 
-  Nav,
-  A
-  } from './Nav.style.js'
+import { Nav, A } from './Nav.style.js'
 
 const paths = ['/', '/blog/', '/about/', '/hire/']
 
 class Li extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      hovered: false
-    }
-  }
-
-  onMouseOver() {
-    this.setState({
-      hovered: true
-    })
-  }
-
-  onMouseOut() {
-    this.setState({
-      hovered: false
-    })
   }
 
   render() {
-    let finalColor
-    if (this.props.current === this.props.location || this.state.hovered) {
-      finalColor = '#a212d1'
-    } else {
-      finalColor = '#000'
-    }
-
     return (
       <li>
         <Link
+          exact
           to={`${this.props.location}`}
-          onMouseOver={() => this.onMouseOver()}
-          onMouseOut={() => this.onMouseOut()}
-          style={{
-            color: finalColor
-            // transition: 'color 1s ease-in'
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red'
           }}
         >
           {this.props.location.slice(1, this.props.location.length - 1) ||
