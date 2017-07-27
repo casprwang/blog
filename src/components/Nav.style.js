@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 export const Nav = styled.div`
   font-size: 1.1rem;
@@ -23,3 +24,56 @@ export const A = styled.a`
     text-decoration: none;
   }
 `
+
+export const NavItem = styled(Link)`
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: .2em;
+  margin: .2em;
+
+  &::before,
+  &::after {
+    content: '';
+    border-bottom: solid 1px black;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+  }
+
+  &::before { left: 0; }
+  &::after { right: 0; }
+
+  &:hover::before,
+  &:hover::after {
+    width: 50%;
+    }
+
+  &::before,
+  &::after {
+    transition: all .2s ease;
+    }
+
+
+  &:focus::before,
+  &:focus::after {
+    width: 50%;
+    }
+
+  &.${(props) => props.activeClassName} {
+    &::before,
+    &::after {
+      content: '';
+      border-bottom: solid 1px black;
+      position: absolute;
+      width: 0;
+      width: 50%;
+    }
+  }
+`
+
+NavItem.defaultProps = {
+  activeClassName: 'active'
+}

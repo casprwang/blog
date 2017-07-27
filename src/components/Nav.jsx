@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Nav, A } from './Nav.style.js'
+import { Nav, A, NavItem } from './Nav.style.js'
+import styled from 'styled-components'
 
 const paths = ['/', '/blog/', '/about/', '/hire/']
 
@@ -10,21 +11,17 @@ class Li extends React.Component {
   }
 
   render() {
-    return (
-      <li>
-        <Link
-          exact
-          to={`${this.props.location}`}
-          activeStyle={{
-            fontWeight: 'bold',
-            color: 'red'
-          }}
-        >
-          {this.props.location.slice(1, this.props.location.length - 1) ||
-            'Home'}
-        </Link>
-      </li>
-    )
+    return this.props.location.slice(1, this.props.location.length - 1)
+      ? <li>
+          <NavItem activeClassName="active" to={`${this.props.location}`}>
+            {this.props.location.slice(1, this.props.location.length - 1)}
+          </NavItem>
+        </li>
+      : <li>
+          <NavItem activeClassName="active" exact to={`${this.props.location}`}>
+            {'Home'}
+          </NavItem>
+        </li>
   }
 }
 

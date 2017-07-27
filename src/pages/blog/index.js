@@ -73,7 +73,7 @@ export default class BlogIndex extends React.Component {
     posts.forEach(post => {
       let slug = post.node.fields.slug
       let title = post.node.frontmatter.title
-      switch (slug.split('/')[1]) {
+      switch (slug.split('/')[2]) {
         case 'til':
           TILRows.push(<BlogArray slug={slug} title={title} />)
           break
