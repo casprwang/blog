@@ -54,4 +54,17 @@ export const resets = `
   header {
     clear: both;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .gatsby-resp-image-wrapper {
+    z-index: 10;
+  }
+
 `

@@ -1,37 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Content } from './blog-post.style.js'
+import { TagSection } from '../components/TagSection.js'
 
 class BlogPostRoute extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { fields: { slug } } = post
-
-    let tags
-    let tagsSection
-    if (this.props.data.markdownRemark.fields.tagSlugs) {
-      const tagsArray = this.props.data.markdownRemark.fields.tagSlugs
-      tags = tagsArray.map((tag, i) => {
-        const divider =
-          i < tagsArray.length - 1 &&
-          <span>
-            {' | '}
-          </span>
-        return (
-          <span key={tag}>
-            <Link to={tag}>
-              {this.props.data.markdownRemark.frontmatter.tags[i]}
-            </Link>
-            {divider}
-          </span>
-        )
-      })
-      tagsSection = (
-        <em>
-          Tagged with {tags}
-        </em>
-      )
-    }
 
     if (post.frontmatter.layout === 'page') {
       return (
@@ -46,13 +21,13 @@ class BlogPostRoute extends React.Component {
                 {post.frontmatter.title}
               </h1>
             </header>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Content dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
-            {tagsSection}
+            <TagSection {...this.props} />
           </div>
         </div>
       )
-    } else if (slug.slice(0, 7) === '/links/') {
+    } else if (slug.slice(5, 12) === '/links/') {
       return (
         <div>
           <Helmet
@@ -79,9 +54,9 @@ class BlogPostRoute extends React.Component {
                 {post.frontmatter.date}
               </small>
             </header>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Content dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
-            {tagsSection}
+            <TagSection {...this.props} />
           </div>
         </div>
       )
@@ -106,9 +81,9 @@ class BlogPostRoute extends React.Component {
                 {post.frontmatter.date}
               </small>
             </header>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Content dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
-            {tagsSection}
+            <TagSection {...this.props} />
           </div>
         </div>
       )

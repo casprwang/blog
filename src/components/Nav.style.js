@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 export const Nav = styled.div`
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: .35rem;
   text-transform: uppercase;

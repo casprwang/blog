@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { Footer } from './Footer.style.js'
 
 const accounts = {
   github: 'https://github.com/wangsongiam',
@@ -16,8 +17,8 @@ export default () => {
   }
 
   return (
-    <footer className='footer'>
+    <Footer>
       <ul>{row}</ul>
-    </footer>
+    </Footer>
   )
 }
