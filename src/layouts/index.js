@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Nav from '../components/Nav.jsx'
 import Footer from '../components/Footer.jsx'
-import '../css/prism-coy.css'
+{/* import '../css/prism-coy.css' */}
 import '../theme/global.js'
 import { Container, Background } from './index.style.js'
 
