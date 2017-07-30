@@ -25,7 +25,7 @@ chineseYear.getAnimal(2000)
 ```
 
 ## API
-### .getAnimal(year: number):string
-### .year:array
+.getAnimal(year: number):string
+.year:array
 get zodiac animal name of a year number
 

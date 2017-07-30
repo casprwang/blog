@@ -8,8 +8,18 @@ export const typography = `
   html,
   body {
     font-family: 'Muli', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 17px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.25;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    margin-top: 2.8em;
+    margin-bottom: 1.2em;
   }
 
   h1 {
@@ -39,5 +49,16 @@ export const typography = `
   p {
     font-family: 'Work Sans', sans-serif;
     color: ${Colors.p};
+    margin: 0 auto 1.2em;
+    line-height: 1.5;
+  }
+
+  .gatsby-resp-image-link,
+  img,
+  video,
+  iframe,
+  figure {
+    display: block;
+    margin: 1.1em 0;
   }
 `

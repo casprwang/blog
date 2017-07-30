@@ -67,4 +67,10 @@ export const resets = `
     z-index: 10;
   }
 
+  pre {
+    padding: 0 1em 0;
+    font-size: 1em;
+    border-left: 2px solid gray;
+    margin-bottom: 2em;
+    overflow-x: auto;
 `

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { Header } from '../../theme/containers/Header.js'
 
 const BlogArray = props =>
   <section className="list" key={props.slug}>
@@ -92,15 +93,17 @@ export default class BlogIndex extends React.Component {
     })
 
     return (
-      <div className="content">
+      <div>
         <Helmet
           title={`Blog`}
           meta={[{ name: 'description', content: "Song Wang's Writings" }]}
         />
-        <header>
+        <Header>
+          <div>
           <h1>Blog</h1>
-          <h2>TL;DR</h2>
-        </header>
+          <small>TL;DR</small>
+          </div>
+        </Header>
         <div className="blog-content">
           <h2>Today I learned</h2>
           {TILRows.slice(0, this.state.tilNumber)}

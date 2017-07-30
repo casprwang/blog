@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Content } from './blog-post.style.js'
+import { Header } from '../theme/containers/Header.js'
+import { ContentContainer } from '../theme/containers/ContentContainer.js'
 import { TagSection } from '../components/TagSection.js'
 
 class BlogPostRoute extends React.Component {
@@ -19,26 +20,34 @@ class BlogPostRoute extends React.Component {
             }
           ]}
         />
-        <div className="content">
-          <header>
+        <div>
+          <Header>
             {slug.slice(5, 12) === '/links/'
-              ? <a
-                  rel="noopener noreferrer"
-                  target="__blank"
-                  href={post.frontmatter.link}
-                >
+              ? <div>
+                  <h1>
+                    <a
+                      rel="noopener noreferrer"
+                      target="__blank"
+                      href={post.frontmatter.link}
+                    >
+                      {post.frontmatter.title}
+                    </a>
+                  </h1>
+                  <small>
+                    {post.frontmatter.date}
+                  </small>
+                </div>
+              : <div>
                   <h1>
                     {post.frontmatter.title}
                   </h1>
-                </a>
-              : <h1>
-                  {post.frontmatter.title}
-                </h1>}
-            <small>
-              {post.frontmatter.date}
-            </small>
-          </header>
-          <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+                  <small>
+                    {post.frontmatter.date}
+                  </small>
+                </div>}
+          </Header>
+          <hr />
+          <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
           <TagSection {...this.props} />
         </div>

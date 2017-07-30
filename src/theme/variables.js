@@ -1,5 +1,5 @@
 export const Colors = {
-  h: `#253445`,
-  p: `#394655`,
-  background: `#FFFEF7`
+  h: `rgba(37, 52, 69, 1)`,
+  p: `rgba(57, 70, 85, 1)`,
+  background: `rgba(255, 254, 247, 1)`
 }
