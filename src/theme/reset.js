@@ -73,4 +73,5 @@ export const resets = `
     border-left: 2px solid gray;
     margin-bottom: 2em;
     overflow-x: auto;
+  }
 `
