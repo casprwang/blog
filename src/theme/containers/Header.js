@@ -6,22 +6,26 @@ export const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
   div {
+    float: left;
+    clear: left;
     h1 {
       align-self: stretch;
       font-size: 3em;
       margin-bottom: 0;
       margin-top:0;
-      display: block;
       span {
         opacity: .85;
         font-size: 80%;
       }
     }
     small {
-      float: left;
       opacity: .5;
-      margin-top: 1em;
+      margin-left: .3em;
+      margin-top: .5em;
       }
     }
 `

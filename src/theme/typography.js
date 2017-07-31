@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import { Colors } from './variables.js'
+import { media } from 'theme/utils/media.js'
+
+let body = media.phone`
+  background: red;
+`
 
 export const typography = `
   @import url('https://fonts.googleapis.com/css?family=Muli');
@@ -9,6 +14,9 @@ export const typography = `
   body {
     font-family: 'Muli', sans-serif;
     font-size: 17px;
+    @media screen and (max-width: 600px) {
+      font-size: 15px;
+    }
   }
 
   h1,
@@ -20,6 +28,9 @@ export const typography = `
     text-rendering: optimizeLegibility;
     margin-top: 2.8em;
     margin-bottom: 1.2em;
+    @media screen and (max-width: 600px) {
+      text-align: center;
+    }
   }
 
   h1 {
@@ -61,4 +72,5 @@ export const typography = `
     display: block;
     margin: 1.1em 0;
   }
+
 `

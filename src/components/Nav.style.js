@@ -4,9 +4,9 @@ import { Colors } from 'theme/variables.js'
 
 export const Nav = styled.div`
 
-  font-size: 0.8rem;
+  font-size: 0.8em;
   font-weight: 600;
-  letter-spacing: .35rem;
+  letter-spacing: .35em;
   text-transform: uppercase;
   ul {
     display: block;

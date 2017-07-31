@@ -5,20 +5,26 @@ import { Footer } from './Footer.style.js'
 const accounts = {
   github: 'https://github.com/wangsongiam',
   twitter: 'https://twitter.com/supsupsong',
-  linkedin: 'https://www.linkedin.com/in/song-wang-279a2b126/',
+  linkedin: 'https://www.linkedin.com/in/song-wang-279a2b126/'
 }
 
 export default () => {
   let row = []
   for (let name in accounts) {
     row.push(
-      <li key={name}><a rel="noopener noreferrer" target="__blank" href={accounts[name]} >{name}</a></li>
+      <li key={name}>
+        <a rel="noopener noreferrer" target="__blank" href={accounts[name]}>
+          {name}
+        </a>
+      </li>
     )
   }
 
   return (
     <Footer>
-      <ul>{row}</ul>
+      <ul>
+        {row}
+      </ul>
     </Footer>
   )
 }

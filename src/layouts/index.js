@@ -1,8 +1,8 @@
+import 'theme/global.js'
 import React from 'react'
 import Link from 'gatsby-link'
-import 'theme/global.js'
 import Nav from 'components/Nav'
-import Footer from 'components/Footer'
+import Footer from 'components/Footer.js'
 import { Background } from './index.style.js'
 import { BodyContainer } from 'theme/containers/BodyContainer.js'
 

@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 import { prism } from 'theme/prism-coy.js'
+import { media } from 'theme/utils/media.js'
 
 export const BodyContainer = styled.div`
   width: 650px;
   margin: 0 auto;
   height: 100%;
   ${prism}
-
+  ${media.tablet`
+    width: 88%;
+  `}
 `

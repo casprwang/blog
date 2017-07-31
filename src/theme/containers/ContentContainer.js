@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from 'theme/utils/media.js'
 // import { offSet } from '../utils/offset.js'
 
 // let space = 'calc( 50vw - 325px )'
@@ -27,5 +28,13 @@ export const ContentContainer = styled.div`
       margin-right: .3em;
       margin-left: -.55em;
     }
+  }
+
+  pre {
+    padding: 0 1em 0;
+    font-size: 1em;
+    border-left: 2px solid gray;
+    margin-bottom: 2em;
+    overflow-x: auto;
   }
 `
