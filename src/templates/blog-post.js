@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Header } from '../theme/containers/Header.js'
-import { ContentContainer } from '../theme/containers/ContentContainer.js'
-import { TagSection } from '../components/TagSection.js'
+import { Header } from 'theme/containers/Header.js'
+import { ContentContainer } from 'theme/containers/ContentContainer.js'
+import { TagSection } from 'components/TagSection.js'
 
 class BlogPostRoute extends React.Component {
   render() {

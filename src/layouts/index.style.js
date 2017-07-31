@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors } from '../theme/variables.js'
+import { Colors } from 'theme/variables.js'
 
 
 export const Background = styled.div`

@@ -13,6 +13,10 @@ export const Header = styled.header`
       margin-bottom: 0;
       margin-top:0;
       display: block;
+      span {
+        opacity: .85;
+        font-size: 80%;
+      }
     }
     small {
       float: left;
