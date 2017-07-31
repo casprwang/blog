@@ -46,9 +46,7 @@ class BlogPostRoute extends React.Component {
                   </small>
                 </div>}
           </Header>
-          <hr />
           <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
           <TagSection {...this.props} />
         </div>
       </div>

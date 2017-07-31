@@ -3,7 +3,7 @@ import { media } from 'theme/utils/media'
 
 export const Footer = styled.footer`
   font-size: .9em;
-  margin-top: 2em;
+  margin-top: 4em;
   margin-bottom: 2em;
   float: right;
   ${media.tablet`

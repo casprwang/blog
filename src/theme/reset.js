@@ -2,7 +2,6 @@ export const resets = `
   * {
     margin: 0;
     padding: 0;
-    border: none;
     box-sizing: border-box;
   }
 
@@ -37,8 +36,7 @@ export const resets = `
     background-image: none;
   }
 
-  img,
-  hr {
+  img {
     border: 0;
   }
 
