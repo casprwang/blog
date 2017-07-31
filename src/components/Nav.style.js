@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import { Colors } from 'theme/variables.js'
 
 export const Nav = styled.div`
+
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: .35rem;
