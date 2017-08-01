@@ -5,12 +5,13 @@ export const Footer = styled.footer`
   font-size: .9em;
   margin-top: 4em;
   margin-bottom: 2em;
-  float: right;
-  ${media.tablet`
-    float: none;
-    text-align: center;
-  `}
+  overflow: auto;
   ul {
+    float: right;
+    ${media.tablet`
+      float: none;
+      text-align: center;
+    `}
     li {
       display: inline-block;
       padding: .2em;

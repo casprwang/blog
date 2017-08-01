@@ -5,6 +5,9 @@ export const SearchItem = styled.div`
   h1 {
     text-align: center;
     margin-bottom: 1em;
+    margin-top: 1em;
+    }
+
   }
   h3 {
     font-size: 1.2em;
@@ -16,6 +19,6 @@ export const SearchItem = styled.div`
   padding-top: 0;
   margin-top: 0;
   padding-bottom: 2em;
-  border-bottom: 1px solid;
+  border-top: 1px solid;
   border-color: ${Colors.border}
 `

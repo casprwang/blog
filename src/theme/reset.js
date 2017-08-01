@@ -65,4 +65,13 @@ export const resets = `
     z-index: 10;
   }
 
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+
+  #inner-editor {
+  }
 `
