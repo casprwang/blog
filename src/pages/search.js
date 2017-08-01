@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import { Header } from 'theme/containers/Header.js'
+import { SearchItem } from 'theme/containers/SearchItem.js'
+import { TagItem, TagIndex } from 'theme/containers/TagItem.js'
 
 const searchingFor = term => {
   return function(x) {
@@ -29,20 +31,26 @@ class SearchPage extends React.Component {
     return (
       <div>
         <Header>
-        <h1>Search</h1>
+          <h1>Search</h1>
         </Header>
         <form>
           <input type="text" onChange={this.searchHandler} />
           {this.state.pages.filter(searchingFor(this.state.term)).map(page =>
-            <div>
+            <SearchItem>
               <h1>
                 {page.node.frontmatter.title}
               </h1>
               <h3>
-                {page.node.excerpt || "Link"}
+                {page.node.excerpt}
               </h3>
-              {page.node.frontmatter.tags}
-            </div>
+              <TagIndex>
+                {page.node.frontmatter.tags ? 
+                page.node.frontmatter.tags.map(tag=>
+                  <TagItem>{tag}</TagItem>
+                )
+                : null }
+              </TagIndex>
+            </SearchItem>
           )}
         </form>
       </div>
