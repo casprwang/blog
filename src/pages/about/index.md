@@ -3,7 +3,6 @@ title: About
 date: "2016-05-06"
 layout: page
 ---
-## About me
 Hello, my name is Song Wang.
 
 I am a grad student majored in Computer Science, living in ~~Beijing~~ ~~Chengdu~~ New York.

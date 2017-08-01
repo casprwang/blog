@@ -57,7 +57,8 @@ export const typography = `
     font-size: 0.72em;
   }
 
-  p {
+  p,
+  .message {
     font-family: 'Work Sans', sans-serif;
     color: ${Colors.p};
     margin: 0 auto 1.2em;

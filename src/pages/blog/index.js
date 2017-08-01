@@ -4,7 +4,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Header } from 'theme/containers/Header.js'
 import { BlogArray } from 'components/BlogArray/index.js'
-
+import { LinkArray } from 'components/LinkArray/index.js'
+import { BlogContent } from './index.style.js'
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
@@ -65,8 +66,8 @@ export default class BlogIndex extends React.Component {
      ['til', 'notes', 'links', 'blogs(else)']
   */
     posts.forEach(post => {
-      let slug = post.node.fields.slug
-      let title = post.node.frontmatter.title
+      const { title, link } = post.node.frontmatter
+      const { slug } = post.node.fields
       switch (slug.split('/')[2]) {
         case 'til':
           TILRows.push(<BlogArray slug={slug} title={title} />)
@@ -75,7 +76,7 @@ export default class BlogIndex extends React.Component {
           rows.push(<BlogArray slug={slug} title={title} />)
           break
         case 'links':
-          linkRows.push(<BlogArray slug={slug} title={title} />)
+          linkRows.push(<LinkArray slug={link} title={title} />)
           break
         case 'notes':
           notesRows.push(<BlogArray slug={slug} title={title} />)
@@ -97,7 +98,7 @@ export default class BlogIndex extends React.Component {
             <small>TL;DR</small>
           </div>
         </Header>
-        <div>
+        <BlogContent>
           <h2>Today I learned</h2>
           {TILRows.slice(0, this.state.tilNumber)}
           <button
@@ -137,7 +138,7 @@ export default class BlogIndex extends React.Component {
             more...
           </button>{' '}
           <h2>External Links </h2>
-          <div class="row">{linkRows.slice(0, this.state.postsNumber)}</div>
+          <div>{linkRows.slice(0, this.state.postsNumber)}</div>
           <button
             style={{
               display:
@@ -149,7 +150,7 @@ export default class BlogIndex extends React.Component {
           >
             more...
           </button>{' '}
-        </div>
+        </BlogContent>
       </div>
     )
   }
@@ -175,6 +176,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          excerpt
           fields {
             slug
           }

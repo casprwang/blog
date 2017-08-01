@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 export const BlogArray = props =>
-  <section className="list" key={props.slug}>
+  <section key={props.slug}>
     <h3>
       <Link to={props.slug}>
         {props.title}
