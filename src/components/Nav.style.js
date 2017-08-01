@@ -3,15 +3,15 @@ import Link from 'gatsby-link'
 import { Colors } from 'theme/variables.js'
 
 export const Nav = styled.div`
-
+  display: block;
   font-size: 0.8em;
   font-weight: 600;
   letter-spacing: .35em;
   text-transform: uppercase;
   ul {
-    display: block;
+    overflow: auto;
     li {
-      display: inline-block;
+      display: block;
       vertical-align: middle;
       line-height: 1;
       list-style: none;
