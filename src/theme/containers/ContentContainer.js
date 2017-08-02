@@ -42,4 +42,8 @@ export const ContentContainer = styled.div`
     font-weight: 500;
     text-decoration: underline;
   }
+
+  p {
+    opacity: .99999;
+  }
 `
