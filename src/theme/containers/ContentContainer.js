@@ -37,4 +37,9 @@ export const ContentContainer = styled.div`
     margin-bottom: 2em;
     overflow-x: auto;
   }
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+  }
 `

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const TilContainer = styled.div`
   h2 {
-    margin-top: 1em;
+    margin-top: .5em;
   }
 
   h3 {
@@ -16,7 +16,7 @@ export const TilContainer = styled.div`
 
 export const NoteContainer = styled.div`
   h2 {
-    margin-top: 1em;
+    margin-top: 2em;
   }
 
   h3 {
@@ -31,7 +31,7 @@ export const NoteContainer = styled.div`
 
 export const BlogContainer = styled.div`
   h2 {
-    margin-top: 1em;
+    margin-top: 2em;
   }
 
   h3 {
@@ -45,7 +45,7 @@ export const BlogContainer = styled.div`
 
 export const LinkContainer = styled.div`
   h2 {
-    margin-top: 1em;
+    margin-top: 2em;
   }
 
   h3 {

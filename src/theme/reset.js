@@ -1,3 +1,5 @@
+import { Colors } from 'theme/variables.js'
+
 export const resets = `
   * {
     margin: 0;
@@ -66,10 +68,25 @@ export const resets = `
     z-index: 10;
   }
 
+  input {
+    background: ${Colors.background};
+    font-size: 3em;
+    display: block;
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid ${Colors.background}
+  }
+
   input:focus,
   select:focus,
   textarea:focus,
   button:focus {
-      outline: none;
+    outline: none;
+    background: ${Colors.background};
+    font-size: 3em;
+    display: block;
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid ${Colors.background}
   }
 `

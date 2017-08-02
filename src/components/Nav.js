@@ -3,7 +3,12 @@ import Link from 'gatsby-link'
 import { Nav, NavItem } from './Nav.style.js'
 import styled from 'styled-components'
 
-const paths = ['/', '/about/', '/hire/', '/blog/']
+const paths = [
+  '/', 
+  '/search/',
+  '/about/', 
+  '/blog/'
+]
 
 class Li extends React.Component {
   constructor(props) {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Colors } from 'theme/variables'
 import Link from 'gatsby-link'
 import { Header } from 'theme/containers/Header.js'
 import { SearchItem } from 'theme/containers/SearchItem.js'
@@ -20,7 +21,7 @@ const inputStyle = {
   display: 'block',
   width: '50%',
   border: 'none',
-  borderBottom: '1px solid red'
+  borderBottom: '2px solid gray'
 }
 
 const searchingFor = term => {
