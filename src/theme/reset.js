@@ -65,6 +65,7 @@ export const resets = `
     color: black;
   }
 
+  .gatsby-resp-image-link,
   img {
     width: 100%;
   }
