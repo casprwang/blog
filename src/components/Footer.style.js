@@ -9,7 +9,7 @@ export const Footer = styled.footer`
   ul {
     float: right;
     ${media.tablet`
-      float: none;
+      width: 100%;
       text-align: center;
     `}
     li {

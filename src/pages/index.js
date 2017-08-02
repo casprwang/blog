@@ -12,6 +12,7 @@ import {
   LinkContainer
 } from 'theme/containers/BlogPostsContaners'
 import { Button } from 'components/Button/index.js'
+import Footer from './index.style.js'
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
@@ -100,8 +101,13 @@ export default class BlogIndex extends React.Component {
         />
         <Header>
           <div>
-            <h1>Blog</h1>
-            <small>TL;DR</small>
+            <h1>
+              SongWang<span>.io</span>
+            </h1>
+            <p>
+              Self driven designer/developer focusing in modular design and mordern Web technologies. Javascripter, Vimmer.
+            </p>
+            <Footer></Footer>
           </div>
         </Header>
         <BlogContent>

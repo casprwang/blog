@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Colors } from 'theme/variables'
 
 export const Header = styled.header`
   min-height: 50vh;
@@ -26,9 +27,16 @@ export const Header = styled.header`
       }
     }
     small {
-      opacity: .5;
+      color: ${Colors.p}
       margin-left: .3em;
       margin-top: .5em;
       }
+
+    p {
+      opacity: .8;
+      margin-top: 1.5em;
+      font-size: 1em;
     }
+
+  }
 `
