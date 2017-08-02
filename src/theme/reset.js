@@ -1,6 +1,9 @@
 import { Colors } from 'theme/variables.js'
 
 export const resets = `
+  // @import url('https://fonts.googleapis.com/css?family=Muli');
+  // @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
   * {
     margin: 0;
     padding: 0;
@@ -8,6 +11,8 @@ export const resets = `
   }
 
   html {
+    // font-family: 'Muli', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, Georgia, serif, sans-serif;
     font-size: 100%;
     text-size-adjust: none;
     text-rendering: optimizelegibility;

@@ -4,12 +4,9 @@ import { media } from 'theme/utils/media.js'
 
 
 export const typography = `
-  @import url('https://fonts.googleapis.com/css?family=Muli');
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
   html,
   body {
-    font-family: 'Muli', sans-serif;
     font-size: 17px;
     @media screen and (max-width: 700px) {
       font-size: 15px;
