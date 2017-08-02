@@ -3,9 +3,15 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Header } from 'theme/containers/Header.js'
-import { BlogArray } from 'components/BlogArray/index.js'
-import { LinkArray } from 'components/LinkArray/index.js'
+import { BlogArray, LinkArray } from 'components/Lists/index.js'
 import { BlogContent } from './index.style.js'
+import {
+  TilContainer,
+  NoteContainer,
+  BlogContainer,
+  LinkContainer
+} from 'theme/containers/BlogPostsContaners'
+import { Button } from 'components/Button/index.js'
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
@@ -99,57 +105,51 @@ export default class BlogIndex extends React.Component {
           </div>
         </Header>
         <BlogContent>
-          <h2>Today I learned</h2>
-          {TILRows.slice(0, this.state.tilNumber)}
-          <button
-            style={{
-              display:
-                this.state.tilNumber >= TILRows.length ? 'none' : 'inline',
-              opacity: '.5',
-              fontSize: '92%'
-            }}
-            onClick={() => this._handleClickTil()}
-          >
-            more...
-          </button>{' '}
-          <h2>Notes</h2>
-          {notesRows.slice(0, this.state.noteNumber)}
-          <button
-            style={{
-              display:
-                this.state.noteNumber >= notesRows.length ? 'none' : 'inline',
-              opacity: '.5',
-              fontSize: '92%'
-            }}
-            onClick={() => this._handleClickNote()}
-          >
-            more...
-          </button>{' '}
-          <h2>Blogs</h2>
-          {rows.slice(0, this.state.blogNumber)}
-          <button
-            style={{
-              display: this.state.blogNumber >= rows.length ? 'none' : 'inline',
-              opacity: '.5',
-              fontSize: '92%'
-            }}
-            onClick={() => this._handleClickBlog()}
-          >
-            more...
-          </button>{' '}
-          <h2>External Links </h2>
-          <div>{linkRows.slice(0, this.state.postsNumber)}</div>
-          <button
-            style={{
-              display:
-                this.state.postsNumber >= linkRows.length ? 'none' : 'inline',
-              opacity: '.5',
-              fontSize: '92%'
-            }}
-            onClick={() => this._handleClick()}
-          >
-            more...
-          </button>{' '}
+          <TilContainer>
+            <h2>Today I learned</h2>
+            {TILRows.slice(0, this.state.tilNumber)}
+            <Button
+              number={this.state.tilNumber}
+              length={TILRows.length}
+              onClick={() => this._handleClickTil()}
+            >
+              more...
+            </Button>
+          </TilContainer>
+          <NoteContainer>
+            <h2>Notes</h2>
+            {notesRows.slice(0, this.state.noteNumber)}
+
+            <Button
+              number={this.state.noteNumber}
+              length={notesRows.length}
+              onClick={() => this._handleClickNote()}
+            >
+              more...
+            </Button>
+          </NoteContainer>
+          <BlogContainer>
+            <h2>Blogs</h2>
+            {rows.slice(0, this.state.blogNumber)}
+            <Button
+              number={this.state.blogNumber}
+              length={rows.length}
+              onClick={() => this._handleClickBlog()}
+            >
+              more...
+            </Button>
+          </BlogContainer>
+          <LinkContainer>
+            <h2>External Links </h2>
+            {linkRows.slice(0, this.state.postsNumber)}
+            <Button
+              number={this.state.postsNumber}
+              length={linkRows.length}
+              onClick={() => this._handleClick()}
+            >
+              more...
+            </Button>
+          </LinkContainer>
         </BlogContent>
       </div>
     )

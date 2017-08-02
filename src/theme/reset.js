@@ -55,6 +55,7 @@ export const resets = `
 
   a {
     text-decoration: none;
+    color: black;
   }
 
   img {
@@ -70,8 +71,5 @@ export const resets = `
   textarea:focus,
   button:focus {
       outline: none;
-  }
-
-  #inner-editor {
   }
 `

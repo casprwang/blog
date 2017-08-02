@@ -2,9 +2,6 @@ import styled from 'styled-components'
 import { Colors } from './variables.js'
 import { media } from 'theme/utils/media.js'
 
-let body = media.phone`
-  background: red;
-`
 
 export const typography = `
   @import url('https://fonts.googleapis.com/css?family=Muli');
