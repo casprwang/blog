@@ -87,23 +87,6 @@ button {
   }
 }
 
-button {
-  appearance: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
-  margin-top: .5em;
-}
-
-img,
-hr {
-  border: 0;
-}
-
-del {
-  text-decoration: line-through;
-}
 
 ::placeholder {
   color: $text-color;

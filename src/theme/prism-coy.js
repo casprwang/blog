@@ -1,3 +1,4 @@
+export const prism = `
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
@@ -113,3 +114,4 @@ pre[data-line] code {
 pre .line-highlight {
 	margin-top: 0;
 }
+`

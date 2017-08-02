@@ -1,18 +1,21 @@
-import React from "react"
-import Link from "gatsby-link"
-import "../css/main.scss"
-import Nav from "../components/Nav.jsx"
-import Footer from "../components/Footer.jsx"
-import "../css/prism-coy.css"
-import "../css/main.scss"
+import 'theme/global.js'
+import React from 'react'
+import Link from 'gatsby-link'
+import Nav from 'components/Nav'
+import Footer from 'components/Footer.js'
+import { Background } from './index.style.js'
+import { BodyContainer } from 'theme/containers/BodyContainer.js'
 
 class Wrapper extends React.Component {
   render() {
     return (
       <div>
-        <Nav location={this.props.location} />
-        {this.props.children()}
-        <Footer />
+        <Background />
+        <BodyContainer>
+          <Nav location={this.props.location} />
+          {this.props.children()}
+          <Footer />
+        </BodyContainer>
       </div>
     )
   }

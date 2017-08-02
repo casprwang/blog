@@ -13,21 +13,21 @@ I would say that the default settings from Vimium are more friendly to new in-br
 ## Demos
 ### Gif demo
 
-![Demo](/../../images/uploads/2017-07-26%2014.17.50.gif)
+![Demo](/../../../images/uploads/2017-07-26%2014.17.50.gif)
 
 > Open urls in histories, buffers, searching engines, pinning tabs...
 
 ### Open a url
-![open a url](/../../images/uploads/Screen%20Shot%202017-07-26%20at%202.11.21%20PM.png)
+![open a url](/../../../images/uploads/Screen%20Shot%202017-07-26%20at%202.11.21%20PM.png)
 
 ### Open from buffer
-![open a buffer](/../../images/uploads/Screen%20Shot%202017-07-26%20at%202.11.37%20PM.png)
+![open a buffer](/../../../images/uploads/Screen%20Shot%202017-07-26%20at%202.11.37%20PM.png)
 
 ### Open from history
-![open from history](/../../images/uploads/Screen%20Shot%202017-07-26%20at%202.12.14%20PM.png)
+![open from history](/../../../images/uploads/Screen%20Shot%202017-07-26%20at%202.12.14%20PM.png)
 
 ### Highlighting all the possibilities
-![highlightings](/../../images/uploads/Screen%20Shot%202017-07-26%20at%203.04.04%20PM.png)
+![highlightings](/../../../images/uploads/Screen%20Shot%202017-07-26%20at%203.04.04%20PM.png)
 
 ## Cvim config:
 ```
