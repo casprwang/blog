@@ -6,6 +6,10 @@ tags:
   - cvim
   - chrome
 ---
+Let me just say this: CVim wins, hands down.
+
+I would say that the default settings from Vimium are more friendly to new in-browser vim users(less nerdy bars, smooth scrolling, etc.), but for advanced users, no smooth scroll feels more natural. And critically, Cvim can search strings with highlighting all the possibilities, which, Vimium has never accomplished(they claimed that it is a Chrome issue and I bought it, but who knows now...).
+
 ## Demos
 ### Gif demo
 
@@ -203,4 +207,5 @@ map gb lastUsedTab
 }
 
 ```
+
 
