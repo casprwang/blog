@@ -6,8 +6,11 @@ export const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     text-align: center;
+  }
+  @media screen and (max-width: 540px) {
+    min-height: 95vh;
   }
   div {
     float: left;

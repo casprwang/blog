@@ -11,7 +11,7 @@ export const typography = `
   body {
     font-family: 'Muli', sans-serif;
     font-size: 17px;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       font-size: 15px;
     }
   }
@@ -25,7 +25,7 @@ export const typography = `
     text-rendering: optimizeLegibility;
     margin-top: 2.8em;
     margin-bottom: 1.2em;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       text-align: center;
     }
   }
