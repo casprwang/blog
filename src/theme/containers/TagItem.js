@@ -9,6 +9,9 @@ padding: 0 1em;
 `
 
 export const TagIndex = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: center; 
 font-size: .8em;
 span:first-child {
   margin-left: 0;

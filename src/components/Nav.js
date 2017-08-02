@@ -6,8 +6,7 @@ import styled from 'styled-components'
 const paths = [
   '/', 
   '/search/',
-  '/about/', 
-  '/blog/'
+  '/about/'
 ]
 
 class Li extends React.Component {

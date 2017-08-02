@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Header } from 'theme/containers/Header.js'
 import { BlogArray, LinkArray } from 'components/Lists/index.js'
-import { BlogContent } from './blog/index.style.js'
+import { BlogContent } from './index.style.js'
 import {
   TilContainer,
   NoteContainer,
