@@ -45,8 +45,8 @@ const Footer = styled.footer`
   overflow: auto;
   ul {
     ${media.tablet`
-      float: none;
       text-align: center;
+      padding-left: 2em;
     `} li {
       display: inline-block;
       :first-child {

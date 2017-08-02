@@ -11,7 +11,7 @@ export const Header = styled.header`
     text-align: center;
   }
   @media screen and (max-width: 540px) {
-    min-height: 95vh;
+    min-height: 92vh;
   }
   div {
     float: left;

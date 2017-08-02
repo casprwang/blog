@@ -1,10 +1,5 @@
 import styled from 'styled-components'
 import { media } from 'theme/utils/media.js'
-// import { offSet } from '../utils/offset.js'
-
-// let space = 'calc( 50vw - 325px )'
-// let neg = 'calc( 325px - 50vw )'
-// let space = '10vw'
 
 export const ContentContainer = styled.div`
   >*:first-child {
@@ -19,7 +14,7 @@ export const ContentContainer = styled.div`
     margin-top: .4em;
     list-style: none;
     li {
-      padding-left: -.4em;
+      padding-left: .4em;
       line-height: 1.6;
     }
     li::before{
