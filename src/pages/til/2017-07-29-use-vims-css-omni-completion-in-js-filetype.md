@@ -6,8 +6,10 @@ tags:
   - css
   - productivity
 ---
+```vim
 let g:cm_sources_override = {
     \ 'cm-css': {'scopes': ['css', 'scss', 'javascript', 'jsx', 'javascript.jsx']}
     \ }
-
+```
 more info: https://github.com/roxma/nvim-completion-manager/issues/103
+
