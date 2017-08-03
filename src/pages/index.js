@@ -76,9 +76,6 @@ export default class BlogIndex extends React.Component {
       const { title, link, tags } = post.node.frontmatter
       const { slug } = post.node.fields
       switch (slug.split('/')[2]) {
-        case 'til':
-          TILRows.push(<BlogArray slug={slug} title={title} />)
-          break
         case 'blog':
           rows.push(<BlogArray slug={slug} title={title} />)
           break
@@ -112,17 +109,6 @@ export default class BlogIndex extends React.Component {
           </div>
         </Header>
         <BlogContent>
-          <TilContainer>
-            <h2>Today I learned</h2>
-            {TILRows.slice(0, this.state.tilNumber)}
-            <Button
-              number={this.state.tilNumber}
-              length={TILRows.length}
-              onClick={() => this._handleClickTil()}
-            >
-              more...
-            </Button>
-          </TilContainer>
           <NoteContainer>
             <h2>Notes</h2>
             {notesRows.slice(0, this.state.noteNumber)}
