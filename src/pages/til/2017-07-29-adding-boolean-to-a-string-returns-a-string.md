@@ -5,3 +5,7 @@ tags:
   - javascript
 ---
  
+```js
+let a = true + ''
+//=> a: 'true'
+```
