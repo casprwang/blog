@@ -21,7 +21,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "notes"
-    folder: "src/pages/blog/blog/notes"
+    folder: "src/pages/blog/notes"
     label: "Notes"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
@@ -32,7 +32,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "links"
-    folder: "src/pages/blog/blog/links"
+    folder: "src/pages/blog/links"
     label: "Links"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
