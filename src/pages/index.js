@@ -73,7 +73,7 @@ export default class BlogIndex extends React.Component {
      ['til', 'notes', 'links', 'blogs(else)']
   */
     posts.forEach(post => {
-      const { title, link } = post.node.frontmatter
+      const { title, link, tags } = post.node.frontmatter
       const { slug } = post.node.fields
       switch (slug.split('/')[2]) {
         case 'til':
@@ -83,7 +83,7 @@ export default class BlogIndex extends React.Component {
           rows.push(<BlogArray slug={slug} title={title} />)
           break
         case 'links':
-          linkRows.push(<LinkArray slug={link} title={title} />)
+          linkRows.push(<LinkArray tags={tags} slug={link} title={title} />)
           break
         case 'notes':
           notesRows.push(<BlogArray slug={slug} title={title} />)

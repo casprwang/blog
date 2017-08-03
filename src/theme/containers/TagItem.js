@@ -18,3 +18,10 @@ span:first-child {
 }
 text-align: center;
 `
+
+export const InlineTag = styled.div`
+display: inline-block;
+opacity: .55;
+font-size: .6em;
+margin-left: .5em;
+`

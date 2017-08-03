@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { InlineTag } from 'theme/containers/TagItem'
 
 export const BlogArray = props =>
   <h3>
@@ -9,9 +10,12 @@ export const BlogArray = props =>
   </h3>
 
 
-export const LinkArray = props =>
+export const LinkArray = ({ tags, slug, title }) =>
   <h3>
-    <a href={props.slug} target="_blank" rel="noopener">
-      {props.title}
+    <a href={slug} target="_blank" rel="noopener">
+      {title}
     </a>
+    <InlineTag>
+      {tags&&tags[0].toLowerCase()}
+    </InlineTag>
   </h3>
