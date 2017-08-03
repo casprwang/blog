@@ -37,6 +37,5 @@ export const Header = styled.header`
       margin-top: 1.5em;
       font-size: 1em;
     }
-
   }
 `

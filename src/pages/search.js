@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Colors } from 'theme/variables'
 import Link from 'gatsby-link'
 import { Header } from 'theme/containers/Header.js'
-import { SearchItem } from 'theme/containers/SearchItem.js'
+import { SearchResultWrapper } from 'theme/containers/Search.js'
 import { TagItem, TagIndex } from 'theme/containers/TagItem.js'
 // import { Form } from 'theme/containers/Form.js'
 
@@ -46,54 +46,68 @@ class SearchPage extends React.Component {
     }
     this.searchHandler = this.searchHandler.bind(this)
     this.focus = this.focus.bind(this)
+    this.handleEnter = this.handleEnter.bind(this)
   }
 
-
   componentDidMount() {
-    this.textInput.focus();
+    this.textInput.focus()
   }
 
   searchHandler(event) {
     this.setState({ term: event.target.value })
   }
 
+  handleEnter(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault()
+    }
+  }
 
   focus() {
-    this.textInput.focus();
+    this.textInput.focus()
   }
 
   render() {
     return (
       <div>
         <form style={formStyle}>
-          <input 
-            style={inputStyle} 
-            type="text" 
+          <input
+            style={inputStyle}
+            type="text"
             onChange={this.searchHandler}
-            ref={(input) => { this.textInput = input; }}
+            onKeyDown={this.handleEnter}
+            ref={input => {
+              this.textInput = input
+            }}
           />
-          {this.state.pages.filter(searchingFor(this.state.term)).map(page =>
-            <SearchItem>
-              <h1>
-                {page.node.frontmatter.title}
-              </h1>
-              <h3>
-                {page.node.excerpt}
-              </h3>
-              {/* <h3> */}
-              {/*   {page.node.headings.map(heading=>heading.value)} */}
-              {/* </h3> */}
-              <TagIndex>
-                {page.node.frontmatter.tags
-                  ? page.node.frontmatter.tags.map(tag =>
-                      <TagItem>
-                        {tag}
-                      </TagItem>
-                    )
-                  : null}
-              </TagIndex>
-            </SearchItem>
-          )}
+          <div>
+            {this.state.pages.filter(searchingFor(this.state.term)).map(page =>
+              <SearchResultWrapper>
+                <Link to={page.node.fields.slug}>
+                  <h1>
+                    {page.node.frontmatter.title}
+                  </h1>
+                  <h3>
+                    {page.node.excerpt}
+                  </h3>
+                </Link>
+                {/* <h3> */}
+                {/*   {page.node.headings.map(heading=>heading.value)} */}
+                {/* </h3> */}
+                <TagIndex>
+                  {page.node.frontmatter.tags
+                    ? page.node.fields.tagSlugs.map(tagSlug =>
+                        <Link to={tagSlug}>
+                          <TagItem>
+                            {tagSlug.slice(6, tagSlug.length - 1)}
+                          </TagItem>
+                        </Link>
+                      )
+                    : null}
+                </TagIndex>
+              </SearchResultWrapper>
+            )}
+          </div>
         </form>
       </div>
     )
@@ -119,6 +133,7 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
+            tagSlugs
           }
           frontmatter {
             title

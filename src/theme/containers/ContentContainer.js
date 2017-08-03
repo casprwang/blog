@@ -1,12 +1,13 @@
 import styled from 'styled-components'
+import { Colors } from 'theme/variables'
 import { media } from 'theme/utils/media.js'
 
 export const ContentContainer = styled.div`
-  >*:first-child {
+  > *:first-child {
     margin-top: 0;
-  } 
+  }
 
-// lists
+  // lists
   ul,
   ol {
     font-size: 1em;
@@ -17,7 +18,7 @@ export const ContentContainer = styled.div`
       padding-left: .4em;
       line-height: 1.6;
     }
-    li::before{
+    li::before {
       content: '‧';
       opacity: 1;
       margin-right: .3em;
@@ -35,7 +36,8 @@ export const ContentContainer = styled.div`
 
   a {
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: .1px solid ${Colors.background};
   }
 
   p {

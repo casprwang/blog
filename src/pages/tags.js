@@ -1,7 +1,11 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import kebabCase from "lodash/kebabCase"
+import React from 'react'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import kebabCase from 'lodash/kebabCase'
+import { Header } from 'theme/containers/Header.js'
+import { TagsIndex } from './tags.style.js'
+
+const sortTag = tagArray => tagArray.sort((a, b) => b.totalCount - a.totalCount)
 
 class TagsPageRoute extends React.Component {
   render() {
@@ -11,20 +15,18 @@ class TagsPageRoute extends React.Component {
     return (
       <div>
         <Helmet title={title} />
-        <div>
-          <header>
+        <Header>
+          <div>
             <h1>Tags</h1>
-          </header>
-          <ul>
-            {allTags.map(tag =>
-              <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
-                </Link>
-              </li>
-            )}
-          </ul>
-        </div>
+          </div>
+        </Header>
+        <TagsIndex>
+          {sortTag(allTags).map(tag =>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          )}
+        </TagsIndex>
       </div>
     )
   }

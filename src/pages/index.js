@@ -96,8 +96,8 @@ export default class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet
-          title={`Blog`}
-          meta={[{ name: 'description', content: "Song Wang's Writings" }]}
+          title={`Song Wang`}
+          meta={[{ name: 'description', content: "Song Wang's website" }]}
         />
         <Header>
           <div>
@@ -105,9 +105,10 @@ export default class BlogIndex extends React.Component {
               SongWang<span>.io</span>
             </h1>
             <p>
-              Self driven designer/developer focusing in modular design and mordern Web technologies. Javascripter, Vimmer.
+              Self driven designer/developer focusing in modular design and
+              mordern Web technologies. Javascripter, Vimmer.
             </p>
-            <Footer></Footer>
+            <Footer />
           </div>
         </Header>
         <BlogContent>
