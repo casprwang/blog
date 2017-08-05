@@ -106,7 +106,7 @@ class SearchPage extends React.Component {
                     : null}
                 </TagIndex>
               </SearchResultWrapper>
-            )}
+            ).slice(0,10)}
           </div>
         </form>
       </div>

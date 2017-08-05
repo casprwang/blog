@@ -5,7 +5,9 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 * [Gatsby.js](https://www.gatsbyjs.org/)
 * [React.js](https://facebook.github.io/react/)
 * [Graphql](http://graphql.org/) / [Relay](https://facebook.github.io/relay/)
-* [PostCSS](http://postcss.org/) / [Sass](http://sass-lang.com/)
+* ~~[PostCSS](http://postcss.org/) / [Sass](http://sass-lang.com/)~~
+* [Styled Components](https://www.styled-components.com/)
+* [Netlify-CMS](https://www.netlifycms.org/)
 
 
 ### Tree View
@@ -15,7 +17,9 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 ├── gatsby-node.js         
 └── src/
     ├── components/        > react components
-    ├── css/               > styles folder 
+    ├── theme/             > styled components
+    │   ├── containers/    > styling containers
+    │   └── utils/         > styling functions
     ├── html.js            > DOM
     ├── images             > static images
     ├── layouts            > main wraper for all pages
