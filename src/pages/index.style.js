@@ -43,9 +43,10 @@ export default () => {
 const Footer = styled.footer`
   font-size: .9em;
   margin-top: 3em;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   overflow: hide;
   ul {
+    overflow: hide;
     ${media.tablet`
       text-align: center;
       padding-left: 2em;
