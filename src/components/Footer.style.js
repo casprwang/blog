@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   font-size: .9em;
   margin-top: 4em;
   margin-bottom: 2em;
-  overflow: auto;
+  overflow: hide;
   ul {
     float: right;
     ${media.tablet`

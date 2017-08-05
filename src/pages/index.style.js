@@ -4,10 +4,12 @@ import { media } from 'theme/utils/media'
 
 export const BlogContent = styled.div`
   h2 {
-    font-weight: 600;
+    font-weight: 550;
+    font-size: 1.8em;
   }
   h3 {
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 450;
   }
 `
 
@@ -42,7 +44,7 @@ const Footer = styled.footer`
   font-size: .9em;
   margin-top: 3em;
   margin-bottom: 2em;
-  overflow: auto;
+  overflow: hide;
   ul {
     ${media.tablet`
       text-align: center;
