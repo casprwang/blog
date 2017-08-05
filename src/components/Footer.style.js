@@ -4,9 +4,9 @@ import { media } from 'theme/utils/media'
 export const Footer = styled.footer`
   font-size: .9em;
   margin-top: 4em;
-  margin-bottom: 2em;
-  overflow: hide;
   ul {
+    overflow: auto;
+    margin-bottom: 2em;
     float: right;
     ${media.tablet`
       width: 100%;

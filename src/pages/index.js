@@ -21,7 +21,7 @@ export default class BlogIndex extends React.Component {
       postsNumber: 4,
       tilNumber: 4,
       noteNumber: 4,
-      blogNumber: 4
+      blogNumber: 3
     }
   }
 
@@ -57,12 +57,12 @@ export default class BlogIndex extends React.Component {
       postsNumber: this.state.postsNumber,
       noteNumber: this.state.noteNumber,
       tilNumber: this.state.tilNumber,
-      blogNumber: this.state.blogNumber + 4
+      blogNumber: this.state.blogNumber + 2
     })
   }
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const { bio, title: siteTitle } = this.props.data.site.siteMetadata
     const pathArray = this.props.data.allSitePage.edges
     const rows = []
     const linkRows = []
@@ -75,16 +75,16 @@ export default class BlogIndex extends React.Component {
     posts.forEach(post => {
       const {
         excerpt,
-        fields: { slug },
+        fields: { slug, tagSlugs },
         frontmatter: {date, title, link, tags }
       } = post.node
 
       switch (slug.split('/')[2]) {
         case 'blog':
-          rows.push(<BlogArray tags={tags} date={date} excerpt={excerpt} slug={slug} title={title} />)
+          rows.push(<BlogArray tagSlugs={tagSlugs} tags={tags} date={date} excerpt={excerpt} slug={slug} title={title} />)
           break
         case 'links':
-          linkRows.push(<LinkArray tags={tags} slug={link} title={title} />)
+          linkRows.push(<LinkArray tagSlugs={tagSlugs} tags={tags} slug={link} title={title} />)
           break
         case 'notes':
           notesRows.push(<NoteArray date={date} slug={slug} title={title} />)
@@ -97,7 +97,7 @@ export default class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet
-          title={`Song Wang`}
+          title={siteTitle}
           meta={[{ name: 'description', content: "Song Wang's website" }]}
         />
         <Header>
@@ -106,8 +106,7 @@ export default class BlogIndex extends React.Component {
               SongWang<span>.io</span>
             </h1>
             <p>
-              Self driven designer/developer focusing in modular design and
-              mordern Web technologies. Javascripter, Vimmer.
+              {bio}
             </p>
             <Footer />
           </div>
@@ -165,6 +164,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        bio
       }
     }
     allMarkdownRemark(
@@ -176,6 +176,7 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
+            tagSlugs
           }
           frontmatter {
             title

@@ -32,4 +32,7 @@ export const InlineTag = styled.div`
 `
 
 export const TimeTag = InlineTag.extend`
+  cursor:default;
+  :after {
+  }
 `

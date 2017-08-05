@@ -3,28 +3,40 @@ import moment from 'moment'
 import Link from 'gatsby-link'
 import { InlineTag, TimeTag } from 'theme/containers/TagItem'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
-import { P } from './index.style.js'
 import { ReadMoreButton } from 'components/Button/index.js'
 
-
-export const BlogArray = props =>
-  <div>
-    <h3>
+export const BlogArray = props => {
+  return (
+    <div>
       <Link to={props.slug}>
-        {props.title}
+        <h3>
+          {props.title}
+          <TimeTag>
+            {moment(props.date).format('MMM D, YYYY')}
+          </TimeTag>
+          <InlineTag>
+            <Link to={props.tagSlugs[0]}>
+              {props.tags && props.tags[0].toLowerCase()}
+            </Link>
+          </InlineTag>
+        </h3>
+        <p>
+          {props.excerpt}
+        </p>
       </Link>
-    <TimeTag>{moment(props.date).format('MMM D, YYYY')}</TimeTag>
-    </h3>
-    <P>{props.excerpt}</P>
-  </div>
+    </div>
+  )
+}
 
-export const LinkArray = ({ tags, slug, title }) =>
+export const LinkArray = props =>
   <h3>
-    <a href={slug} target="_blank" rel="noopener">
-      {title}
+    <a href={props.slug} target="_blank" rel="noopener">
+      {props.title}
     </a>
     <InlineTag>
-      {tags && tags[0].toLowerCase()}
+      <Link to={props.tagSlugs[0]}>
+        {props.tags && props.tags[0].toLowerCase()}
+      </Link>
     </InlineTag>
   </h3>
 
@@ -33,6 +45,8 @@ export const NoteArray = ({ slug, date, title }) =>
     <Link to={slug}>
       {title}
     </Link>
-    <InlineTag>{moment(date).fromNow()}</InlineTag>
+    <InlineTag>
+      {moment(date).fromNow()}
+    </InlineTag>
     {/* <InlineTag>{date}</InlineTag> */}
   </h3>
