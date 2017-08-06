@@ -11,6 +11,9 @@ export const BlogContent = styled.div`
     font-size: 1.2em;
     font-weight: 450;
   }
+  h2 + h3 {
+    margin-top: 0;
+  }
 `
 
 const accounts = {

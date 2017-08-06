@@ -1,22 +1,9 @@
 import styled from 'styled-components'
 import { media } from 'theme/utils/media'
 
-export const TilContainer = styled.div`
+const Base = styled.div`
   h2 {
-    margin-top: .5em;
-  }
-
-  h3 {
-    font-size: 1em;
-    margin-top: .5em;
-  }
-  h3:nth-last-child(2) {
-    margin-bottom: .8em;
-  }
-`
-
-export const NoteContainer = styled.div`
-  h2 {
+    font-size: 1.3em;
     margin-top: 2em;
   }
 
@@ -30,18 +17,12 @@ export const NoteContainer = styled.div`
   }
 `
 
-export const BlogContainer = styled.div`
-  h2 {
-    margin-top: 2em;
-  }
 
-  h3 {
-    font-size: 1em;
-    margin-top: .5em;
-  }
-  h3:nth-last-child(2) {
-    margin-bottom: .8em;
-  }
+export const NoteContainer = Base.extend`
+`
+
+
+export const BlogContainer = Base.extend`
   p {
     cursor: default;
     ${media.tablet`
@@ -50,19 +31,5 @@ export const BlogContainer = styled.div`
   }
 `
 
-export const LinkContainer = styled.div`
-  h2 {
-    margin-top: 2em;
-  }
-
-  h3 {
-    // a {
-    //   cursor: alias;
-    // }
-    font-size: 1em;
-    margin-top: .5em;
-  }
-  h3:nth-last-child(2) {
-    margin-bottom: .8em;
-  }
+export const LinkContainer = Base.extend`
 `
