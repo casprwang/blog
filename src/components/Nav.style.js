@@ -31,7 +31,7 @@ export const NavItem = styled(Link)`
   :hover,
   :active,
   :focus {
-    color: ${Colors.p};
+    color: ${Colors.h};
     transition: opacity .1s ease-in;
   }
 
