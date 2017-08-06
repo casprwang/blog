@@ -14,12 +14,12 @@ export const Footer = styled.footer`
     `}
     li {
       display: inline-block;
-      padding: .2em;
+      padding: 1em;
       a {
         position: relative;
     }
     li::after {
-      content: " \\ ";
+      content: ' \\ ';
       }
     }
   }

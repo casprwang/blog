@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Header } from 'theme/containers/Header.js'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
 import { TagSection } from 'components/TagSection.js'
+import Comment from 'components/Comment.js'
 
 class BlogPostRoute extends React.Component {
   render() {
@@ -48,6 +49,7 @@ class BlogPostRoute extends React.Component {
           </Header>
           <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
           <TagSection {...this.props} />
+          <Comment></Comment>
         </div>
       </div>
     )

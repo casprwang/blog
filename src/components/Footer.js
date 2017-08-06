@@ -21,12 +21,12 @@ export default () => {
   }
 
   return (
-  <div>
-    <Footer>
-      <ul>
-        {row}
-      </ul>
-    </Footer>
-  </div>
+    <div>
+      <Footer>
+        <ul>
+          {row}
+        </ul>
+      </Footer>
+    </div>
   )
 }
