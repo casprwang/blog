@@ -20,6 +20,7 @@ export const typography = `
   h2,
   h3,
   h4 {
+    color: ${Colors.h};
     line-height: 1.25;
     font-weight: 600;
     text-rendering: optimizeLegibility;
