@@ -11,6 +11,9 @@ export const typography = `
     @media screen and (max-width: 700px) {
       font-size: 15px;
     }
+    @media screen and (min-width: 1600px) {
+      font-size: 19px;
+    }
   }
 
   h1,
