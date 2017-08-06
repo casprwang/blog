@@ -34,6 +34,7 @@ export const InlineTag = styled.div`
   ` }
 `
 export const BlogInlineTag = InlineTag.extend`
+  color: ${Colors.p};
   a {
     padding: 0 .3em;
     :first-child {
@@ -43,6 +44,7 @@ export const BlogInlineTag = InlineTag.extend`
 `
 
 export const TimeTag = InlineTag.extend`
+  color: ${Colors.p};
   margin-left: 0;
   cursor:default;
   :after {
