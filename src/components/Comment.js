@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { media } from 'theme/utils/media'
 
 const issueUrl = 'https://github.com/wangsongiam/songwang.io/issues/new'
 
@@ -9,6 +10,11 @@ const CommentSection = styled.div`
     font-weight: 550;
     border-bottom: 1px dashed;
     margin-left: .3em;
+    ${media.phone`
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+    `}
   }
 `
 

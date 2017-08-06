@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Em } from './TagSection.style.js'
+import { InlineTag } from 'theme/containers/TagItem'
 
 export const TagSection = props => {
   let tags
@@ -37,4 +38,17 @@ export const TagSection = props => {
     )
   }
   return tagsSection
+}
+
+export const BlogTags = ({ tagNames }) => {
+  let tags = tagNames.map(tagName =>
+      <Link to={`/tags/${tagName}/`}>
+        {tagName}
+      </Link>
+  )
+  return (
+    <div>
+      {tags.slice(0,3)}
+    </div>
+  )
 }

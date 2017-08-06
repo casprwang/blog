@@ -29,7 +29,7 @@ export const ContentContainer = styled.div`
   pre {
     padding: 0 1em 0;
     font-size: 1em;
-    border-left: 2px solid gray;
+    border-left: 2px solid ${ Colors.border };
     margin-bottom: 2em;
     overflow-x: auto;
   }

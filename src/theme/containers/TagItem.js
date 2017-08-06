@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { media } from 'theme/utils/media'
+import { Colors } from 'theme/variables.js'
 
 export const TagItem = styled.span`
   opacity: .8;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
+  border-left: 1px solid ${Colors.border};
+  border-right: 1px solid ${Colors.border};
   margin: 1em;
   padding: 0 1em;
 `
@@ -19,6 +20,8 @@ export const TagIndex = styled.div`
   }
   text-align: center;
 `
+export const TagWrapper = styled.div`
+`
 
 export const InlineTag = styled.div`
   display: inline-block;
@@ -30,8 +33,17 @@ export const InlineTag = styled.div`
     margin-top: .3em;
   ` }
 `
+export const BlogInlineTag = InlineTag.extend`
+  a {
+    padding: 0 .3em;
+    :first-child {
+      padding-left: 0;
+    }
+  }
+`
 
 export const TimeTag = InlineTag.extend`
+  margin-left: 0;
   cursor:default;
   :after {
     content: '|';

@@ -53,7 +53,6 @@ export const typography = `
 
   p,
   .message {
-    font-family: 'Work Sans', sans-serif;
     color: ${Colors.p};
     margin: 0 auto 1.2em;
     line-height: 1.5;

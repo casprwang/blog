@@ -1,9 +1,10 @@
 import React from 'react'
 import moment from 'moment'
 import Link from 'gatsby-link'
-import { InlineTag, TimeTag } from 'theme/containers/TagItem'
+import { InlineTag, BlogInlineTag, TimeTag, TagWrapper } from 'theme/containers/TagItem'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
 import { ReadMoreButton } from 'components/Button/index.js'
+import { BlogTags } from 'components/TagSection'
 
 export const BlogArray = props => {
   return (
@@ -11,14 +12,14 @@ export const BlogArray = props => {
       <Link to={props.slug}>
         <h3>
           {props.title}
-          <TimeTag>
-            {moment(props.date).format('MMM D, YYYY')}
-          </TimeTag>
-          <InlineTag>
-            <Link to={props.tagSlugs[0]}>
-              {props.tags && props.tags[0].toLowerCase()}
-            </Link>
-          </InlineTag>
+          <TagWrapper>
+            <TimeTag>
+              {moment(props.date).format('MMM D, YYYY')}
+            </TimeTag>
+            <BlogInlineTag>
+              <BlogTags tagNames={props.tags} />
+            </BlogInlineTag>
+          </TagWrapper>
         </h3>
         <p>
           {props.excerpt}
