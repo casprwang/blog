@@ -8,12 +8,10 @@ export const Button = styled.button`
   ${media.tablet`
     width: 100%;
     text-align: center;
-  `}
+  `};
 `
 
 export const PullMoreButton = Button.extend`
-  display: ${props=> props.number>=props.length? 'none':'block'};
+  display: ${props => (props.number >= props.length ? 'none' : 'block')};
 `
 
-export const ReadMoreButton = Button.extend`
-`

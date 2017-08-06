@@ -19,25 +19,18 @@ export default class BlogIndex extends React.Component {
     super(props)
     this.state = {
       postsNumber: 4,
-      tilNumber: 4,
       noteNumber: 4,
       blogNumber: 3
     }
   }
 
-  _handleClick() {
-    this.setState({
-      postsNumber: this.state.postsNumber + 4,
-      tilNumber: this.state.tilNumber,
-      noteNumber: this.state.noteNumber,
-      blogNumber: this.state.blogNumber
-    })
+  _handleMouseDown (e){
+    e.preventDefault()
   }
 
-  _handleClickTil() {
+  _handleClickLink() {
     this.setState({
-      postsNumber: this.state.postsNumber,
-      tilNumber: this.state.tilNumber + 4,
+      postsNumber: this.state.postsNumber + 4,
       noteNumber: this.state.noteNumber,
       blogNumber: this.state.blogNumber
     })
@@ -46,7 +39,6 @@ export default class BlogIndex extends React.Component {
   _handleClickNote() {
     this.setState({
       postsNumber: this.state.postsNumber,
-      tilNumber: this.state.tilNumber,
       noteNumber: this.state.noteNumber + 4,
       blogNumber: this.state.blogNumber
     })
@@ -56,7 +48,6 @@ export default class BlogIndex extends React.Component {
     this.setState({
       postsNumber: this.state.postsNumber,
       noteNumber: this.state.noteNumber,
-      tilNumber: this.state.tilNumber,
       blogNumber: this.state.blogNumber + 2
     })
   }
@@ -76,15 +67,31 @@ export default class BlogIndex extends React.Component {
       const {
         excerpt,
         fields: { slug, tagSlugs },
-        frontmatter: {date, title, link, tags }
+        frontmatter: { date, title, link, tags }
       } = post.node
 
       switch (slug.split('/')[2]) {
         case 'blog':
-          rows.push(<BlogArray tagSlugs={tagSlugs} tags={tags} date={date} excerpt={excerpt} slug={slug} title={title} />)
+          rows.push(
+            <BlogArray
+              tagSlugs={tagSlugs}
+              tags={tags}
+              date={date}
+              excerpt={excerpt}
+              slug={slug}
+              title={title}
+            />
+          )
           break
         case 'links':
-          linkRows.push(<LinkArray tagSlugs={tagSlugs} tags={tags} slug={link} title={title} />)
+          linkRows.push(
+            <LinkArray
+              tagSlugs={tagSlugs}
+              tags={tags}
+              slug={link}
+              title={title}
+            />
+          )
           break
         case 'notes':
           notesRows.push(<NoteArray date={date} slug={slug} title={title} />)
@@ -120,6 +127,7 @@ export default class BlogIndex extends React.Component {
               number={this.state.noteNumber}
               length={notesRows.length}
               onClick={() => this._handleClickNote()}
+              onMouseDown={()=> this._handleMouseDown()}
             >
               more...
             </PullMoreButton>
@@ -141,7 +149,7 @@ export default class BlogIndex extends React.Component {
             <PullMoreButton
               number={this.state.postsNumber}
               length={linkRows.length}
-              onClick={() => this._handleClick()}
+              onClick={() => this._handleClickLink()}
             >
               more...
             </PullMoreButton>
