@@ -25,7 +25,7 @@ export const TagWrapper = styled.div`
 
 export const InlineTag = styled.div`
   display: inline-block;
-  opacity: .55;
+  opacity: .60;
   font-size: .6em;
   margin-left: .5em;
   ${ media.phone`
