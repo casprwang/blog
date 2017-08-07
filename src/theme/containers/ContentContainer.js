@@ -19,7 +19,7 @@ export const ContentContainer = styled.div`
     margin-top: .4em;
     list-style: none;
     li {
-      padding-left: .4em;
+      padding-left: 1em;
       line-height: 1.6;
     }
     li::before {
@@ -67,4 +67,10 @@ export const ContentContainer = styled.div`
   p {
     opacity: .99999;
   }
+
+
+  blockquote {
+    font-size: 90%;
+    border-left: 2px solid ${Colors.border};
+    padding-left: 1em;
 `

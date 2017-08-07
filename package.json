@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "author": "Song Wang <wangsongiam@gmail.com>",
   "scripts": {
-    "format": "prettier --no-semi --trailing-comma none --write '*.js'"
+    "format": "prettier --no-semi --trailing-comma none --write '*.js'",
+    "dev": "gatsby develop"
   },
   "dependencies": {
     "babel-plugin-lodash": "^3.2.11",
