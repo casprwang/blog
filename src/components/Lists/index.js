@@ -45,7 +45,7 @@ export const NoteArray = ({ slug, date, title }) =>
     <Link to={slug}>
       {title}
     </Link>
-    <InlineTag>
-    </InlineTag>
+    {/* <InlineTag> */}
+    {/* </InlineTag> */}
     {/* <InlineTag>{date}</InlineTag> */}
   </h3>
