@@ -1,24 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: 'Song Wang',
-    author: 'Song Wang',
-    homeCity: 'New York',
+    title: "Song Wang",
+    author: "Song Wang",
+    homeCity: "New York",
     bio:
-      'Self driven designer/developer focusing on modular design and mordern Web technologies. Javascripter, Vimmer.'
+      "Self driven designer/developer focusing on modular design and mordern Web technologies. Javascripter, Vimmer."
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
+        name: "pages"
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
-        name: 'images'
+        name: "images"
       }
     },
     {
@@ -36,9 +36,9 @@ module.exports = {
               maxWidth: 740
             }
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants'
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants"
         ]
       }
     },
@@ -52,19 +52,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Bricolage',
-        short_name: 'Bricolage',
+        name: "Bricolage",
+        short_name: "Bricolage",
         icons: [
           {
-            src: '/logo.png',
-            sizes: '1024x1024',
-            type: 'image/png'
+            src: "/logo.png",
+            sizes: "1024x1024",
+            type: "image/png"
           }
         ],
-        start_url: '/',
-        background_color: 'white',
-        theme_color: 'white',
-        display: 'minimal-ui'
+        start_url: "/",
+        background_color: "white",
+        theme_color: "white",
+        display: "minimal-ui"
       }
     },
     `gatsby-plugin-offline`,
