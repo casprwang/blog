@@ -1,5 +1,4 @@
 import React from 'react'
-import moment from 'moment'
 import Link from 'gatsby-link'
 import { InlineTag, BlogInlineTag, TimeTag, TagWrapper } from 'theme/containers/TagItem'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
@@ -14,7 +13,7 @@ export const BlogArray = props => {
           {props.title}
           <TagWrapper>
             <TimeTag>
-              {moment(props.date).format('MMM D, YYYY')}
+              {props.date}
             </TimeTag>
             <BlogInlineTag>
               <BlogTags tagNames={props.tags} />
@@ -47,7 +46,6 @@ export const NoteArray = ({ slug, date, title }) =>
       {title}
     </Link>
     <InlineTag>
-      {moment(date).fromNow()}
     </InlineTag>
     {/* <InlineTag>{date}</InlineTag> */}
   </h3>

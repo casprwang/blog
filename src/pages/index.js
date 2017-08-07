@@ -190,7 +190,7 @@ export const pageQuery = graphql`
             title
             link
             tags
-            date
+            date(formatString: "MMM DD, YYYY")
             layout
           }
         }
