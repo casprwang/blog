@@ -4,7 +4,7 @@ date: '2017-08-03T14:33:21-04:00'
 tags:
   - javascript
 ---
-Good
+Bad
 
 ```js
 functioncreateMicrobrewery(name) {
@@ -13,10 +13,13 @@ functioncreateMicrobrewery(name) {
 }
 ```
 
+Good
+
 ```js
 functioncreateMicrobrewery(breweryName='Hipster Brew Co.') {
   // ...
 }
 ```
+
 
 
