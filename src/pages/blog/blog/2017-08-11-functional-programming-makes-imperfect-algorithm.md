@@ -8,7 +8,7 @@ tags:
 ---
 I love functional programming(FP), but at the same time, it makes me tend to reach more space and time in computing. 
 
-As one of the core principles in FP, is avoiding declaring variables, not even temporary variables. Which means all the data are supposed to be taken from the arguments. And so in Javascript, functional programmers tend to avoid `for` looping and make the best use of `Array.prototype.map`, `Array.prototype.reduce`(my favorite), eg., and loop the iterators without touching the variables out of the function's scope. 
+As one of the core principles in FP, is avoiding declaring variables, not even temporary variables. Which means all the data are supposed to be taken from the arguments. And so in Javascript, functional programmers tend to avoid `for` looping and make the best use of `Array.prototype.map`, `Array.prototype.reduce`(my favorite), etc., and loop the iterators without touching the variables out of the function's scope. 
 
 In this example, the algorithm is for determining whether an array of numbers has duplicate elements.
 
@@ -43,7 +43,7 @@ const containsDuplicate = nums => {
 
 from MDN:
 
-> Note: There is no way to stop or break a forEach\(\) loop other than by throwing an exception. If you need such behaviour, > the .forEach\(\) method is the wrong tool, use a plain loop instead. If you are testing the array elements for a predicate > and need a boolean return value, you can use every\(\) or some\(\) instead.
+> Note: There is no way to stop or break a forEach\(\) loop other than by throwing an exception. If you need such behaviour,  the .forEach\(\) method is the wrong tool, use a plain loop instead. If you are testing the array elements for a predicate  and need a boolean return value, you can use every\(\) or some\(\) instead.
 
 So, the more reasonable way would still be the boring `for` loop, which allows you jump out from the middle.
 
@@ -58,3 +58,4 @@ const containDuplicate = nums => {
   return false
 }
 ```
+
