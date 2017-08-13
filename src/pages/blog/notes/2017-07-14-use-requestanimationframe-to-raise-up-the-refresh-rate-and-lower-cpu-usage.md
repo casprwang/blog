@@ -3,7 +3,7 @@ title: 'How to raise up the refresh rate and lower CPU usage '
 date: '2017-07-14T13:36:10-04:00'
 tags:
   - DOM
-  - Javascript
+  - javascript
   - JQuery
 ---
 ```js

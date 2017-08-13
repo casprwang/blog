@@ -27,11 +27,7 @@ const inputStyle = {
 const searchingFor = term => {
   return function(x) {
     return (
-      (x.node.frontmatter.tags &&
-        x.node.frontmatter.tags.every(tag =>
-          tag.toLowerCase().includes(term.toLowerCase())
-        )) ||
-      x.node.frontmatter.title.toLowerCase().includes(term.toLowerCase()) ||
+      x.node.excerpt.toLowerCase().includes(term.toLowerCase()) ||
       !term
     )
   }
@@ -81,32 +77,35 @@ class SearchPage extends React.Component {
             }}
           />
           <div>
-            {this.state.pages.filter(searchingFor(this.state.term)).map(page =>
-              <SearchResultWrapper>
-                <Link to={page.node.fields.slug}>
-                  <h1>
-                    {page.node.frontmatter.title}
-                  </h1>
-                  <h3>
-                    {page.node.excerpt}
-                  </h3>
-                </Link>
-                {/* <h3> */}
-                {/*   {page.node.headings.map(heading=>heading.value)} */}
-                {/* </h3> */}
-                <TagIndex>
-                  {page.node.frontmatter.tags
-                    ? page.node.fields.tagSlugs.map(tagSlug =>
-                        <Link to={tagSlug}>
-                          <TagItem>
-                            {tagSlug.slice(6, tagSlug.length - 1)}
-                          </TagItem>
-                        </Link>
-                      )
-                    : null}
-                </TagIndex>
-              </SearchResultWrapper>
-            ).slice(0,10)}
+            {this.state.pages
+              .filter(searchingFor(this.state.term))
+              .map(page =>
+                <SearchResultWrapper>
+                  <Link to={page.node.fields.slug}>
+                    <h1>
+                      {page.node.frontmatter.title}
+                    </h1>
+                    <h3>
+                      {page.node.excerpt}
+                    </h3>
+                  </Link>
+                  {/* <h3> */}
+                  {/*   {page.node.headings.map(heading=>heading.value)} */}
+                  {/* </h3> */}
+                  <TagIndex>
+                    {page.node.frontmatter.tags
+                      ? page.node.fields.tagSlugs.map(tagSlug =>
+                          <Link to={tagSlug}>
+                            <TagItem>
+                              {tagSlug.slice(6, tagSlug.length - 1)}
+                            </TagItem>
+                          </Link>
+                        )
+                      : null}
+                  </TagIndex>
+                </SearchResultWrapper>
+              )
+              .slice(0, 10)}
           </div>
         </form>
       </div>
