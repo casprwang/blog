@@ -1,5 +1,5 @@
 ---
-title: Scala, a good choice to replace javascript
+title: a good choice to replace javascript'
 date: '2017-08-14T15:39:20-04:00'
 tags:
   - javascript
