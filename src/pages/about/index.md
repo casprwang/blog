@@ -12,7 +12,7 @@ I code with Javascript, Go, Python, HTML, CSS.
 I love open source, and I contributed over [2,000
 times](https://github.com/wangsongiam) last year on Github.
 
-I love to play with [leetcode](https://leetcode.com/wangsup/) and [code wars](https://www.codewars.com/users/wangsup) for practicing a new language and
+I love to play with [leetcode](https://leetcode.com/wangsup/), [code wars](https://www.codewars.com/users/wangsup) for practicing a new language and
 algorithms.
 
 I configure and sync the [dotfile](https://github.com/wangsongiam/dotfiles) for my editors, terminals, apps, macros almost every day.

@@ -119,6 +119,17 @@ export default class BlogIndex extends React.Component {
           </div>
         </Header>
         <BlogContent>
+          <BlogContainer>
+            <h2>Blogs</h2>
+            {rows.slice(0, this.state.blogNumber)}
+            <PullMoreButton
+              number={this.state.blogNumber}
+              length={rows.length}
+              onClick={() => this._handleClickBlog()}
+            >
+              more...
+            </PullMoreButton>
+          </BlogContainer>
           <NoteContainer>
             <h2>Notes</h2>
             {notesRows.slice(0, this.state.noteNumber)}
@@ -132,17 +143,6 @@ export default class BlogIndex extends React.Component {
               more...
             </PullMoreButton>
           </NoteContainer>
-          <BlogContainer>
-            <h2>Blogs</h2>
-            {rows.slice(0, this.state.blogNumber)}
-            <PullMoreButton
-              number={this.state.blogNumber}
-              length={rows.length}
-              onClick={() => this._handleClickBlog()}
-            >
-              more...
-            </PullMoreButton>
-          </BlogContainer>
           <LinkContainer>
             <h2>External Links </h2>
             {linkRows.slice(0, this.state.postsNumber)}
