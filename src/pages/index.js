@@ -18,7 +18,7 @@ export default class BlogIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      postsNumber: 4,
+      postsNumber: 7,
       noteNumber: 4,
       blogNumber: 3
     }
