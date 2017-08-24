@@ -70,13 +70,18 @@ export const ContentContainer = styled.div`
 
 
   blockquote {
+    margin-top: 4em;
     font-size: 90%;
-    padding: 1.5em 1em;
-    padding-bottom: 0;
+    padding: 1.5em 1em 1.5em .5em;
+    margin-bottom: 0;
     font-size: 1em;
     border-top:1px solid ${Colors.border};
     border-bottom:1px solid ${Colors.border};
     position:relative;
+    margin-bottom: 4em;
+    p {
+      margin-bottom:  0;
+    }
 
     :after {
       color:${Colors.border};
