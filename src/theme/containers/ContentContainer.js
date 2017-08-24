@@ -87,8 +87,8 @@ export const ContentContainer = styled.div`
       left:50%;
       bottom:calc(100% - .3em);
       background:#fff;
-      height:55px;
-      width: 55px;
+      height:.7em;
+      width: .7em;
       line-height:normal;
       text-align:center;
       transform:translateX(-50%);
