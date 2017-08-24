@@ -71,6 +71,38 @@ export const ContentContainer = styled.div`
 
   blockquote {
     font-size: 90%;
-    border-left: 2px solid ${Colors.border};
-    padding-left: 1em;
+    padding: 1.5em 1em;
+    padding-bottom: 0;
+    font-size: 1em;
+    border-top:1px solid ${Colors.border};
+    border-bottom:1px solid ${Colors.border};
+    position:relative;
+
+    :after {
+      color:${Colors.border};
+      font-family:serif;
+      content: open-quote;
+      font-size:5em;
+      position:absolute;
+      left:50%;
+      bottom:calc(100% - .3em);
+      background:#fff;
+      height:55px;
+      width: 55px;
+      line-height:normal;
+      text-align:center;
+      transform:translateX(-50%);
+    }
+
+    cite {
+      float: right;
+      font-weight: 400;
+      padding: .3em;
+    }
+  }
+
+  blockquote + p {
+    margin-top: 2em;
+  }
+
 `

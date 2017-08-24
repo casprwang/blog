@@ -41,9 +41,8 @@ const containsDuplicate = nums => {
 ```
 
 
-from MDN:
-
 > Note: There is no way to stop or break a forEach\(\) loop other than by throwing an exception. If you need such behaviour,  the .forEach\(\) method is the wrong tool, use a plain loop instead. If you are testing the array elements for a predicate  and need a boolean return value, you can use every\(\) or some\(\) instead.
+> <cite>-- MDN</cite>
 
 So, the more reasonable way would still be the boring `for` loop, which allows you jump out from the middle.
 
