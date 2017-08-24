@@ -23,7 +23,7 @@ I am a fast typer ranked top 6% of the world with [2,500 matches](https://www.ke
 This site is my blog site, primarily for sharing my ideas and works. It is the 4th version, and its predecessor was built in 2016 with Jekyll. Yet, thanks to the help from GraphQL and Webpack3, this version is even faster in a more progressive way and performs pretty well in the browser.
 
 ![performance](ChromeAudits.png)
-> by Google's [lighthouse](https://developers.google.com/web/tools/lighthouse/)
+by Google's [lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
 Performance is the hardest one to reach full points. I tried my best with
 injecting vanilla CSS or PostCSS with SCSS plugin, yet the best I could got from
