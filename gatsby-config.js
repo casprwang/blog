@@ -4,8 +4,9 @@ module.exports = {
     author: "Song Wang",
     homeCity: "New York",
     bio:
-     "Self motivated Web designer/developer focusing on modular design and mordern Web technologies. Javascripter, Vimmer."
-
+     "Self driven web designer/developer focusing on mordern Web technologies. Javascripter, Vimmer."
+  },
+  plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
