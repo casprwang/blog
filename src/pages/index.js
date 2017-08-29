@@ -6,7 +6,6 @@ import { Header } from 'theme/containers/Header.js'
 import { BlogArray, LinkArray, NoteArray } from 'components/Lists/index.js'
 import { BlogContent } from './index.style.js'
 import {
-  TilContainer,
   NoteContainer,
   BlogContainer,
   LinkContainer
@@ -115,7 +114,7 @@ export default class BlogIndex extends React.Component {
             <p>
               {bio}
             </p>
-            <Footer />
+            <Footer/>
           </div>
         </Header>
         <BlogContent>

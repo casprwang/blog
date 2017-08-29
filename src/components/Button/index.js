@@ -7,7 +7,7 @@ export const Button = styled.button`
   font-size: 92%;
   ${media.tablet`
     width: 100%;
-    text-align: center;
+    text-align: left;
   `};
 `
 

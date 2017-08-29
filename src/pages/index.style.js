@@ -51,8 +51,8 @@ const Footer = styled.footer`
   ul {
     overflow: hide;
     ${media.tablet`
-      text-align: center;
-      padding-left: 2em;
+      // text-align: center;
+      // padding-left: 2em;
     `} li {
       display: inline-block;
       :first-child {
@@ -67,4 +67,5 @@ const Footer = styled.footer`
       }
     }
   }
+  text-decoration:  underline;
 `

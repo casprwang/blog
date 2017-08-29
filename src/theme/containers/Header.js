@@ -8,7 +8,7 @@ export const Header = styled.header`
   justify-content: center;
   text-align: left;
   @media screen and (max-width: 700px) {
-    text-align: center;
+    // text-align: center;
   }
   @media screen and (max-width: 540px) {
     min-height: 92vh;

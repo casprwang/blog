@@ -26,7 +26,7 @@ export const BlogContainer = Base.extend`
   p {
     cursor: default;
     ${media.tablet`
-      text-align: center;
+      // text-align: center;
     `}
   }
 `

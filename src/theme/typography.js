@@ -27,7 +27,7 @@ export const typography = `
     margin-top: 2.8em;
     margin-bottom: 1.2em;
     @media screen and (max-width: 700px) {
-      text-align: center;
+      // text-align: center;
     }
   }
 

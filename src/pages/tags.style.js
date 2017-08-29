@@ -13,7 +13,7 @@ export const TagsIndex = styled.div`
     `}
     ${media.phone`
       width: 100%;
-      text-align: center;
+      // text-align: center;
     `}
   }
 `

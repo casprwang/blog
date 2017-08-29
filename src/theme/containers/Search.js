@@ -3,7 +3,7 @@ import { Colors } from 'theme/variables'
 
 export const SearchResultWrapper = styled.div`
   h1 {
-    text-align: center;
+    // text-align: center;
     margin-bottom: 1em;
     margin-top: 1em;
     width: 100%;

@@ -29,7 +29,7 @@ export const InlineTag = styled.div`
   font-size: .6em;
   margin-left: .5em;
   ${ media.phone`
-    display: block;
+    // display: block;
     margin-top: .3em;
   ` }
 `

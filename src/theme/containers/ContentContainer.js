@@ -95,7 +95,7 @@ export const ContentContainer = styled.div`
       height:.7em;
       width: .7em;
       line-height:normal;
-      text-align:center;
+      // text-align:center;
       transform:translateX(-50%);
     }
 
