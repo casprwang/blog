@@ -109,7 +109,7 @@ export default class BlogIndex extends React.Component {
         <Header>
           <div>
             <h1>
-              SongWang<span>.io</span>
+              Song Wang
             </h1>
             <p>
               {bio}

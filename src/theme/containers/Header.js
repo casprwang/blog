@@ -17,10 +17,14 @@ export const Header = styled.header`
     float: left;
     clear: left;
     h1 {
+      letter-spacing: .01em;
       align-self: stretch;
       font-size: 3em;
       margin-bottom: 0;
       margin-top:0;
+      @media screen and (max-width: 540px) {
+        font-size: 2em;
+      }
       span {
         opacity: .85;
         font-size: 80%;
@@ -35,7 +39,10 @@ export const Header = styled.header`
     p {
       opacity: .8;
       margin-top: 1.5em;
-      font-size: 1em;
+      font-size: 1.2em;
+      @media screen and (max-width: 540px) {
+        font-size: 1.2em;
+      }
     }
   }
 `

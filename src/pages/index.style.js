@@ -55,6 +55,11 @@ const Footer = styled.footer`
       // padding-left: 2em;
     `} li {
       display: inline-block;
+      text-decoration:  underline;
+      font-size: 1.1em;
+      :first-letter {
+        text-transform: uppercase;
+      }
       :first-child {
       padding-left: 0;
       }
@@ -67,5 +72,4 @@ const Footer = styled.footer`
       }
     }
   }
-  text-decoration:  underline;
 `
