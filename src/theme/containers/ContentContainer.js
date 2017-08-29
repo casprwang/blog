@@ -75,29 +75,29 @@ export const ContentContainer = styled.div`
     padding: 1.5em 1em 1.5em .5em;
     margin-bottom: 0;
     font-size: 1em;
-    border-top:1px solid ${Colors.border};
-    border-bottom:1px solid ${Colors.border};
+    border-top:2px solid ${Colors.border};
+    border-bottom:2px solid ${Colors.border};
     position:relative;
     margin-bottom: 4em;
     p {
       margin-bottom:  0;
     }
 
-    :after {
-      color:${Colors.border};
-      font-family:serif;
-      content: open-quote;
-      font-size:5em;
-      position:absolute;
-      left:50%;
-      bottom:calc(100% - .3em);
-      background:#fff;
-      height:.7em;
-      width: .7em;
-      line-height:normal;
-      // text-align:center;
-      transform:translateX(-50%);
-    }
+    // :after {
+    //   color:${Colors.border};
+    //   font-family:serif;
+    //   content: open-quote;
+    //   font-size:5em;
+    //   position:absolute;
+    //   left:50%;
+    //   bottom:calc(100% - .3em);
+    //   background:#fff;
+    //   height:.7em;
+    //   width: .7em;
+    //   line-height:normal;
+    //   // text-align:center;
+    //   transform:translateX(-50%);
+    // }
 
     cite {
       float: right;
