@@ -19,7 +19,6 @@ const findLUSlength =
 I wrote those codes hours ago, now I am converting it to 8 width indentation:
 
 ```js
-```
 const findLUSlength = 
         (a,b)=> 
                 a===b 
@@ -28,6 +27,7 @@ const findLUSlength =
 ```
 
 It looks more straightforward to me, my eyes feel more focused on a ​single function level scope, and that could be necessary for codes without curly braces. 
+
 
 
 
