@@ -1,7 +1,7 @@
 #  [songwang.io](songwang.io)
 Source code for the website about Song Wang at [songwang.io](songwang.io).
 
-### Built with
+### Tech Stack
 * [Gatsby.js](https://www.gatsbyjs.org/)
 * [React.js](https://facebook.github.io/react/)
 * [Graphql](http://graphql.org/) / [Relay](https://facebook.github.io/relay/)
@@ -34,7 +34,7 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
         └── tag-page.js    > template for tag page
 ```
 
-### Installation
+### Local Installation
 
 ```
 git clone https://github.com/wangsongiam/songwang.io.git
