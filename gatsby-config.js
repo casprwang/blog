@@ -4,7 +4,7 @@ module.exports = {
     author: "Song Wang",
     homeCity: "New York",
     bio:
-     "Self driven web designer/developer focusing on mordern Web technologies. Javascripter, Vimmer."
+     "Self driven developer/designer focusing on mordern technologies. Javascripter, Vimmer, New Yorker."
   },
   plugins: [
     {

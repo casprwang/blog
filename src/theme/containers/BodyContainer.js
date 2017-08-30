@@ -11,4 +11,7 @@ export const BodyContainer = styled.div`
   ${media.tablet`
     width: 88%;
   `}
+  @media screen and (min-width: 1600px){
+    width: 700px;
+  }
 `

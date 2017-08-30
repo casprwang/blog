@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Colors } from 'theme/variables'
+import offSet from 'theme/utils/offSet'
 
 export const Header = styled.header`
   min-height: 50vh;
@@ -7,6 +8,8 @@ export const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  @media screen and (min-width: 1600px) {
+  }
   @media screen and (max-width: 700px) {
     // text-align: center;
   }

@@ -1,4 +1,4 @@
-export const offSet = width => `
+export default width => `
   padding-left: ${width};
   padding-right: ${width};
   margin-left: -${width};

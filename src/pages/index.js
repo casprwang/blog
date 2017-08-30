@@ -12,6 +12,7 @@ import {
 } from 'theme/containers/BlogPostsContaners'
 import { PullMoreButton } from 'components/Button/index.js'
 import Footer from './index.style.js'
+import { Colors } from 'theme/variables'
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
@@ -111,7 +112,11 @@ export default class BlogIndex extends React.Component {
             <h1>
               Song Wang
             </h1>
-            <p>
+            <p
+              style={{
+                color: Colors.h
+              }}
+            >
               {bio}
             </p>
             <Footer/>
