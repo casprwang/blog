@@ -4,7 +4,7 @@ module.exports = {
     author: "Song Wang",
     homeCity: "New York",
     bio:
-     "Self driven developer/designer focusing on mordern technologies. Javascripter, Vimmer, New Yorker."
+     "Self driven developer/designer focusing on modern technologies. Javascripter, Vimmer, New Yorker."
   },
   plugins: [
     {
@@ -52,8 +52,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Bricolage",
-        short_name: "Bricolage",
+        name: "Song Wang",
+        short_name: "Song",
         icons: [
           {
             src: "/logo.png",
