@@ -13,25 +13,48 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 ### Tree View
 ```
 .
-├── gatsby-config.js       
-├── gatsby-node.js         
-└── src/
-    ├── components/        > react components
-    ├── theme/             > styled components
-    │   ├── containers/    > styling containers
-    │   └── utils/         > styling functions
-    ├── html.js            > DOM
-    ├── images             > static images
-    ├── layouts            > main wraper for all pages
-    │   └── index.js
-    ├── pages
-    │   ├── index.js       > landing page index
-    │   └── tags.js        > tag index page
-    ├── scripts
-    │   └── new.js         > script for creating new blog/pages
-    └── templates
-        ├── blog-post.js   > template for blog post
-        └── tag-page.js    > template for tag page
+├── static
+│  ├── admin              > Netlify CMS files
+├── src
+│  ├── components
+│  ├── html.jsx           > React Entry Point
+│  ├── images             > image uploads
+│  ├── layouts            > Global layout
+│  │  ├── index.js
+│  ├── pages
+│  │  ├── 404.js
+│  │  ├── about           > About Page
+│  │  ├── blog            > All Posts
+│  │  │  ├── blog
+│  │  │  ├── links
+│  │  │  └── notes
+│  │  ├── cv              > Resume Page
+│  │  ├── hire
+│  │  ├── index.js        > Landing Page
+│  │  ├── index.style.js
+│  │  ├── search.js       > Search Page
+│  │  ├── tags.js         > Tag Page
+│  │  └── tags.style.js
+│  ├── templates
+│  │  ├── blog-post.js    > Blog Template
+│  │  └── tag-page.js     > Tag Page Template
+│  └── theme
+│     ├── containers      > Style Components
+│     ├── global.js       > Global Styles
+│     ├── prism-coy.js    > Code Block Styles
+│     ├── reset.js
+│     ├── typography.js 
+│     ├── utils
+│     │  ├── media.js
+│     │  └── offSet.js
+│     └── variables.js    > Styling Variables
+├── gatsby-browser.js
+├── gatsby-config.js
+├── gatsby-node.js
+├── package-lock.json
+├── package.json
+├── post-build.coffee
+└── yarn.lock
 ```
 
 ### Local Installation
