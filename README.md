@@ -21,19 +21,19 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 │  ├── images             > Image Uploads
 │  ├── layouts            > Global layout
 │  │  ├── index.js
-│  ├── pages
+│  ├── pages              > Pages
 │  │  ├── 404.js
-│  │  ├── about           > About Page
-│  │  ├── blog            > All Posts
+│  │  ├── about
+│  │  ├── blog            > Posts
 │  │  │  ├── blog
 │  │  │  ├── links
 │  │  │  └── notes
-│  │  ├── cv              > Resume Page
+│  │  ├── cv              > Resume
 │  │  ├── hire
-│  │  ├── index.js        > Landing Page
+│  │  ├── index.js        > Landing
 │  │  ├── index.style.js
-│  │  ├── search.js       > Search Page
-│  │  ├── tags.js         > Tag Page
+│  │  ├── search.js       > Search
+│  │  ├── tags.js         > Tag
 │  │  └── tags.style.js
 │  ├── templates
 │  │  ├── blog-post.js    > Blog Template
