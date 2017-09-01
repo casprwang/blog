@@ -18,7 +18,7 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 ├── src
 │  ├── components
 │  ├── html.jsx           > React Entry Point
-│  ├── images             > image uploads
+│  ├── images             > Image Uploads
 │  ├── layouts            > Global layout
 │  │  ├── index.js
 │  ├── pages
@@ -38,18 +38,18 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 │  ├── templates
 │  │  ├── blog-post.js    > Blog Template
 │  │  └── tag-page.js     > Tag Page Template
-│  └── theme
-│     ├── containers      > Style Components
-│     ├── global.js       > Global Styles
-│     ├── prism-coy.js    > Code Block Styles
+│  └── theme              > Styled Components
+│     ├── containers
+│     ├── global.js
+│     ├── prism-coy.js
 │     ├── reset.js
-│     ├── typography.js 
+│     ├── typography.js
 │     ├── utils
 │     │  ├── media.js
 │     │  └── offSet.js
-│     └── variables.js    > Styling Variables
+│     └── variables.js
 ├── gatsby-browser.js
-├── gatsby-config.js
+├── gatsby-config.js      > Gatsby Configuration
 ├── gatsby-node.js
 ├── package-lock.json
 ├── package.json
