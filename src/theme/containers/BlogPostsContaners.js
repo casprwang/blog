@@ -3,12 +3,12 @@ import { media } from 'theme/utils/media'
 
 const Base = styled.div`
   h2 {
-    font-size: 1.62rem;
+    font-size: 1.99rem;
     margin-top: 2em;
   }
 
   h3 {
-    font-size: 1.424rem;
+    font-size: 1.524rem;
     margin-top: .5em;
   }
 
