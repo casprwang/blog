@@ -1,5 +1,5 @@
 #  [songwang.io](songwang.io)
-Source code for the website about Song Wang at [songwang.io](songwang.io).
+Source code for the website about Song Wang at [songwang.io](https://songwang.io).
 
 ### Tech Stack
 * [Gatsby.js](https://www.gatsbyjs.org/)
@@ -14,7 +14,7 @@ Source code for the website about Song Wang at [songwang.io](songwang.io).
 ```
 .
 ├── static
-│  ├── admin              > Netlify CMS files
+│  ├── admin              > Netlify CMS
 ├── src
 │  ├── components
 │  ├── html.jsx           > React Entry Point
