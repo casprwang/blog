@@ -19,7 +19,7 @@ export default class BlogIndex extends React.Component {
     super(props)
     this.state = {
       postsNumber: 7,
-      noteNumber: 4,
+      noteNumber: 6,
       blogNumber: 3
     }
   }
@@ -136,7 +136,9 @@ export default class BlogIndex extends React.Component {
           </BlogContainer>
           <NoteContainer>
             <h2>Notes</h2>
-            {notesRows.slice(0, this.state.noteNumber)}
+              <section>
+                {notesRows.slice(0, this.state.noteNumber)}
+              </section>
 
             <PullMoreButton
               number={this.state.noteNumber}

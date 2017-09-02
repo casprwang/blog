@@ -17,8 +17,20 @@ const Base = styled.div`
   }
 `
 
+const Wrapper = styled.div`
+  background-color: red;
+`
 
 export const NoteContainer = Base.extend`
+  section {
+    display: flex;
+    flex-wrap: wrap;
+
+    h3 {
+      width: 50%;
+      font-size: 1.2em;
+    }
+  }
 `
 
 
@@ -32,4 +44,7 @@ export const BlogContainer = Base.extend`
 `
 
 export const LinkContainer = Base.extend`
+  h3 {
+    font-size: .8em;
+  }
 `
