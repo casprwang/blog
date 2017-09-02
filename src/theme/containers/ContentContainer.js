@@ -23,9 +23,9 @@ export const ContentContainer = styled.div`
       line-height: 1.6;
     }
     li::before {
-      content: '‧';
+      content: '•';
       opacity: 1;
-      margin-right: .3em;
+      margin-right: .5em;
       margin-left: -.55em;
     }
   }
