@@ -36,7 +36,7 @@ export const typography = `
   }
 
   h2 {
-    font-size: 1.62em;
+    font-size: 1.72em;
   }
 
   h3 {
