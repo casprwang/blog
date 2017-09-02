@@ -24,6 +24,7 @@ const inputStyle = {
   borderBottom: '2px solid gray'
 }
 
+
 const searchingFor = term => {
   return function(x) {
     return (
