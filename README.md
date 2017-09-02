@@ -14,47 +14,29 @@ Source code for the website about Song Wang at [songwang.io](https://songwang.io
 ```
 .
 ├── static
-│  ├── admin              > Netlify CMS
+│  └── admin              > Netlify CMS
 ├── src
 │  ├── components
 │  ├── html.jsx           > React Entry Point
 │  ├── images             > Image Uploads
-│  ├── layouts            > Global layout
-│  │  ├── index.js
+│  ├── layouts/           > Global layout
 │  ├── pages              > Pages
-│  │  ├── 404.js
 │  │  ├── about
 │  │  ├── blog            > Posts
 │  │  │  ├── blog
 │  │  │  ├── links
 │  │  │  └── notes
-│  │  ├── cv              > Resume
-│  │  ├── hire
 │  │  ├── index.js        > Landing
-│  │  ├── index.style.js
 │  │  ├── search.js       > Search
-│  │  ├── tags.js         > Tag
-│  │  └── tags.style.js
+│  │  └── tags.js         > Tag
 │  ├── templates
 │  │  ├── blog-post.js    > Blog Template
 │  │  └── tag-page.js     > Tag Page Template
 │  └── theme              > Styled Components
 │     ├── containers
-│     ├── global.js
-│     ├── prism-coy.js
-│     ├── reset.js
-│     ├── typography.js
-│     ├── utils
-│     │  ├── media.js
-│     │  └── offSet.js
-│     └── variables.js
-├── gatsby-browser.js
-├── gatsby-config.js      > Gatsby Configuration
-├── gatsby-node.js
-├── package-lock.json
-├── package.json
-├── post-build.coffee
-└── yarn.lock
+│     └── utils
+├── gatsby-node.js        > Nodes Manipulations
+└── gatsby-config.js      > Gatsby Configuration
 ```
 
 ### Local Installation
