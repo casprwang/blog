@@ -29,6 +29,9 @@ export const NoteContainer = Base.extend`
     h3 {
       width: 50%;
       font-size: 1.2em;
+      ${media.tablet`
+        width: 100%;
+      `}
     }
   }
 `
