@@ -1,4 +1,4 @@
-#  [songwang.io](songwang.io)
+#  [songwang.io](https://songwang.io)
 Source code for the website about Song Wang at [songwang.io](https://songwang.io).
 
 ### Tech Stack
@@ -23,9 +23,9 @@ Source code for the website about Song Wang at [songwang.io](https://songwang.io
 │  ├── pages              > Pages
 │  │  ├── about
 │  │  ├── blog            > Posts
-│  │  │  ├── blog
-│  │  │  ├── links
-│  │  │  └── notes
+│  │  │  ├── blog/
+│  │  │  ├── links/
+│  │  │  └── notes/
 │  │  ├── index.js        > Landing
 │  │  ├── search.js       > Search
 │  │  └── tags.js         > Tag

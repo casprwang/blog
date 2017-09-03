@@ -1,10 +1,12 @@
 ## Topics
-* My workstation
-* Vim
+> * My workstation
+> * Vim
 * Interview questions
 * gatsby
 * CMS
-* Motivation
+* Programming motivations
+* Typing
+* English
 
 
 ## Pages
