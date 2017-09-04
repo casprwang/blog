@@ -63,6 +63,9 @@ export const ProjectContainer = Base.extend`
       width: 33.3%;
       font-size: 1.2em;
       ${media.tablet`
+        width: 50%;
+      `}
+      ${media.phone`
         width: 100%;
       `}
     }
