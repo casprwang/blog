@@ -17,12 +17,10 @@ const Base = styled.div`
   }
 `
 
-const Wrapper = styled.div`
-  background-color: red;
-`
+const Wrapper = styled.div`background-color: red;`
 
 export const NoteContainer = Base.extend`
- letter-spacing: -.010em;
+  letter-spacing: -.010em;
   section {
     display: flex;
     flex-wrap: wrap;
@@ -32,24 +30,23 @@ export const NoteContainer = Base.extend`
       font-size: 1.2em;
       ${media.tablet`
         width: 100%;
-      `}
+      `};
     }
   }
 `
-
 
 export const BlogContainer = Base.extend`
   p {
     cursor: default;
     ${media.tablet`
       // text-align: center;
-    `}
+    `};
   }
 `
 
 export const LinkContainer = Base.extend`
   h3 {
-    font-size: .8em;
+    font-size: 1em;
   }
 `
 
@@ -64,11 +61,9 @@ export const ProjectContainer = Base.extend`
       font-size: 1.2em;
       ${media.tablet`
         width: 50%;
-      `}
-      ${media.phone`
+      `} ${media.phone`
         width: 100%;
-      `}
+      `};
     }
   }
 `
-
