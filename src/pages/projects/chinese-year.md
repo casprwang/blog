@@ -3,7 +3,7 @@ author: Song Wang
 title: Chinese years
 date: '2017-09-02T01:27:47-04:00'
 description: a simple npm package
-color: '#EED447'
+color: '#DBC258'
 tags:
   - npm
   - nodejs
