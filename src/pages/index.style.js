@@ -4,7 +4,6 @@ import { media } from 'theme/utils/media'
 
 export const BlogContent = styled.div`
   h2 {
-    font-weight: 550;
     letter-spacing: .01em;
     font-size: 1.8em;
   }

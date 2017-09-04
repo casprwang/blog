@@ -8,7 +8,7 @@ import {
   LinkArray,
   NoteArray,
   ProjectArray
-  } from 'components/Lists/index.js'
+} from 'components/Lists/index.js'
 import { BlogContent } from './index.style.js'
 import {
   NoteContainer,
@@ -30,7 +30,7 @@ export default class BlogIndex extends React.Component {
     }
   }
 
-  _handleMouseDown (e){
+  _handleMouseDown(e) {
     e.preventDefault()
   }
 
@@ -59,7 +59,10 @@ export default class BlogIndex extends React.Component {
   }
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const { bio, title: siteTitle } = this.props.data.site.siteMetadata
+    const {
+      bio,
+      title: siteTitle
+    } = this.props.data.site.siteMetadata
     const pathArray = this.props.data.allSitePage.edges
     const rows = []
     const linkRows = []
@@ -75,7 +78,13 @@ export default class BlogIndex extends React.Component {
       } = post.node
 
       if (slug.split('/')[1] === 'projects')
-        projectRows.push(<ProjectArray title={title} slug={slug} color={color}  />)
+        projectRows.push(
+          <ProjectArray
+            title={title}
+            slug={slug}
+            color={color}
+          />
+        )
 
       switch (slug.split('/')[2]) {
         case 'blog':
@@ -101,7 +110,13 @@ export default class BlogIndex extends React.Component {
           )
           break
         case 'notes':
-          notesRows.push(<NoteArray date={date} slug={slug} title={title} />)
+          notesRows.push(
+            <NoteArray
+              date={date}
+              slug={slug}
+              title={title}
+            />
+          )
           break
         default:
           break
@@ -112,13 +127,16 @@ export default class BlogIndex extends React.Component {
       <div>
         <Helmet
           title={siteTitle}
-          meta={[{ name: 'description', content: "Song Wang's website" }]}
+          meta={[
+            {
+              name: 'description',
+              content: "Song Wang's website"
+            }
+          ]}
         />
         <Header>
           <div>
-            <h1>
-              Song Wang
-            </h1>
+            <h1>Song Wang</h1>
             <p
               style={{
                 color: Colors.h
@@ -126,15 +144,15 @@ export default class BlogIndex extends React.Component {
             >
               {bio}
             </p>
-            <Footer/>
+            <Footer />
           </div>
         </Header>
         <BlogContent>
           <ProjectContainer>
             {/* <h2>Projects</h2> */}
-              <section>
-                {projectRows}
-              </section>
+            <section>
+              {projectRows}
+            </section>
           </ProjectContainer>
           <BlogContainer>
             <h2>Blogs</h2>
@@ -149,15 +167,15 @@ export default class BlogIndex extends React.Component {
           </BlogContainer>
           <NoteContainer>
             <h2>Notes</h2>
-              <section>
-                {notesRows.slice(0, this.state.noteNumber)}
-              </section>
+            <section>
+              {notesRows.slice(0, this.state.noteNumber)}
+            </section>
 
             <PullMoreButton
               number={this.state.noteNumber}
               length={notesRows.length}
               onClick={() => this._handleClickNote()}
-              onMouseDown={()=> this._handleMouseDown()}
+              onMouseDown={() => this._handleMouseDown()}
             >
               more...
             </PullMoreButton>
