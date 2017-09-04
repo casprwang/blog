@@ -46,7 +46,7 @@ export const BlogContainer = Base.extend`
 
 export const LinkContainer = Base.extend`
   h3 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 `
 
