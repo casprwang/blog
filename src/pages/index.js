@@ -3,12 +3,18 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Header } from 'theme/containers/Header.js'
-import { BlogArray, LinkArray, NoteArray } from 'components/Lists/index.js'
+import {
+  BlogArray,
+  LinkArray,
+  NoteArray,
+  ProjectArray
+  } from 'components/Lists/index.js'
 import { BlogContent } from './index.style.js'
 import {
   NoteContainer,
   BlogContainer,
-  LinkContainer
+  LinkContainer,
+  ProjectContainer
 } from 'theme/containers/BlogPostsContaners'
 import { PullMoreButton } from 'components/Button/index.js'
 import Footer from './index.style.js'
@@ -59,16 +65,17 @@ export default class BlogIndex extends React.Component {
     const linkRows = []
     const TILRows = []
     const notesRows = []
+    const projectRows = []
 
-    /*
-     ['til', 'notes', 'links', 'blogs(else)']
-  */
     posts.forEach(post => {
       const {
         excerpt,
         fields: { slug, tagSlugs },
-        frontmatter: { date, title, link, tags }
+        frontmatter: { date, title, link, tags, color }
       } = post.node
+
+      if (slug.split('/')[1] === 'projects')
+        projectRows.push(<ProjectArray title={title} slug={slug} color={color}  />)
 
       switch (slug.split('/')[2]) {
         case 'blog':
@@ -123,6 +130,12 @@ export default class BlogIndex extends React.Component {
           </div>
         </Header>
         <BlogContent>
+          <ProjectContainer>
+            {/* <h2>Projects</h2> */}
+              <section>
+                {projectRows}
+              </section>
+          </ProjectContainer>
           <BlogContainer>
             <h2>Blogs</h2>
             {rows.slice(0, this.state.blogNumber)}
@@ -150,7 +163,7 @@ export default class BlogIndex extends React.Component {
             </PullMoreButton>
           </NoteContainer>
           <LinkContainer>
-            <h2>External Links </h2>
+            <h2>Links </h2>
             {linkRows.slice(0, this.state.postsNumber)}
             <PullMoreButton
               number={this.state.postsNumber}
@@ -194,6 +207,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            color
             link
             tags
             date(formatString: "MMM DD, YYYY")

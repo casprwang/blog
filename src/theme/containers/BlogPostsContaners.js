@@ -48,6 +48,22 @@ export const BlogContainer = Base.extend`
 
 export const LinkContainer = Base.extend`
   h3 {
-    font-size: .8em;
   }
 `
+
+export const ProjectContainer = Base.extend`
+  width: 100%;
+  section {
+    display: flex;
+    flex-wrap: wrap;
+
+    h3 {
+      width: 33.3%;
+      font-size: 1.2em;
+      ${media.tablet`
+        width: 100%;
+      `}
+    }
+  }
+`
+

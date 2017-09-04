@@ -3,13 +3,19 @@ author: Song Wang
 title: Chinese years
 date: '2017-09-02T01:27:47-04:00'
 description: a simple npm package
+color: '#EED447'
 tags:
   - npm
   - nodejs
   - javascript
   - package
 ---
+
+```
+npm i chinese-year
+```
 a simple NPM package to tell you what Chinese zodiac name in a certain year.
+
 ## Source
 * [Github](https://github.com/wangsongiam/chinese-year)
 * [NPM](https://www.npmjs.com/package/chinese-year)

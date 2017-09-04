@@ -3,6 +3,7 @@ author: Song Wang
 title: Leetcode
 date: '2017-09-02T01:27:47-04:00'
 description: algorithms in javascript
+color: '#893838'
 tags:
   - javascript
   - leetcode

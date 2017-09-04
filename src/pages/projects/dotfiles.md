@@ -3,6 +3,7 @@ author: Song Wang
 title: Dotfiles
 date: '2017-09-02T01:22:48-04:00'
 description: the configurations of my workstation
+color: 'HSLA(133, 100%, 24%, 1.00)'
 tags:
   - vim
   - neovim

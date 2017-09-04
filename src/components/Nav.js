@@ -4,7 +4,7 @@ import { Nav, NavItem } from './Nav.style.js'
 import styled from 'styled-components'
 
 const paths = [
-  '/', 
+  '/',
   '/search/',
   '/about/'
 ]

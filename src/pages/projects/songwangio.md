@@ -1,8 +1,9 @@
 ---
 author: Song Wang
-title: My blog site
+title: SongWang.io
 date: '2017-09-02T01:36:10-04:00'
 description: the website about Song Wang
+color: 'HSLA(267, 31%, 46%, 1.00)'
 tags:
  - gatsby
  - styled components

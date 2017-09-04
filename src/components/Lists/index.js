@@ -1,9 +1,34 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { StyledLink } from 'theme/containers/StyledLink'
 import { InlineTag, BlogInlineTag, TimeTag, TagWrapper } from 'theme/containers/TagItem'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
 import { ReadMoreButton } from 'components/Button/index.js'
 import { BlogTags } from 'components/TagSection'
+
+export const ProjectArray = props => {
+  return (
+    <h3>
+      <StyledLink
+        to={props.slug}
+        color={props.color}
+      >
+        {props.title}
+        {/* <TagWrapper> */}
+        {/*   <TimeTag> */}
+        {/*     {props.date} */}
+        {/*   </TimeTag> */}
+        {/*   <BlogInlineTag> */}
+        {/*     <BlogTags tagNames={props.tags} /> */}
+        {/*   </BlogInlineTag> */}
+        {/* </TagWrapper> */}
+      {/* <p> */}
+      {/*   {props.excerpt} */}
+      {/* </p> */}
+      </StyledLink>
+    </h3>
+  )
+}
 
 export const BlogArray = props => {
   return (
