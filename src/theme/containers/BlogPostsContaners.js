@@ -22,6 +22,7 @@ const Wrapper = styled.div`
 `
 
 export const NoteContainer = Base.extend`
+ letter-spacing: -.010em;
   section {
     display: flex;
     flex-wrap: wrap;
