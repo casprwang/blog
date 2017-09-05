@@ -1,14 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
-import { Header } from 'theme/containers/Header.js'
+import Header from 'components/Header'
 import {
   BlogArray,
   LinkArray,
   NoteArray,
   ProjectArray
-} from 'components/Lists/index.js'
+} from 'components/Lists'
 import { BlogContent } from './index.style.js'
 import {
   NoteContainer,
@@ -16,8 +14,7 @@ import {
   LinkContainer,
   ProjectContainer
 } from 'theme/containers/BlogPostsContaners'
-import { PullMoreButton } from 'components/Button/index.js'
-import Footer from './index.style.js'
+import { PullMoreButton } from 'components/Button'
 import { Colors } from 'theme/variables'
 
 export default class BlogIndex extends React.Component {
@@ -134,19 +131,7 @@ export default class BlogIndex extends React.Component {
             }
           ]}
         />
-        <Header>
-          <div>
-            <h1>Song Wang</h1>
-            <p
-              style={{
-                color: Colors.h
-              }}
-            >
-              {bio}
-            </p>
-            <Footer />
-          </div>
-        </Header>
+        <Header bio = {bio} />
         <BlogContent>
           <ProjectContainer>
             {/* <h2>Projects</h2> */}
