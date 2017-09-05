@@ -38,6 +38,15 @@ export default styled.footer`
             ${Colors.p}
           );
         }
+        ${media.phone`
+          background-image: linear-gradient(
+            transparent,
+            transparent calc(1.1em),
+            ${Colors.p} 5px,
+            ${Colors.p}
+          );
+        `}
+
       }
       li::after {
         content: " \\ ";
