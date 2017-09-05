@@ -1,8 +1,7 @@
 <h1>
-  <a href="https://songwang.io" target="_blank">songwang.io</a>
+  <a rel="noopener noreferrer" href="https://songwang.io" target="__blank">songwang.io</a>
 </h1>
 
-Source code for the website about Song Wang at <span><a href="https://songwang.io" target="_blank">songwang.io</a></span>
 
 ### Tech Stack
 * [Gatsby.js](https://www.gatsbyjs.org/)

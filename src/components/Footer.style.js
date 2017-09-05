@@ -16,7 +16,7 @@ export const Footer = styled.footer`
       padding: 1em;
       a {
         position: relative;
-      }
+
       li::after {
         content: ' \\ ';
       }
