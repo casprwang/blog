@@ -8,8 +8,6 @@ import {
   ProjectArray
 } from 'components/Lists'
 import { BlogContent } from './index.style.js'
-import { PullMoreButton } from 'theme/containers/Button.style.js'
-import { Colors } from 'theme/variables'
 import {
   Projects,
   Notes,
@@ -26,9 +24,6 @@ export default class BlogIndex extends React.Component {
       blogNumber: 3
     }
   }
-
-  //  _handleMouseDown(e) {
-  //  }
 
   _handleClickLink() {
     this.setState({
