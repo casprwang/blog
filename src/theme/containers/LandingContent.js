@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { media } from 'theme/utils/media'
 
-export const BlogContent = styled.div`
+export default styled.div`
   h2 {
     letter-spacing: .01em;
     font-size: 1.8em;

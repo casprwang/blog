@@ -1,13 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Header from 'components/Header'
+import LandingContainer from 'theme/containers/LandingContent'
 import {
   BlogArray,
   LinkArray,
   NoteArray,
   ProjectArray
 } from 'components/Lists'
-import { BlogContent } from './index.style.js'
 import {
   Projects,
   Notes,
@@ -54,7 +54,7 @@ export default class BlogIndex extends React.Component {
       bio,
       title: siteTitle
     } = this.props.data.site.siteMetadata
-    const pathArray = this.props.data.allSitePage.edges
+
     const rows = []
     const linkRows = []
     const TILRows = []
@@ -76,42 +76,42 @@ export default class BlogIndex extends React.Component {
             color={color}
           />
         )
-
-      switch (slug.split('/')[2]) {
-        case 'blog':
-          rows.push(
-            <BlogArray
-              tagSlugs={tagSlugs}
-              tags={tags}
-              date={date}
-              excerpt={excerpt}
-              slug={slug}
-              title={title}
-            />
-          )
-          break
-        case 'links':
-          linkRows.push(
-            <LinkArray
-              tagSlugs={tagSlugs}
-              tags={tags}
-              slug={link}
-              title={title}
-            />
-          )
-          break
-        case 'notes':
-          notesRows.push(
-            <NoteArray
-              date={date}
-              slug={slug}
-              title={title}
-            />
-          )
-          break
-        default:
-          break
-      }
+      else
+        switch (slug.split('/')[2]) {
+          case 'blog':
+            rows.push(
+              <BlogArray
+                tagSlugs={tagSlugs}
+                tags={tags}
+                date={date}
+                excerpt={excerpt}
+                slug={slug}
+                title={title}
+              />
+            )
+            break
+          case 'links':
+            linkRows.push(
+              <LinkArray
+                tagSlugs={tagSlugs}
+                tags={tags}
+                slug={link}
+                title={title}
+              />
+            )
+            break
+          case 'notes':
+            notesRows.push(
+              <NoteArray
+                date={date}
+                slug={slug}
+                title={title}
+              />
+            )
+            break
+          default:
+            break
+        }
     })
 
     return (
@@ -126,7 +126,7 @@ export default class BlogIndex extends React.Component {
           ]}
         />
         <Header bio={bio} />
-        <BlogContent>
+        <LandingContainer>
           <Projects row={projectRows} />
           <Blogs
             row={rows.slice(0, this.state.blogNumber)}
@@ -140,13 +140,13 @@ export default class BlogIndex extends React.Component {
             length={notesRows.length}
             onClick={() => this._handleClickNote()}
           />
-        </BlogContent>
-        <Links
-          row={linkRows.slice(0, this.state.postsNumber)}
-          number={this.state.postsNumber}
-          length={linkRows.length}
-          onClick={() => this._handleClickLink()}
-        />
+          <Links
+            row={linkRows.slice(0, this.state.postsNumber)}
+            number={this.state.postsNumber}
+            length={linkRows.length}
+            onClick={() => this._handleClickLink()}
+          />
+        </LandingContainer>
       </div>
     )
   }

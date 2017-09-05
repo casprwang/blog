@@ -8,7 +8,6 @@ import {
   TagWrapper
 } from 'theme/containers/TagItem'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
-import { ReadMoreButton } from 'components/Button/index.js'
 import { BlogTags } from 'components/TagSection'
 
 export const ProjectArray = props => {
