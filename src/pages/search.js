@@ -1,27 +1,27 @@
-import React, { Component } from "react"
-import { Colors } from "theme/variables"
-import Link from "gatsby-link"
-import { Header } from "theme/containers/Header.js"
-import { SearchResultWrapper } from "theme/containers/Search.js"
-import { TagItem, TagIndex } from "theme/containers/TagItem.js"
+import React, { Component } from 'react'
+import { Colors } from 'theme/variables'
+import Link from 'gatsby-link'
+import { Header } from 'theme/containers/Header.js'
+import { SearchResultWrapper } from 'theme/containers/Search.js'
+import { TagItem, TagIndex } from 'theme/containers/TagItem.js'
 // import { Form } from 'theme/containers/Form.js'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const formStyle = {
-  display: "flex",
-  color: "#000",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column"
+  display: 'flex',
+  color: '#000',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column'
 }
 
 const inputStyle = {
-  fontSize: "3em",
-  display: "block",
-  width: "50%",
-  border: "none",
-  borderBottom: "2px solid gray"
+  fontSize: '3em',
+  display: 'block',
+  width: '50%',
+  border: 'none',
+  borderBottom: '2px solid gray'
 }
 
 const searchingFor = term => {
@@ -43,7 +43,7 @@ class SearchPage extends React.Component {
     super(props)
     this.state = {
       pages: this.props.data.allMarkdownRemark.edges,
-      term: ""
+      term: ''
     }
     this.searchHandler = this.searchHandler.bind(this)
     this.focus = this.focus.bind(this)

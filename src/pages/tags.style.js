@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { media } from "theme/utils/media"
+import styled from 'styled-components'
+import { media } from 'theme/utils/media'
 
 export const TagsIndex = styled.div`
   display: flex;

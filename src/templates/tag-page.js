@@ -1,8 +1,8 @@
-import React from "react"
-import Link from "gatsby-link"
-import Helmet from "react-helmet"
-import { Header } from "theme/containers/Header.js"
-import { LinkContainer } from "theme/containers/BlogPostsContaners"
+import React from 'react'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import { Header } from 'theme/containers/Header.js'
+import { LinkContainer } from 'theme/containers/BlogPostsContaners'
 
 class TagRoute extends React.Component {
   render() {

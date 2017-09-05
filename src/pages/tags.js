@@ -1,9 +1,9 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import kebabCase from "lodash/kebabCase"
-import { Header } from "theme/containers/Header.js"
-import { TagsIndex } from "./tags.style.js"
+import React from 'react'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import kebabCase from 'lodash/kebabCase'
+import { Header } from 'theme/containers/Header.js'
+import { TagsIndex } from './tags.style.js'
 
 const sortTag = tagArray => tagArray.sort((a, b) => b.totalCount - a.totalCount)
 

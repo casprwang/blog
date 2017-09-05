@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { Colors } from "./variables.js"
-import { media } from "theme/utils/media.js"
+import styled from 'styled-components'
+import { Colors } from './variables.js'
+import { media } from 'theme/utils/media.js'
 
 export const typography = `
   html,

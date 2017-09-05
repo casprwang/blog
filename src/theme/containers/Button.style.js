@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { media } from "theme/utils/media.js"
+import styled from 'styled-components'
+import { media } from 'theme/utils/media.js'
 
 export const Button = styled.button`
   margin-top: 0;
@@ -12,5 +12,5 @@ export const Button = styled.button`
 `
 
 export const PullMoreButton = Button.extend`
-  display: ${props => (props.number >= props.length ? "none" : "block")};
+  display: ${props => (props.number >= props.length ? 'none' : 'block')};
 `

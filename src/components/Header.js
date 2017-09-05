@@ -1,8 +1,8 @@
-import React from "react"
-import { Header } from "theme/containers/Header.js"
-import { Colors } from "theme/variables"
+import React from 'react'
+import { Header } from 'theme/containers/Header.js'
+import { Colors } from 'theme/variables'
 // import Footer from '../index.style.js'
-import Footer from "components/LandingFooter"
+import Footer from 'components/LandingFooter'
 
 const styledHeader = ({ bio }) =>
   <Header>

@@ -1,15 +1,15 @@
-import React from "react"
-import Link from "gatsby-link"
-import { StyledLink } from "theme/containers/StyledLink"
+import React from 'react'
+import Link from 'gatsby-link'
+import { StyledLink } from 'theme/containers/StyledLink'
 import {
   InlineTag,
   BlogInlineTag,
   TimeTag,
   TagWrapper,
   NoteTag
-} from "theme/containers/TagItem"
-import { ContentContainer } from "theme/containers/ContentContainer.js"
-import { BlogTags } from "components/TagSection"
+} from 'theme/containers/TagItem'
+import { ContentContainer } from 'theme/containers/ContentContainer.js'
+import { BlogTags } from 'components/TagSection'
 
 export const ProjectArray = props => {
   return (

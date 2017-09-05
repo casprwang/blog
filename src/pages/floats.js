@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   window.postsToShow = 12
 }
 
@@ -8,7 +8,7 @@ class Float extends React.Component {
   constructor() {
     super()
     let postsToShow = 12
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       postsToShow = window.postsToShow
     }
 

@@ -48,9 +48,7 @@ export const ContentContainer = styled.div`
     ${media.phone`
       font-weight: 500;
       background-image: none;
-    `}
-
-    :hover {
+    `} :hover {
       background-image: linear-gradient(
         transparent,
         transparent calc(1.04em),

@@ -17,8 +17,7 @@ class BlogPostRoute extends React.Component {
           meta={[
             {
               name: 'description',
-              content:
-                post.excerpt || post.frontmatter.description
+              content: post.excerpt || post.frontmatter.description
             }
           ]}
         />
@@ -48,9 +47,7 @@ class BlogPostRoute extends React.Component {
                   </small>
                 </div>}
           </Header>
-          <ContentContainer
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
           <TagSection {...this.props} />
           <Comment />
         </div>
