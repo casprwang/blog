@@ -1,5 +1,5 @@
 ---
-title: Arrow function => more expressions && less statements
+title: More expressions and less statements with arrows
 date: '2017-09-04T15:10:21-04:00'
 tags:
   - functional programming
