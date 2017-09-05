@@ -1,19 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Header from 'components/Header'
-import LandingContainer from 'theme/containers/LandingContent'
-import {
-  BlogArray,
-  LinkArray,
-  NoteArray,
-  ProjectArray
-} from 'components/Lists'
-import {
-  Projects,
-  Notes,
-  Blogs,
-  Links
-} from 'components/LandingPage'
+import React from "react"
+import Helmet from "react-helmet"
+import Header from "components/Header"
+import LandingContainer from "theme/containers/LandingContent"
+import { BlogArray, LinkArray, NoteArray, ProjectArray } from "components/Lists"
+import { Projects, Notes, Blogs, Links } from "components/LandingPage"
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
@@ -50,10 +40,7 @@ export default class BlogIndex extends React.Component {
   }
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const {
-      bio,
-      title: siteTitle
-    } = this.props.data.site.siteMetadata
+    const { bio, title: siteTitle } = this.props.data.site.siteMetadata
 
     const rows = []
     const linkRows = []
@@ -68,17 +55,13 @@ export default class BlogIndex extends React.Component {
         frontmatter: { date, title, link, tags, color }
       } = post.node
 
-      if (slug.split('/')[1] === 'projects')
+      if (slug.split("/")[1] === "projects")
         projectRows.push(
-          <ProjectArray
-            title={title}
-            slug={slug}
-            color={color}
-          />
+          <ProjectArray title={title} slug={slug} color={color} />
         )
       else
-        switch (slug.split('/')[2]) {
-          case 'blog':
+        switch (slug.split("/")[2]) {
+          case "blog":
             rows.push(
               <BlogArray
                 tagSlugs={tagSlugs}
@@ -90,7 +73,7 @@ export default class BlogIndex extends React.Component {
               />
             )
             break
-          case 'links':
+          case "links":
             linkRows.push(
               <LinkArray
                 tagSlugs={tagSlugs}
@@ -100,9 +83,11 @@ export default class BlogIndex extends React.Component {
               />
             )
             break
-          case 'notes':
+          case "notes":
             notesRows.push(
               <NoteArray
+                tagSlugs={tagSlugs}
+                tags={tags}
                 date={date}
                 slug={slug}
                 title={title}
@@ -120,7 +105,7 @@ export default class BlogIndex extends React.Component {
           title={siteTitle}
           meta={[
             {
-              name: 'description',
+              name: "description",
               content: "Song Wang's website"
             }
           ]}

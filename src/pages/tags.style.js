@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
 export const TagsIndex = styled.div`
   display: flex;
@@ -10,10 +10,9 @@ export const TagsIndex = styled.div`
     ${media.tablet`
       width: 50%;
       text-align: center;
-    `}
-    ${media.phone`
+    `} ${media.phone`
       width: 100%;
       // text-align: center;
-    `}
+    `};
   }
 `

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import Link from 'gatsby-link'
-import { Colors } from 'theme/variables.js'
+import styled from "styled-components"
+import Link from "gatsby-link"
+import { Colors } from "theme/variables.js"
 
 export const Nav = styled.div`
   display: block;
@@ -43,5 +43,5 @@ export const NavItem = styled(Link)`
 `
 
 NavItem.defaultProps = {
-  activeClassName: 'active'
+  activeClassName: "active"
 }

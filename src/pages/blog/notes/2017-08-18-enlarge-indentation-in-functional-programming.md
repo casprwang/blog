@@ -3,6 +3,7 @@ title: Enlarge indentation in functional programming
 date: '2017-08-18T19:22:49-04:00'
 tags:
   - coding
+  - functional programming
 ---
 Recently, I was learning functional programming, and I happened to notice in [this book](https://github.com/getify/Functional-Light-JS/blob/7ad68a545f2800611d11d10d5a8337e4561c867e/ch3.md), the author uses eight widths of indentation all the time. To be honest, that's not the coding styled I would like to read/code, and I was pissed by reading that enlarged indentation a lot. But surprisingly, it didn't piss me at all. 
 

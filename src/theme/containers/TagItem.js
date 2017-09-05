@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
-import { Colors } from 'theme/variables.js'
+import styled from "styled-components"
+import { media } from "theme/utils/media"
+import { Colors } from "theme/variables.js"
 
 export const TagItem = styled.span`
   opacity: .8;
@@ -20,7 +20,17 @@ export const TagIndex = styled.div`
   }
   text-align: center;
 `
-export const TagWrapper = styled.div`
+export const TagWrapper = styled.div``
+
+export const NoteTag = styled.div`
+  display: block;
+  opacity: .60;
+  font-size: .6em;
+  margin-left: 0;
+  ${media.phone`
+    // display: block;
+    margin-top: .3em;
+  `};
 `
 
 export const InlineTag = styled.div`
@@ -28,10 +38,10 @@ export const InlineTag = styled.div`
   opacity: .60;
   font-size: .6em;
   margin-left: .5em;
-  ${ media.phone`
+  ${media.phone`
     // display: block;
     margin-top: .3em;
-  ` }
+  `};
 `
 export const BlogInlineTag = InlineTag.extend`
   color: ${Colors.h};
@@ -46,7 +56,7 @@ export const BlogInlineTag = InlineTag.extend`
 export const TimeTag = InlineTag.extend`
   color: ${Colors.h};
   margin-left: 0;
-  cursor:default;
+  cursor: default;
   :after {
     content: '|';
     margin-left: .5em;

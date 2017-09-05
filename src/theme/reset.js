@@ -1,4 +1,4 @@
-import { Colors } from 'theme/variables.js'
+import { Colors } from "theme/variables.js"
 
 export const resets = `
   * {

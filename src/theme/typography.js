@@ -1,10 +1,8 @@
-import styled from 'styled-components'
-import { Colors } from './variables.js'
-import { media } from 'theme/utils/media.js'
-
+import styled from "styled-components"
+import { Colors } from "./variables.js"
+import { media } from "theme/utils/media.js"
 
 export const typography = `
-
   html,
   body {
     font-size: 17px;
@@ -29,18 +27,6 @@ export const typography = `
     @media screen and (max-width: 700px) {
       // text-align: center;
     }
-  }
-
-  h1 {
-    font-size: 2.027em;
-  }
-
-  h2 {
-    font-size: 1.62em;
-  }
-
-  h3 {
-    font-size: 1.424em;
   }
 
   h4 {

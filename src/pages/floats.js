@@ -1,15 +1,14 @@
 import React from "react"
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   window.postsToShow = 12
 }
-
 
 class Float extends React.Component {
   constructor() {
     super()
     let postsToShow = 12
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       postsToShow = window.postsToShow
     }
 
@@ -18,9 +17,9 @@ class Float extends React.Component {
       postsToShow
     }
   }
-  
+
   update() {
-    const distanceToBottom = 
+    const distanceToBottom =
       document.documentElement.offsetHeight -
       (window.scrollY + window.innerHeight)
     if (this.state.showingMore && distanceToBottom < 100) {
@@ -32,8 +31,7 @@ class Float extends React.Component {
   handleScroll = () => {
     if (!this.ticking) {
       this.ticking = true
-      requestAnimationFrame(()=> this.update())
+      requestAnimationFrame(() => this.update())
     }
   }
-
 }

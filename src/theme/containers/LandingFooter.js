@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
 export const Footer = styled.footer`
   font-size: .9em;
@@ -13,13 +13,13 @@ export const Footer = styled.footer`
       // padding-left: 2em;
     `} li {
       display: inline-block;
-      text-decoration:  underline;
+      text-decoration: underline;
       font-size: 1.1em;
       :first-letter {
         text-transform: uppercase;
       }
       :first-child {
-      padding-left: 0;
+        padding-left: 0;
       }
       padding: 2em;
       a {

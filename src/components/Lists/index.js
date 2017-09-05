@@ -1,31 +1,21 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { StyledLink } from 'theme/containers/StyledLink'
+import React from "react"
+import Link from "gatsby-link"
+import { StyledLink } from "theme/containers/StyledLink"
 import {
   InlineTag,
   BlogInlineTag,
   TimeTag,
-  TagWrapper
-} from 'theme/containers/TagItem'
-import { ContentContainer } from 'theme/containers/ContentContainer.js'
-import { BlogTags } from 'components/TagSection'
+  TagWrapper,
+  NoteTag
+} from "theme/containers/TagItem"
+import { ContentContainer } from "theme/containers/ContentContainer.js"
+import { BlogTags } from "components/TagSection"
 
 export const ProjectArray = props => {
   return (
     <h3>
       <StyledLink to={props.slug} color={props.color}>
         {props.title}
-        {/* <TagWrapper> */}
-        {/*   <TimeTag> */}
-        {/*     {props.date} */}
-        {/*   </TimeTag> */}
-        {/*   <BlogInlineTag> */}
-        {/*     <BlogTags tagNames={props.tags} /> */}
-        {/*   </BlogInlineTag> */}
-        {/* </TagWrapper> */}
-        {/* <p> */}
-        {/*   {props.excerpt} */}
-        {/* </p> */}
       </StyledLink>
     </h3>
   )
@@ -59,19 +49,16 @@ export const LinkArray = props =>
     <a href={props.slug} target="_blank" rel="noopener">
       {props.title}
     </a>
-    <InlineTag>
+  </h3>
+
+export const NoteArray = props =>
+  <h3>
+    <Link to={props.slug}>
+      {props.title}
+    </Link>
+    <NoteTag>
       <Link to={props.tagSlugs[0]}>
         {props.tags && props.tags[0].toLowerCase()}
       </Link>
-    </InlineTag>
-  </h3>
-
-export const NoteArray = ({ slug, date, title }) =>
-  <h3>
-    <Link to={slug}>
-      {title}
-    </Link>
-    {/* <InlineTag> */}
-    {/* </InlineTag> */}
-    {/* <InlineTag>{date}</InlineTag> */}
+    </NoteTag>
   </h3>

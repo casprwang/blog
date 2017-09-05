@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
 export const Footer = styled.footer`
   font-size: .9em;
@@ -11,15 +11,14 @@ export const Footer = styled.footer`
     ${media.tablet`
       width: 100%;
       text-align: center;
-    `}
-    li {
+    `} li {
       display: inline-block;
       padding: 1em;
       a {
         position: relative;
-    }
-    li::after {
-      content: ' \\ ';
+      }
+      li::after {
+        content: ' \\ ';
       }
     }
   }

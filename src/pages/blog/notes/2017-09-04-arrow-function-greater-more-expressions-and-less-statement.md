@@ -2,7 +2,7 @@
 title: Arrow function => more expressions && less statements
 date: '2017-09-04T15:10:21-04:00'
 tags:
-  - funtional programming
+  - functional programming
   - es6
 ---
 You better do rather than declare!

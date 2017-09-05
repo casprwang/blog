@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import React from "react"
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
-const issueUrl = 'https://github.com/wangsongiam/songwang.io/issues/new'
+const issueUrl = "https://github.com/wangsongiam/songwang.io/issues/new"
 
 const CommentSection = styled.div`
   margin-top: 2em;
@@ -14,14 +14,14 @@ const CommentSection = styled.div`
       display: inline-block;
       text-align: center;
       margin: 0 auto;
-    `}
+    `};
   }
 `
 
 export default () =>
   <CommentSection>
     <p>
-      Questions, Comments, Suggestions? 
+      Questions, Comments, Suggestions?
       <a rel="noopener noreferrer" target="__blank" href={issueUrl}>
         Open an Issue
       </a>

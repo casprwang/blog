@@ -1,11 +1,11 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { Footer } from './Footer.style.js'
+import React from "react"
+import Link from "gatsby-link"
+import { Footer } from "./Footer.style.js"
 
 const accounts = {
-  github: 'https://github.com/wangsongiam',
-  twitter: 'https://twitter.com/supsupsong',
-  linkedin: 'https://www.linkedin.com/in/song-wang-279a2b126/'
+  github: "https://github.com/wangsongiam",
+  twitter: "https://twitter.com/supsupsong",
+  linkedin: "https://www.linkedin.com/in/song-wang-279a2b126/"
 }
 
 export default () => {

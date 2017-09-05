@@ -1,6 +1,6 @@
-import React from 'react'
-import { BlogContainer } from 'theme/containers/BlogPostsContaners'
-import { PullMoreButton } from 'theme/containers/Button.style.js'
+import React from "react"
+import { BlogContainer } from "theme/containers/BlogPostsContaners"
+import { PullMoreButton } from "theme/containers/Button.style.js"
 
 export default props =>
   <BlogContainer>

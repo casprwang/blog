@@ -4,7 +4,6 @@ date: '2017-08-11T01:56:57-04:00'
 tags:
   - functional programming
   - javascript
-  - es6
 ---
 I love functional programming(FP), but at the same time, it makes me tend to reach more space and time in computing. 
 

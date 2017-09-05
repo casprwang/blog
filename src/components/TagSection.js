@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { Em } from './TagSection.style.js'
-import { InlineTag } from 'theme/containers/TagItem'
+import React from "react"
+import Link from "gatsby-link"
+import { Em } from "./TagSection.style.js"
+import { InlineTag } from "theme/containers/TagItem"
 
 export const TagSection = props => {
   let tags
@@ -12,7 +12,7 @@ export const TagSection = props => {
       const divider =
         i < tagsArray.length - 1 &&
         <span>
-          {', '}
+          {", "}
         </span>
       return (
         <span key={tag}>
@@ -27,8 +27,8 @@ export const TagSection = props => {
       <Em>
         <span
           style={{
-            opacity: '.4',
-            paddingRight: '.4em'
+            opacity: ".4",
+            paddingRight: ".4em"
           }}
         >
           Tagged with
@@ -42,13 +42,13 @@ export const TagSection = props => {
 
 export const BlogTags = ({ tagNames }) => {
   let tags = tagNames.map(tagName =>
-      <Link to={`/tags/${tagName}/`}>
-        {tagName}
-      </Link>
+    <Link to={`/tags/${tagName}/`}>
+      {tagName}
+    </Link>
   )
   return (
     <div>
-      {tags.slice(0,3)}
+      {tags.slice(0, 3)}
     </div>
   )
 }

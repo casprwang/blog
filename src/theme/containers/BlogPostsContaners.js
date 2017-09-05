@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
 const Base = styled.div`
   h2 {
@@ -19,8 +19,15 @@ const Base = styled.div`
 
 const Wrapper = styled.div`background-color: red;`
 
-export const NoteContainer = Base.extend`
-  letter-spacing: -.010em;
+export const NoteContainer = Base.extend`// letter-spacing: -.010em;`
+
+export const BlogContainer = Base.extend`
+  p {
+    cursor: default;
+  }
+`
+
+export const LinkContainer = Base.extend`
   section {
     display: flex;
     flex-wrap: wrap;
@@ -32,21 +39,6 @@ export const NoteContainer = Base.extend`
         width: 100%;
       `};
     }
-  }
-`
-
-export const BlogContainer = Base.extend`
-  p {
-    cursor: default;
-    ${media.tablet`
-      // text-align: center;
-    `};
-  }
-`
-
-export const LinkContainer = Base.extend`
-  h3 {
-    font-size: 1.2em;
   }
 `
 
