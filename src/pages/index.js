@@ -15,6 +15,10 @@ export default class BlogIndex extends React.Component {
     }
   }
 
+//  _handleMouseDown (e){
+//    e.preventDefault()
+//  }
+
   _handleClickLink() {
     this.setState({
       postsNumber: this.state.postsNumber + 4,
