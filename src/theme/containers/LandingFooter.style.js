@@ -39,12 +39,8 @@ export default styled.footer`
           );
         }
         ${media.phone`
-          background-image: linear-gradient(
-            transparent,
-            transparent calc(1.1em),
-            ${Colors.p} 5px,
-            ${Colors.p}
-          );
+          background-image: none;
+          border-bottom: 1px solid ${Colors.p};
         `}
 
       }
