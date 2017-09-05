@@ -48,7 +48,7 @@ npm i
 npm run dev
 ```
 
-### Inspired by 
+### Acknowledgments
 - almace-scaffolding
 - bricolage.io
 - yuppi.es

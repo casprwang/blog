@@ -8,14 +8,14 @@ import {
   ProjectArray
 } from 'components/Lists'
 import { BlogContent } from './index.style.js'
-import {
-  NoteContainer,
-  BlogContainer,
-  LinkContainer,
-  ProjectContainer
-} from 'theme/containers/BlogPostsContaners'
-import { PullMoreButton } from 'components/Button'
+import { PullMoreButton } from 'theme/containers/Button.style.js'
 import { Colors } from 'theme/variables'
+import {
+  Projects,
+  Notes,
+  Blogs,
+  Links
+} from 'components/LandingPage'
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
@@ -27,9 +27,8 @@ export default class BlogIndex extends React.Component {
     }
   }
 
-  _handleMouseDown(e) {
-    e.preventDefault()
-  }
+  //  _handleMouseDown(e) {
+  //  }
 
   _handleClickLink() {
     this.setState({
@@ -131,52 +130,28 @@ export default class BlogIndex extends React.Component {
             }
           ]}
         />
-        <Header bio = {bio} />
+        <Header bio={bio} />
         <BlogContent>
-          <ProjectContainer>
-            {/* <h2>Projects</h2> */}
-            <section>
-              {projectRows}
-            </section>
-          </ProjectContainer>
-          <BlogContainer>
-            <h2>Blogs</h2>
-            {rows.slice(0, this.state.blogNumber)}
-            <PullMoreButton
-              number={this.state.blogNumber}
-              length={rows.length}
-              onClick={() => this._handleClickBlog()}
-            >
-              more...
-            </PullMoreButton>
-          </BlogContainer>
-          <NoteContainer>
-            <h2>Notes</h2>
-            <section>
-              {notesRows.slice(0, this.state.noteNumber)}
-            </section>
-
-            <PullMoreButton
-              number={this.state.noteNumber}
-              length={notesRows.length}
-              onClick={() => this._handleClickNote()}
-              onMouseDown={() => this._handleMouseDown()}
-            >
-              more...
-            </PullMoreButton>
-          </NoteContainer>
-          <LinkContainer>
-            <h2>Links </h2>
-            {linkRows.slice(0, this.state.postsNumber)}
-            <PullMoreButton
-              number={this.state.postsNumber}
-              length={linkRows.length}
-              onClick={() => this._handleClickLink()}
-            >
-              more...
-            </PullMoreButton>
-          </LinkContainer>
+          <Projects row={projectRows} />
+          <Blogs
+            row={rows.slice(0, this.state.blogNumber)}
+            number={this.state.blogNumber}
+            length={rows.length}
+            onClick={() => this._handleClickBlog()}
+          />
+          <Notes
+            row={notesRows.slice(0, this.state.noteNumber)}
+            number={this.state.noteNumber}
+            length={notesRows.length}
+            onClick={() => this._handleClickNote()}
+          />
         </BlogContent>
+        <Links
+          row={linkRows.slice(0, this.state.postsNumber)}
+          number={this.state.postsNumber}
+          length={linkRows.length}
+          onClick={() => this._handleClickLink()}
+        />
       </div>
     )
   }
