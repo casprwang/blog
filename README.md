@@ -30,11 +30,7 @@ Source code for the website about Song Wang at [songwang.io](https://songwang.io
 │  │  ├── search.js       > Search
 │  │  └── tags.js         > Tag
 │  ├── templates
-│  │  ├── blog-post.js    > Blog Template
-│  │  └── tag-page.js     > Tag Page Template
 │  └── theme              > Styled Components
-│     ├── containers
-│     └── utils
 ├── gatsby-node.js        > Nodes Manipulations
 └── gatsby-config.js      > Gatsby Configuration
 ```
