@@ -42,7 +42,7 @@ export const prism = `
 .token.entity,
 .token.url,
 .token.variable {
-	color: ${Colors.h};
+	// color: ${Colors.h};
 }
 
 .token.atrule,
@@ -55,12 +55,12 @@ export const prism = `
 
 .token.regex,
 .token.important {
-	color: #e90;
+	// color: #e90;
 }
 
 .language-css .token.string,
 .style .token.string {
-	color: #a67f59;
+	// color: #a67f59;
 }
 
 .token.important {
@@ -86,7 +86,7 @@ export const prism = `
 .token.tab:not(:empty):before,
 .token.cr:before,
 .token.lf:before {
-	color: #e0d7d1;
+	// color: #e0d7d1;
 }
 
 /* Plugin styles: Line Numbers */
