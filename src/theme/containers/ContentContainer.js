@@ -31,8 +31,9 @@ export const ContentContainer = styled.div`
   }
 
   pre {
+    font-size: .9em;
+    color: ${Colors.p};
     padding: 0 1em 0;
-    font-size: 1em;
     border-left: 2px solid ${Colors.border};
     margin-bottom: 2em;
     overflow-x: auto;
@@ -41,9 +42,9 @@ export const ContentContainer = styled.div`
   a {
     background-image: linear-gradient(
       transparent,
-      transparent calc(1.1em),
-      ${Colors.border} 5px,
-      ${Colors.border}
+      transparent calc(1.11em),
+      ${Colors.link} 5px,
+      ${Colors.link}
     );
     ${media.phone`
       font-weight: 500;
@@ -51,8 +52,8 @@ export const ContentContainer = styled.div`
       background-image: linear-gradient(
         transparent,
         transparent calc(1.04em),
-        ${Colors.link} 4px,
-        ${Colors.link}
+        ${Colors.linkHover} 4px,
+        ${Colors.linkHover}
       );
     }
   }
@@ -67,7 +68,12 @@ export const ContentContainer = styled.div`
   p {
     opacity: .99999;
     code {
-      background-color: ${Colors.border};
+      background-image: linear-gradient(
+        transparent,
+        transparent calc(.95em),
+        ${Colors.code} 4px,
+        ${Colors.code}
+      );
     }
   }
 

@@ -1,3 +1,5 @@
+import { Colors } from 'theme/variables'
+
 export const prism = `
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
@@ -42,14 +44,15 @@ export const prism = `
 .token.entity,
 .token.url,
 .token.variable {
-	color: #a67f59;
+	color: ${Colors.h};
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.class-name {
-	color: #1990b8;
+	color: ${Colors.p};
+  font-weight: 600;
 }
 
 .token.regex,

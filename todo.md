@@ -9,6 +9,7 @@
 > * My workstation
 > * Vim
 * Interview questions
+* coloring on this site
 * gatsby
 * CMS
 * Programming motivations
