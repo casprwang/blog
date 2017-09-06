@@ -1,3 +1,8 @@
+## Server
+
+## Design
+* new header styling for projects
+
 ## Topics
 > * My workstation
 > * Vim

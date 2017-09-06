@@ -11,14 +11,23 @@ class Li extends React.Component {
   }
 
   render() {
-    return this.props.location.slice(1, this.props.location.length - 1)
+    return this.props.location.slice(
+      1,
+      this.props.location.length - 1
+    )
       ? <li
           style={{
             float: 'right'
           }}
         >
-          <NavItem activeClassName="active" to={`${this.props.location}`}>
-            {this.props.location.slice(1, this.props.location.length - 1)}
+          <NavItem
+            activeClassName="active"
+            to={`${this.props.location}`}
+          >
+            {this.props.location.slice(
+              1,
+              this.props.location.length - 1
+            )}
           </NavItem>
         </li>
       : <li
@@ -26,7 +35,11 @@ class Li extends React.Component {
             float: 'left'
           }}
         >
-          <NavItem activeClassName="home" exact to={`${this.props.location}`}>
+          <NavItem
+            activeClassName="home"
+            exact
+            to={`${this.props.location}`}
+          >
             {'Song'}
           </NavItem>
         </li>

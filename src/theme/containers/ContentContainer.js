@@ -47,7 +47,6 @@ export const ContentContainer = styled.div`
     );
     ${media.phone`
       font-weight: 500;
-      background-image: none;
     `} :hover {
       background-image: linear-gradient(
         transparent,
@@ -67,6 +66,9 @@ export const ContentContainer = styled.div`
 
   p {
     opacity: .99999;
+    code {
+      background-color: ${Colors.border};
+    }
   }
 
   blockquote {

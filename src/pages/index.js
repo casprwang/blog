@@ -9,7 +9,7 @@ export default class BlogIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      postsNumber: 7,
+      postsNumber: 6,
       noteNumber: 6,
       blogNumber: 3
     }
@@ -162,7 +162,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 250)
           fields {
             slug
             tagSlugs

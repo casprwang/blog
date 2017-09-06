@@ -38,7 +38,14 @@ export const BlogArray = props => {
         </TagWrapper>
       </h3>
       <p>
+        <PostLink
+          style={{
+            cursor: 'pointer',
+            backgroundImage: 'none'
+          }}
+          to={props.slug}>
         {props.excerpt}
+        </PostLink>
       </p>
     </div>
   )

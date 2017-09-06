@@ -23,6 +23,8 @@ export const TagIndex = styled.div`
 export const TagWrapper = styled.div``
 
 export const NoteTag = styled.div`
+  line-height: 1.7;
+  font-weight: light;
   display: block;
   opacity: .60;
   font-size: .6em;
@@ -30,6 +32,7 @@ export const NoteTag = styled.div`
   ${media.phone`
     // display: block;
     margin-top: .3em;
+    line-height 1.2;
   `};
 `
 
