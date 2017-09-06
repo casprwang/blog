@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors } from 'theme/variables'
+import { Colors, Fonts } from 'theme/variables'
 import { media } from 'theme/utils/media.js'
 
 export const ContentContainer = styled.div`
@@ -30,14 +30,6 @@ export const ContentContainer = styled.div`
     }
   }
 
-  pre {
-    font-size: .9em;
-    color: ${Colors.p};
-    padding: 0 1em 0;
-    border-left: 2px solid ${Colors.border};
-    margin-bottom: 2em;
-    overflow-x: auto;
-  }
 
   a {
     background-image: linear-gradient(
@@ -100,5 +92,19 @@ export const ContentContainer = styled.div`
 
   blockquote + p {
     margin-top: 2em;
+  }
+
+  pre {
+    font-size: .85em;
+    color: ${Colors.p};
+    padding: 0 1em 0;
+    border-left: 2px solid ${Colors.border};
+    margin-bottom: 2em;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: ${Fonts.basic};
+    font-family: ${Fonts.code};
   }
 `

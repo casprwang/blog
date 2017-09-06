@@ -36,6 +36,7 @@ module.exports = {
               maxWidth: 740
             }
           },
+          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants'
         ]

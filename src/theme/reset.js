@@ -1,4 +1,4 @@
-import { Colors } from 'theme/variables.js'
+import { Colors, Fonts } from 'theme/variables.js'
 
 export const resets = `
   * {
@@ -8,7 +8,7 @@ export const resets = `
   }
 
   html {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, Georgia, serif, sans-serif;
+    font-family: ${Fonts.basic};
     font-size: 100%;
     text-size-adjust: none;
     text-rendering: optimizelegibility;

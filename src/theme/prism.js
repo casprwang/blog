@@ -1,22 +1,20 @@
 import { Colors } from 'theme/variables'
 
 export const prism = `
-/**
- * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
- * @author Tim  Shedor
- */
+/*
+@author Song Wang
+*/
 
 .token.comment,
 .token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #7D8B99;
+	// color: #7D8B99;
 }
 
 .token.punctuation {
-	color: #5F6364;
+	// color: #5F6364;
 }
 
 .token.property,
@@ -27,7 +25,7 @@ export const prism = `
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #c92c2c;
+	// color: #c92c2c;
 }
 
 .token.selector,
@@ -37,7 +35,7 @@ export const prism = `
 .token.function,
 .token.builtin,
 .token.inserted {
-	color: #2f9c0a;
+	// color: #2f9c0a;
 }
 
 .token.operator,
