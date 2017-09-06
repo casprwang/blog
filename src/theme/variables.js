@@ -11,7 +11,7 @@ export const Colors = {
   code: changeColor(h, 0.1),
   background,
   linkHover,
-  link: changeColor(h, 0.25)
+  link: changeColor(h, 0.35)
 }
 
 export const Fonts = {

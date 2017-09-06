@@ -60,12 +60,9 @@ export const ContentContainer = styled.div`
   p {
     opacity: .99999;
     code {
-      background-image: linear-gradient(
-        transparent,
-        transparent calc(.95em),
-        ${Colors.code} 4px,
-        ${Colors.code}
-      );
+      padding-left: .2em;
+      border: 1px solid ${Colors.code};
+      padding-right: .2em;
     }
   }
 
