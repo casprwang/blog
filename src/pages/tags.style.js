@@ -9,9 +9,10 @@ export const TagsIndex = styled.div`
     width: 33.333%;
     ${media.tablet`
       width: 50%;
-      text-align: center;
+      text-align: left;
     `} ${media.phone`
-      width: 100%;
+      width: 50%;
+      text-align: left;
       // text-align: center;
     `};
   }
