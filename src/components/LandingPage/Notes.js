@@ -10,6 +10,9 @@ export default props =>
       number={props.number}
       length={props.length}
       onClick={props.onClick}
+      onMouseDown={e => {
+        e.preventDefault()
+      }}
     >
       more...
     </PullMoreButton>
