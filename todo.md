@@ -2,6 +2,8 @@
 
 ## Design
 * new header styling for projects
+* tag hovering like a tag
+* bio: made by Song Wang
 
 ## Topics
 > * My workstation
