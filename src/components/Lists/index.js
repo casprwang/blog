@@ -1,6 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { ProjectLink, PostLink, LinkLink } from 'theme/containers/Links'
+import {
+  ProjectLink,
+  PostLink,
+  LinkLink
+} from 'theme/containers/Links'
 import {
   InlineTag,
   BlogInlineTag,
@@ -43,8 +47,9 @@ export const BlogArray = props => {
             cursor: 'pointer',
             backgroundImage: 'none'
           }}
-          to={props.slug}>
-        {props.excerpt}
+          to={props.slug}
+        >
+          {props.excerpt}
         </PostLink>
       </p>
     </div>
@@ -53,7 +58,11 @@ export const BlogArray = props => {
 
 export const LinkArray = props =>
   <h3>
-    <LinkLink href={props.slug} target="_blank" rel="noopener">
+    <LinkLink
+      href={props.slug}
+      target="_blank"
+      rel="noopener"
+    >
       {props.title}
     </LinkLink>
   </h3>
