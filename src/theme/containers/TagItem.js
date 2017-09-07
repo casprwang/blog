@@ -16,7 +16,7 @@ export const TagIndex = styled.div`
   justify-content: center;
   font-size: .8em;
   span:first-child {
-    margin-left: 0;
+    padding-left: 0;
   }
   text-align: center;
 `
@@ -29,6 +29,24 @@ export const NoteTag = styled.div`
   opacity: .60;
   font-size: .6em;
   margin-left: 0;
+  a {
+    position: relative;
+    :hover {
+      filter: invert(.9);
+      :after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: ${Colors.background};
+        filter: invert(.1);
+        position: absolute;
+        z-index: -11;
+        border-radius: .1em;
+      }
+    }
+  }
   ${media.phone`
     // display: block;
     margin-top: .3em;
@@ -50,8 +68,24 @@ export const BlogInlineTag = InlineTag.extend`
   color: ${Colors.h};
   a {
     padding: 0 .3em;
+    position: relative;
     :first-child {
-      padding-left: 0;
+    }
+
+    :hover {
+      filter: invert(.9);
+      :after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: ${Colors.background};
+        filter: invert(.1);
+        position: absolute;
+        z-index: -11;
+        border-radius: .1em;
+      }
     }
   }
 `
@@ -62,6 +96,6 @@ export const TimeTag = InlineTag.extend`
   cursor: default;
   :after {
     content: '|';
-    margin-left: .5em;
+    margin-left: .7em;
   }
 `
