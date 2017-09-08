@@ -5,14 +5,17 @@ import { Colors, Fonts } from 'theme/variables'
 export const Button = styled.div`
   font-family: ${Fonts.basic};
   font-weight: 500;
-  letter-spacing: .3em;
+  letter-spacing: .1em;
+  :first-letter {
+    text-transform: uppercase;
+  }
   position: relative;
   cursor: pointer;
   background-image: linear-gradient(
     transparent,
     transparent calc(1.1em),
-    ${Colors.p} 5px,
-    ${Colors.p}
+    ${Colors.link} 5px,
+    ${Colors.link}
   );
   :hover {
     background-image: linear-gradient(
@@ -24,10 +27,7 @@ export const Button = styled.div`
   }
   ${media.phone`
      border-bottom: 1px solid ${Colors.p};
-  `}
-  text-transform: uppercase;
-  margin-top: 0;
-  opacity: .7;
+  `} margin-top: 0;
   font-size: 92%;
   ${media.tablet`
     width: 100%;
