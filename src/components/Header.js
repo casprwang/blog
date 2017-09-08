@@ -7,7 +7,8 @@ import Footer from 'components/LandingFooter'
 const styledHeader = ({ bio }) =>
   <Header>
     <div>
-      <h1>Song Wang</h1>
+      <h1 className='mo'
+      >Song Wang</h1>
       <p
         style={{
           color: Colors.h

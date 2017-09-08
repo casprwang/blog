@@ -23,10 +23,11 @@ export const Header = styled.header`
       font-size: 2.8em;
       margin-top: 0;
       margin-bottom: 0;
-      padding-top: 18vh;
+      padding-top: 20vh;
+
       @media screen and (max-width: 440px) {
         font-size: 2em;
-        padding-top: 30vh;
+        padding-top: 38vh;
       }
       span {
         opacity: .85;
@@ -47,6 +48,12 @@ export const Header = styled.header`
       @media screen and (max-width: 540px) {
         font-size: 1.3em;
       }
+    }
+  }
+  .mo {
+    @media screen and (max-width: 440px) {
+      font-size: 2em;
+      padding-top: 32vh;
     }
   }
 `
