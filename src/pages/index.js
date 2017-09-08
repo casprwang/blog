@@ -2,17 +2,64 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Header from 'components/Header'
 import LandingContainer from 'theme/containers/LandingContent'
-import { BlogArray, LinkArray, NoteArray, ProjectArray } from 'components/Lists'
-import { Projects, Notes, Blogs, Links } from 'components/LandingPage'
+import {
+  BlogArray,
+  LinkArray,
+  NoteArray,
+  ProjectArray
+} from 'components/Lists'
+import {
+  Projects,
+  Notes,
+  Blogs,
+  Links,
+  SubNav
+} from 'components/LandingPage'
 
 export default class BlogIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      postsNumber: 6,
-      noteNumber: 6,
-      blogNumber: 3
+      postsNumber: 16,
+      noteNumber: 8,
+      blogNumber: 4,
+      haveBlogs: true,
+      haveNotes: false,
+      haveLinks: false
     }
+  }
+
+  _showBlogs() {
+    this.setState({
+      postsNumber: this.state.postsNumber,
+      noteNumber: this.state.noteNumber,
+      blogNumber: this.state.blogNumber,
+      haveBlogs: true,
+      haveNotes: false,
+      haveLinks: false
+    })
+  }
+
+  _showNotes() {
+    this.setState({
+      postsNumber: this.state.postsNumber,
+      noteNumber: this.state.noteNumber,
+      blogNumber: this.state.blogNumber,
+      haveBlogs: false,
+      haveNotes: true,
+      haveLinks: false
+    })
+  }
+
+  _showLinks() {
+    this.setState({
+      postsNumber: this.state.postsNumber,
+      noteNumber: this.state.noteNumber,
+      blogNumber: this.state.blogNumber,
+      haveBlogs: false,
+      haveNotes: false,
+      haveLinks: true
+    })
   }
 
   _handleClickLink() {
@@ -40,7 +87,10 @@ export default class BlogIndex extends React.Component {
   }
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const { bio, title: siteTitle } = this.props.data.site.siteMetadata
+    const {
+      bio,
+      title: siteTitle
+    } = this.props.data.site.siteMetadata
 
     const rows = []
     const linkRows = []
@@ -52,17 +102,24 @@ export default class BlogIndex extends React.Component {
       const {
         excerpt,
         fields: { slug, tagSlugs },
-        frontmatter: { date, title, link, tags, color, description }
+        frontmatter: {
+          date,
+          title,
+          link,
+          tags,
+          color,
+          description
+        }
       } = post.node
 
       if (slug.split('/')[1] === 'projects')
         projectRows.push(
-          <ProjectArray 
-            title={title} 
-            slug={slug} 
+          <ProjectArray
+            title={title}
+            slug={slug}
             color={color}
             description={description}
-            />
+          />
         )
       else
         switch (slug.split('/')[2]) {
@@ -118,24 +175,44 @@ export default class BlogIndex extends React.Component {
         <Header bio={bio} />
         <LandingContainer>
           <Projects row={projectRows} />
-          <Blogs
-            row={rows.slice(0, this.state.blogNumber)}
-            number={this.state.blogNumber}
-            length={rows.length}
-            onClick={() => this._handleClickBlog()}
+          <SubNav
+            checkNote={this.state.haveNotes}
+            checkBlog={this.state.haveBlogs}
+            checkLink={this.state.haveLinks}
+            clickNote={() => this._showNotes()}
+            clickBlog={() => this._showBlogs()}
+            clickLink={() => this._showLinks()}
           />
-          <Notes
-            row={notesRows.slice(0, this.state.noteNumber)}
-            number={this.state.noteNumber}
-            length={notesRows.length}
-            onClick={() => this._handleClickNote()}
-          />
-          <Links
-            row={linkRows.slice(0, this.state.postsNumber)}
-            number={this.state.postsNumber}
-            length={linkRows.length}
-            onClick={() => this._handleClickLink()}
-          />
+          {this.state.haveBlogs
+            ? <Blogs
+                row={rows.slice(0, this.state.blogNumber)}
+                number={this.state.blogNumber}
+                length={rows.length}
+                onClick={() => this._handleClickBlog()}
+              />
+            : null}
+          {this.state.haveNotes
+            ? <Notes
+                row={notesRows.slice(
+                  0,
+                  this.state.noteNumber
+                )}
+                number={this.state.noteNumber}
+                length={notesRows.length}
+                onClick={() => this._handleClickNote()}
+              />
+            : null}
+          {this.state.haveLinks
+            ? <Links
+                row={linkRows.slice(
+                  0,
+                  this.state.postsNumber
+                )}
+                number={this.state.postsNumber}
+                length={linkRows.length}
+                onClick={() => this._handleClickLink()}
+              />
+            : null}
         </LandingContainer>
       </div>
     )

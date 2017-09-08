@@ -4,7 +4,6 @@ import { PullMoreButton } from 'theme/containers/Button.style.js'
 
 export default props =>
   <LinkContainer>
-    <h2>Links</h2>
     <section>
       {props.row}
     </section>

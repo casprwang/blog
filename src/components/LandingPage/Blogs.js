@@ -4,7 +4,6 @@ import { PullMoreButton } from 'theme/containers/Button.style.js'
 
 export default props =>
   <BlogContainer>
-    <h2>Blogs</h2>
     {props.row}
     <PullMoreButton
       number={props.number}
