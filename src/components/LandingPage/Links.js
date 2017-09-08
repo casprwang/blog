@@ -15,6 +15,6 @@ export default props =>
         e.preventDefault()
       }}
     >
-      more...
+      More
     </PullMoreButton>
   </LinkContainer>

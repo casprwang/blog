@@ -5,10 +5,6 @@ import { media } from 'theme/utils/media.js'
 
 export const PostLink = styled(Link)`
   position: relative;
-  // ${media.phone`
-  //   font-weight: 500;
-  //   background-image: none;
-  // `}
   :hover {
     background-image: linear-gradient(
       transparent,
