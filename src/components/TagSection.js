@@ -39,16 +39,3 @@ export const TagSection = props => {
   }
   return tagsSection
 }
-
-export const BlogTags = ({ tagNames }) => {
-  let tags = tagNames.map(tagName =>
-    <Link to={`/tags/${tagName}/`}>
-      {tagName}
-    </Link>
-  )
-  return (
-    <div>
-      {tags.slice(0, 3)}
-    </div>
-  )
-}

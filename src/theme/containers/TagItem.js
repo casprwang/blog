@@ -23,6 +23,7 @@ export const TagIndex = styled.div`
 export const TagWrapper = styled.div``
 
 export const NoteTag = styled.div`
+  color: ${Colors.h};
   line-height: 1.7;
   font-weight: light;
   display: block;
@@ -31,6 +32,10 @@ export const NoteTag = styled.div`
   margin-left: 0;
   a {
     position: relative;
+    padding: 0 .4em;
+    :first-child {
+      margin-left: -.4em;
+    }
     :hover {
       filter: invert(.9);
       :after {
@@ -65,6 +70,7 @@ export const InlineTag = styled.div`
   `};
 `
 export const BlogInlineTag = InlineTag.extend`
+  line-height: 1.7;
   color: ${Colors.h};
   a {
     padding: 0 .3em;

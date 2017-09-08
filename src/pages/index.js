@@ -138,7 +138,6 @@ export default class BlogIndex extends React.Component {
           case 'links':
             linkRows.push(
               <LinkArray
-                tagSlugs={tagSlugs}
                 tags={tags}
                 slug={link}
                 title={title}

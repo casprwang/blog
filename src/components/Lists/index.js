@@ -13,7 +13,6 @@ import {
   NoteTag
 } from 'theme/containers/TagItem'
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
-import { BlogTags } from 'components/TagSection'
 
 export const ProjectArray = props => {
   return (
@@ -37,7 +36,11 @@ export const BlogArray = props => {
             {props.date}
           </TimeTag>
           <BlogInlineTag>
-            <BlogTags tagNames={props.tags} />
+            {props.tags.map((tag, i) =>
+              <Link to={props.tagSlugs[i]}>
+                {tag}
+              </Link>
+            )}
           </BlogInlineTag>
         </TagWrapper>
       </h3>
@@ -72,9 +75,16 @@ export const NoteArray = props =>
     <PostLink to={props.slug}>
       {props.title}
     </PostLink>
-    <NoteTag>
-      <Link to={props.tagSlugs[0]}>
-        {props.tags && props.tags[0].toLowerCase()}
-      </Link>
-    </NoteTag>
+    <TagWrapper>
+      <TimeTag>
+        {props.date}
+      </TimeTag>
+      <BlogInlineTag>
+        {props.tags.map((tag, i) =>
+          <Link to={props.tagSlugs[i]}>
+            {tag}
+          </Link>
+        )}
+      </BlogInlineTag>
+    </TagWrapper>
   </h3>
