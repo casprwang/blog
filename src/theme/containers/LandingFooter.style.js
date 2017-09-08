@@ -3,25 +3,34 @@ import { media } from 'theme/utils/media'
 import { Colors } from 'theme/variables'
 
 export default styled.footer`
+  bottom: 11%;
+  ${media.phone`
+    bottom: 22%;
+  `}
   font-size: .9em;
-  margin-top: 3em;
-  margin-bottom: 0;
   overflow: hide;
   ul {
     overflow: hide;
     ${media.tablet`
       // text-align: center;
       // padding-left: 2em;
-    `} li {
+    `} 
+    li {
       display: inline-block;
-      font-size: 1.1em;
+      font-size: 1.2em;
       :first-letter {
         text-transform: uppercase;
-      }
+    }
       :first-child {
         padding-left: 0;
-      }
-      padding: 2em;
+    }
+      :last-child {
+        padding-right: 0;
+    }
+    padding: 2em;
+    ${media.tiny`
+      padding: 1.3em;
+    `}
       a {
         position: relative;
         background-image: linear-gradient(

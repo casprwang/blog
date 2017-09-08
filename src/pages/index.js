@@ -52,12 +52,17 @@ export default class BlogIndex extends React.Component {
       const {
         excerpt,
         fields: { slug, tagSlugs },
-        frontmatter: { date, title, link, tags, color }
+        frontmatter: { date, title, link, tags, color, description }
       } = post.node
 
       if (slug.split('/')[1] === 'projects')
         projectRows.push(
-          <ProjectArray title={title} slug={slug} color={color} />
+          <ProjectArray 
+            title={title} 
+            slug={slug} 
+            color={color}
+            description={description}
+            />
         )
       else
         switch (slug.split('/')[2]) {
@@ -169,6 +174,7 @@ export const pageQuery = graphql`
             link
             tags
             date(formatString: "MMM DD, YYYY")
+            description
             layout
           }
         }

@@ -43,9 +43,13 @@ class BlogPostRoute extends React.Component {
                   <h1>
                     {post.frontmatter.title}
                   </h1>
-                  <small>
-                    {post.frontmatter.date}
-                  </small>
+                  {post.frontmatter.description
+                    ? <p>
+                        {post.frontmatter.description}
+                      </p>
+                    : <small>
+                        {post.frontmatter.date}
+                      </small>}
                 </div>}
           </Header>
           <ContentContainer
@@ -80,6 +84,7 @@ export const pageQuery = graphql`
         title
         layout
         tags
+        description
         link
         date(formatString: "MMMM DD, YYYY")
       }

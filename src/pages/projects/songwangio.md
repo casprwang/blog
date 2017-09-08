@@ -12,12 +12,8 @@ tags:
  - graphql
  - netlify-cms
 ---
-The website about Song Wang.
 
-## Motivation
-to be written
-
-## Sections
+## Contents
 ### Projects
 I added the portfolio the last into my website; even it could be the most important one for me to get hired. But it comes with a benefit that I could be much more comfortable building it since I am much more familiar and comfortable with the layout(trust me I quit many times when I was not comfortable with the things I built). 
 

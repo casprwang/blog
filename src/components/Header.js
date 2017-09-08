@@ -15,8 +15,8 @@ const styledHeader = ({ bio }) =>
       >
         {bio}
       </p>
-      <Footer />
     </div>
+    <Footer />
   </Header>
 
 export default styledHeader
