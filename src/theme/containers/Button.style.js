@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { media } from 'theme/utils/media.js'
-import { Colors } from 'theme/variables'
+import { Colors, Fonts } from 'theme/variables'
 
-export const Button = styled.button`
+export const Button = styled.div`
+  font-family: ${Fonts.basic};
   font-weight: 500;
   letter-spacing: .3em;
   position: relative;
+  cursor: pointer;
   background-image: linear-gradient(
     transparent,
     transparent calc(1.1em),
@@ -21,9 +23,8 @@ export const Button = styled.button`
     );
   }
   ${media.phone`
-          background-image: none;
-          border-bottom: 1px solid ${Colors.p};
-        `} 
+     border-bottom: 1px solid ${Colors.p};
+  `}
   text-transform: uppercase;
   margin-top: 0;
   opacity: .7;
@@ -36,5 +37,5 @@ export const Button = styled.button`
 
 export const PullMoreButton = Button.extend`
   display: ${props =>
-    props.number >= props.length ? 'none' : 'block'};
+    props.number >= props.length ? 'none' : 'inline'};
 `
