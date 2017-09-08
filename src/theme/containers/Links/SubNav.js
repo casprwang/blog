@@ -8,6 +8,9 @@ export default styled.section`
     color: ${Colors.h};
   }
   button {
+    :hover {
+      text-decoration: underline;
+    }
     :first-child {
       margin-left: 0;
     }
