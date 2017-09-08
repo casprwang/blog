@@ -31,5 +31,13 @@ export default styled.section`
       margin-left: .7em;
       margin-right: .7em;
     `}
+    ${media.phone`
+      margin-left: .7em;
+      margin-right: .7em;
+    `}
+    ${media.none`
+      margin-left: .65em;
+      margin-right: .65em;
+    `}
   }
 `
