@@ -7,13 +7,9 @@ export default styled.section`
   .down {
     color: ${Colors.h};
   }
-  :hover {
-  }
   button {
-    text-decoration-color: ${Colors.link};
     :hover {
       text-decoration: underline;
-      text-decoration-color: ${Colors.h};
     }
     :first-child {
       margin-left: 0;
