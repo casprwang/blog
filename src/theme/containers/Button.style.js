@@ -6,7 +6,7 @@ export const Button = styled.div`
   font-family: ${Fonts.basic};
   font-weight: 500;
   letter-spacing: .1em;
-  :first-letter {
+  &:first-letter {
     text-transform: uppercase;
   }
   position: relative;
