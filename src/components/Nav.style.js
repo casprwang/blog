@@ -27,12 +27,11 @@ export const NavItem = styled(Link)`
   padding: .2em;
   margin: .4em;
   // line-height: 1.9;
-  transition: opacity .1s ease-in;
+  transition: opacity .5s ease-in;
   :hover,
   :active,
   :focus {
-    color: ${Colors.h};
-    transition: opacity .1s ease-in;
+    filter: invert(40%);
   }
 
 
