@@ -22,7 +22,7 @@ export const Header = styled.header`
     h1 {
       letter-spacing: .01em;
       font-size: 2.8em;
-      margin-top: 0;
+      margin-top: 0em;
       margin-bottom: 0;
 
       @media screen and (max-width: 440px) {

@@ -22,6 +22,7 @@ npm i chinese-year
 ## Inspiration
 I created this repo out of a heat of the moment, especially after seeing this [repo](https://github.com/sindresorhus/pokemon), which only stored a few JSON data with some simple API representing logics. The message was clear; I could make an elegant somehow useful package in NPM myself. 
 
+
 ## About the API
 The logic was straightforward; I had 12 animals’ name stored in an object and then created two functions: one for exporting all the data in the object; one for getting a name every zodiacal period(12 years). If not, throw an error. 
 

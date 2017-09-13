@@ -13,6 +13,7 @@ tags:
 ## Motivation
 As a programmer, algorithm lies behind the solutions and should be practiced for sure, especially for a backend developer. While I used to focus on front end world more, but I still found it a necessity at the time around 2017 March, when I was focusing on [Gatsby](https://github.com/gatsbyjs/gatsby) and found it hard to contribute without neat codes. And so I started the practicing journey.
 
+
 ## Platforms
 ### Exercism 
 I started here cause I found it working with the command line, which suits me pretty well since I was a terminal freak. Also, the questions and testing tools were in the place I could see makes it fun to try. It was a good place to start, but I still moved pass it cause the community there wasn’t the best. 

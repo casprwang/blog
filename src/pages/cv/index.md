@@ -1,8 +1,15 @@
 ---
 title: Resume
 date: '2017-07-05T20:22:31-04:00'
+draft: true
 layout: page
 ---
+
+## Contact
+* github
+* email
+* website
+
 
 ## Education
 
