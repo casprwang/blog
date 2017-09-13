@@ -3,7 +3,7 @@ import { Colors } from 'theme/variables'
 import Link from 'gatsby-link'
 import { Header } from 'theme/containers/Header.js'
 import { SearchResultWrapper } from 'theme/containers/Search.js'
-import { TagItem, TagIndex } from 'theme/containers/TagItem.js'
+import { SearchTagItem, TagIndex } from 'theme/containers/TagItem.js'
 // import { Form } from 'theme/containers/Form.js'
 
 import styled from 'styled-components'
@@ -101,9 +101,9 @@ class SearchPage extends React.Component {
                     {page.node.frontmatter.tags
                       ? page.node.fields.tagSlugs.map(tagSlug =>
                           <Link to={tagSlug}>
-                            <TagItem>
+                            <SearchTagItem>
                               {tagSlug.slice(6, tagSlug.length - 1)}
-                            </TagItem>
+                            </SearchTagItem>
                           </Link>
                         )
                       : null}

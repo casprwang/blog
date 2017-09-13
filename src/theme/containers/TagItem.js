@@ -10,6 +10,32 @@ export const TagItem = styled.span`
   padding: 0 1em;
 `
 
+export const SearchTagItem = TagItem.extend`
+  border: 1px solid ${Colors.code};
+  position: relative;
+  padding: 0 1.4em;
+  margin: 0 1.8em;
+  padding-right: 0;
+  :first-child {
+    margin-left: -.4em;
+  }
+  :hover {
+    filter: invert(.9);
+    :after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: ${Colors.background};
+      filter: invert(.1);
+      position: absolute;
+      z-index: -11;
+      border-radius: .1em;
+    }
+  }
+`
+
 export const TagIndex = styled.div`
   display: flex;
   flex-wrap: wrap;
