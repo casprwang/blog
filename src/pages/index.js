@@ -22,7 +22,7 @@ export default class BlogIndex extends React.Component {
     this.state = {
       postsNumber: 16,
       noteNumber: 8,
-      blogNumber: 4,
+      blogNumber: 3,
       haveBlogs: true,
       haveNotes: false,
       haveLinks: false
