@@ -13,6 +13,42 @@ tags:
  - netlify-cms
 ---
 
+## Source
+[wangsongiam/songwang.io
+](https://github.com/wangsongiam/songwang.io)
+
+
+## Development
+
+### Tech Stack
+* Gatsby.js (extends Webpack)
+* React.js
+* GraphQL, Relay
+* Styled components
+* Netlify-CMS
+
+### Data flow
+All the data are stored in markdown files and hosted on GitHub. In production, data will be pulled into GraphQL layer and queried to the front-end by Relay.
+
+### Netlify-CMS as a Service
+
+I use Netlify-CMS for content managing. It’s still being developed the time I am writing. But it is a cool way to manage all the writings and on the cloud which I believe would be a big deal in the future. 
+
+### Github as a Service
+
+All of my source files are hosted on Github and used by other third party services like Netlify. Also, the comment section is connected to the same repository’s issue page, which is a good solution for serverless/static websites.
+
+
+Although I experienced with React and Webpack before, It was a frustrating ordeal to work with the alpha version to me. I was frequently asking, reporting and fixing the problem as long as I can those days, yet still, failed uncountable times, sometimes couldn't figure how to make things work for days. But thanks to the community from both React and Gatsby, I was able to make my site work in my preferred way before the Beta version was released. It took over three weeks which is way more than I thought at the beginning, but it was a valuable learning experience, and I am happy with both my site and my contribution to the communities.
+
+## Design
+
+Two things I care the most on this site are simplicity and performance. 
+
+For simplicity, I designed with only two colors, one as the main color for all the words, one for hovering color; I kept things as simple and straightforward as possible; Also, each UI element and Styling block are modular and composed by Javascript, could also be reused if necessary.
+
+For performance, I avoid using any animation or transitions, no drawing and keyframes make loading easy and fast.
+
 ## Contents
 ### Projects
 I added the portfolio the last into my website; even it could be the most important one for me to get hired. But it comes with a benefit that I could be much more comfortable building it since I am much more familiar and comfortable with the layout(trust me I quit many times when I was not comfortable with the things I built). 

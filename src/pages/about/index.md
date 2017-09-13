@@ -29,23 +29,18 @@ by Google's [lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
 I started building this site back in June 2017, when Gatsby was in the alpha versions of 1.0, and Netlify-CMS was on the road to version 1. They were pretty buggy, but I still gave them a shot.
 
-### Tech Stack
-* Gatsby.js (extends Webpack)
+### Dependencies
+To name a few Web technology I heavily used on this site:
+
+* Gatsby.js
 * React.js
 * GraphQL, Relay
-* Styled components
+* ~~PostCSS, SCSS~~
 * Netlify-CMS
 
-### Development
-Although I experienced with React and Webpack before, It was a frustrating ordeal to work with the alpha version to me. I was frequently asking, reporting and fixing the problem as long as I can those days, yet still, failed uncountable times, sometimes couldn't figure how to make things work for days. But thanks to the community from both React and Gatsby, I was able to make my site work in my preferred way before the Beta version was released. It took over three weeks which is way more than I thought at the beginning, but it was a valuable learning experience, and I am happy with both my site and my contribution to the communities.
+I started building this site back in June 2017, when Gatsby was in the alpha versions of 1.0, and Netlify-CMS was on the road to version 1. They were pretty buggy, but I still gave them a shot.
 
-### Design
-
-Two things I care the most on this site are simplicity and performance. 
-
-For simplicity, I designed with only two colors, one as the main color for all the words, one for hovering color; I kept things as simple and straightforward as possible; Also, each UI element and Styling block are modular and composed by Javascript, could also be reused if necessary.
-
-For performance, I avoid using any animation or transitions, no drawing and keyframes make loading easy and fast.
+Although I experienced with React and Webpack before, It was a tough new experience to work with the alpha version to me. I was frequently asking, reporting and fixing the problem as long as I can those days, yet still, failed uncountable times, sometimes couldn't figure how to make things work for days. But thanks to the community from both React and Gatsby, I was able to make my site work in my preferred way before the Beta version was released. It took over three weeks which is way more than I thought at the beginning, but it was a valuable learning experience, and I am happy with both my site and my contribution to the communities.
 
 
 ### Performance on Chrome
