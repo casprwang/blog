@@ -122,7 +122,10 @@ export default SearchPage
 
 export const pageQuery = graphql`
   query SearchQuery {
-    allMarkdownRemark(limit: 1000) {
+    allMarkdownRemark(
+    limit: 1000
+    filter: {frontmatter: {draft: { ne: true}}}
+    ) {
       edges {
         node {
           id
