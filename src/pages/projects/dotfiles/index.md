@@ -15,6 +15,7 @@ tags:
 
 Source: [github.com/wangsongiam/dotfiles](https://github.com/wangsongiam/dotfiles)
 
+
 ## Motivation
 As you might not know, I was very serious about coding the moment I started. I did a quite amount of work on the basics like English and typing to make sure I am well suited to start coding. And as for the computer and editors, I will be using every day as a programmer, I definitely would love to spend lots of my time tweaking it, and here comes the Dotfiles you are looking at.
 

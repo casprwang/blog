@@ -56,5 +56,18 @@ export const typography = `
     display: block;
     margin: 1.1em 0;
   }
+  
+  table {
+    margin-top: 2.8em;
+    color: ${Colors.h};
+    margin-bottom: 2.2em;
+    max-width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding-bottom: 1em;
+    padding-right: 1em;
+  }
 
 `
