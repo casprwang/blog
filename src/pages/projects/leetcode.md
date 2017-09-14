@@ -10,6 +10,7 @@ tags:
   - algorithm
 ---
 
+Source: [github](https://github.com/wangsongiam/leetcode)
 ## Motivation
 As a programmer, algorithm lies behind the solutions and should be practiced for sure, especially for a backend developer. While I used to focus on front end world more, but I still found it a necessity at the time around 2017 March, when I was focusing on [Gatsby](https://github.com/gatsbyjs/gatsby) and found it hard to contribute without neat codes. And so I started the practicing journey.
 

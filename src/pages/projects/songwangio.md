@@ -13,9 +13,7 @@ tags:
  - netlify-cms
 ---
 
-## Source
-[wangsongiam/songwang.io
-](https://github.com/wangsongiam/songwang.io)
+Source: [wangsongiam/songwang.io](https://github.com/wangsongiam/songwang.io)
 
 
 ## Development
