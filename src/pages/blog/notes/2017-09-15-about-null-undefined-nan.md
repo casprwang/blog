@@ -50,7 +50,8 @@ NaN
 undefined + 3
 NaN
 
-// Wtf
+// WTF
 null + undefined
 NaN
 ```
+
