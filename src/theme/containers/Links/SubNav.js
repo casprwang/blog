@@ -8,6 +8,7 @@ export default styled.section`
     color: ${Colors.h};
   }
   button {
+    letter-spacing: .02em;
     :hover {
       text-decoration: underline;
     }
