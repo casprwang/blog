@@ -21,37 +21,38 @@ undefined is undefined, null is an obejct standing for nothing, while undefined
 ## Expressions
 ```js
 null + ''
-"null"
+//=> "null"
 
 undefined + ''
-"undefined"
+//=> "undefined"
 
 // NaN -> NaN
 NaN + ''
-"NaN"
+//=> "NaN"
 
 NaN + 1
-NaN
+//=> NaN
 
 NaN + 3
-NaN
+//=> NaN
 
 // null + int -> int
 null + 3
-3
+//=> 3
 
 // NaN + undefined||null -> NaN
 null + NaN
-NaN
+//=> NaN
 
 undefined + NaN
-NaN
+//=> NaN
 
 undefined + 3
-NaN
+//=> NaN
 
 // WTF
 null + undefined
-NaN
+//=> NaN
 ```
+
 
