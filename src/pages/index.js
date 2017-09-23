@@ -114,7 +114,7 @@ export default class BlogIndex extends React.Component {
       } = post.node
 
       if (slug.split('/')[1] === 'projects')
-        projectRows.push(
+        projectRows.unshift(
           <ProjectArray
             external={external}
             title={title}
@@ -161,15 +161,6 @@ export default class BlogIndex extends React.Component {
             break
         }
     })
-    {/* projectRows.push( */}
-    {/*     <ProjectArray */}
-    {/*       external={true} */}
-    {/*       title={'lol'} */}
-    {/*       slug={'https://www.google.com/'} */}
-    {/*       color={'red'} */}
-    {/*       description={'none'} */}
-    {/*     /> */}
-    {/* ) */}
 
     return (
       <div>
