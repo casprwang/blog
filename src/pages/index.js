@@ -160,6 +160,10 @@ export default class BlogIndex extends React.Component {
         }
     })
 
+    // organizing array
+    projectRows.unshift(projectRows.pop())
+    projectRows.unshift(projectRows.pop())
+
     return (
       <div>
         <Helmet

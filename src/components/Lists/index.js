@@ -17,7 +17,6 @@ import { ContentContainer } from 'theme/containers/ContentContainer.js'
 export const ProjectArray = props => {
   {/* if (props.external) { */}
   {/*   return ( */}
-  {/*     <h3> */}
   {/*       <a */}
   {/*         rel="noopener noreferrer" */}
   {/*         target="__blank" */}
