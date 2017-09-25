@@ -9,6 +9,7 @@ class FourOFour extends React.Component {
           <div>
             <h1>Page not found</h1>
           </div>
+          <p>Try to be smarter next time</p>
         </Header>
       </div>
     )
