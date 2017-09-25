@@ -7,9 +7,9 @@ Hello, my name is Song Wang.
 
 I am a grad student majored in Computer Science, living in ~~Beijing~~, ~~Chengdu~~, New York.
 
-I code Javascript for web, analyse data with Python.
+I code Javascript for web, analyze data with Python.
 
-I love open source, and I contributed over [2,000
+I love open source, and I contributed over [2,500
 times](https://github.com/wangsongiam) last year on Github.
 
 I play with [leetcode](https://leetcode.com/wangsup/), [code wars](https://www.codewars.com/users/wangsup) for new languages and
