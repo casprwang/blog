@@ -15,19 +15,19 @@ import {
 import { ContentContainer } from 'theme/containers/ContentContainer.js'
 
 export const ProjectArray = props => {
-  if (props.external) {
-    return (
-      <h3>
-        <a
-          rel="noopener noreferrer"
-          target="__blank"
-          href={props.external}
-        >
-          {' '}{props.title}
-        </a>
-      </h3>
-    )
-  } else
+  {/* if (props.external) { */}
+  {/*   return ( */}
+  {/*     <h3> */}
+  {/*       <a */}
+  {/*         rel="noopener noreferrer" */}
+  {/*         target="__blank" */}
+  {/*         href={props.external} */}
+  {/*       > */}
+  {/*         {' '}{props.title} */}
+  {/*       </a> */}
+  {/*     </h3> */}
+  {/*   ) */}
+  {/* } else */}
     return (
       <h3>
         <ProjectLink to={props.slug} color={props.color}>

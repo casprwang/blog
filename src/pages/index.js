@@ -107,7 +107,6 @@ export default class BlogIndex extends React.Component {
           title,
           link,
           tags,
-          external,
           color,
           description
         }
@@ -116,7 +115,6 @@ export default class BlogIndex extends React.Component {
       if (slug.split('/')[1] === 'projects')
         projectRows.unshift(
           <ProjectArray
-            external={external}
             title={title}
             slug={slug}
             color={color}
@@ -249,7 +247,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            external
             color
             link
             tags
