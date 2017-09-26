@@ -21,17 +21,20 @@ export const Nav = styled.div`
 
 export const NavItem = styled(Link)`
   text-transform: uppercase;
-  color: ${Colors.h};
+  color: ${Colors.border};
   text-decoration: none;
   display: block;
   padding: .2em;
   margin: .4em;
   // line-height: 1.9;
-  transition: opacity .5s ease-in;
+  filter: blur(.04em);
+  transition: color .075s ease-in;
   :hover,
   :active,
   :focus {
-    filter: invert(40%);
+    color: ${Colors.h};
+    filter: blur(0);
+    // filter: invert(10%);
   }
 
 

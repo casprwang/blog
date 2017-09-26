@@ -26,7 +26,7 @@ export default styled.section`
     margin-top: 2em;
     color: ${Colors.code};
     line-height: 1.25;
-    font-weight: 600;
+    font-weight: 500;
     text-rendering: optimizeLegibility;
     margin-left: 1em;
     margin-right: 1em;
