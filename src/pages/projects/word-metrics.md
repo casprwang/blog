@@ -2,7 +2,7 @@
 author: Song Wang
 title: Word metrics
 date: '2017-09-12T01:22:48-04:00'
-description: simplify and anylize a article
+description: simplify and anylize an article
 color: '#DBC258'
 tags:
   - npm
