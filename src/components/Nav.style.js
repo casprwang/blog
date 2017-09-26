@@ -21,13 +21,13 @@ export const Nav = styled.div`
 
 export const NavItem = styled(Link)`
   text-transform: uppercase;
-  color: ${Colors.border};
+  color: ${Colors.link};
   text-decoration: none;
   display: block;
   padding: .2em;
   margin: .4em;
   // line-height: 1.9;
-  filter: blur(.04em);
+  // filter: blur(.04em);
   transition: color .075s ease-in;
   :hover,
   :active,

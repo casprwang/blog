@@ -46,11 +46,12 @@ export const TagIndex = styled.div`
   }
   text-align: center;
 `
-export const TagWrapper = styled.div``
+export const TagWrapper = styled.div`
+`
 
 export const NoteTag = styled.div`
   color: ${Colors.h};
-  line-height: 1.7;
+  line-height: 1.3;
   font-weight: light;
   display: block;
   opacity: .60;
@@ -98,6 +99,7 @@ export const InlineTag = styled.div`
 export const BlogInlineTag = InlineTag.extend`
   line-height: 1.7;
   color: ${Colors.h};
+  font-weight: 600;
   a {
     padding: 0 .3em;
     position: relative;

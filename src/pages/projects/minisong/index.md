@@ -10,7 +10,7 @@ tags:
  - react
  - styled components
 ---
-
+Live: [minisong.life](http://minisong.life)
 Source: [wangsongiam/minisong](https://github.com/wangsongiam/minisong)
 
 
