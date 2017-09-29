@@ -5,6 +5,8 @@ draft: true
 layout: page
 ---
 
+[pdf](../../resume.pdf)
+
 ## Contact
 * github
 * email
