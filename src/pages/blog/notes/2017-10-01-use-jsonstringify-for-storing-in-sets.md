@@ -24,6 +24,13 @@ set.add(JSON.stringify([1]))
 set.size // => 1
 ```
 
+Also, whenever you want to pull the data back as Arrays, use `JSON.parse` with `Array.prototype.map()`
+```js
+[...set] //=> '[1]'
+[...set].map(JSON.parse) //=> [1]
+```
+
+
 
 
 
