@@ -10,11 +10,20 @@ Use the following function to get non-duplicate version of a two-dimensional​ 
 ```js
 const unique = (arr) => {
   let map = {}
-  return arr.filter(item=> {
-    return item in map ? false : (map[item] = true)
+  return arr.filter(item => {
+    if (item in map) return false
+    else {
+      map[item] = true
+      return true
+    }
   })
 }
+
+uique([[1,2], [1,2]]) 
+//=> [[1,2]]
 ```
 
-note that the `item in map` has to be in a single line after return.
+
+
+
 
