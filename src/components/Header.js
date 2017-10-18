@@ -1,8 +1,6 @@
 import React from 'react'
 import { Header } from 'theme/containers/Header.js'
 import { Colors } from 'theme/variables'
-// import Footer from '../index.style.js'
-import Footer from 'components/LandingFooter'
 
 const styledHeader = ({ bio }) =>
   <Header>
@@ -17,7 +15,6 @@ const styledHeader = ({ bio }) =>
         {bio}
       </p>
     </div>
-    {/* <Footer /> */}
   </Header>
 
 export default styledHeader

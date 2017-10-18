@@ -53,7 +53,7 @@ export const ProjectContainer = Base.extend`
     flex-wrap: wrap;
 
     h3 {
-      font-weight: 500;
+      font-weight: 600;
       width: 33.3%;
       font-size: 1.2em;
       ${media.tablet`
