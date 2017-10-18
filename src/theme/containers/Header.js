@@ -6,7 +6,9 @@ export const Header = styled.header`
   margin-top: 150px;
   margin-bottom: 150px;
   text-align: left;
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
+    // margin-top: 200px;
+    // margin-bottom: 200px;
   }
   @media screen and (max-width: 700px) {
     // text-align: center;
