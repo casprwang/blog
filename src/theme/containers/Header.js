@@ -3,22 +3,19 @@ import { Colors } from 'theme/variables'
 import { media } from 'theme/utils/media'
 
 export const Header = styled.header`
-  min-height: 50vh;
+  margin-top: 150px;
+  margin-bottom: 150px;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   @media screen and (min-width: 1600px) {
   }
   @media screen and (max-width: 700px) {
     // text-align: center;
   }
   @media screen and (max-width: 440px) {
+    margin: 0;
     min-height: 92vh;
   }
   div {
-    float: left;
-    clear: left;
     h1 {
       letter-spacing: .01em;
       font-size: 2.8em;
