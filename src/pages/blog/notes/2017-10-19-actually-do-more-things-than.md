@@ -1,5 +1,5 @@
 ---
-title: == actually do more things than ===
+title: == actually does more things than ===
 date: '2017-10-19T01:25:43-04:00'
 tags:
   - javascript
@@ -18,3 +18,4 @@ x == y; \\ false (x and y, despite both being Number, refer to different memory 
 x == z; \\  true (x is converted to builtin primitive 1)
 x === y; \\ false (x and y refer to different memory addresses)﻿
 ```
+
