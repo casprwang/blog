@@ -6,29 +6,30 @@ import { LinkContainer } from 'theme/containers/BlogPostsContaners'
 
 class TagRoute extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    const title = this.props.data.site.siteMetadata.title
-    const postLinks = posts.map(post => {
-      return (
-        <h3 key={post.node.fields.slug}>
-          <Link to={post.node.fields.slug}>
-            {post.node.frontmatter.title}
-          </Link>
-        </h3>
-      )
-    })
+    console.log(this.props.data)
+    {/* const posts = this.props.data.allMarkdownRemark.edges */}
+    {/* const title = this.props.data.site.siteMetadata.title */}
+    {/* const postLinks = posts.map(post => { */}
+    {/*   return ( */}
+    {/*     <h3 key={post.node.fields.slug}> */}
+    {/*       <Link to={post.node.fields.slug}> */}
+    {/*         {post.node.frontmatter.title} */}
+    {/*       </Link> */}
+    {/*     </h3> */}
+    {/*   ) */}
+    {/* }) */}
 
     return (
       <div className="content">
-        <Helmet title={title} />
+        {/* <Helmet title={title} /> */}
         <Header>
           <h1>
-            {this.props.data.allMarkdownRemark.totalCount} posts tagged with “{this.props.pathContext.tag}”
+            {/* {this.props.data.allMarkdownRemark.totalCount} posts tagged with “{this.props.pathContext.tag}” */}
           </h1>
         </Header>
         <ul>
           <LinkContainer>
-            {postLinks}
+            {/* {postLinks} */}
           </LinkContainer>
         </ul>
         <p>
