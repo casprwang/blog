@@ -1,5 +1,5 @@
 ---
-title: Find the closure in Chrome developer tools
+title: Finding Closure in Chrome developer tools
 date: '2017-11-11T20:12:54-05:00'
 tags:
   - javascript
@@ -31,3 +31,4 @@ console.log(x)
 ```
 
 ![Closure in Chrome](/../../../images/uploads/Screen Shot 2017-11-11 at 8.18.06 PM.png)
+
