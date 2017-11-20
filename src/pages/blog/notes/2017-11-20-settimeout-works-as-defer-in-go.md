@@ -5,4 +5,5 @@ tags:
   - javascript
   - go
 ---
-It all come to the point of executing something else after done doing the current thing.
+It all comes to the point of executing something else after done doing the current thing.
+
