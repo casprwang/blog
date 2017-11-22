@@ -66,29 +66,29 @@ function shuffleInPlace(arr) {
 package play
 
 import (
-		"math/rand"
-		"time"
+        "math/rand"
+        "time"
 )
 
 func Shuffle(arr []int) []int {
-		len := len(arr)
-		shuffled := make([]int, len)
+        len := len(arr)
+        shuffled := make([]int, len)
 
-		var ran int
+        var ran int
 
-		for i := 0; i < len; i++ {
+        for i := 0; i < len; i++ {
 
-				rand.Seed(time.Now().UnixNano())
-				ran = rand.Intn(i + 1)
+                rand.Seed(time.Now().UnixNano())
+                ran = rand.Intn(i + 1)
 
-			if ran != i {
-					shuffled[i] = shuffled[ran]
-			}
+                if ran != i {
+                        shuffled[i] = shuffled[ran]
+                }
 
-			shuffled[ran] = arr[i]
-		}
+                shuffled[ran] = arr[i]
+        }
 
-		return shuffled
+        return shuffled
 }
 
 ```
