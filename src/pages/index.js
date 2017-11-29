@@ -89,9 +89,6 @@ const Index = props => {
   // organizing array
   projectRows.unshift(projectRows.pop())
   projectRows.unshift(projectRows.pop())
-  // console.log(props)
-
-  // console.log(props.toggleNote)
 
   return (
     <div>

@@ -6,7 +6,6 @@ import { LinkContainer } from 'theme/containers/BlogPostsContaners'
 
 class TagRoute extends React.Component {
   render() {
-    console.log(this.props.data)
     {/* const posts = this.props.data.allMarkdownRemark.edges */}
     {/* const title = this.props.data.site.siteMetadata.title */}
     {/* const postLinks = posts.map(post => { */}
