@@ -6,17 +6,17 @@ import { LinkContainer } from 'theme/containers/BlogPostsContaners'
 
 class TagRoute extends React.Component {
   render() {
-    {/* const posts = this.props.data.allMarkdownRemark.edges */}
-    {/* const title = this.props.data.site.siteMetadata.title */}
-    {/* const postLinks = posts.map(post => { */}
-    {/*   return ( */}
-    {/*     <h3 key={post.node.fields.slug}> */}
-    {/*       <Link to={post.node.fields.slug}> */}
-    {/*         {post.node.frontmatter.title} */}
-    {/*       </Link> */}
-    {/*     </h3> */}
-    {/*   ) */}
-    {/* }) */}
+    // const posts = this.props.data.allMarkdownRemark.edges 
+    // const title = this.props.data.site.siteMetadata.title 
+    // const postLinks = posts.map(post => { 
+    //   return ( 
+    //     <h3 key={post.node.fields.slug}> 
+    //       <Link to={post.node.fields.slug}> 
+    //         {post.node.frontmatter.title} 
+    //       </Link> 
+    //     </h3> 
+    //   ) 
+    // }) 
 
     return (
       <div className="content">

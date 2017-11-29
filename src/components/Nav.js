@@ -48,7 +48,7 @@ class Li extends React.Component {
 
 export default props => {
   let links = paths.map(path =>
-    <Li location={path} current={props.location.pathname} />
+    <Li location={path}  />
   )
 
   return (

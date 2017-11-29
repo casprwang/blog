@@ -30,5 +30,5 @@ console.log(x)
 
 ```
 
-![Closure in Chrome](/../../../images/uploads/Screen Shot 2017-11-11 at 8.18.06 PM.png)
+![Closure in Chrome](/../../../images/uploads/11-11.png)
 

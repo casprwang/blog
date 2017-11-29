@@ -68,6 +68,7 @@ export const resets = `
 
   .gatsby-resp-image-wrapper {
     z-index: 10;
+    margin: 0!important;
   }
 
   input {
