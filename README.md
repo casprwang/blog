@@ -7,6 +7,7 @@ Source code for the website about Song Wang at <span><a rel="noopener noreferrer
 ### Tech Stack
 * [Gatsby.js](https://www.gatsbyjs.org/)
 * [React.js](https://facebook.github.io/react/)
+* [Redux](https://redux.js.org/)
 * [Graphql](http://graphql.org/) / [Relay](https://facebook.github.io/relay/)
 * ~~[PostCSS](http://postcss.org/) / [Sass](http://sass-lang.com/)~~
 * [Styled Components](https://www.styled-components.com/)
