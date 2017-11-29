@@ -15,3 +15,11 @@ export const increaseBlog = () => ({
 export const incre = () => ({
   type: C.INCREMENT
 })
+
+export const toggleBlog = () => ({
+  type: C.TOGGLE_BLOG
+})
+
+export const toggleNote = () => ({
+  type: C.INCREMENT_NOTE
+})
