@@ -1,27 +1,27 @@
-import React, { Component } from 'react'
-import { Colors } from 'theme/variables'
-import Link from 'gatsby-link'
-import { Header } from 'theme/containers/Header.js'
-import { SearchResultWrapper } from 'theme/containers/Search.js'
-import { SearchTagItem, TagIndex } from 'theme/containers/TagItem.js'
+import React, { Component } from "react"
+import { Colors } from "theme/variables"
+import Link from "gatsby-link"
+import { Header } from "theme/containers/Header.js"
+import { SearchResultWrapper } from "theme/containers/Search.js"
+import { SearchTagItem, TagIndex } from "theme/containers/TagItem.js"
 // import { Form } from 'theme/containers/Form.js'
 
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const formStyle = {
-  display: 'flex',
-  color: '#000',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexDirection: 'column'
+  display: "flex",
+  color: "#000",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
 }
 
 const inputStyle = {
-  fontSize: '3em',
-  display: 'block',
-  width: '50%',
-  border: 'none',
-  borderBottom: '2px solid gray'
+  fontSize: "3em",
+  display: "block",
+  width: "50%",
+  border: "none",
+  borderBottom: "2px solid gray",
 }
 
 const searchingFor = term => {
@@ -29,7 +29,7 @@ const searchingFor = term => {
     return (
       (x.node.frontmatter.tags &&
         x.node.frontmatter.tags.every(tag =>
-          tag.toLowerCase().includes(term.toLowerCase())
+          tag.toLowerCase().includes(term.toLowerCase()),
         )) ||
       x.node.frontmatter.title.toLowerCase().includes(term.toLowerCase()) ||
       x.node.excerpt.toLowerCase().includes(term.toLowerCase()) ||
@@ -43,7 +43,7 @@ class SearchPage extends React.Component {
     super(props)
     this.state = {
       pages: this.props.data.allMarkdownRemark.edges,
-      term: ''
+      term: "",
     }
     this.searchHandler = this.searchHandler.bind(this)
     this.focus = this.focus.bind(this)
@@ -84,32 +84,28 @@ class SearchPage extends React.Component {
           <div>
             {this.state.pages
               .filter(searchingFor(this.state.term))
-              .map(page =>
+              .map(page => (
                 <SearchResultWrapper>
                   <Link to={page.node.fields.slug}>
-                    <h1>
-                      {page.node.frontmatter.title}
-                    </h1>
-                    <h3>
-                      {page.node.excerpt}
-                    </h3>
+                    <h1>{page.node.frontmatter.title}</h1>
+                    <h3>{page.node.excerpt}</h3>
                   </Link>
                   {/* <h3> */}
                   {/*   {page.node.headings.map(heading=>heading.value)} */}
                   {/* </h3> */}
                   <TagIndex>
-                    {page.node.frontmatter.tags
-                      ? page.node.fields.tagSlugs.map(tagSlug =>
-                          <Link to={tagSlug}>
-                            <SearchTagItem>
-                              {tagSlug.slice(6, tagSlug.length - 1)}
-                            </SearchTagItem>
-                          </Link>
-                        )
-                      : null}
+                    {page.node.frontmatter.tags ? (
+                      page.node.fields.tagSlugs.map(tagSlug => (
+                        <Link to={tagSlug}>
+                          <SearchTagItem>
+                            {tagSlug.slice(6, tagSlug.length - 1)}
+                          </SearchTagItem>
+                        </Link>
+                      ))
+                    ) : null}
                   </TagIndex>
                 </SearchResultWrapper>
-              )
+              ))
               .slice(0, 10)}
           </div>
         </form>
@@ -123,8 +119,8 @@ export default SearchPage
 export const pageQuery = graphql`
   query SearchQuery {
     allMarkdownRemark(
-    limit: 1000
-    filter: {frontmatter: {draft: { ne: true}}}
+      limit: 1000
+      filter: { frontmatter: { draft: { ne: true } } }
     ) {
       edges {
         node {

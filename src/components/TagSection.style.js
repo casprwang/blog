@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Em = styled.em`
   display: block;
   margin: 2em 0 1em;
-  font-size: .9rem;
+  font-size: 0.9rem;
   :before {
     display: block;
-    content: '';
+    content: "";
     width: 3px;
     height: 3px;
     margin: 2em auto;

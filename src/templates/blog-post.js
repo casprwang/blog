@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Header } from 'theme/containers/Header.js'
-import { ContentContainer } from 'theme/containers/ContentContainer.js'
-import { TagSection } from 'components/TagSection.js'
-import Comment from 'components/Comment.js'
+import React from "react"
+import Helmet from "react-helmet"
+import { Header } from "theme/containers/Header.js"
+import { ContentContainer } from "theme/containers/ContentContainer.js"
+import { TagSection } from "components/TagSection.js"
+import Comment from "components/Comment.js"
 
 class BlogPostRoute extends React.Component {
   render() {
@@ -16,45 +16,38 @@ class BlogPostRoute extends React.Component {
           title={`${post.frontmatter.title}`}
           meta={[
             {
-              name: 'description',
-              content:
-                post.excerpt || post.frontmatter.description
-            }
+              name: "description",
+              content: post.excerpt || post.frontmatter.description,
+            },
           ]}
         />
         <div>
           <Header>
-            {slug.slice(5, 12) === '/links/'
-              ? <div>
-                  <h1>
-                    <a
-                      rel="noopener noreferrer"
-                      target="__blank"
-                      href={post.frontmatter.link}
-                    >
-                      {post.frontmatter.title}
-                    </a>
-                  </h1>
-                  <small>
-                    {post.frontmatter.date}
-                  </small>
-                </div>
-              : <div>
-                  <h1>
+            {slug.slice(5, 12) === "/links/" ? (
+              <div>
+                <h1>
+                  <a
+                    rel="noopener noreferrer"
+                    target="__blank"
+                    href={post.frontmatter.link}
+                  >
                     {post.frontmatter.title}
-                  </h1>
-                  {post.frontmatter.description
-                    ? <p>
-                        {post.frontmatter.description}
-                      </p>
-                    : <small>
-                        {post.frontmatter.date}
-                      </small>}
-                </div>}
+                  </a>
+                </h1>
+                <small>{post.frontmatter.date}</small>
+              </div>
+            ) : (
+              <div>
+                <h1>{post.frontmatter.title}</h1>
+                {post.frontmatter.description ? (
+                  <p>{post.frontmatter.description}</p>
+                ) : (
+                  <small>{post.frontmatter.date}</small>
+                )}
+              </div>
+            )}
           </Header>
-          <ContentContainer
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
           <TagSection {...this.props} />
           <Comment />
         </div>

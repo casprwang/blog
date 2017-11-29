@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import React from "react"
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
-const issueUrl = 'https://github.com/wangsongiam/songwang.io/issues/new'
+const issueUrl = "https://github.com/wangsongiam/songwang.io/issues/new"
 
 const CommentSection = styled.div`
   margin-top: 2em;
   a {
     font-weight: 550;
     border-bottom: 1px dashed;
-    margin-left: .3em;
+    margin-left: 0.3em;
     ${media.phone`
       display: inline-block;
       text-align: center;
@@ -18,7 +18,7 @@ const CommentSection = styled.div`
   }
 `
 
-export default () =>
+export default () => (
   <CommentSection>
     <p>
       Questions, Comments, Suggestions?
@@ -27,3 +27,4 @@ export default () =>
       </a>
     </p>
   </CommentSection>
+)

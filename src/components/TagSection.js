@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import { Em } from './TagSection.style.js'
-import { InlineTag } from 'theme/containers/TagItem'
+import React from "react"
+import Link from "gatsby-link"
+import { Em } from "./TagSection.style.js"
+import { InlineTag } from "theme/containers/TagItem"
 
 export const TagSection = props => {
   let tags
@@ -9,16 +9,10 @@ export const TagSection = props => {
   if (props.data.markdownRemark.fields.tagSlugs) {
     const tagsArray = props.data.markdownRemark.fields.tagSlugs
     tags = tagsArray.map((tag, i) => {
-      const divider =
-        i < tagsArray.length - 1 &&
-        <span>
-          {', '}
-        </span>
+      const divider = i < tagsArray.length - 1 && <span>{", "}</span>
       return (
         <span key={tag}>
-          <Link to={tag}>
-            {props.data.markdownRemark.frontmatter.tags[i]}
-          </Link>
+          <Link to={tag}>{props.data.markdownRemark.frontmatter.tags[i]}</Link>
           {divider}
         </span>
       )
@@ -27,8 +21,8 @@ export const TagSection = props => {
       <Em>
         <span
           style={{
-            opacity: '.4',
-            paddingRight: '.4em'
+            opacity: ".4",
+            paddingRight: ".4em",
           }}
         >
           Tagged with

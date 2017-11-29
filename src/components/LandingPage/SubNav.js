@@ -1,10 +1,10 @@
-import React from 'react'
-import StyledSubNav from 'theme/containers/Links/SubNav'
+import React from "react"
+import StyledSubNav from "theme/containers/Links/SubNav"
 
-export default props =>
+export default props => (
   <StyledSubNav>
     <button
-      className={props.checkBlog ? 'down' : null}
+      className={props.checkBlog ? "down" : null}
       onClick={props.clickBlog}
       onMouseDown={e => {
         e.preventDefault()
@@ -14,7 +14,7 @@ export default props =>
     </button>
 
     <button
-      className={props.checkNote ? 'down' : null}
+      className={props.checkNote ? "down" : null}
       onClick={props.clickNote}
       onMouseDown={e => {
         e.preventDefault()
@@ -23,7 +23,7 @@ export default props =>
       Notes
     </button>
     <button
-      className={props.checkLink ? 'down' : null}
+      className={props.checkLink ? "down" : null}
       onClick={props.clickLink}
       onMouseDown={e => {
         e.preventDefault()
@@ -32,3 +32,4 @@ export default props =>
       Links
     </button>
   </StyledSubNav>
+)

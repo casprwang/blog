@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
-import { media } from 'theme/utils/media.js'
+import styled from "styled-components"
+import { Colors } from "theme/variables"
+import { media } from "theme/utils/media.js"
 
 export default styled.section`
   margin-bottom: 1.8em;
@@ -9,8 +9,8 @@ export default styled.section`
     filter: blur(0);
   }
   button {
-    filter: blur(.02em);
-    letter-spacing: .02em;
+    filter: blur(0.02em);
+    letter-spacing: 0.02em;
     :hover {
       text-decoration: underline;
     }
@@ -33,14 +33,12 @@ export default styled.section`
     ${media.phone`
       margin-left: .7em;
       margin-right: .7em;
-    `}
-    ${media.phone`
+    `} ${media.phone`
       margin-left: .7em;
       margin-right: .7em;
-    `}
-    ${media.none`
+    `} ${media.none`
       margin-left: .65em;
       margin-right: .65em;
-    `}
+    `};
   }
 `

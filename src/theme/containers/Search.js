@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
+import styled from "styled-components"
+import { Colors } from "theme/variables"
 
 export const SearchResultWrapper = styled.div`
   h1 {
@@ -11,10 +11,10 @@ export const SearchResultWrapper = styled.div`
 
   h3 {
     font-size: 1.2em;
-    opacity: .5;
+    opacity: 0.5;
     font-weight: 400;
     margin-top: 0;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
   padding-top: 0;
   margin-top: 0;

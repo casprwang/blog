@@ -1,4 +1,4 @@
-import C from './constants.js'
+import C from "./constants.js"
 
 export const increasePost = () => ({
   type: C.INCREMENT_POST,
@@ -13,13 +13,13 @@ export const increaseBlog = () => ({
 })
 
 export const incre = () => ({
-  type: C.INCREMENT
+  type: C.INCREMENT,
 })
 
 export const toggleBlog = () => ({
-  type: C.TOGGLE_BLOG
+  type: C.TOGGLE_BLOG,
 })
 
 export const toggleNote = () => ({
-  type: C.INCREMENT_NOTE
+  type: C.INCREMENT_NOTE,
 })

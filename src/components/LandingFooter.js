@@ -1,10 +1,10 @@
-import React from 'react'
-import StyledFooter from 'theme/containers/LandingFooter.style.js'
+import React from "react"
+import StyledFooter from "theme/containers/LandingFooter.style.js"
 
 const accounts = {
-  github: 'https://github.com/wangsongiam',
-  twitter: 'https://twitter.com/supsupsong',
-  linkedin: 'https://www.linkedin.com/in/song-wang-279a2b126/'
+  github: "https://github.com/wangsongiam",
+  twitter: "https://twitter.com/supsupsong",
+  linkedin: "https://www.linkedin.com/in/song-wang-279a2b126/",
 }
 
 export default () => {
@@ -15,15 +15,13 @@ export default () => {
         <a rel="noopener noreferrer" target="__blank" href={accounts[name]}>
           {name}
         </a>
-      </li>
+      </li>,
     )
   }
 
   return (
     <StyledFooter>
-      <ul>
-        {row}
-      </ul>
+      <ul>{row}</ul>
     </StyledFooter>
   )
 }

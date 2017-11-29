@@ -1,12 +1,10 @@
-import React from 'react'
-import { LinkContainer } from 'theme/containers/BlogPostsContaners'
-import { PullMoreButton } from 'theme/containers/Button.style.js'
+import React from "react"
+import { LinkContainer } from "theme/containers/BlogPostsContaners"
+import { PullMoreButton } from "theme/containers/Button.style.js"
 
-export default props =>
+export default props => (
   <LinkContainer>
-    <section>
-      {props.row}
-    </section>
+    <section>{props.row}</section>
     <PullMoreButton
       number={props.number}
       length={props.length}
@@ -18,3 +16,4 @@ export default props =>
       More
     </PullMoreButton>
   </LinkContainer>
+)

@@ -1,4 +1,4 @@
-import changeColor from 'theme/utils/colorChanger'
+import changeColor from "theme/utils/colorChanger"
 
 const h = `hsla(0, 0%, 0%, 1)`
 const background = `hsla(0, 0%, 100%, 1)`
@@ -11,10 +11,10 @@ export const Colors = {
   code: changeColor(h, 0.1),
   background,
   linkHover,
-  link: changeColor(h, 0.35)
+  link: changeColor(h, 0.35),
 }
 
 export const Fonts = {
   basic: `-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif, Georgia, serif, sans-serif`,
-  code: `'Source Code Pro', monospace`
+  code: `'Source Code Pro', monospace`,
 }

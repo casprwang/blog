@@ -1,4 +1,4 @@
-import { Colors } from 'theme/variables'
+import { Colors } from "theme/variables"
 
 export const prism = `
 /*

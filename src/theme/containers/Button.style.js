@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media.js'
-import { Colors, Fonts } from 'theme/variables'
+import styled from "styled-components"
+import { media } from "theme/utils/media.js"
+import { Colors, Fonts } from "theme/variables"
 
 export const Button = styled.div`
   font-family: ${Fonts.basic};
   font-weight: 500;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   &:first-letter {
     text-transform: uppercase;
   }
@@ -36,6 +36,5 @@ export const Button = styled.div`
 `
 
 export const PullMoreButton = Button.extend`
-  display: ${props =>
-    props.number >= props.length ? 'none' : 'inline'};
+  display: ${props => (props.number >= props.length ? "none" : "inline")};
 `

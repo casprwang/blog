@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-import { media } from 'theme/utils/media'
+import styled from "styled-components"
+import { media } from "theme/utils/media"
 
 export const Footer = styled.footer`
-  font-size: .9em;
+  font-size: 0.9em;
   margin-top: 3em;
   margin-bottom: 0;
   overflow: hide;

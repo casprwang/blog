@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header } from 'theme/containers/Header.js'
+import React from "react"
+import { Header } from "theme/containers/Header.js"
 
 class FourOFour extends React.Component {
   render() {

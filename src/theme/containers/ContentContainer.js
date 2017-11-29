@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Colors, Fonts } from 'theme/variables'
-import { media } from 'theme/utils/media.js'
+import styled from "styled-components"
+import { Colors, Fonts } from "theme/variables"
+import { media } from "theme/utils/media.js"
 
 export const ContentContainer = styled.div`
   > *:first-child {
@@ -16,20 +16,19 @@ export const ContentContainer = styled.div`
   ol {
     font-size: 1em;
     margin-bottom: 1.8em;
-    margin-top: .4em;
+    margin-top: 0.4em;
     list-style: none;
     li {
       padding-left: 1em;
       line-height: 1.6;
     }
     li::before {
-      content: '•';
+      content: "•";
       opacity: 1;
-      margin-right: .5em;
+      margin-right: 0.5em;
       margin-left: -.55em;
     }
   }
-
 
   a {
     background-image: linear-gradient(
@@ -58,18 +57,18 @@ export const ContentContainer = styled.div`
   }
 
   p {
-    opacity: .99999;
+    opacity: 0.99999;
     code {
-      padding-left: .2em;
+      padding-left: 0.2em;
       border: 1px solid ${Colors.code};
-      padding-right: .2em;
+      padding-right: 0.2em;
     }
   }
 
   blockquote {
     margin-top: 4em;
     font-size: 90%;
-    padding: 1.5em 1em 1.5em .5em;
+    padding: 1.5em 1em 1.5em 0.5em;
     margin-bottom: 0;
     font-size: 1em;
     border-top: 2px solid ${Colors.border};
@@ -83,7 +82,7 @@ export const ContentContainer = styled.div`
     cite {
       float: right;
       font-weight: 400;
-      padding: .3em;
+      padding: 0.3em;
     }
   }
 
@@ -92,7 +91,7 @@ export const ContentContainer = styled.div`
   }
 
   pre {
-    font-size: .85em;
+    font-size: 0.85em;
     color: ${Colors.p};
     padding: 0 1em 0;
     border-left: 2px solid ${Colors.border};

@@ -1,11 +1,11 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Header from 'components/Header'
-import LandingContainer from 'theme/containers/LandingContent'
-import { BlogArray, LinkArray, NoteArray, ProjectArray } from 'components/Lists'
-import { Projects, Notes, Blogs, Links, SubNav } from 'components/LandingPage'
+import React from "react"
+import Helmet from "react-helmet"
+import Header from "components/Header"
+import LandingContainer from "theme/containers/LandingContent"
+import { BlogArray, LinkArray, NoteArray, ProjectArray } from "components/Lists"
+import { Projects, Notes, Blogs, Links, SubNav } from "components/LandingPage"
 
-import { connect } from 'react-redux'
+import { connect } from "react-redux"
 
 const mapStateToProps = ({ blog, note, link, tab }) => {
   return {
@@ -44,7 +44,7 @@ const Index = props => {
       frontmatter: { date, title, link, tags, color, description },
     } = post.node
 
-    if (slug.split('/')[1] === 'projects')
+    if (slug.split("/")[1] === "projects")
       projectRows.unshift(
         <ProjectArray
           title={title}
@@ -54,8 +54,8 @@ const Index = props => {
         />,
       )
     else
-      switch (slug.split('/')[2]) {
-        case 'blog':
+      switch (slug.split("/")[2]) {
+        case "blog":
           rows.push(
             <BlogArray
               tagSlugs={tagSlugs}
@@ -67,10 +67,10 @@ const Index = props => {
             />,
           )
           break
-        case 'links':
+        case "links":
           linkRows.push(<LinkArray tags={tags} slug={link} title={title} />)
           break
-        case 'notes':
+        case "notes":
           notesRows.push(
             <NoteArray
               tagSlugs={tagSlugs}
@@ -96,7 +96,7 @@ const Index = props => {
         title={siteTitle}
         meta={[
           {
-            name: 'description',
+            name: "description",
             content: "Song Wang's website",
           },
         ]}

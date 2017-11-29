@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
-import { media } from 'theme/utils/media'
+import styled from "styled-components"
+import { Colors } from "theme/variables"
+import { media } from "theme/utils/media"
 
 export const Header = styled.header`
   margin-top: 150px;
