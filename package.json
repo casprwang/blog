@@ -2,9 +2,9 @@
   "name": "blog",
   "description": "'My blog'",
   "version": "0.0.1",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Song Wang <wangsongiam@gmail.com>",
   "scripts": {
-    "format": "prettier --no-semi --trailing-comma es5 --write 'src/**/*.js'"
+    "format": "prettier --no-semi --trailing-comma all --write 'src/**/*.js'"
   },
   "dependencies": {
     "babel-plugin-lodash": "^3.2.11",

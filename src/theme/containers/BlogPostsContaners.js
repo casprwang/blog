@@ -17,6 +17,7 @@ const Base = styled.div`
   h3:nth-last-child(2) {
     margin-bottom: .8em;
   }
+
 `
 
 const Wrapper = styled.div`background-color: red;`
