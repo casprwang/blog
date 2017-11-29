@@ -21,6 +21,7 @@ Source code for the website about Song Wang at <span><a rel="noopener noreferrer
 │  └── admin              > Netlify CMS
 ├── src
 │  ├── components
+│  ├── state/             > Redux's reducers, actions..
 │  ├── html.jsx           > React Entry Point
 │  ├── images             > Image Uploads
 │  ├── layouts/           > Global layout
