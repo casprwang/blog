@@ -16,6 +16,26 @@ import {
   SubNav
 } from 'components/LandingPage'
 
+import { connect } from "react-redux"
+
+const Counter = ({ count, increment }) => (
+  <div>
+    <p>Count: {count}</p>
+    <button onClick={increment}>Increment</button>
+  </div>
+)
+
+const mapStateToProps = ({ count }) => {
+  return { count }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { increment: () => dispatch({ type: `INCREMENT` }) }
+}
+
+const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter)
+
+
 export default class BlogIndex extends React.Component {
   constructor(props) {
     super(props)
@@ -177,6 +197,7 @@ export default class BlogIndex extends React.Component {
         />
         <Header bio={bio} />
         <LandingContainer>
+        <ConnectedCounter />
           <Projects row={projectRows} />
           <SubNav
             checkNote={this.state.haveNotes}
