@@ -8,7 +8,7 @@ const Base = styled.div`
   }
 
   h3 {
-    font-weight: 600;
+    // font-weight: 600;
     font-size: 1.324rem !important;
     margin-top: 0.5em;
     text-size-adjust: 100%;
