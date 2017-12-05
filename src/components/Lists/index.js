@@ -51,7 +51,7 @@ export const LinkArray = props => (
   </h3>
 )
 
-export const NoteArray = props => (
+export const NoteArray = props =>
   <h3>
     <PostLink to={props.slug}>{props.title}</PostLink>
     <TagWrapper>
@@ -61,4 +61,3 @@ export const NoteArray = props => (
       </BlogInlineTag>
     </TagWrapper>
   </h3>
-)
