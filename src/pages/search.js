@@ -29,7 +29,7 @@ const searchingFor = term => {
     return (
       (x.node.frontmatter.tags &&
         x.node.frontmatter.tags.every(tag =>
-          tag.toLowerCase().includes(term.toLowerCase()),
+          tag.toLowerCase().includes(term.toLowerCase())
         )) ||
       x.node.frontmatter.title.toLowerCase().includes(term.toLowerCase()) ||
       x.node.excerpt.toLowerCase().includes(term.toLowerCase()) ||
@@ -116,6 +116,7 @@ class SearchPage extends React.Component {
 
 export default SearchPage
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
   query SearchQuery {
     allMarkdownRemark(

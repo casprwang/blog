@@ -59,26 +59,32 @@ const Index = props => {
     } else {
       switch (slug.split(`/`)[2]) {
       case `blog`:
-        rows.push(<BlogArray
-          tagSlugs={tagSlugs}
-          tags={tags}
-          date={date}
-          excerpt={excerpt}
-          slug={slug}
-          title={title}
-        />)
+        rows.push(
+          <BlogArray
+            tagSlugs={tagSlugs}
+            tags={tags}
+            date={date}
+            excerpt={excerpt}
+            slug={slug}
+            title={title}
+          />
+        )
         break
       case `links`:
-        linkRows.push(<LinkArray tags={tags} slug={link} title={title} />)
+        linkRows.push(
+          <LinkArray tags={tags} slug={link} title={title} />
+        )
         break
       case `notes`:
-        notesRows.push(<NoteArray
-          tagSlugs={tagSlugs}
-          tags={tags}
-          date={date}
-          slug={slug}
-          title={title}
-        />)
+        notesRows.push(
+          <NoteArray
+            tagSlugs={tagSlugs}
+            tags={tags}
+            date={date}
+            slug={slug}
+            title={title}
+          />
+        )
         break
       default:
         break

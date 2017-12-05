@@ -16,7 +16,7 @@ export default () => {
         <a rel="noopener noreferrer" target="__blank" href={accounts[name]}>
           {name}
         </a>
-      </li>,
+      </li>
     )
   }
 

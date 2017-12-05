@@ -22,7 +22,7 @@
     "curly": [2, "all"],
     "no-console": [2, { "allow": ["warn", "error", "log"] }],
     "no-unused-vars": 0,
-    "function-paren-newline": ["error", "multiline"],
-    "comma-dangle": [2, "only-multiline"]
+    "comma-dangle": [2, "only-multiline"],
+    "react/jsx-indent": [2, 2]
   }
 }
