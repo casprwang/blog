@@ -1,7 +1,7 @@
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { Colors } from "theme/variables"
-import { media } from "theme/utils/media.js"
+// import { media } from "theme/utils/media.js"
 
 export const PostLink = styled(Link)`
   position: relative;

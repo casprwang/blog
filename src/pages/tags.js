@@ -34,6 +34,7 @@ class TagsPageRoute extends React.Component {
 
 export default TagsPageRoute
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
   query TagsQuery {
     site {

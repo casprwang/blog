@@ -16,14 +16,14 @@ class BlogPostRoute extends React.Component {
           title={`${post.frontmatter.title}`}
           meta={[
             {
-              name: "description",
+              name: `description`,
               content: post.excerpt || post.frontmatter.description,
             },
           ]}
         />
         <div>
           <Header>
-            {slug.slice(5, 12) === "/links/" ? (
+            {slug.slice(5, 12) === `/links/` ? (
               <div>
                 <h1>
                   <a
@@ -58,6 +58,7 @@ class BlogPostRoute extends React.Component {
 
 export default BlogPostRoute
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {

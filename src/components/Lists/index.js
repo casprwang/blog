@@ -73,8 +73,8 @@ export const BlogArray = props => {
       <p>
         <PostLink
           style={{
-            cursor: "pointer",
-            backgroundImage: "none",
+            cursor: `pointer`,
+            backgroundImage: `none`,
           }}
           to={props.slug}
         >

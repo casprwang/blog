@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "author": "Song Wang <wangsongiam@gmail.com>",
   "scripts": {
-    "format": "prettier --no-semi --trailing-comma all --write 'src/**/*.js'"
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/esw --ignore-path .gitignore --ext .jsx --ext .js -w"
   },
   "dependencies": {
     "babel-plugin-lodash": "^3.2.11",
@@ -30,8 +31,12 @@
     "gatsby-transformer-sharp": "^1.6.5",
     "lodash": "^4.17.4",
     "lodash-webpack-plugin": "^0.11.2",
-    "prettier": "^1.6.1",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-watch": "^3.1.3"
   }
 }

@@ -9,7 +9,7 @@ export const TagSection = props => {
   if (props.data.markdownRemark.fields.tagSlugs) {
     const tagsArray = props.data.markdownRemark.fields.tagSlugs
     tags = tagsArray.map((tag, i) => {
-      const divider = i < tagsArray.length - 1 && <span>{", "}</span>
+      const divider = i < tagsArray.length - 1 && <span>{`, `}</span>
       return (
         <span key={tag}>
           <Link to={tag}>{props.data.markdownRemark.frontmatter.tags[i]}</Link>
@@ -21,8 +21,8 @@ export const TagSection = props => {
       <Em>
         <span
           style={{
-            opacity: ".4",
-            paddingRight: ".4em",
+            opacity: `.4`,
+            paddingRight: `.4em`,
           }}
         >
           Tagged with

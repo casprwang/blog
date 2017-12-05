@@ -10,13 +10,11 @@ const accounts = {
 export default () => {
   let row = []
   for (let name in accounts) {
-    row.push(
-      <li key={name}>
-        <a rel="noopener noreferrer" target="__blank" href={accounts[name]}>
-          {name}
-        </a>
-      </li>,
-    )
+    row.push(<li key={name}>
+      <a rel="noopener noreferrer" target="__blank" href={accounts[name]}>
+        {name}
+      </a>
+    </li>)
   }
 
   return (

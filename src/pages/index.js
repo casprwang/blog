@@ -2,7 +2,12 @@ import React from "react"
 import Helmet from "react-helmet"
 import Header from "components/Header"
 import LandingContainer from "theme/containers/LandingContent"
-import { BlogArray, LinkArray, NoteArray, ProjectArray } from "components/Lists"
+import {
+  BlogArray,
+  LinkArray,
+  NoteArray,
+  ProjectArray,
+} from "components/Lists"
 import { Projects, Notes, Blogs, Links, SubNav } from "components/LandingPage"
 
 import { connect } from "react-redux"
@@ -44,46 +49,41 @@ const Index = props => {
       frontmatter: { date, title, link, tags, color, description },
     } = post.node
 
-    if (slug.split("/")[1] === "projects")
-      projectRows.unshift(
-        <ProjectArray
-          title={title}
+    if (slug.split(`/`)[1] === `projects`) {
+      projectRows.unshift(<ProjectArray
+        title={title}
+        slug={slug}
+        color={color}
+        description={description}
+      />)
+    } else {
+      switch (slug.split(`/`)[2]) {
+      case `blog`:
+        rows.push(<BlogArray
+          tagSlugs={tagSlugs}
+          tags={tags}
+          date={date}
+          excerpt={excerpt}
           slug={slug}
-          color={color}
-          description={description}
-        />,
-      )
-    else
-      switch (slug.split("/")[2]) {
-        case "blog":
-          rows.push(
-            <BlogArray
-              tagSlugs={tagSlugs}
-              tags={tags}
-              date={date}
-              excerpt={excerpt}
-              slug={slug}
-              title={title}
-            />,
-          )
-          break
-        case "links":
-          linkRows.push(<LinkArray tags={tags} slug={link} title={title} />)
-          break
-        case "notes":
-          notesRows.push(
-            <NoteArray
-              tagSlugs={tagSlugs}
-              tags={tags}
-              date={date}
-              slug={slug}
-              title={title}
-            />,
-          )
-          break
-        default:
-          break
+          title={title}
+        />)
+        break
+      case `links`:
+        linkRows.push(<LinkArray tags={tags} slug={link} title={title} />)
+        break
+      case `notes`:
+        notesRows.push(<NoteArray
+          tagSlugs={tagSlugs}
+          tags={tags}
+          date={date}
+          slug={slug}
+          title={title}
+        />)
+        break
+      default:
+        break
       }
+    }
   })
 
   // organizing array
@@ -96,8 +96,8 @@ const Index = props => {
         title={siteTitle}
         meta={[
           {
-            name: "description",
-            content: "Song Wang's website",
+            name: `description`,
+            content: `Song Wang's website`,
           },
         ]}
       />
@@ -145,6 +145,7 @@ const ConnectedIndex = connect(mapStateToProps, mapDispatchToProps)(Index)
 
 export default ConnectedIndex
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
   query BlogQuery {
     allSitePage {

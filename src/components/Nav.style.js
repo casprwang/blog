@@ -41,5 +41,5 @@ export const NavItem = styled(Link)`
 `
 
 NavItem.defaultProps = {
-  activeClassName: "active",
+  activeClassName: `active`,
 }

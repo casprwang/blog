@@ -27,31 +27,31 @@ const toggle = (
   state = {
     blog: true,
     note: false,
-    link: false,
+    link: false
   },
-  action,
+  action
 ) => {
   switch (action.type) {
-    case C.TOGGLE_BLOG:
-      return {
-        blog: true,
-        note: false,
-        link: false,
-      }
-    case C.TOGGLE_NOTE:
-      return {
-        blog: false,
-        note: true,
-        link: false,
-      }
-    case C.TOGGLE_LINK:
-      return {
-        blog: false,
-        note: false,
-        link: true,
-      }
-    default:
-      return state
+  case C.TOGGLE_BLOG:
+    return {
+      blog: true,
+      note: false,
+      link: false
+    }
+  case C.TOGGLE_NOTE:
+    return {
+      blog: false,
+      note: true,
+      link: false
+    }
+  case C.TOGGLE_LINK:
+    return {
+      blog: false,
+      note: false,
+      link: true
+    }
+  default:
+    return state
   }
 }
 
@@ -59,5 +59,5 @@ export default combineReducers({
   link: increLink,
   note: increNote,
   blog: increBlog,
-  tab: toggle,
+  tab: toggle
 })

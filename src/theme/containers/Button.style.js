@@ -36,5 +36,5 @@ export const Button = styled.div`
 `
 
 export const PullMoreButton = Button.extend`
-  display: ${props => (props.number >= props.length ? "none" : "inline")};
+  display: ${props => (props.number >= props.length ? `none` : `inline`)};
 `

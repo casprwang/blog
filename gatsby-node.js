@@ -1,19 +1,18 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
-const path = require('path')
+const _ = require("lodash")
+const Promise = require("bluebird")
+const path = require("path")
 const select = require(`unist-util-select`)
 const precache = require(`sw-precache`)
-const webpackLodashPlugin = require('lodash-webpack-plugin')
+const webpackLodashPlugin = require("lodash-webpack-plugin")
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
     const pages = []
-    const blogPost = path.resolve('src/templates/blog-post.js')
-    const tagPages = path.resolve('src/templates/tag-page.js')
-    graphql(
-      `
+    const blogPost = path.resolve("src/templates/blog-post.js")
+    const tagPages = path.resolve("src/templates/tag-page.js")
+    graphql(`
         {
           allMarkdownRemark(
             limit: 1000,
@@ -30,8 +29,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         }
-      `
-    ).then(result => {
+      `).then(result => {
       if (result.errors) {
         console.log(result.errors)
         resolve()
@@ -52,7 +50,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       // Tag pages.
       let tags = []
       _.each(result.data.allMarkdownRemark.edges, edge => {
-        if (_.get(edge, 'node.frontmatter.tags')) {
+        if (_.get(edge, "node.frontmatter.tags")) {
           tags = tags.concat(edge.node.frontmatter.tags)
         }
       })
@@ -86,7 +84,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({ node, name: `slug`, value: slug })
     createNodeField({ node, name: `nakedSlug`, value: nakedSlug })
   } else if (node.internal.type === `MarkdownRemark`) {
-    if (getNode(node.parent).name !== 'index') {
+    if (getNode(node.parent).name !== "index") {
       let fileNode = getNode(node.parent)
       createNodeField({
         node,
@@ -103,9 +101,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     }
 
     if (node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(
-        tag => `/tags/${_.kebabCase(tag)}/`
-      )
+      const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${_.kebabCase(tag)}/`)
       createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
     }
   }
@@ -114,27 +110,23 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 // Add Lodash plugin
 exports.modifyWebpackConfig = ({ config, stage }) => {
   switch (stage) {
-    case 'develop':
-      config._config.resolve.modulesDirectories = ['src', 'node_modules']
-      break
+  case "develop":
+    config._config.resolve.modulesDirectories = ["src", "node_modules"]
+    break
 
-    case 'build-css':
-      config._config.resolve.modulesDirectories = ['src', 'node_modules']
-      break
+  case "build-css":
+    config._config.resolve.modulesDirectories = ["src", "node_modules"]
+    break
 
-    case 'build-html':
-      config._config.resolve.modulesDirectories = ['src', 'node_modules']
-      break
+  case "build-html":
+    config._config.resolve.modulesDirectories = ["src", "node_modules"]
+    break
 
-    case 'build-html':
-      config._config.resolve.modulesDirectories = ['src', 'node_modules']
 
-      break
+  case "build-javascript":
+    config._config.resolve.modulesDirectories = ["src", "node_modules"]
 
-    case 'build-javascript':
-      config._config.resolve.modulesDirectories = ['src', 'node_modules']
-
-      break
+    break
   }
 
   return config
