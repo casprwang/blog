@@ -7,9 +7,8 @@ color: 'HSLA(267, 31%, 46%, 1.00)'
 tags:
  - gatsby
  - styled components
- - react
- - relay
- - graphql
+ - react, redux
+ - graphql, relay
  - netlify-cms
 ---
 
