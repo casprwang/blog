@@ -17,34 +17,31 @@ export const ProjectArray = props =>
     </ProjectLink>
   </h3>
 
-export const BlogArray = props => {
-  return (
-    <div>
-      <h3>
-        <PostLink to={props.slug}>{props.title}</PostLink>
-        <TagWrapper>
-          <TimeTag>{props.date}</TimeTag>
-          <BlogInlineTag>
-            {props.tags.map((tag, i) => (
-              <Link to={props.tagSlugs[i]}>{tag}</Link>
-            ))}
-          </BlogInlineTag>
-        </TagWrapper>
-      </h3>
-      <p>
-        <PostLink
-          style={{
-            cursor: `pointer`,
-            backgroundImage: `none`,
-          }}
-          to={props.slug}
-        >
-          {props.excerpt}
-        </PostLink>
-      </p>
-    </div>
-  )
-}
+export const BlogArray = props =>
+  <div>
+    <h3>
+      <PostLink to={props.slug}>{props.title}</PostLink>
+      <TagWrapper>
+        <TimeTag>{props.date}</TimeTag>
+        <BlogInlineTag>
+          {props.tags.map((tag, i) => (
+            <Link to={props.tagSlugs[i]}>{tag}</Link>
+          ))}
+        </BlogInlineTag>
+      </TagWrapper>
+    </h3>
+    <p>
+      <PostLink
+        style={{
+          cursor: `pointer`,
+          backgroundImage: `none`,
+        }}
+        to={props.slug}
+      >
+        {props.excerpt}
+      </PostLink>
+    </p>
+  </div>
 
 export const LinkArray = props => (
   <h3>
