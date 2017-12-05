@@ -9,7 +9,7 @@ const Base = styled.div`
 
   h3 {
     font-weight: 600;
-    font-size: 1.524rem;
+    font-size: 1.524rem !important;
     margin-top: 0.5em;
     text-size-adjust: 100%;
   }
@@ -21,7 +21,12 @@ const Base = styled.div`
 
 const Wrapper = styled.div`background-color: red;`
 
-export const NoteContainer = Base.extend`// letter-spacing: -.010em;`
+export const NoteContainer = Base.extend`
+  p {
+    cursor: default;
+    text-size-adjust: 100%;
+  }
+`
 
 export const BlogContainer = Base.extend`
   p {
