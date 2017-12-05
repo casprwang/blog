@@ -7,6 +7,10 @@ export default styled.div`
     letter-spacing: 0.01em;
     font-size: 1.8em;
   }
+  h3 {
+    font-size: 1.2em;
+    font-weight: 450;
+  }
   h2 + h3 {
     margin-top: 0;
   }
