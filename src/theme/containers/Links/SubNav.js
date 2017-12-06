@@ -6,10 +6,8 @@ export default styled.section`
   margin-bottom: 1.8em;
   .down {
     color: ${Colors.h};
-    filter: blur(0);
   }
   button {
-    filter: blur(0.02em);
     letter-spacing: 0.02em;
     :hover {
       text-decoration: underline;

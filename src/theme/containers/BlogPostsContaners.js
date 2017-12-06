@@ -32,6 +32,8 @@ export const BlogContainer = Base.extend`
   p {
     cursor: default;
     text-size-adjust: 100%;
+    padding-bottom: .8em;
+    // border-bottom: 1px solid #f2f2f2;
   }
 `
 
