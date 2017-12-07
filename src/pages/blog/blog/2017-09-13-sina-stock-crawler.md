@@ -7,7 +7,7 @@ tags:
   - crawler
   - data
 ---
-A few month ago, my friend Hongkai, Zhang, Ph.D. found me and asked me if I could crawl all the data from [sina stock source](http://stock.finance.sina.com.cn/option/quotes.html), which, provides all sorts of Chinese options data for the next season. I did know a lot about the stock, especially from Chinese sites. But  I kicked this out since Hongkai is a nice person and he helps me once before; I owe him once.
+A few month ago, my friend Hongkai, Zhang, Ph.D. found me and asked me if I could crawl all the data from [sina stock source](http://stock.finance.sina.com.cn/option/quotes.html), which, provides all sorts of Chinese options data for the next season. I didn' know too much about the stock, especially from Chinese sites. But I kicked this out since Hongkai is a nice person and he helps me once before; I owe him once.
 
 Before anything, I wanted to say sorry to my Chinese fellows who are reading this blog; I probably should have written this in Chinese since most of the people might find it useful is probably from China. But please excuse me that I am terrible at Chinese writing(didn’t even finish writing section on [Gaokao](https://www.wikiwand.com/en/National_Higher_Education_Entrance_Examination)), and I’ve been writing English for a while, and I am used to it now.
 
