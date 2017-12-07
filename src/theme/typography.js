@@ -56,7 +56,7 @@ export const typography = `
     display: block;
     margin: 1.1em 0;
   }
-  
+
   table {
     margin-top: 2.8em;
     color: ${Colors.h};

@@ -2,8 +2,8 @@ import React from "react"
 import Helmet from "react-helmet"
 import { Header } from "theme/containers/Header.js"
 import { ContentContainer } from "theme/containers/ContentContainer.js"
-import { TagSection } from "components/TagSection.js"
-import Comment from "components/Comment.js"
+import { TagSection } from "components/TagSection.jsx"
+import Comment from "components/Comment.jsx"
 
 class BlogPostRoute extends React.Component {
   render() {
