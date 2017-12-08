@@ -6,7 +6,7 @@ tags:
   - go
   - algorithm
 ---
- Fisher-Yates shuffle algorithm is a classic shuffling algorithm with great performance and correctness. Here is two implementation in Javascript and Go.
+ Fisher-Yates shuffle algorithm is a classic shuffling algorithm with great performance and mathematical correctness. Here is two implementation in Javascript and Go.
 
 ### Javascript
 ```js
