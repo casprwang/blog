@@ -160,3 +160,52 @@ const postorderIterativeTwoStack = root => {
 
 ```
 
+### Levelorder
+```js
+const recursive = root => {
+  let res = []
+
+  const walk = (node, level) => {
+    if (!node) return
+
+    if (res[level] === undefined) res[level] = [node.val]
+    else res[level].push(node.val)
+
+    walk(node.left, level + 1)
+    walk(node.right, level + 1)
+  }
+
+  walk(root, 0)
+
+  return res 
+}
+
+
+const iterative = root => {
+  let queue = [root]
+  let res = []
+
+  while (queue.length > 0) {
+    let curLevel = []
+
+    let len = queue.length
+
+    for (let i = 0; i < len; i++) {
+      let curNode = queue.shift()
+
+      if (curNode !== null) {
+        curLevel.push(curNode.val)
+
+        queue.push(curNode.left)
+        queue.push(curNode.right)
+      }
+    }
+
+    if (curLevel.length !== 0) res.push(curLevel)
+  }
+
+  return res
+}
+
+```
+
