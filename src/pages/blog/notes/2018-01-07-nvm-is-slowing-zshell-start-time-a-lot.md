@@ -1,5 +1,5 @@
 ---
-title: NVM is slowing zshell start time a lot
+title: Making zshell load faster on start
 date: '2018-01-07T18:06:49-05:00'
 tags:
   - zsh
@@ -16,3 +16,4 @@ My final solution is to alias the loading commands by a short macro, for wheneve
 
 
 The performance got boosted to 1s, which is way more comfortable to me.
+
