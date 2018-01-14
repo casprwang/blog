@@ -34,7 +34,7 @@ I started building this site back in June 2017, when Gatsby was in the alpha ver
 To name a few Web technology I heavily used on this site:
 
 * Gatsby.js
-* React.js
+* React, Redux
 * GraphQL, Relay
 * ~~PostCSS, SCSS~~
 * Netlify-CMS
