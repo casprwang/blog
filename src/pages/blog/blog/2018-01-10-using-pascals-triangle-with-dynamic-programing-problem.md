@@ -55,7 +55,7 @@ If we are trying to find the pure math relations, we usually need to draw out th
 
 In the triangle, the solid line stands for the first move, the dashed stands for the second, and the curled for the third. By connecting all of the ending positions from each move, we could find a larger triangle every time. And if you looked at the ending counting numbers from the left edge or right edge of the triangle, it actually goes like a [Pascal's triangle](https://www.wikiwand.com/en/Pascal%27s_triangle), from "1" to "1, 2 ,1", to "1, 3, 3, 1" to "1, 4, 6, 4, 1".
 
-Following through the Pascal's triangle with two edgesAnde could find the ultimate equation is
+Following through the two Pascal's triangles, we could find the ultimate equation is
 
 > F(n) = 2 ^ (n + 1) - 1
 
