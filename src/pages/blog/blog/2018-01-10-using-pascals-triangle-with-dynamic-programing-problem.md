@@ -50,7 +50,7 @@ A Linear way is usually considered as a "good" solution for computing time. But 
 
 If we are trying to find the pure math relations, we usually need to draw out the math and "feel" it.
 
-![pascal's triangle](/../../../images/uploads/pascal_triangle.jpg)
+![pascal's triangle](/../../../images/uploads/pascal.png)
 
 In the triangle, the solid line stands for the first move, the dashed stands for the second, and the curled for the third. By connecting all of the ending positions from each move, we could find a larger triangle every time. And if you looked at the ending counting numbers from the left edge or right edge of the triangle, it actually goes like a [Pascal's triangle](https://www.wikiwand.com/en/Pascal%27s_triangle), from "1" to "1, 2 ,1", to "1, 3, 3, 1" to "1, 4, 6, 4, 1".
 
