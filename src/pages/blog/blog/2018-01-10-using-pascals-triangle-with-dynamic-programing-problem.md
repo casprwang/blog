@@ -43,11 +43,11 @@ By that equation, we could simply organize a simple array and keep track from mo
 
 
 
-
 ### 3. Mathematical Induction, O(1)
 A Linear way is usually considered as a "good" solution for computing time. But if we could find the pure mathematical equation that takes n and simply puts the final result, that would be the fastest possible solution. 
 
 ### Draw and find the Pascal's triangle
+
 If we are trying to find the pure math relations, we usually need to draw out the math and "feel" it.
 
 ![pascal's triangle](/../../../images/uploads/pascal_triangle.jpg)
