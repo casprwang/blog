@@ -13,14 +13,14 @@ The following question is asked by an interviewer who’s specialized in algorit
 > A kid can move towards three directions: up, left, right. Each move has the same length. The kid can't move down and can't move to his last position(eg. moving to the right then left is not allowed). How many unique ways by n moves the kid could have?
 
 
-## 1. The intuitive backtracking way, O(n!)
+## The intuitive backtracking way, O(n!)
 By the first glance, the question could be done by backtracking all the possible ways starting from position "0,0", and count the number of it. 
 
 But at the same time, since backtracking needs to be done incrementally, we have to store all the previous moves in the memory, which could be highly inefficient. Also, the computing complexity of backtracking could goes to n factorial, with a pretty large memory space.
 
 That being said, the dumb solution is obviously a less optimized solution. But we can certainly try some more consistent way by finding the pattern or pure math.
 
-## 2. Dynamic programming, O(n)
+## Dynamic programming, O(n)
 
 By being less dumb, we may notice that we don't really have to store all of the previews moves. Since we are just calculating number count, we could find a relation with previous ending spot and the next one, and just store the counting number without move records. The validating part could be avoid by not adding invalid counts from each step followed by a same pattern. 
 
@@ -44,7 +44,7 @@ By that equation, we could simply organize a simple array and keep track from mo
 
 
 
-## 3. Mathematical Induction, O(1)
+## Mathematical Induction, O(1)
 A Linear way is usually considered as a "good" solution for computing time. But if we could find the pure mathematical equation that takes n and simply puts the final result, that would be the fastest possible solution. 
 
 ### Draw and find the Pascal's triangle
