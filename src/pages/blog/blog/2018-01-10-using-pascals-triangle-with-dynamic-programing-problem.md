@@ -15,18 +15,18 @@ The following question is asked by an interviewer who’s specialized in algorit
 ## The intuitive backtracking way, O(n!)
 By the first glance, the question could be done by backtracking all the possible ways starting from position "0,0", and count the number of it. 
 
-But at the same time, since backtracking needs to be done incrementally, in the worst case, we have to walk through all of the previous moves in the memory, which could be highly inefficient. The computing complexity of backtracking goes up to n factorial, with a pretty large memory space.
+But at the same time, since backtracking needs to be done incrementally, in the worst case we have to store all the previous moves in the memory, which is highly inefficient. Also, the computing complexity of backtracking goes up to n factorial, with a pretty large memory space.
 
-That being said, the intuitive solution is obviously a less optimized solution. But we can certainly try some more consistent way by finding the pattern or pure math.
+That being said, the dumb solution is obviously a less optimized solution. But we can certainly try some more consistent way by finding the pattern or pure math.
 
 ## Dynamic programming, O(n)
 
-By being less intuitive, we may notice that we don't really have to store all of the previews moves. Since we are just calculating number count, we could find a relation with previous ending spot and the next one, and just store the counting number without move records. The validating part could be avoided by not adding invalid counts from each step followed by the same pattern. 
+By being less dumb, we may notice that we don't really have to store all of the previews moves. Since we are just calculating number count, we could find a relation with previous ending spot and the next one, and just store the counting number without move records. The validating part could be avoid by not adding invalid counts from each step followed by a same pattern. 
 
-### Finding the DP relation equation
+#### Finding the DP relation equation
 That being said, if we have a pattern function that links the counting numbers' relations with each other, then we could find a much smarter way to incrementally get the result. But the relation is not that obvious in this problem, and that's where I got stuck. Normally, a dynamic programming only need the relation between the previous and current position, but in this problem, the relation actually lies from the first position to the last position. 
 
-### The logic behinds (TL;DR)
+#### TL;DR
 Considering this question, for n moves, the kid could move at most up 10 times. But he doesn't have to be up 10 times, he could end up in 0 - 9 up times. So we may consider the kid have 10 cases divided by upper level. For upper 0 level, we say the kids didn't move up at all, for upper 1 level we say the kid moved up once. 
 
 If you think about the relation by upper level, for each level the id went up, he could end up with lots of unique ways, but that's all related with the ways from the last level. 
@@ -54,7 +54,7 @@ If we are trying to find the pure math relations, we usually need to draw out th
 
 In the triangle, the solid line stands for the first move, the dashed stands for the second, and the curled for the third. By connecting all of the ending positions from each move, we could find a larger triangle every time. And if you looked at the ending counting numbers from the left edge or right edge of the triangle, it actually goes like a [Pascal's triangle](https://www.wikiwand.com/en/Pascal%27s_triangle), from "1" to "1, 2 ,1", to "1, 3, 3, 1" to "1, 4, 6, 4, 1".
 
-Following through the Pascal's triangle with two edgesAnde could find the ultimate equation is
+Following through the two Pascal's triangles, we could find the ultimate equation is
 
 > F(n) = 2 ^ (n + 1) - 1
 
