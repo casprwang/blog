@@ -4,6 +4,7 @@ date: '2018-01-10T17:12:39-05:00'
 tags:
   - algorithm
   - dynamic programming
+draft: true
 ---
 Dynamic programming might be the most interesting approach in computer science with a clean and elegant solution. The general idea is to find the mathematical relations(equations) between the input and output. With enough "dark magic", the solution could be extremely simple.
 
