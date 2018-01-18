@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Song Wang <wangsongiam@gmail.com>",
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "./node_modules/.bin/gatsby develop",
     "lint": "./node_modules/.bin/esw --ignore-path .gitignore --ext .jsx --ext .js -w"
   },
   "dependencies": {
