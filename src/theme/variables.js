@@ -12,6 +12,7 @@ export const Colors = {
   background,
   linkHover,
   link: changeColor(h, 0.35),
+  subNav: changeColor(h, 0.20)
 }
 
 export const Fonts = {
