@@ -17,7 +17,7 @@ algorithms.
 
 I configure and sync the [dotfile](https://github.com/wangsongiam/dotfiles) for my editors, terminals, apps, macros.
 
-I am a [top 5%](https://www.keyhero.com/profile/user67157/) fastest typist of the world.
+I am a [top 5% fastest](https://www.keyhero.com/profile/user67157/) typist in the world.
 
 ## About songwang.io
 This site is my blog site, primarily for sharing my ideas and works. It is the 4th version, and its predecessor was built in 2016 with Jekyll. Yet, thanks to the help from Gatsby and the React ecosystem, this version is even faster in a more progressive way and performs pretty well in the browser.
