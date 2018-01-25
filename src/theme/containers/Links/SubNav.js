@@ -17,6 +17,15 @@ export default styled.section`
     right: 0;
     background-color: black;
   }
+  .down:hover:after{
+    position: absolute;
+    height: 2px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    background-color: black;
+  }
   button {
     letter-spacing: 0.02em;
     :first-child {
@@ -35,7 +44,7 @@ export default styled.section`
       content: '';
       left: 0;
       right: 0;
-      background-color: black;
+      background-color: ${Colors.link};
     }
     display: inline-block;
     font-size: 1.8rem;

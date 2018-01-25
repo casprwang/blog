@@ -18,5 +18,3 @@ x == y; \\ false (x and y, despite both being Number, refer to different memory 
 x == z; \\  true (x is converted to builtin primitive 1)
 x === y; \\ false (x and y refer to different memory addresses)﻿
 ```
-
-
