@@ -10,8 +10,8 @@ I used to believe that the triple equal checks both type and equality whereas do
 It's not that === checks for type, it's that == additionally converts into compatible types.
 
 ```js
-x = new Number\(1\);
-y = new Number\(1\);
+x = new Number(1);
+y = new Number(1);
 z = 1;
 
 x == y; \\ false (x and y, despite both being Number, refer to different memory addresses)
