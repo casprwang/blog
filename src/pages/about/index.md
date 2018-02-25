@@ -5,7 +5,7 @@ layout: page
 ---
 Hello, my name is Song Wang.
 
-I am a grad student majored in Computer Science, living in ~~Beijing~~, ~~Chengdu~~, New York.
+I am a grad student majored in Computer Science, living in ~~Beijing~~, ~~Chengdu~~, ~~New York~~, San Diego.
 
 I code Javascript, Go and Python, I'm also digging Lua, Vim Script.
 
