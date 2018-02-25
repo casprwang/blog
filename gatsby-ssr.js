@@ -5,18 +5,6 @@ import { Provider } from "react-redux"
 import { renderToString } from "react-dom/server"
 import createStore from "./src/state/createStore"
 
-// exports.replaceRouterComponent = ({ history }) => {
-//     const store = createStore()
-
-//     const ConnectedRouterWrapper = ({ children }) => (
-//         <Provider store={store}>
-//             <Router history={history}>{children}</Router>
-//         </Provider>
-//     )
-
-//     return ConnectedRouterWrapper
-// }
-
 
 exports.replaceRenderer = ({
   bodyComponent,

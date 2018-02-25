@@ -4,7 +4,6 @@ import Link from "gatsby-link"
 import { Header } from "theme/containers/Header.js"
 import { SearchResultWrapper } from "theme/containers/Search.js"
 import { SearchTagItem, TagIndex } from "theme/containers/TagItem.js"
-// import { Form } from 'theme/containers/Form.js'
 
 import styled from "styled-components"
 

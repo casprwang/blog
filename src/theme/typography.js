@@ -1,6 +1,4 @@
 import { Colors } from "./variables.js"
-// import styled from "styled-components"
-// import { media } from "theme/utils/media.js"
 
 export const typography = `
   html,

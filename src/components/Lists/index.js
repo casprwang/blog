@@ -43,13 +43,12 @@ export const BlogArray = props =>
     </p>
   </div>
 
-export const LinkArray = props => (
+export const LinkArray = props =>
   <h3>
     <LinkLink href={props.slug} target="_blank" rel="noopener">
       {props.title}
     </LinkLink>
   </h3>
-)
 
 export const NoteArray = props =>
   <h3>

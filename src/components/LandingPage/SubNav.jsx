@@ -1,7 +1,7 @@
 import React from "react"
 import StyledSubNav from "theme/containers/Links/SubNav"
 
-export default props => (
+export default props =>
   <StyledSubNav>
     <button
       className={props.checkBlog ? `down` : null}
@@ -32,4 +32,3 @@ export default props => (
       Links
     </button>
   </StyledSubNav>
-)
