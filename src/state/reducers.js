@@ -1,6 +1,5 @@
 import C from "./constants.js"
 import { combineReducers } from "redux"
-import initialState from "./initialState.js"
 
 const increLink = (state = 16, action) => {
   if (action.type === C.INCREMENT_LINK) {
