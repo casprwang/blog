@@ -5,14 +5,14 @@ layout: page
 ---
 Hello, my name is Song Wang.
 
-I am a grad student majored in Computer Science, living in ~~Beijing~~, ~~Chengdu~~, ~~New York~~, San Diego.
+I am a fullstack software engineer at [TuSimple](http://www.tusimple.com/), living in ~~Beijing~~, ~~Chengdu~~, ~~New York~~, San Diego.
 
-I code Javascript, Go and Python, I'm also digging Lua, Vim Script.
+I code Javascript, Python and Go, I'm also digging Lua, Vim Script.
 
 I love open source, and I contributed over [2,000
 times](https://github.com/wangsongiam) last year on Github.
 
-I play with [leetcode](https://leetcode.com/wangsup/), [code wars](https://www.codewars.com/users/wangsup) for new languages and
+I play with [leetcode](https://leetcode.com/song_hoboken/), [code wars](https://www.codewars.com/users/wangsup) for new languages and
 algorithms.
 
 I configure and sync the [dotfile](https://github.com/wangsongiam/dotfiles) for my editors, terminals, apps, macros.
