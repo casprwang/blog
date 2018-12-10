@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: "Song Wang",
     author: "Song Wang",
-    homeCity: "New York",
+    homeCity: "Beijing",
     bio:
-      "Self driven developer who makes simple and stupid codes"
+      "A software engineer who makes simple and stupid codes"
   },
   plugins: [
     {
