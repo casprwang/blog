@@ -30,11 +30,10 @@ A server is where we do our tasks, it's like the kitchen for our cooks working o
 ### Socket to communicate
 A socket is like a phone connection when it's connected between one cook in the kitchen and the manager from the front desk. The manager and the cook can talk with each other in either way. For this case, most of the case would be our scheduler checking every socket to see if anything has been done, the worker will then answer with the status at that moment. You can picture the scene that a manager keep asking workers, "Hey, have you done with the coffee?", "Not yet", "Hey, have you done with the sandwich?", "Not yet" over and over.
 
-### Looping and Polling to check workers' status
-As mentioned earlier, the manager will be constantly calling into the workers through a socket and see if anything has been done yet. This technique could be done in some different ways in a different operating system, eg. epoll, kqueue, but the ultimate purposes are similar: keep looping and polling through all socket connections and let them check in with the current status. 
-
 ![epoll and kqueue](/../../../images/uploads/epoll.png)
 
+### Looping and Polling to check workers' status
+As mentioned earlier, the manager will be constantly calling into the workers through a socket and see if anything has been done yet. This technique could be done in some different ways in a different operating system, eg. epoll, kqueue, but the ultimate purposes are similar: keep looping and polling through all socket connections and let them check in with the current status. 
 
 ## Concurrency in Node.js
 Concurrency in Node.js is another abstraction based on synchronous programming while utilizing epoll/kqueue for asynchronous tasks.
