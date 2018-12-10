@@ -6,7 +6,7 @@ tags:
   - javascript
   - concurrency
 ---
-Recently I got into an interesting conversation with a cool guy named Chris, where he asked if I can explain how Node.js works to some nontechnical people. I found it pretty interesting and challenging at the same time given that some of the abstractions I usually based on are probably not in audience's knowledge. After some thoughts, I found one of the ways I could do is starting from the connections in the real world and how the operating system simulates in the lower level, then moving up to Node.js. 
+Recently I had an interesting conversation with a cool guy named Chris, where he asked if I can explain how Node.js works to some nontechnical people. I found it pretty interesting and challenging at the same time given that some of the abstractions I usually based on are probably not in audience's knowledge. After some thoughts, I found one of the ways I could do is starting from the connections in the real world and how the operating system simulates in the lower level, then moving up to Node.js. 
 
 Following the thoughts with some lookups, I eventually put up some words and scratches as bellows, explaining some common concurrent programming terminologies, eg. event loop, promise, etc. in Unix and Node.js.
 
