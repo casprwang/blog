@@ -49,6 +49,6 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build"
+    "build": "rm -rf .cache && gatsby build"
   }
 }
