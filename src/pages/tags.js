@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Header from 'components/Header'
-import TagList from 'theme/containers/TagList'
+import TagListContainer from 'theme/containers/TagListContainer'
 import Layout from 'components/Layout'
 
 
@@ -23,7 +23,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Header title="Tags" subtitle={`All Tags from ${siteName}`} />
-      <TagList>
+      <TagListContainer>
         {cleanTags
           .sort((a, b) => b.totalCount - a.totalCount)
           .map(tag => (
@@ -31,7 +31,7 @@ export default ({ data }) => {
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           ))}
-      </TagList>
+      </TagListContainer>
     </Layout>
 
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from 'components/Layout'
-import SearchResultWrapper from 'theme/containers/Search.js'
+import SearchResultContainer from 'theme/containers/SearchResultContainer.js'
 import { SearchTagItem, TagIndex } from 'theme/containers/TagItem.js'
 
 const formStyle = {
@@ -84,14 +84,14 @@ export default class extends React.Component {
             .filter(searchingFor(this.state.term))
             .slice(0, 10)
             .map((page, i) => (
-              <SearchResultWrapper key={i}>
+              <SearchResultContainer key={i}>
                 <h2>
                   <Link to={page.node.fields.slug}>
                     {page.node.frontmatter.title}
                   </Link>
                 </h2>
                 <p>{page.node.excerpt}</p>
-              </SearchResultWrapper>
+              </SearchResultContainer>
             ))
           }
         </div>
