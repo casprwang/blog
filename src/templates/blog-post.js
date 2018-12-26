@@ -5,11 +5,11 @@ import HeaderContainer from "theme/containers/HeaderContainer"
 import ContentContainer from "theme/containers/ContentContainer.js"
 import Comment from "components/Comment"
 import SEO from 'components/SEO.js'
+import TagSection from 'components/TagSection'
 
 export default class extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const { fields: { slug } } = post
 
     return (
       <Layout>
@@ -26,6 +26,7 @@ export default class extends React.Component {
         </HeaderContainer>
         <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
+        <TagSection data={this.props.data} />
         <Comment />
       </Layout>
     )
@@ -46,6 +47,7 @@ export const blogpageQuery = graphql`
       excerpt
       fields {
         slug
+        tagSlugs
       }
       frontmatter {
         title
