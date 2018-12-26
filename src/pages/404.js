@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from "components/Header"
 import Layout from 'components/layout'
-import Seo from 'components/Seo'
+// import Seo from 'components/Seo'
 
 export default () =>
   <Layout>
-    <Seo title="404: Not Found" />
+    {/* <Seo title="404: Not Found" /> */}
     <Header title="Page not found" subtitle="Try to be smarter next time" />
   </Layout>

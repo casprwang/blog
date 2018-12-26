@@ -4,7 +4,7 @@ import Layout from 'components/layout'
 import HeaderContainer from "theme/containers/HeaderContainer"
 import ContentContainer from "theme/containers/ContentContainer.js"
 import Comment from "components/Comment"
-import Seo from 'components/Seo.js'
+// import Seo from 'components/Seo.js'
 
 export default class extends React.Component {
   render() {
@@ -13,7 +13,7 @@ export default class extends React.Component {
 
     return (
       <Layout>
-        <Seo title={post.frontmatter.title} description={post.excerpt} />
+        {/* <Seo title={post.frontmatter.title} description={post.excerpt} /> */}
         <HeaderContainer>
           <div>
             <h1>{post.frontmatter.title}</h1>
