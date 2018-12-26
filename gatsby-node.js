@@ -9,7 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
-    const tagPage = path.resolve(`./src/templates/tag-page.js`)
+    // const tagPage = path.resolve(`./src/templates/tag-page.js`)
     resolve(
       graphql(
         `
@@ -67,16 +67,17 @@ exports.createPages = ({ graphql, actions }) => {
           }
         })
 
-        tags.forEach(tag => {
-          const tagPath = `/tags/${getKebab(tag)}/`
-          createPage({
-            path: tagPath,
-            component: tagPage,
-            context: {
-              tag
-            }
-          })
-        })
+        // tags.forEach(tag => {
+        //   const tagPath = `/tags/${getKebab(tag)}/`
+        //   createPage({
+        //     path: tagPath,
+        //     component: tagPage,
+        //     context: {
+        //       tag
+        //     }
+        //   })
+        // })
+
       })
     )
   })

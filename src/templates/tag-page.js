@@ -3,52 +3,43 @@ import { Link } from "gatsby"
 import HeaderContainer from "theme/containers/HeaderContainer"
 import { LinkContainer } from "theme/containers/BlogPostsContaners"
 
-export default class extends React.Component {
-  render() {
-    const posts = this.props.data.allMarkdownRemark.edges
-    const title = this.props.data.site.siteMetadata.title
-    const postLinks = posts.map(post => {
-      return (
-        <h3 key={post.node.fields.slug}>
-          <Link to={post.node.fields.slug}>
-            {post.node.frontmatter.title}
-          </Link>
-        </h3>
-      )
-    })
+export default ({ pageContext, data }) => {
+  const { tag } = pageContext
+  const { edges, totalCount } = data.allMarkdownRemark
+  const tagHeader = `${totalCount} post${
+    totalCount === 1 ? "" : "s"
+  } tagged with "${tag}"`
 
-    return (
-      <div className="content">
-        <HeaderContainer>
-          <h1>
-            {this.props.data.allMarkdownRemark.totalCount} posts tagged with “{this.props.pathContext.tag}”
-          </h1>
-        </HeaderContainer>
-        <ul>
-          <LinkContainer>
-            {postLinks}
-          </LinkContainer>
-        </ul>
-        <p>
-          <Link to="/tags/">Browse all tags</Link>
-        </p>
-      </div>
-    )
-  }
+  return (
+    <div className="content">
+      <HeaderContainer>
+        <h1>
+          {tagHeader}
+        </h1>
+      </HeaderContainer>
+      <ul>
+        {edges.map(({ node }) => {
+          const { title } = node.frontmatter
+          const { slug } = node.fields
+          return (
+            <li key={slug}>
+              <Link to={slug}>{title}</Link>
+            </li>
+          )
+        })}
+      </ul>
+      <Link to="/tags">All tags</Link>
+    </div>
+  )
 }
 
 // eslint-disable-next-line
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query($tag: String) {
     allMarkdownRemark(
-      limit: 1000
+      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] }, draft: { ne: true } } }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {
