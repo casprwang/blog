@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { prism } from "theme/prism"
-import { media } from "theme/utils/media"
+import styled from 'styled-components'
+import { prism } from 'theme/prism'
+import { media } from 'theme/utils/media'
 
 export default styled.div`
   width: 650px;

@@ -125,7 +125,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: ["src", "node_modules"],
+      modules: ['src', 'node_modules'],
     },
   })
 }

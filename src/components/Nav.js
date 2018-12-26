@@ -1,6 +1,6 @@
-import React from "react"
-import Link from "gatsby"
-import { Nav, NavItem } from "./Nav.style.js"
+import React from 'react'
+import Link from 'gatsby'
+import { Nav, NavItem } from './Nav.style.js'
 
 const PATHS = [`/`, `/search/`, `/about/`]
 
@@ -16,15 +16,15 @@ const Li = ({ location }) =>
       </NavItem>
     </li>
   ) : (
-      <li
+    <li
         style={{
           float: `left`,
         }}
       >
-        <NavItem activeClassName="home" to={`${location}`}>
-          {`Song`}
-        </NavItem>
-      </li>
+      <NavItem activeClassName="home" to={`${location}`}>
+        {`Song`}
+      </NavItem>
+    </li>
     )
 
 export default () =>

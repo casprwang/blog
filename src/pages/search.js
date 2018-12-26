@@ -1,24 +1,24 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 import Layout from 'components/Layout'
-import SearchResultWrapper from "theme/containers/Search.js"
-import { SearchTagItem, TagIndex } from "theme/containers/TagItem.js"
+import SearchResultWrapper from 'theme/containers/Search.js'
+import { SearchTagItem, TagIndex } from 'theme/containers/TagItem.js'
 
 const formStyle = {
-  display: "flex",
-  color: "#000",
-  alignItems: "left",
-  justifyContent: "left",
-  flexDirection: "column",
+  display: 'flex',
+  color: '#000',
+  alignItems: 'left',
+  justifyContent: 'left',
+  flexDirection: 'column',
   marginTop: '3em',
 }
 
 const inputStyle = {
-  fontSize: "3em",
-  display: "block",
-  width: "50%",
-  border: "none",
-  borderBottom: "2px solid gray",
+  fontSize: '3em',
+  display: 'block',
+  width: '50%',
+  border: 'none',
+  borderBottom: '2px solid gray',
 }
 
 const searchingFor = term => {
@@ -40,7 +40,7 @@ export default class extends React.Component {
     super(props)
     this.state = {
       pages: this.props.data.allMarkdownRemark.edges,
-      term: "",
+      term: '',
     }
     this.searchHandler = this.searchHandler.bind(this)
     this.focus = this.focus.bind(this)

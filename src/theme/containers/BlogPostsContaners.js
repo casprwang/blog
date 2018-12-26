@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { media } from "theme/utils/media"
+import styled from 'styled-components'
+import { media } from 'theme/utils/media'
 
 const Base = styled.div`
   h2 {

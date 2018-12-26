@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { Colors } from "theme/variables"
+import { Colors } from 'theme/variables'
 
 export default styled.div`
   a {

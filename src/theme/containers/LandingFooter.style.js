@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { media } from "theme/utils/media"
-import { Colors } from "theme/variables"
+import styled from 'styled-components'
+import { media } from 'theme/utils/media'
+import { Colors } from 'theme/variables'
 
 export default styled.footer`
   bottom: 11%;

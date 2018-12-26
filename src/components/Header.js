@@ -1,5 +1,5 @@
-import React from "react"
-import HeaderContainer from "theme/containers/HeaderContainer"
+import React from 'react'
+import HeaderContainer from 'theme/containers/HeaderContainer'
 
 export default ({ title, subtitle }) =>
   <HeaderContainer>

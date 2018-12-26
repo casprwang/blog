@@ -1,4 +1,4 @@
-import changeColor from "theme/utils/colorChanger"
+import changeColor from 'theme/utils/colorChanger'
 
 const h = `hsla(0, 0%, 0%, 1)`
 const background = `hsla(0, 0%, 100%, 1)`

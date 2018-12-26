@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { Colors } from "theme/variables"
-import { media } from "theme/utils/media.js"
+import styled from 'styled-components'
+import { Colors } from 'theme/variables'
+import { media } from 'theme/utils/media.js'
 
 export default styled.section`
   margin-bottom: 1.8em;

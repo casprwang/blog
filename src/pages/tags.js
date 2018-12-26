@@ -1,7 +1,7 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Header from "components/Header"
-import TagList from "theme/containers/TagList"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Header from 'components/Header'
+import TagList from 'theme/containers/TagList'
 import Layout from 'components/Layout'
 
 

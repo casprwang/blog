@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import TagSectionContainer from "theme/containers/TagSectionContainer"
+import React from 'react'
+import { Link } from 'gatsby'
+import TagSectionContainer from 'theme/containers/TagSectionContainer'
 
 const TagRow = ({ data }) => {
   let tags

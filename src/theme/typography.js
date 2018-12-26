@@ -1,4 +1,4 @@
-import { Colors } from "./variables.js"
+import { Colors } from './variables.js'
 
 export const typography = `
   html,

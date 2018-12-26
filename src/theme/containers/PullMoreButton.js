@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { media } from "theme/utils/media.js"
-import { Colors, Fonts } from "theme/variables"
+import styled from 'styled-components'
+import { media } from 'theme/utils/media.js'
+import { Colors, Fonts } from 'theme/variables'
 
 export const Button = styled.div`
   margin-top: 3em;

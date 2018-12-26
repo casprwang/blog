@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: "Song Wang",
-    author: "Song Wang",
+    title: 'Song Wang',
+    author: 'Song Wang',
     siteName: 'songwang.io',
     bio:
-      "A software engineer who makes simple and stupid codes",
+      'A software engineer who makes simple and stupid codes',
     siteUrl: `https://songwang.io/`,
-    github: "https://github.com/wangsongiam",
-    twitter: "https://twitter.com/supsupsong",
-    linkedin: "https://www.linkedin.com/in/song-wang-279a2b126/",
-    homeCity: "Beijing",
+    github: 'https://github.com/wangsongiam',
+    twitter: 'https://twitter.com/supsupsong',
+    linkedin: 'https://www.linkedin.com/in/song-wang-279a2b126/',
+    homeCity: 'Beijing',
     description: `website about Song Wang`,
   },
   plugins: [
@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/static/uploads`,
-        name: "uploads"
+        name: 'uploads'
       }
     },
     {

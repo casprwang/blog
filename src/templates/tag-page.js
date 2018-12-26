@@ -1,7 +1,7 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 import Layout from 'components/Layout'
-import Header from "components/Header"
+import Header from 'components/Header'
 import SEO from 'components/SEO'
 import NoteListContainer from 'theme/containers/NoteListContainer'
 
@@ -9,7 +9,7 @@ export default ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
+    totalCount === 1 ? '' : 's'
     } tagged with "${tag}"`
 
   return (

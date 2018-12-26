@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { Colors } from "theme/variables.js"
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+import { Colors } from 'theme/variables.js'
 
 export const Nav = styled.div`
   display: block;
