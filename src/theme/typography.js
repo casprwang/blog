@@ -44,6 +44,7 @@ export const typography = `
     color: ${Colors.p};
     margin: 0 auto 1.2em;
     line-height: 1.5;
+    letter-spacing: normal;
   }
 
   .gatsby-resp-image-link,

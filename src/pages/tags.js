@@ -1,38 +1,45 @@
 import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import kebabCase from "lodash/kebabCase"
-import { Header } from "theme/containers/Header.js"
-import { TagsIndex } from "./tags.style.js"
+import { Link } from "gatsby"
+import HeaderContainer from "theme/containers/HeaderContainer"
+import TagList from "theme/containers/TagList"
 
-const sortTag = tagArray => tagArray.sort((a, b) => b.totalCount - a.totalCount)
 
-class TagsPageRoute extends React.Component {
-  render() {
-    const title = this.props.data.site.siteMetadata.title
-    const allTags = this.props.data.allMarkdownRemark.group
+export default ({ data }) => {
+  const title = data.site.siteMetadata.title
+  const allTags = data.allMarkdownRemark.group
 
-    return (
-      <div>
-        <Helmet title={title} />
-        <Header>
-          <div>
-            <h1>Tags</h1>
-          </div>
-        </Header>
-        <TagsIndex>
-          {sortTag(allTags).map(tag => (
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+  let hashMap = {}
+  allTags.forEach(({ fieldValue, totalCount }) => {
+    if (hashMap[fieldValue.toLowerCase()]) {
+      hashMap[fieldValue.toLowerCase()] += totalCount
+    } else {
+      hashMap[fieldValue.toLowerCase()] = totalCount
+    }
+  })
+  let cleanTags =
+    Object.entries(hashMap).map(([key, value]) => ({ fieldValue: key, totalCount: value }))
+
+  return (
+    <div>
+      <HeaderContainer>
+        <div>
+          <h1>Tags</h1>
+        </div>
+      </HeaderContainer>
+      <TagList>
+        {cleanTags
+          .sort((a, b) => b.totalCount - a.totalCount)
+          .map(tag => (
+            <Link to={`/tags/${tag.fieldValue}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           ))}
-        </TagsIndex>
-      </div>
-    )
-  }
+      </TagList>
+    </div>
+
+  )
 }
 
-export default TagsPageRoute
 
 // eslint-disable-next-line
 export const pageQuery = graphql`

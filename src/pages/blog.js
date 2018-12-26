@@ -9,9 +9,9 @@ export default ({ data, location }) => {
   const { title, bio } = data.site.siteMetadata
 
   return (
-    <Layout location={location} title={title}>
-      <Header title={title} subtitle={bio} />
-      <NoteList notes={data.allMarkdownRemark.edges} viewCount={3} />
+    <Layout>
+      <Header title={'Blogs'} />
+      <NoteList notes={data.allMarkdownRemark.edges} viewCount={8}/>
     </Layout>
   )
 }

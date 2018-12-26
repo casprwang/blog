@@ -1,8 +1,8 @@
-import { injectGlobal } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 import { resets } from "./reset.js"
 import { typography } from "./typography.js"
 
-injectGlobal`
+export default createGlobalStyle`
   @font-face {
     font-family: 'Source Code Pro', monospace;
     src: url('https://fonts.googleapis.com/css?family=Source+Code+Pro');

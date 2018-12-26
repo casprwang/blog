@@ -103,7 +103,7 @@ export const resets = `
       content: '';
       width: 3px;
       height: 3px;
-      margin: 2em auto;
+      margin: 2em 2em 2em;
       border-radius: 50%;
       background: black;
       box-shadow: calc(3px*8) 0 0 0 black, calc(3px*-8) 0 0 0 black;

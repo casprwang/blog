@@ -10,7 +10,7 @@ export const TagItem = styled.span`
   padding: 0 1em;
 `
 
-export const SearchTagItem = TagItem.extend`
+export const SearchTagItem = styled(TagItem)`
   border: 1px solid ${Colors.code};
   position: relative;
   padding: 0 1.4em;
@@ -95,7 +95,7 @@ export const InlineTag = styled.div`
     margin-top: .3em;
   `};
 `
-export const BlogInlineTag = InlineTag.extend`
+export const BlogInlineTag = styled(InlineTag)`
   line-height: 1.7;
   color: ${Colors.h};
   font-weight: 600;
@@ -123,7 +123,7 @@ export const BlogInlineTag = InlineTag.extend`
   }
 `
 
-export const TimeTag = InlineTag.extend`
+export const TimeTag = styled(InlineTag)`
   color: ${Colors.h};
   margin-left: 0;
   cursor: default;

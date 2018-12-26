@@ -5,12 +5,12 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "src/images/uploads"
-public_folder: "../../../images/uploads"
+media_folder: "static/uploads"
+public_folder: "uploads"
 
 collections:
   - name: "blog"
-    folder: "src/pages/blog/blog"
+    folder: "content/blog"
     label: "Blog"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
@@ -20,47 +20,3 @@ collections:
       - {label: "Date", name: "date", widget: "string", default: ""}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "notes"
-    folder: "src/pages/blog/notes"
-    label: "Notes"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
-    create: true
-    searchFields: ["title", "body", "tags"]
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "string", default: ""}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "links"
-    folder: "src/pages/blog/links"
-    label: "Links"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
-    create: true
-    searchFields: ["title", "body", "tags"]
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string", default: ""}
-      - {label: "Date", name: "date", widget: "string", default: ""}
-      - {label: "Tags", name: "tags", widget: "list"}
-  - name: "about"
-    folder: "src/pages/about"
-    label: "About"
-    searchFields: ["title", "body", "tags"]
-    fields: 
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "string", default: ""}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "hire"
-    folder: "src/pages/hire"
-    label: "Hire"
-    searchFields: ["title", "body", "tags"]
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "string", default: ""}
-      - {label: "Body", name: "body", widget: "markdown"}
-
-#     fields:
-#       - {label: "Image Alt", name: "image_alt", widget: "string", required: false}
-#       - {label: "Featured Image", name: "image", widget: "image", required: false}
-#       - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
-#       - {label: "Image", name: "image", widget: "image"}

@@ -2,14 +2,13 @@ import styled from "styled-components"
 import { prism } from "theme/prism"
 import { media } from "theme/utils/media"
 
-export const BodyContainer = styled.div`
+export default styled.div`
   width: 650px;
   height: 100%;
   margin: 0 auto;
-  height: 100%;
   ${prism} ${media.tablet`
     width: 88%;
   `} @media screen and (min-width: 1600px) {
-    width: 700px;
+    width: 900px;
   }
 `

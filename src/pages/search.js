@@ -1,18 +1,16 @@
-import React, { Component } from "react"
-import { Colors } from "theme/variables"
-import Link from "gatsby-link"
-import { Header } from "theme/containers/Header.js"
-import { SearchResultWrapper } from "theme/containers/Search.js"
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from 'components/layout'
+import SearchResultWrapper from "theme/containers/Search.js"
 import { SearchTagItem, TagIndex } from "theme/containers/TagItem.js"
-
-import styled from "styled-components"
 
 const formStyle = {
   display: "flex",
   color: "#000",
-  alignItems: "center",
-  justifyContent: "center",
+  alignItems: "left",
+  justifyContent: "left",
   flexDirection: "column",
+  marginTop: '3em',
 }
 
 const inputStyle = {
@@ -24,7 +22,7 @@ const inputStyle = {
 }
 
 const searchingFor = term => {
-  return function(x) {
+  return function (x) {
     return (
       (x.node.frontmatter.tags &&
         x.node.frontmatter.tags.every(tag =>
@@ -37,7 +35,7 @@ const searchingFor = term => {
   }
 }
 
-class SearchPage extends React.Component {
+export default class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -69,7 +67,7 @@ class SearchPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <Layout>
         <form style={formStyle}>
           <input
             style={inputStyle}
@@ -80,55 +78,44 @@ class SearchPage extends React.Component {
               this.textInput = input
             }}
           />
-          <div>
-            {this.state.pages
-              .filter(searchingFor(this.state.term))
-              .map(page => (
-                <SearchResultWrapper>
-                  <Link to={page.node.fields.slug}>
-                    <h1>{page.node.frontmatter.title}</h1>
-                    <h3>{page.node.excerpt}</h3>
-                  </Link>
-                  {/* <h3> */}
-                  {/*   {page.node.headings.map(heading=>heading.value)} */}
-                  {/* </h3> */}
-                  <TagIndex>
-                    {page.node.frontmatter.tags ? (
-                      page.node.fields.tagSlugs.map(tagSlug => (
-                        <Link to={tagSlug}>
-                          <SearchTagItem>
-                            {tagSlug.slice(6, tagSlug.length - 1)}
-                          </SearchTagItem>
-                        </Link>
-                      ))
-                    ) : null}
-                  </TagIndex>
-                </SearchResultWrapper>
-              ))
-              .slice(0, 10)}
-          </div>
         </form>
-      </div>
+        <div>
+          {this.state.pages
+            .filter(searchingFor(this.state.term))
+            .slice(0, 10)
+            .map((page, i) => (
+              <SearchResultWrapper key={i}>
+                <h2>
+                  <Link to={page.node.fields.slug}>
+                    {page.node.frontmatter.title}
+                  </Link>
+                </h2>
+                <p>{page.node.excerpt}</p>
+              </SearchResultWrapper>
+            ))
+          }
+        </div>
+
+      </Layout>
     )
   }
 }
 
-export default SearchPage
-
 // eslint-disable-next-line
 export const pageQuery = graphql`
-  query SearchQuery {
+  query {
     allMarkdownRemark(
       limit: 1000
-      filter: { frontmatter: { draft: { ne: true } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {frontmatter: {draft: {ne: true } } }
     ) {
-      edges {
-        node {
-          id
-          excerpt
-          timeToRead
-          internal {
-            content
+        edges {
+          node {
+            id
+            excerpt
+            timeToRead
+            internal {
+              content
           }
           headings {
             value
@@ -136,17 +123,15 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
-            tagSlugs
           }
           frontmatter {
             title
-            link
             tags
-            date
-            layout
-          }
+          date
+          layout
         }
       }
     }
   }
+}
 `

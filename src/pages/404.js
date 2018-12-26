@@ -1,19 +1,18 @@
-import React from "react"
-import { Header } from "theme/containers/Header.js"
+import React from 'react'
 
-class FourOFour extends React.Component {
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+
+class NotFoundPage extends React.Component {
   render() {
     return (
-      <div>
-        <Header style={{ marginBottom: 0 }}>
-          <div>
-            <h1>Page not found</h1>
-          </div>
-          <p>Try to be smarter next time</p>
-        </Header>
-      </div>
+      <Layout location={this.props.location}>
+        <SEO title="404: Not Found" />
+        <h1>Not Found</h1>
+        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      </Layout>
     )
   }
 }
 
-export default FourOFour
+export default NotFoundPage

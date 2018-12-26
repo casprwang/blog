@@ -21,14 +21,14 @@ const Base = styled.div`
 
 const Wrapper = styled.div`background-color: red;`
 
-export const NoteContainer = Base.extend`
+export const NoteContainer = styled(Base)`
   p {
     cursor: default;
     text-size-adjust: 100%;
   }
 `
 
-export const BlogContainer = Base.extend`
+export const BlogContainer = styled(Base)`
   p {
     cursor: default;
     text-size-adjust: 100%;
@@ -37,7 +37,7 @@ export const BlogContainer = Base.extend`
   }
 `
 
-export const LinkContainer = Base.extend`
+export const LinkContainer = styled(Base)`
   section {
     display: flex;
     flex-wrap: wrap;
@@ -52,7 +52,7 @@ export const LinkContainer = Base.extend`
   }
 `
 
-export const ProjectContainer = Base.extend`
+export const ProjectContainer = styled(Base)`
   width: 100%;
   letter-spacing: 0.02em;
   section {

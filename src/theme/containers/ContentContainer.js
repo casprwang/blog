@@ -2,7 +2,11 @@ import styled from "styled-components"
 import { Colors, Fonts } from "theme/variables"
 import { media } from "theme/utils/media.js"
 
-export const ContentContainer = styled.div`
+export default styled.div`
+  p {
+    max-width: 650px;
+    margin-left: 0;
+  }
   > *:first-child {
     margin-top: 0;
   }

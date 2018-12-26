@@ -1,133 +1,115 @@
-const _ = require("lodash")
-const Promise = require("bluebird")
-const path = require("path")
-const select = require(`unist-util-select`)
-const precache = require(`sw-precache`)
-const webpackLodashPlugin = require("lodash-webpack-plugin")
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const pages = []
-    const blogPost = path.resolve("src/templates/blog-post.js")
-    const tagPages = path.resolve("src/templates/tag-page.js")
-    graphql(`
-        {
-          allMarkdownRemark(
-            limit: 1000,
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  tags
+    const blogPost = path.resolve(`./src/templates/blog-post.js`)
+    const tagPage = path.resolve(`./src/templates/tag-page.js`)
+    resolve(
+      graphql(
+        `
+          {
+            allMarkdownRemark(
+              sort: { fields: [frontmatter___date], order: DESC }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    tags
+                  }
                 }
               }
             }
           }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
         }
-      `).then(result => {
-      if (result.errors) {
-        console.log(result.errors)
-        resolve()
-        // reject(result.errors);
-      }
 
-      // Create blog posts pages.
-      _.each(result.data.allMarkdownRemark.edges, edge => {
-        createPage({
-          path: edge.node.fields.slug, // required
-          component: blogPost,
-          context: {
-            slug: edge.node.fields.slug
+        // Create blog posts pages.
+        const posts = result.data.allMarkdownRemark.edges
+
+        posts.forEach((post, index) => {
+          const previous =
+            index === posts.length - 1 ? null : posts[index + 1].node
+          const next = index === 0 ? null : posts[index - 1].node
+
+          createPage({
+            path: post.node.fields.slug,
+            component: blogPost,
+            context: {
+              slug: post.node.fields.slug,
+              previous,
+              next,
+            },
+          })
+        })
+
+        let tags = new Set()
+
+        posts.forEach(({ node }) => {
+          if (node.frontmatter &&
+            node.frontmatter.tags &&
+            node.frontmatter.tags.length) {
+            node.frontmatter.tags.forEach(tag => tags.add(tag.toLowerCase()))
           }
         })
-      })
 
-      // Tag pages.
-      let tags = []
-      _.each(result.data.allMarkdownRemark.edges, edge => {
-        if (_.get(edge, "node.frontmatter.tags")) {
-          tags = tags.concat(edge.node.frontmatter.tags)
-        }
-      })
-      tags = _.uniq(tags)
-      tags.forEach(tag => {
-        const tagPath = `/tags/${_.kebabCase(tag)}/`
-        createPage({
-          path: tagPath,
-          component: tagPages,
-          context: {
-            tag
-          }
+        tags.forEach(tag => {
+          const tagPath = `/tags/${getKebab(tag)}/`
+          createPage({
+            path: tagPath,
+            component: tagPage,
+            context: {
+              tag
+            }
+          })
         })
       })
-
-      resolve()
-    })
+    )
   })
 }
 
-//exports.postBuild = require('./post-build')
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  fmImagesToRelative(node)
 
-// Add custom slug for blog posts to both File and MarkdownRemark nodes.
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
-  if (node.internal.type === `File`) {
-    const parsedFilePath = path.parse(node.relativePath)
-    const slug = `/${parsedFilePath.dir}/`
-    const nakedSlug = path.join(slug, `/${parsedFilePath.name}/`)
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 
-    createNodeField({ node, name: `slug`, value: slug })
-    createNodeField({ node, name: `nakedSlug`, value: nakedSlug })
-  } else if (node.internal.type === `MarkdownRemark`) {
-    if (getNode(node.parent).name !== "index") {
-      let fileNode = getNode(node.parent)
-      createNodeField({
-        node,
-        name: `slug`,
-        value: fileNode.fields.nakedSlug
-      })
-    } else {
-      let fileNode = getNode(node.parent)
-      createNodeField({
-        node,
-        name: `slug`,
-        value: fileNode.fields.slug
-      })
-    }
-
-    if (node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${_.kebabCase(tag)}/`)
-      createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
-    }
+  if (node.frontmatter && node.frontmatter.tags && node.frontmatter.tags.length) {
+    const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${getKebab(tag)}/`)
+    createNodeField({
+      name: `tagSlugs`,
+      node,
+      value: tagSlugs,
+    })
   }
 }
 
-// Add Lodash plugin
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  switch (stage) {
-  case "develop":
-    config._config.resolve.modulesDirectories = ["src", "node_modules"]
-    break
 
-  case "build-css":
-    config._config.resolve.modulesDirectories = ["src", "node_modules"]
-    break
-
-  case "build-html":
-    config._config.resolve.modulesDirectories = ["src", "node_modules"]
-    break
-
-
-  case "build-javascript":
-    config._config.resolve.modulesDirectories = ["src", "node_modules"]
-
-    break
-  }
-
-  return config
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+    },
+  })
 }

@@ -3,6 +3,8 @@ module.exports = {
     title: "Song Wang",
     author: "Song Wang",
     homeCity: "Beijing",
+    description: `website about Song Wang`,
+    siteUrl: `https://songwang.io/`,
     bio:
       "A software engineer who makes simple and stupid codes"
   },
@@ -10,64 +12,79 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
-      }
+        path: `${__dirname}/content`,
+        name: `content`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
-        name: "images"
-      }
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
     },
     {
-      resolve: `gatsby-plugin-postcss-sass`
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/uploads`,
+        name: "uploads"
+      }
     },
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 740
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-smartypants`,
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
             }
           },
-          "gatsby-remark-prismjs",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants"
-        ]
-      }
+        ],
+      },
     },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-101324222-1`
-      }
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
     },
+    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Song Wang",
-        short_name: "Song",
-        icons: [
-          {
-            src: "/logo.png",
-            sizes: "1024x1024",
-            type: "image/png"
-          }
-        ],
-        start_url: "/",
-        background_color: "white",
-        theme_color: "white",
-        display: "minimal-ui"
-      }
+        name: `Song Wang`,
+        short_name: `SWang`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/gatsby-icon.png`,
+      },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-preact`,
-    `gatsby-plugin-react-helmet`
-  ]
+    `gatsby-plugin-react-helmet`,
+  ],
 }
