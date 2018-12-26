@@ -4,14 +4,14 @@ import { graphql } from 'gatsby'
 import Layout from 'components/layout'
 import NoteList from 'components/NoteList'
 import Header from 'components/Header'
-import SEO from 'components/SEO'
+import Seo from 'components/Seo.js'
 
 export default ({ data, location }) => {
   const { title, bio } = data.site.siteMetadata
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={title}
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
