@@ -9,7 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
-    // const tagPage = path.resolve(`./src/templates/tag-page.js`)
+    const tagPage = path.resolve(`./src/templates/tag-page.js`)
     resolve(
       graphql(
         `
@@ -67,16 +67,16 @@ exports.createPages = ({ graphql, actions }) => {
           }
         })
 
-        // tags.forEach(tag => {
-        //   const tagPath = `/tags/${getKebab(tag)}/`
-        //   createPage({
-        //     path: tagPath,
-        //     component: tagPage,
-        //     context: {
-        //       tag
-        //     }
-        //   })
-        // })
+        tags.forEach(tag => {
+          const tagPath = `/tags/${getKebab(tag)}/`
+          createPage({
+            path: tagPath,
+            component: tagPage,
+            context: {
+              tag
+            }
+          })
+        })
 
       })
     )
@@ -88,22 +88,22 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node)
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const slug = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: slug,
     })
+    if (node.frontmatter && node.frontmatter.tags && node.frontmatter.tags.length) {
+      const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${getKebab(tag)}/`)
+      createNodeField({
+        name: `tagSlugs`,
+        node,
+        value: tagSlugs,
+      })
+    }
   }
 
-  if (node.frontmatter && node.frontmatter.tags && node.frontmatter.tags.length) {
-    const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${getKebab(tag)}/`)
-    createNodeField({
-      name: `tagSlugs`,
-      node,
-      value: tagSlugs,
-    })
-  }
 }
 
 
