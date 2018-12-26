@@ -86,5 +86,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-purgecss', // must be after other CSS plugins
   ],
 }
