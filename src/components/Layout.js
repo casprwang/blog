@@ -1,5 +1,4 @@
 import React from 'react'
-
 import styled from "styled-components"
 import GlobalStyle from "theme/global.js"
 import { Colors } from "theme/variables.js"

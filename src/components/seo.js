@@ -54,9 +54,9 @@ function SEO({ description, lang, meta, keywords, title }) {
               .concat(
                 keywords.length > 0
                   ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
                   : []
               )
               .concat(meta)}
@@ -84,7 +84,7 @@ SEO.propTypes = {
 export default SEO
 
 const detailsQuery = graphql`
-  query DefaultSEOQuery {
+  query {
     site {
       siteMetadata {
         title
