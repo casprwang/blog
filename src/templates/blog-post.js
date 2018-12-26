@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from 'components/layout'
 import HeaderContainer from "theme/containers/HeaderContainer"
 import ContentContainer from "theme/containers/ContentContainer.js"
 import Comment from "components/Comment"
+import SEO from 'components/SEO'
 
 export default class extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class extends React.Component {
 
     return (
       <Layout>
+        <SEO title={post.frontmatter.title} description={post.excerpt} />
         <HeaderContainer>
           <div>
             <h1>{post.frontmatter.title}</h1>

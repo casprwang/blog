@@ -15,7 +15,7 @@ const Background = styled.div`
   background-color: ${Colors.background};
 `
 
-export default ({ children, location }) => (
+export default ({ children }) => (
   <>
     <GlobalStyle />
     <Background />
