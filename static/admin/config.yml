@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: wangsongiam/songwang.io 
-  branch: master 
+  branch: v3 
 
 publish_mode: editorial_workflow
 
