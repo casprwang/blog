@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import HeaderContainer from "theme/containers/HeaderContainer"
-import { LinkContainer } from "theme/containers/BlogPostsContaners"
 
 export default ({ pageContext, data }) => {
   const { tag } = pageContext

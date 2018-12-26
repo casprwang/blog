@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "components/Header"
 import Layout from 'components/layout'
-import SEO from 'components/seo'
+import SEO from 'components/SEO'
 
 export default () =>
   <Layout>
