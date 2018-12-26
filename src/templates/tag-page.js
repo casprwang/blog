@@ -33,7 +33,7 @@ export default ({ pageContext, data }) => {
 }
 
 // eslint-disable-next-line
-export const pageQuery = graphql`
+export const tagpageQuery = graphql`
   query($tag: String) {
     allMarkdownRemark(
       limit: 2000

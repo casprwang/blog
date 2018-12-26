@@ -102,7 +102,7 @@ export default class extends React.Component {
 }
 
 // eslint-disable-next-line
-export const pageQuery = graphql`
+export const searchpageQuery = graphql`
   query {
     allMarkdownRemark(
       limit: 1000

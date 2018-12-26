@@ -33,7 +33,7 @@ export default class extends React.Component {
 }
 
 // eslint-disable-next-line
-export const pageQuery = graphql`
+export const blogpageQuery = graphql`
   query ($slug: String!) {
     site {
       siteMetadata {

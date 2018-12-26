@@ -42,7 +42,7 @@ export default ({ data }) => {
 
 
 // eslint-disable-next-line
-export const pageQuery = graphql`
+export const tagspageQuery = graphql`
   query TagsQuery {
     site {
       siteMetadata {

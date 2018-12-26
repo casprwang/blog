@@ -17,7 +17,7 @@ export default ({ data, location }) => {
 }
 
 
-export const pageQuery = graphql`
+export const blogpageQuery = graphql`
   query {
     site {
       siteMetadata {
