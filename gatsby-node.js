@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
+    const normalPage = path.resolve(`./src/templates/normal-page.js`)
     const blogPost = path.resolve(`./src/templates/blog-post.js`)
     const tagPage = path.resolve(`./src/templates/tag-page.js`)
     resolve(
@@ -45,16 +46,30 @@ exports.createPages = ({ graphql, actions }) => {
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node
           const next = index === 0 ? null : posts[index - 1].node
+          if (post.node.fields.slug && post.node.fields.slug.startsWith('/blog/')) {
+            // blog pages
+            createPage({
+              path: post.node.fields.slug,
+              component: blogPost,
+              context: {
+                slug: post.node.fields.slug,
+                previous,
+                next,
+              },
+            })
+          } else {
+            // normal page
+            createPage({
+              path: post.node.fields.slug,
+              component: normalPage,
+              context: {
+                slug: post.node.fields.slug,
+                previous,
+                next,
+              },
+            })
+          }
 
-          createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          })
         })
 
         let tags = new Set()

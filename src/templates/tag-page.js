@@ -1,6 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import HeaderContainer from "theme/containers/HeaderContainer"
+import Layout from 'components/Layout'
+import Header from "components/Header"
+import SEO from 'components/SEO'
+import NoteListContainer from 'theme/containers/NoteListContainer'
 
 export default ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -10,25 +13,22 @@ export default ({ pageContext, data }) => {
     } tagged with "${tag}"`
 
   return (
-    <div className="content">
-      <HeaderContainer>
-        <h1>
-          {tagHeader}
-        </h1>
-      </HeaderContainer>
-      <ul>
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter
-          const { slug } = node.fields
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
+    <Layout>
+      <SEO title={tag} description={tagHeader} />
+      <Header title={tag} subtitle={tagHeader} />
+      {edges.map(({ node }) => {
+        return (
+          <NoteListContainer key={node.fields.slug}>
+            <h3>
+              <Link to={node.fields.slug}>
+                {node.frontmatter.title}
+              </Link>
+            </h3>
+          </NoteListContainer>
+        )
+      })}
       <Link to="/tags">All tags</Link>
-    </div>
+    </Layout>
   )
 }
 

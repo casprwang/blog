@@ -1,11 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import HeaderContainer from "theme/containers/HeaderContainer"
+import Header from "components/Header"
 import TagList from "theme/containers/TagList"
+import Layout from 'components/Layout'
 
 
 export default ({ data }) => {
-  const title = data.site.siteMetadata.title
+  const { title, siteName } = data.site.siteMetadata
   const allTags = data.allMarkdownRemark.group
 
   let hashMap = {}
@@ -20,12 +21,8 @@ export default ({ data }) => {
     Object.entries(hashMap).map(([key, value]) => ({ fieldValue: key, totalCount: value }))
 
   return (
-    <div>
-      <HeaderContainer>
-        <div>
-          <h1>Tags</h1>
-        </div>
-      </HeaderContainer>
+    <Layout>
+      <Header title="Tags" subtitle={`All Tags from ${siteName}`} />
       <TagList>
         {cleanTags
           .sort((a, b) => b.totalCount - a.totalCount)
@@ -35,7 +32,7 @@ export default ({ data }) => {
             </Link>
           ))}
       </TagList>
-    </div>
+    </Layout>
 
   )
 }
@@ -47,6 +44,7 @@ export const tagspageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteName
       }
     }
     allMarkdownRemark(limit: 2000) {

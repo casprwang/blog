@@ -4,6 +4,7 @@ module.exports = {
     author: "Song Wang",
     homeCity: "Beijing",
     description: `website about Song Wang`,
+    siteName: 'songwang.io',
     siteUrl: `https://songwang.io/`,
     bio:
       "A software engineer who makes simple and stupid codes"

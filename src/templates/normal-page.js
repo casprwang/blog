@@ -5,7 +5,6 @@ import Header from 'components/Header'
 import ContentContainer from "theme/containers/ContentContainer.js"
 import Comment from "components/Comment"
 import SEO from 'components/SEO.js'
-import TagSection from 'components/TagSection'
 
 export default class extends React.Component {
   render() {
@@ -14,10 +13,9 @@ export default class extends React.Component {
     return (
       <Layout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <Header title={post.frontmatter.title} subtitle={post.frontmatter.date} />
+        <Header title={post.frontmatter.title} subtitle={''} />
         <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
-        <TagSection data={this.props.data} />
         <Comment />
       </Layout>
     )

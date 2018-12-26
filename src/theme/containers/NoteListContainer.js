@@ -19,4 +19,8 @@ export default styled.div`
     max-width: 660px;
     margin: 0;
   }
+
+  h3 {
+    margin-top: 0;
+  }
 `
