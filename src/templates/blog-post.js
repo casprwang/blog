@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from 'components/layout'
+import Layout from 'components/Layout'
 import HeaderContainer from "theme/containers/HeaderContainer"
 import ContentContainer from "theme/containers/ContentContainer.js"
 import Comment from "components/Comment"
