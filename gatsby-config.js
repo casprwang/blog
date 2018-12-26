@@ -2,12 +2,15 @@ module.exports = {
   siteMetadata: {
     title: "Song Wang",
     author: "Song Wang",
+    siteName: 'songwang.io',
+    bio:
+      "A software engineer who makes simple and stupid codes",
+    siteUrl: `https://songwang.io/`,
+    github: "https://github.com/wangsongiam",
+    twitter: "https://twitter.com/supsupsong",
+    linkedin: "https://www.linkedin.com/in/song-wang-279a2b126/",
     homeCity: "Beijing",
     description: `website about Song Wang`,
-    siteName: 'songwang.io',
-    siteUrl: `https://songwang.io/`,
-    bio:
-      "A software engineer who makes simple and stupid codes"
   },
   plugins: [
     {
