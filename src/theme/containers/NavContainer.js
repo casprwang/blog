@@ -11,6 +11,10 @@ export default styled.div`
     overflow: auto;
     li:first-child {
       float: left;
+      padding-left: 0em;
+    }
+    li:nth-child(2) {
+      padding-right: 0em;
     }
     li {
       float: right;
@@ -18,14 +22,14 @@ export default styled.div`
       vertical-align: middle;
       line-height: 1;
       list-style: none;
+      padding: 0.7em;
+      margin: 0em;
 
       a {
         text-transform: uppercase;
         color: ${Colors.h};
         text-decoration: none;
         display: block;
-        padding: 0.2em;
-        margin: 0.7em;
         // line-height: 1.9;
         transition: opacity 0.5s ease-in;
         :hover,
