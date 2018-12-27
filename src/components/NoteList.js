@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 import NoteListContainer from 'theme/containers/NoteListContainer'
-import PullMoreButton from "theme/containers/PullMoreButton"
+import PullMoreButton from 'theme/containers/PullMoreButton'
 
 const NoteList = ({ notes, viewCount }) =>
   notes
@@ -21,9 +21,7 @@ const NoteList = ({ notes, viewCount }) =>
 export default ({ notes, viewCount, step }) => {
   const [count, setCount] = useState(viewCount ? viewCount : 1)
   return (
-    <>
-      <NoteList notes={notes} viewCount={count} />
-      <PullMoreButton
+    <>'     '<NoteList notes={notes} viewCount={count} />'     '<PullMoreButton
         number={count}
         length={notes.length}
         onClick={() => setCount(count + (step || 3))}
@@ -32,7 +30,6 @@ export default ({ notes, viewCount, step }) => {
         }}
       >
         More...
-      </PullMoreButton>
-    </>
+    </PullMoreButton>'   '</>
   )
 }
