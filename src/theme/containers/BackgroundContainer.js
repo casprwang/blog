@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Colors } from "theme/variables.js"
+import styled from 'styled-components'
+import { Colors } from 'theme/variables.js'
 
 export default styled.div`
   position: fixed;

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import NavContainer from 'theme/containers/NavContainer'
 
-const PATHS = [`/`, `/search/`, `/about/`, `/blog/`]
+const PATHS = ['/', '/search/', '/about/', '/blog/']
 
 const getLinkName = locationSlug => locationSlug.length === 1 ? 'Song' : locationSlug.split('/')[1]
 

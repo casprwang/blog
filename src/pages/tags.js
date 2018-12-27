@@ -24,7 +24,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title={title} keywords={['blog', 'gatsby', 'javascript', 'react']} />
       <Header title="Tags" subtitle={`All Tags from ${siteName}`} />
       <TagListContainer>
         {cleanTags

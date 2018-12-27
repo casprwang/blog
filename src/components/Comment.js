@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { media } from 'theme/utils/media'
 
-const URL = `https://github.com/wangsongiam/songwang.io/issues/new`
+const URL = 'https://github.com/wangsongiam/songwang.io/issues/new'
 
 const CommentSection = styled.div`
   margin-top: 2em;

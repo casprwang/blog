@@ -1,5 +1,5 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
@@ -8,9 +8,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const normalPage = path.resolve(`./src/templates/normal-page.js`)
-    const blogPost = path.resolve(`./src/templates/blog-post.js`)
-    const tagPage = path.resolve(`./src/templates/tag-page.js`)
+    const normalPage = path.resolve('./src/templates/normal-page.js')
+    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const tagPage = path.resolve('./src/templates/tag-page.js')
     resolve(
       graphql(
         `
@@ -100,17 +100,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node)
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
+      name: 'slug',
       node,
       value: slug,
     })
     if (node.frontmatter && node.frontmatter.tags && node.frontmatter.tags.length) {
       const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${getKebab(tag)}/`)
       createNodeField({
-        name: `tagSlugs`,
+        name: 'tagSlugs',
         node,
         value: tagSlugs,
       })

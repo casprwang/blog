@@ -16,7 +16,7 @@
   "rules": {
     "indent": [0, 2],
     "linebreak-style": [2, "unix"],
-    "quotes": [2, "single", { "allowTemplateLiterals": true }],
+    "quotes": [2, "single", { "allowTemplateLiterals": false }],
     "semi": [2, "never"],
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     "curly": 0,

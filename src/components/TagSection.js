@@ -7,7 +7,7 @@ const TagRow = ({ data }) => {
   if (data.markdownRemark.fields.tagSlugs) {
     const tagsArray = data.markdownRemark.fields.tagSlugs
     tags = tagsArray.map((tag, i) => {
-      const divider = i < tagsArray.length - 1 && <span>{`, `}</span>
+      const divider = i < tagsArray.length - 1 && <span>{', '}</span>
       return (
         <span key={tag}>
           <Link to={tag}>{data.markdownRemark.frontmatter.tags[i]}</Link>

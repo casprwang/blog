@@ -11,7 +11,7 @@ export default ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO title={title} keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title={title} keywords={['blog', 'gatsby', 'javascript', 'react']} />
       <Header title={title} subtitle={bio} />
       <NoteList notes={data.allMarkdownRemark.edges} viewCount={3} />
     </Layout>
