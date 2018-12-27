@@ -6,21 +6,20 @@ import ContentContainer from 'theme/containers/ContentContainer.js'
 import Comment from 'components/Comment'
 import SEO from 'components/SEO.js'
 
-export default class extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
 
-    return (
-      <Layout>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <Header title={post.frontmatter.title} subtitle={''} />
-        <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <Comment />
-      </Layout>
-    )
-  }
+export default ({ data }) => {
+  const post = data.markdownRemark
+  return (
+    <Layout>
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <Header title={post.frontmatter.title} subtitle={''} />
+      <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr />
+      <Comment />
+    </Layout>
+  )
 }
+
 
 // eslint-disable-next-line
 export const blogpageQuery = graphql`

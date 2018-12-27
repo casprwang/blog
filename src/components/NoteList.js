@@ -20,7 +20,6 @@ const NoteList = ({ notes, viewCount }) =>
 
 export default ({ notes, viewCount }) => {
   const [count, setCount] = useState(viewCount ? viewCount : 1)
-
   return (
     <>
       <NoteList notes={notes} viewCount={count} />

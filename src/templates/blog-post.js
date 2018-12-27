@@ -7,21 +7,18 @@ import Comment from 'components/Comment'
 import SEO from 'components/SEO.js'
 import TagSection from 'components/TagSection'
 
-export default class extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-
-    return (
-      <Layout>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <Header title={post.frontmatter.title} subtitle={post.frontmatter.date} />
-        <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <TagSection data={this.props.data} />
-        <Comment />
-      </Layout>
-    )
-  }
+export default ({ data }) => {
+  const post = data.markdownRemark
+  return (
+    <Layout>
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <Header title={post.frontmatter.title} subtitle={post.frontmatter.date} />
+      <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
+      <hr />
+      <TagSection data={data} />
+      <Comment />
+    </Layout>
+  )
 }
 
 // eslint-disable-next-line
