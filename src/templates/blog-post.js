@@ -42,7 +42,6 @@ export const blogpageQuery = graphql`
       }
       frontmatter {
         title
-        layout
         tags
         description
         date(formatString: "MMMM DD, YYYY")

@@ -1,7 +1,6 @@
 ---
 title: About
 date: "2017-08-06"
-layout: page
 ---
 Hello, my name is Song Wang.
 
@@ -23,7 +22,7 @@ I am a [top 5% fastest](https://www.keyhero.com/profile/user67157/) typist in th
 This site is my blog site, primarily for sharing my ideas and works. It is the 4th version, and its predecessor was built in 2016 with Jekyll. Yet, thanks to the help from Gatsby and the React ecosystem, this version is even faster in a more progressive way and performs pretty well in the browser.
 
 
-![performance](ChromeAudits.png)
+![performance](images/uploads/ChromeAudits.png)
 
 by Google's [lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
@@ -43,7 +42,7 @@ Although I experienced with React and Webpack before, It was a tough new experie
 
 
 ### Performance on Chrome
-![detail on performance](performance.png)
+![detail on performance](images/uploads/performance.png)
 
 ### Acknowledgments:
 * [KyleAMathews](https://github.com/KyleAMathews) for actively responding to my questions and pull requests

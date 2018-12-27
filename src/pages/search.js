@@ -127,8 +127,7 @@ export const searchpageQuery = graphql`
           frontmatter {
             title
             tags
-          date
-          layout
+            date
         }
       }
     }
