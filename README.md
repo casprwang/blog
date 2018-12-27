@@ -7,10 +7,9 @@ Source code for the website about Song Wang at <span><a rel="noopener noreferrer
 ### Tech Stack
 * [Gatsby.js](https://www.gatsbyjs.org/)
 * [React.js](https://facebook.github.io/react/)
-* [Redux](https://redux.js.org/)
+* ~~[Redux](https://redux.js.org/)~~, [Hooks](https://reactjs.org/docs/hooks-intro.html)
 * [Graphql](http://graphql.org/) / [Relay](https://facebook.github.io/relay/)
-* ~~[PostCSS](http://postcss.org/) / [Sass](http://sass-lang.com/)~~
-* [Styled Components](https://www.styled-components.com/)
+* ~~[PostCSS](http://postcss.org/)~~,  ~~[Sass](http://sass-lang.com/)~~, [Styled Components](https://www.styled-components.com/)
 * [Netlify-CMS](https://www.netlifycms.org/)
 
 
@@ -20,33 +19,19 @@ Source code for the website about Song Wang at <span><a rel="noopener noreferrer
 ├── static
 │  └── admin              > Netlify CMS
 ├── src
-│  ├── components
-│  ├── state/             > Redux's reducers, actions..
-│  ├── html.jsx           > React Entry Point
-│  ├── images             > Image Uploads
-│  ├── layouts/           > Global layout
-│  ├── pages              > Pages
-│  │  ├── about
-│  │  ├── blog            > Posts
-│  │  │  ├── blog/
-│  │  │  ├── links/
-│  │  │  └── notes/
-│  │  ├── index.js        > Landing
-│  │  ├── search.js       > Search
-│  │  └── tags.js         > Tag
+│  ├── components         > JSXs
+│  ├── pages              > Views
 │  ├── templates
 │  └── theme              > Styled Components
 ├── gatsby-node.js        > Nodes Manipulations
 └── gatsby-config.js      > Gatsby Configuration
 ```
 
-### Local Installation
+### Local Demo
 
 ```
 git clone https://github.com/wangsongiam/songwang.io.git
-cd songwang.io
-npm i
-npm run dev
+(cd songwang.io && yarn && yarn dev)
 ```
 
 ### Acknowledgments
