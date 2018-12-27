@@ -63,9 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
               path: post.node.fields.slug,
               component: normalPage,
               context: {
-                slug: post.node.fields.slug,
-                previous,
-                next,
+                slug: post.node.fields.slug
               },
             })
           }
@@ -84,11 +82,12 @@ exports.createPages = ({ graphql, actions }) => {
 
         tags.forEach(tag => {
           const tagPath = `/tags/${getKebab(tag)}/`
+          console.log(tagPath)
           createPage({
             path: tagPath,
             component: tagPage,
             context: {
-              tag
+              tag: decodeURI(tag)
             }
           })
         })

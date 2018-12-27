@@ -4,6 +4,7 @@ import Header from 'components/Header'
 import TagListContainer from 'theme/containers/TagListContainer'
 import Layout from 'components/Layout'
 
+const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
 
 export default ({ data }) => {
   const { title, siteName } = data.site.siteMetadata
@@ -26,8 +27,8 @@ export default ({ data }) => {
       <TagListContainer>
         {cleanTags
           .sort((a, b) => b.totalCount - a.totalCount)
-          .map(tag => (
-            <Link to={`/tags/${tag.fieldValue}/`}>
+          .map((tag, i) => (
+            <Link key={i} to={`/tags/${getKebab(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           ))}

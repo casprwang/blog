@@ -6,6 +6,7 @@ import SEO from 'components/SEO'
 import NoteListContainer from 'theme/containers/NoteListContainer'
 
 export default ({ pageContext, data }) => {
+  if (!data.allMarkdownRemark) return null
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
@@ -45,6 +46,7 @@ export const tagpageQuery = graphql`
         node {
           fields {
             slug
+            tagSlugs
           }
           frontmatter {
             title
