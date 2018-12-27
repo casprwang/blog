@@ -9,7 +9,7 @@ Source code for the website about Song Wang at <span><a rel="noopener noreferrer
 * [React.js](https://facebook.github.io/react/)
 * ~~[Redux](https://redux.js.org/)~~, [Hooks](https://reactjs.org/docs/hooks-intro.html)
 * [Graphql](http://graphql.org/) / [Relay](https://facebook.github.io/relay/)
-* ~~[PostCSS](http://postcss.org/)~~,  ~~[Sass](http://sass-lang.com/)~~, [Styled Components](https://www.styled-components.com/)
+* ~~[Sass](http://sass-lang.com/)~~, ~~[PostCSS](http://postcss.org/)~~, [Styled Components](https://www.styled-components.com/)
 * [Netlify-CMS](https://www.netlifycms.org/)
 
 
