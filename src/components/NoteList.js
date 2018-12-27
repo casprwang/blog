@@ -18,7 +18,7 @@ const NoteList = ({ notes, viewCount }) =>
       </NoteListContainer>
     )
 
-export default ({ notes, viewCount }) => {
+export default ({ notes, viewCount, step }) => {
   const [count, setCount] = useState(viewCount ? viewCount : 1)
   return (
     <>
@@ -26,12 +26,12 @@ export default ({ notes, viewCount }) => {
       <PullMoreButton
         number={count}
         length={notes.length}
-        onClick={() => setCount(count + 2)}
+        onClick={() => setCount(count + (step || 3))}
         onMouseDown={e => {
           e.preventDefault()
         }}
       >
-        more...
+        More...
       </PullMoreButton>
     </>
   )

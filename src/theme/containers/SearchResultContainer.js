@@ -20,4 +20,9 @@ export default styled.div`
       }
     }
   }
+
+  p {
+    max-width: 650px;
+    margin-left: 0;
+  }
 `
