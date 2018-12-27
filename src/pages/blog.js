@@ -4,14 +4,16 @@ import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import NoteList from 'components/NoteList'
 import Header from 'components/Header'
+import SEO from 'components/SEO.js'
 
 export default ({ data, location }) => {
   const { title, bio } = data.site.siteMetadata
 
   return (
     <Layout>
+      <SEO title={title} keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Header title={'Blogs'} />
-      <NoteList notes={data.allMarkdownRemark.edges} viewCount={8}/>
+      <NoteList notes={data.allMarkdownRemark.edges} viewCount={15} />
     </Layout>
   )
 }

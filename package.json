@@ -46,9 +46,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "rm -rf .cache && gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "develop": "gatsby develop",
+    "develop": "rm -rf .cache && gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf .cache && gatsby build"
   }

@@ -3,7 +3,6 @@ import { media } from 'theme/utils/media.js'
 import { Colors, Fonts } from 'theme/variables'
 
 export const Button = styled.div`
-  margin-top: 3em;
   font-family: ${Fonts.basic};
   font-weight: 500;
   letter-spacing: 0.1em;

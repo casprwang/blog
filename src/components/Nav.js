@@ -1,35 +1,19 @@
 import React from 'react'
-import Link from 'gatsby'
-import { Nav, NavItem } from './Nav.style.js'
+import { Link } from 'gatsby'
+import NavContainer from 'theme/containers/NavContainer'
 
 const PATHS = [`/`, `/search/`, `/about/`]
 
+const getLinkName = locationSlug => locationSlug.length === 1 ? 'Song' : locationSlug.split('/')[1]
+
 const Li = ({ location }) =>
-  location.slice(1, location.length - 1) ? (
-    <li
-      style={{
-        float: `right`,
-      }}
-    >
-      <NavItem activeClassName="active" to={`${location}`}>
-        {location.slice(1, location.length - 1)}
-      </NavItem>
-    </li>
-  ) : (
-    <li
-        style={{
-          float: `left`,
-        }}
-      >
-      <NavItem activeClassName="home" to={`${location}`}>
-        {`Song`}
-      </NavItem>
-    </li>
-    )
+  <li>
+    <Link to={location}>{getLinkName(location)}</Link>
+  </li>
 
 export default () =>
-  <Nav>
+  <NavContainer>
     <ul>
       {PATHS.map((path, i) => <Li key={i} location={path} />)}
     </ul>
-  </Nav>
+  </NavContainer>

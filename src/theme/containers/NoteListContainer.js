@@ -18,6 +18,7 @@ export default styled.div`
   p {
     max-width: 660px;
     margin: 0;
+    margin-bottom: 1em;
   }
 
   h3 {

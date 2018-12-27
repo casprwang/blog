@@ -82,7 +82,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         tags.forEach(tag => {
           const tagPath = `/tags/${getKebab(tag)}/`
-          console.log(tagPath)
           createPage({
             path: tagPath,
             component: tagPage,
