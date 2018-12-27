@@ -34,6 +34,10 @@ git clone https://github.com/wangsongiam/songwang.io.git
 (cd songwang.io && yarn && yarn dev)
 ```
 
+### Benchmark
+![bench mark for songwang.io](https://rawcdn.githack.com/wangsongiam/songwang.io/8ed64e9e95d7c1dab09c23baacbdad79be80158e/static/uploads/bench_201812.png)
+
+
 ### Acknowledgments
 - almace-scaffolding
 - bricolage.io
