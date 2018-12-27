@@ -5,7 +5,7 @@ export default styled.div`
   display: block;
   font-size: 0.8em;
   font-weight: 600;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   ul {
     overflow: auto;
@@ -25,7 +25,7 @@ export default styled.div`
         text-decoration: none;
         display: block;
         padding: 0.2em;
-        margin: 0.4em;
+        margin: 0.7em;
         // line-height: 1.9;
         transition: opacity 0.5s ease-in;
         :hover,
