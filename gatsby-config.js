@@ -72,8 +72,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+        trackingId: `UA-101324222-1`
+      }
     },
     `gatsby-plugin-feed`,
     {
@@ -91,5 +91,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-purgecss', // must be after other CSS plugins
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
