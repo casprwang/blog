@@ -20,3 +20,13 @@ collections:
       - {label: "Date", name: "date", widget: "string", default: ""}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date", name: "date", widget: "string", default: ""}
+          - {label: "Body", name: "body", widget: "markdown"}
