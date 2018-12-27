@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import SearchResultContainer from 'theme/containers/SearchResultContainer.js'
-import { SearchTagItem, TagIndex } from 'theme/containers/TagItem.js'
 
 const formStyle = {
   display: 'flex',
