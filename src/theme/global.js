@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import { resets } from 'theme/reset.js'
-import { typography } from 'theme/typography.js'
+import resets from 'theme/reset'
+import typography from 'theme/typography'
+import prism from 'theme/prism'
 
 export default createGlobalStyle`
   @font-face {
@@ -9,4 +10,5 @@ export default createGlobalStyle`
   }
   ${resets}
   ${typography}
+  ${prism}
 `

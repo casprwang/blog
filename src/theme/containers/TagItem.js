@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { media } from 'theme/utils/media'
-import { Colors } from 'theme/variables.js'
+import media from 'theme/utils/media'
+import { Colors } from 'theme/variables'
 
 export const TagItem = styled.span`
   opacity: 0.8;

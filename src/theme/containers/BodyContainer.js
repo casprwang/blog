@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { prism } from 'theme/prism'
-import { media } from 'theme/utils/media'
+import media from 'theme/utils/media'
 
 export default styled.div`
   width: 650px;
   height: 100%;
   margin: 0 auto;
-  ${prism} ${media.tablet`
+  ${media.tablet`
     width: 88%;
   `} @media screen and (min-width: 1600px) {
     width: 900px;

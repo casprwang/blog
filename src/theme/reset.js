@@ -1,6 +1,6 @@
-import { Colors, Fonts } from 'theme/variables.js'
+import { Colors, Fonts } from 'theme/variables'
 
-export const resets = `
+export default `
   * {
     margin: 0;
     padding: 0;

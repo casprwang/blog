@@ -1,6 +1,6 @@
-import { Colors } from './variables.js'
+import { Colors } from './variables'
 
-export const typography = `
+export default `
   html,
   body {
     font-size: 17px;
