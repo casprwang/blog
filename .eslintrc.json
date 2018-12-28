@@ -1,28 +1,32 @@
 {
-	"parser": "babel-eslint",
-	"env": {
-		"browser": true,
-		"es6": true,
-		"node": true
-	},
-	"extends": "eslint:recommended",
-	"parserOptions": {
-		"ecmaFeatures": {
-			"experimentalObjectRestSpread": true,
-			"jsx": true
-		},
-		"sourceType": "module"
-	},
-	"plugins": ["react"],
-	"rules": {
-		"indent": [0, 2],
-		"linebreak-style": [2, "unix"],
-		"semi": [2, "never"],
-		"brace-style": [2, "1tbs", { "allowSingleLine": true }],
-		"curly": 0,
-		"no-console": [2, { "allow": ["warn", "error", "log"] }],
-		"no-unused-vars": 0,
-		"comma-dangle": [2, "only-multiline"],
-		"react/jsx-indent": [2, 2]
-	}
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "indent": [0, 2],
+    "linebreak-style": [2, "unix"],
+    "semi": [2, "never"],
+    "brace-style": [2, "1tbs", {
+      "allowSingleLine": true
+    }],
+    "curly": 0,
+    "no-console": [2, {
+      "allow": ["warn", "error", "log"]
+    }],
+    "no-unused-vars": 0,
+    "comma-dangle": [2, "only-multiline"],
+    "react/jsx-indent": [2, 2]
+  }
 }
