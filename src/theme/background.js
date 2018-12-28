@@ -1,7 +1,6 @@
-import styled from 'styled-components'
 import { Colors } from 'theme/variables'
 
-export default styled.div`
+export default `
   position: fixed;
   width: 100%;
   height: 100%;

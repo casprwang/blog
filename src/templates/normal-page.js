@@ -1,8 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+
+import ContentContainer from 'theme/containers/ContentContainer'
+
 import Layout from 'components/Layout'
 import Header from 'components/Header'
-import ContentContainer from 'theme/containers/ContentContainer'
 import Comment from 'components/Comment'
 import SEO from 'components/SEO'
 

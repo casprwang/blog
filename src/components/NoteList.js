@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-
 import NoteListContainer from 'theme/containers/NoteListContainer'
 import PullMoreButton from 'theme/containers/PullMoreButton'
+
 
 const NoteList = ({ notes, viewCount }) => notes
     .filter((_, i) => i < viewCount)
@@ -14,6 +14,7 @@ const NoteList = ({ notes, viewCount }) => notes
       </h2>
       <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
     </NoteListContainer>)
+
 
 export default ({ notes, viewCount, step }) => {
   const [count, setCount] = useState(viewCount || 1)

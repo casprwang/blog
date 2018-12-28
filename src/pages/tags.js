@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Header from 'components/Header'
+
 import TagListContainer from 'theme/containers/TagListContainer'
+
+import Header from 'components/Header'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
+
 
 const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
 

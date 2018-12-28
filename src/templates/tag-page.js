@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+
+import NoteListContainer from 'theme/containers/NoteListContainer'
+
 import Layout from 'components/Layout'
 import Header from 'components/Header'
 import SEO from 'components/SEO'
-import NoteListContainer from 'theme/containers/NoteListContainer'
+
 
 export default ({ pageContext, data }) => {
   if (!data.allMarkdownRemark) return null

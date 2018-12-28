@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from 'components/Layout'
 import SearchResultContainer from 'theme/containers/SearchResultContainer'
+import Layout from 'components/Layout'
 
 const formStyle = {
   display: 'flex',

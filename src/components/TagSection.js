@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import TagSectionContainer from 'theme/containers/TagSectionContainer'
 
+
 const TagRow = ({ data }) => {
   let tags
   if (data.markdownRemark.fields.tagSlugs) {
