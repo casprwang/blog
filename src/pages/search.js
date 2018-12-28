@@ -92,7 +92,6 @@ export default class extends React.Component {
             ))
           }
         </div>
-
       </Layout>
     )
   }
@@ -125,9 +124,9 @@ export const searchpageQuery = graphql`
             title
             tags
             date
+          }
         }
       }
     }
   }
-}
 `
