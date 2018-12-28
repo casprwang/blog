@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors)
           reject(result.errors)
@@ -43,8 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
         const posts = result.data.allMarkdownRemark.edges
 
         posts.forEach((post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node
+          const previous = index === posts.length - 1 ? null : posts[index + 1].node
           const next = index === 0 ? null : posts[index - 1].node
           if (post.node.fields.slug && post.node.fields.slug.startsWith('/blog/')) {
             // blog pages
@@ -67,20 +66,19 @@ exports.createPages = ({ graphql, actions }) => {
               },
             })
           }
-
         })
 
-        let tags = new Set()
+        const tags = new Set()
 
         posts.forEach(({ node }) => {
-          if (node.frontmatter &&
-            node.frontmatter.tags &&
-            node.frontmatter.tags.length) {
+          if (node.frontmatter
+            && node.frontmatter.tags
+            && node.frontmatter.tags.length) {
             node.frontmatter.tags.forEach(tag => tags.add(tag.toLowerCase()))
           }
         })
 
-        tags.forEach(tag => {
+        tags.forEach((tag) => {
           const tagPath = `/tags/${getKebab(tag)}/`
           createPage({
             path: tagPath,
@@ -90,7 +88,6 @@ exports.createPages = ({ graphql, actions }) => {
             }
           })
         })
-
       })
     )
   })
@@ -116,7 +113,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       })
     }
   }
-
 }
 
 

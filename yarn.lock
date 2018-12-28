@@ -4727,7 +4727,7 @@ eslint-plugin-graphql@^2.0.0:
     graphql-config "^2.0.1"
     lodash "^4.11.1"
 
-eslint-plugin-import@^2.14.0, eslint-plugin-import@^2.9.0:
+eslint-plugin-import@2.14.0, eslint-plugin-import@^2.9.0:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.14.0.tgz#6b17626d2e3e6ad52cfce8807a845d15e22111a8"
   integrity sha512-FpuRtniD/AY6sXByma2Wr0TXvXJ4nA/2/04VPlfpmUDPOpOY264x+ILiwnrk/k4RINgDAyFZByxqPUbSQ5YE7g==

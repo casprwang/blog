@@ -17,17 +17,15 @@ export default ({ pageContext, data }) => {
     <Layout>
       <SEO title={tag} description={tagHeader} />
       <Header title={tag} subtitle={tagHeader} />
-      {edges.map(({ node }) => {
-        return (
-          <NoteListContainer key={node.fields.slug}>
-            <h3>
-              <Link to={node.fields.slug}>
-                {node.frontmatter.title}
-              </Link>
-            </h3>
-          </NoteListContainer>
-        )
-      })}
+      {edges.map(({ node }) => (
+        <NoteListContainer key={node.fields.slug}>
+          <h3>
+            <Link to={node.fields.slug}>
+              {node.frontmatter.title}
+            </Link>
+          </h3>
+        </NoteListContainer>
+        ))}
       <Link to="/tags">All tags</Link>
     </Layout>
   )

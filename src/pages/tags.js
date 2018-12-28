@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Header from 'components/Header'
 import TagListContainer from 'theme/containers/TagListContainer'
 import Layout from 'components/Layout'
-import SEO from 'components/SEO.js'
+import SEO from 'components/SEO'
 
 const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
 
@@ -11,7 +11,7 @@ export default ({ data }) => {
   const { title, siteName } = data.site.siteMetadata
   const allTags = data.allMarkdownRemark.group
 
-  let hashMap = {}
+  const hashMap = {}
   allTags.forEach(({ fieldValue, totalCount }) => {
     if (hashMap[fieldValue.toLowerCase()]) {
       hashMap[fieldValue.toLowerCase()] += totalCount
@@ -19,8 +19,9 @@ export default ({ data }) => {
       hashMap[fieldValue.toLowerCase()] = totalCount
     }
   })
-  let cleanTags =
-    Object.entries(hashMap).map(([key, value]) => ({ fieldValue: key, totalCount: value }))
+  const cleanTags = Object
+    .entries(hashMap)
+    .map(([key, value]) => ({ fieldValue: key, totalCount: value }))
 
   return (
     <Layout>

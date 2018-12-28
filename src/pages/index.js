@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import NoteList from 'components/NoteList'
 import Header from 'components/Header'
-import SEO from 'components/SEO.js'
+import SEO from 'components/SEO'
 
 export default ({ data, location }) => {
   const { title, bio } = data.site.siteMetadata

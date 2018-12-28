@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from 'components/Layout'
-import SearchResultContainer from 'theme/containers/SearchResultContainer.js'
+import SearchResultContainer from 'theme/containers/SearchResultContainer'
 
 const formStyle = {
   display: 'flex',
@@ -22,15 +22,18 @@ const inputStyle = {
 }
 
 
-const searchingFor = term => x =>
-  (x.node.frontmatter.tags &&
-    x.node.frontmatter.tags.every(tag =>
-      tag.toLowerCase().includes(term.toLowerCase())
-    )) ||
-  x.node.frontmatter.title.toLowerCase().includes(term.toLowerCase()) ||
-  x.node.excerpt.toLowerCase().includes(term.toLowerCase()) ||
-  !term
+const searchingFor = term => x => (x.node.frontmatter.tags
+  && x.node.frontmatter.tags.every(tag => tag.toLowerCase().includes(term.toLowerCase())))
+  || x.node.frontmatter.title.toLowerCase().includes(term.toLowerCase())
+  || x.node.excerpt.toLowerCase().includes(term.toLowerCase())
+  || !term
 
+
+const handleEnter = (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault()
+  }
+}
 
 export default class extends React.Component {
   constructor(props) {
@@ -41,7 +44,6 @@ export default class extends React.Component {
     }
     this.searchHandler = this.searchHandler.bind(this)
     this.focus = this.focus.bind(this)
-    this.handleEnter = this.handleEnter.bind(this)
   }
 
   componentDidMount() {
@@ -50,12 +52,6 @@ export default class extends React.Component {
 
   searchHandler(event) {
     this.setState({ term: event.target.value })
-  }
-
-  handleEnter(event) {
-    if (event.keyCode === 13) {
-      event.preventDefault()
-    }
   }
 
   focus() {
@@ -70,8 +66,8 @@ export default class extends React.Component {
             style={inputStyle}
             type="text"
             onChange={this.searchHandler}
-            onKeyDown={this.handleEnter}
-            ref={input => {
+            onKeyDown={handleEnter}
+            ref={(input) => {
               this.textInput = input
             }}
           />

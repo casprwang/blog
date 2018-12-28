@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import Header from 'components/Header'
-import ContentContainer from 'theme/containers/ContentContainer.js'
+import ContentContainer from 'theme/containers/ContentContainer'
 import Comment from 'components/Comment'
-import SEO from 'components/SEO.js'
+import SEO from 'components/SEO'
 import TagSection from 'components/TagSection'
 
 export default ({ data }) => {
