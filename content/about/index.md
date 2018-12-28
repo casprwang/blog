@@ -16,4 +16,4 @@ I am a [top 5% fastest](https://www.keyhero.com/profile/user67157/) typist in th
 
 This is my blog site, with a focus on simplicity and performance. It was built with Jekyll and got migrated to Gatsby. It's also coded in the functional paradigm and fully [open sourced](https://github.com/wangsongiam/songwang.io).
 
-While the site is about expressing myself through words, the UI and codes are also carrying reflections.
+While the site is about expressing myself through words, the UI and codes are also carrying my reflections.
