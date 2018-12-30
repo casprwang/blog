@@ -5,15 +5,15 @@ import PullMoreButton from 'theme/containers/PullMoreButton'
 
 
 const NoteList = ({ notes, viewCount }) => notes
-    .filter((_, i) => i < viewCount)
-    .map(({ node }) => <NoteListContainer key={node.fields.slug}>
-      <h2>
-        <Link to={node.fields.slug}>
-          {node.frontmatter.title}
-        </Link>
-      </h2>
-      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-    </NoteListContainer>)
+  .filter((_, i) => i < viewCount)
+  .map(({ node }) => <NoteListContainer key={node.fields.slug}>
+    <h2>
+      <Link to={node.fields.slug}>
+        {node.frontmatter.title}
+      </Link>
+    </h2>
+    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+  </NoteListContainer>)
 
 
 export default ({ notes, viewCount, step }) => {

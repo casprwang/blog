@@ -7,8 +7,8 @@ import Header from 'components/Header'
 import SEO from 'components/SEO'
 
 
-export default ({ data, location }) => {
-  const { title, bio } = data.site.siteMetadata
+export default ({ data }) => {
+  const { title } = data.site.siteMetadata
   return (
     <Layout>
       <SEO title={title} keywords={['blog', 'gatsby', 'javascript', 'react']} />
@@ -24,7 +24,6 @@ export const blogpageQuery = graphql`
     site {
       siteMetadata {
         title
-        bio
       }
     }
     allMarkdownRemark(

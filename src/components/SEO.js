@@ -18,7 +18,8 @@ const detailsQuery = graphql`
 
 const SEO = ({
   description, lang, meta, keywords, title
-}) => <StaticQuery
+}) => (
+  <StaticQuery
     query={detailsQuery}
     render={(data) => {
       const metaDescription = description || data.site.siteMetadata.description
@@ -76,6 +77,7 @@ const SEO = ({
       )
     }}
   />
+)
 
 SEO.defaultProps = {
   lang: 'en',
