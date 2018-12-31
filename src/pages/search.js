@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import SearchResultContainer from 'theme/containers/SearchResultContainer'
 import SearchFormContainer from 'theme/containers/SearchFormContainer'
+import SearchResultContainer from 'theme/containers/SearchResultContainer'
 import Layout from 'components/Layout'
 
 
