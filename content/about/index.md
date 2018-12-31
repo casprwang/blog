@@ -8,7 +8,7 @@ I am a full-stack software engineer at [TuSimple](http://www.tusimple.com/), liv
 
 I code Javascript, Python and Go; I'm also digging Lua, Vim Script.
 
-I love open source, and I contribute to some projects from [my Github](https://github.com/wangsongiam/) as a hobby.
+I love open source, and I contribute from [my Github](https://github.com/wangsongiam/) as a hobby.
 
 I am a [top 5% fastest](https://www.keyhero.com/profile/user67157/) typist in the world.
 
