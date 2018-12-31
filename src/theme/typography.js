@@ -28,7 +28,8 @@ export default `
   }
 
   h4 {
-    font-size: 1.266em;
+    margin-top: 2.2em;
+    font-size: .966em;
   }
 
   h5 {
