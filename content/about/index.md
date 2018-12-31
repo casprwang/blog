@@ -4,7 +4,7 @@ date: '2017-08-06'
 ---
 Hello, my name is Song Wang.
 
-I am a full-stack software engineer at [TuSimple](http://www.tusimple.com/), living in ~~Beijing~~, ~~Chengdu~~, ~~New York~~, San Diego.
+I am a full-stack software engineer at [TuSimple](http://www.tusimple.com/), living in ~~Beijing~~, ~~Chengdu~~, ~~Yokohama~~, ~~New York~~, San Diego.
 
 I code Javascript, Python and Go; I'm also digging Lua, Vim Script.
 
