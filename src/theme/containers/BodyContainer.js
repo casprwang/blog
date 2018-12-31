@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from 'theme/utils/media'
 
+
 export default styled.div`
   width: 650px;
   height: 100%;

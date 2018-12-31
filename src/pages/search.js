@@ -1,25 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import SearchResultContainer from 'theme/containers/SearchResultContainer'
+import SearchFormContainer from 'theme/containers/SearchFormContainer'
 import Layout from 'components/Layout'
-
-const formStyle = {
-  display: 'flex',
-  color: '#000',
-  alignItems: 'left',
-  justifyContent: 'left',
-  flexDirection: 'column',
-  marginTop: '3em',
-}
-
-
-const inputStyle = {
-  fontSize: '3em',
-  display: 'block',
-  width: '50%',
-  border: 'none',
-  borderBottom: '2px solid gray',
-}
 
 
 const searchingFor = term => x => (x.node.frontmatter.tags
@@ -61,17 +44,17 @@ export default class extends React.Component {
   render() {
     return (
       <Layout>
-        <form style={formStyle}>
+        <SearchFormContainer>
           <input
-            style={inputStyle}
             type="text"
+            placeholder="search here"
             onChange={this.searchHandler}
             onKeyDown={handleEnter}
             ref={(input) => {
               this.textInput = input
             }}
           />
-        </form>
+        </SearchFormContainer>
         <div>
           {this.state.pages
             .filter(searchingFor(this.state.term))
