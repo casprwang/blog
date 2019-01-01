@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import media from 'theme/utils/media'
+import media from 'utils/media'
 import { Colors } from 'theme/variables'
 
 export const TagItem = styled.span`

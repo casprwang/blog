@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Colors, Fonts } from 'theme/variables'
-import media from 'theme/utils/media'
+import media from 'utils/media'
+
 
 export default styled.div`
   p {
