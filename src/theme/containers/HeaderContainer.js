@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Colors } from 'theme/variables'
 
+
 export default styled.header`
   max-width: 700px;
   margin-top: 150px;

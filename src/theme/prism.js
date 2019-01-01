@@ -1,5 +1,6 @@
 import { Colors } from 'theme/variables'
 
+
 export default `
   /*
   @author Song Wang

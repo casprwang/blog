@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import media from 'utils/media'
 import { Colors, Fonts } from 'theme/variables'
 
+
 export const Button = styled.div`
   font-family: ${Fonts.basic};
   font-weight: 500;

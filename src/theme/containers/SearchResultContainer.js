@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Colors } from 'theme/variables'
 
+
 export default styled.div`
   text-align: left;
   padding-top: 0;

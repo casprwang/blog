@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from 'utils/media'
 
+
 export default styled.footer`
   font-size: .9em;
   margin-top: 4em;

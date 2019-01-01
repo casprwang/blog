@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import media from 'utils/media'
 import { Colors } from 'theme/variables'
 
+
 export const TagItem = styled.span`
   opacity: 0.8;
   border-left: 1px solid ${Colors.border};

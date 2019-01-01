@@ -1,8 +1,10 @@
-import changeColor from 'utils/colorChanger'
+import changeColor from 'utils/changeColor'
+
 
 const h = 'hsla(0, 0%, 0%, 1)'
 const background = 'hsla(0, 0%, 100%, 1)'
 const linkHover = 'hsla(192, 100%, 50%, 1)'
+
 
 export const Colors = {
   h,
