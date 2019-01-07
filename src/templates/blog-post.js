@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import ContentContainer from 'theme/containers/ContentContainer'
+import MainContainer from 'theme/containers/MainContainer'
 
 import Layout from 'components/Layout'
 import Header from 'components/Header'
@@ -16,7 +16,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <Header title={post.frontmatter.title} subtitle={post.frontmatter.date} />
-      <ContentContainer dangerouslySetInnerHTML={{ __html: post.html }} />
+      <MainContainer dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
       <TagSection data={data} />
       <Comment />

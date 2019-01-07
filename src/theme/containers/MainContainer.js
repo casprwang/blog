@@ -3,7 +3,7 @@ import { Colors, Fonts } from 'theme/variables'
 import media from 'utils/media'
 
 
-export default styled.div`
+export default styled.main`
   p {
     max-width: 650px;
     margin-left: 0;
