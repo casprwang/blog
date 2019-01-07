@@ -6,6 +6,7 @@ tags:
   - throttling
   - debouncing
   - event
+draft: true
 ---
 This is a question asked by an interviewer from Evernote. Event throttling avoids a massive event jamming in the browser. 
 
