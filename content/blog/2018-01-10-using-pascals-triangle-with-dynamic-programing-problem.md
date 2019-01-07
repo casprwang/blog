@@ -1,5 +1,5 @@
 ---
-title: Using Pascal's triangle with dynamic programing problem
+title: Using Pascal's triangle for dynamic programming problem
 date: '2018-01-10T17:12:39-05:00'
 tags:
   - algorithm
