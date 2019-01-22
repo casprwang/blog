@@ -46,11 +46,6 @@ function shuffleInPlace(arr) {
     ran = ~~(Math.random() * (i + 1))
 
     ;[arr[ran], arr[i]] = [arr[i], arr[ran]]
-    
-    // // that is ES6, same as the temp things as:
-    // let temp = arr[i]
-    // arr[i] = arr[ran]
-    // arr[ran] = temp
 
     i++
   }
