@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import media from 'utils/media'
+import styled from 'styled-components';
+import media from 'utils/media';
 
 
 const Base = styled.div`
@@ -18,16 +18,14 @@ const Base = styled.div`
   h3:nth-last-child(2) {
     margin-bottom: 0.8em;
   }
-`
-
-const Wrapper = styled.div`background-color: red;`
+`;
 
 export const NoteContainer = styled(Base)`
   p {
     cursor: default;
     text-size-adjust: 100%;
   }
-`
+`;
 
 export const BlogContainer = styled(Base)`
   p {
@@ -36,7 +34,7 @@ export const BlogContainer = styled(Base)`
     padding-bottom: .8em;
     // border-bottom: 1px solid #f2f2f2;
   }
-`
+`;
 
 export const LinkContainer = styled(Base)`
   section {
@@ -51,7 +49,7 @@ export const LinkContainer = styled(Base)`
       `};
     }
   }
-`
+`;
 
 export const ProjectContainer = styled(Base)`
   width: 100%;
@@ -71,4 +69,4 @@ export const ProjectContainer = styled(Base)`
       `};
     }
   }
-`
+`;

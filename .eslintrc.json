@@ -5,7 +5,7 @@
     "es6": true,
     "node": true
   },
-  "extends": "airbnb-base",
+  "extends": "airbnb",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -13,21 +13,24 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["react"],
-  "rules": {
-    "indent": [0, 2],
-    "linebreak-style": [2, "unix"],
-    "semi": [2, "never"],
-    "brace-style": [2, "1tbs", {
-      "allowSingleLine": true
-    }],
-    "import/no-unresolved": 0,
-    "curly": 0,
-    "no-console": [2, {
-      "allow": ["warn", "error", "log"]
-    }],
-    "no-unused-vars": 0,
-    "comma-dangle": [2, "only-multiline"],
-    "react/jsx-indent": [2, 2]
+  "plugins": [
+    "react"
+  ],
+  "rules": {},
+  "settings": {
+    "react": {
+      "version": "16.8.2"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
   }
 }

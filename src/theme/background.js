@@ -1,4 +1,4 @@
-import { Colors } from 'theme/variables'
+import { Colors } from 'theme/variables';
 
 
 export default `
@@ -7,4 +7,4 @@ export default `
   height: 100%;
   z-index: -1000;
   background-color: ${Colors.background};
-`
+`;

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
+import styled from 'styled-components';
+import { Colors } from 'theme/variables';
 
 
 export default styled.div`
@@ -24,4 +24,4 @@ export default styled.div`
   h3 {
     margin-top: 0;
   }
-`
+`;

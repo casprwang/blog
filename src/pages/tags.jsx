@@ -1,30 +1,31 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
 
-import TagListContainer from 'theme/containers/TagListContainer'
+import TagListContainer from 'theme/containers/TagListContainer';
 
-import Header from 'components/Header'
-import Layout from 'components/Layout'
-import SEO from 'components/SEO'
+import Header from 'components/Header';
+import Layout from 'components/Layout';
+import SEO from 'components/SEO';
 
 
-const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
+const getKebab = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase();
 
-export default ({ data }) => {
-  const { title, siteName } = data.site.siteMetadata
-  const allTags = data.allMarkdownRemark.group
+const Tags = ({ data }) => {
+  const { title, siteName } = data.site.siteMetadata;
+  const allTags = data.allMarkdownRemark.group;
 
-  const hashMap = {}
+  const hashMap = {};
   allTags.forEach(({ fieldValue, totalCount }) => {
     if (hashMap[fieldValue.toLowerCase()]) {
-      hashMap[fieldValue.toLowerCase()] += totalCount
+      hashMap[fieldValue.toLowerCase()] += totalCount;
     } else {
-      hashMap[fieldValue.toLowerCase()] = totalCount
+      hashMap[fieldValue.toLowerCase()] = totalCount;
     }
-  })
+  });
   const cleanTags = Object
     .entries(hashMap)
-    .map(([key, value]) => ({ fieldValue: key, totalCount: value }))
+    .map(([key, value]) => ({ fieldValue: key, totalCount: value }));
 
   return (
     <Layout>
@@ -33,17 +34,56 @@ export default ({ data }) => {
       <TagListContainer>
         {cleanTags
           .sort((a, b) => b.totalCount - a.totalCount)
-          .map((tag, i) => (
-            <Link key={i} to={`/tags/${getKebab(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+          .map(tag => (
+            <Link key={tag.fieldValue} to={`/tags/${getKebab(tag.fieldValue)}/`}>
+              {tag.fieldValue}
+              {' '}
+              (
+              {tag.totalCount}
+              )
             </Link>
           ))}
       </TagListContainer>
     </Layout>
 
-  )
-}
+  );
+};
 
+Tags.defaultProps = {
+  data: {
+    site: {
+      siteMetadata: {
+        title: '',
+        siteName: '',
+      },
+    },
+    allMarkdownRemark: {
+      group: {
+        fieldValue: '',
+        totalCount: 0,
+      },
+    },
+  },
+};
+
+Tags.propTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string,
+        siteName: PropTypes.string,
+      }),
+    }),
+    allMarkdownRemark: PropTypes.shape({
+      group: PropTypes.shape({
+        fieldValue: PropTypes.string,
+        totalCount: PropTypes.number,
+      }),
+    }),
+  }),
+};
+
+export default Tags;
 
 // eslint-disable-next-line
 export const tagspageQuery = graphql`
@@ -61,4 +101,4 @@ export const tagspageQuery = graphql`
       }
     }
   }
-`
+`;

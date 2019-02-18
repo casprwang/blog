@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Colors, Fonts } from 'theme/variables'
-import media from 'utils/media'
+import styled from 'styled-components';
+import { Colors, Fonts } from 'theme/variables';
+import media from 'utils/media';
 
 
 export default styled.main`
@@ -108,4 +108,4 @@ export default styled.main`
     font-family: ${Fonts.basic};
     font-family: ${Fonts.code};
   }
-`
+`;

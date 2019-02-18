@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import media from 'utils/media'
-import { Colors, Fonts } from 'theme/variables'
+import styled from 'styled-components';
+import media from 'utils/media';
+import { Colors, Fonts } from 'theme/variables';
 
 
 export const Button = styled.div`
@@ -34,8 +34,8 @@ export const Button = styled.div`
     width: 100%;
     text-align: left;
   `};
-`
+`;
 
 export default styled(Button)`
   display: ${props => (props.number >= props.length ? 'none' : 'inline')};
-`
+`;

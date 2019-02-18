@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
+import styled from 'styled-components';
+import { Colors } from 'theme/variables';
 
 
 export default styled.div`
@@ -26,4 +26,4 @@ export default styled.div`
     max-width: 650px;
     margin-left: 0;
   }
-`
+`;

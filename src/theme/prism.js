@@ -1,4 +1,4 @@
-import { Colors } from 'theme/variables'
+import { Colors } from 'theme/variables';
 
 
 export default `
@@ -116,4 +116,4 @@ export default `
   pre .line-highlight {
     margin-top: 0;
   }
-`
+`;

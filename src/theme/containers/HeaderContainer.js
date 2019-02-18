@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
+import styled from 'styled-components';
+import { Colors } from 'theme/variables';
 
 
 export default styled.header`
@@ -52,4 +52,4 @@ export default styled.header`
       }
     }
   }
-`
+`;

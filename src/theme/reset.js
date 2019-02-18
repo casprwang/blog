@@ -1,4 +1,4 @@
-import { Colors, Fonts } from 'theme/variables'
+import { Colors, Fonts } from 'theme/variables';
 
 
 export default `
@@ -110,4 +110,4 @@ export default `
       box-shadow: calc(3px*8) 0 0 0 black, calc(3px*-8) 0 0 0 black;
     }
   }
-`
+`;

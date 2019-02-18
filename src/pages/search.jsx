@@ -1,80 +1,81 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import SearchFormContainer from 'theme/containers/SearchFormContainer'
-import SearchResultContainer from 'theme/containers/SearchResultContainer'
-import Layout from 'components/Layout'
+import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
+import SearchFormContainer from 'theme/containers/SearchFormContainer';
+import SearchResultContainer from 'theme/containers/SearchResultContainer';
+import Layout from 'components/Layout';
 
 
-const searchingFor = term => x => (x.node.frontmatter.tags
-  && x.node.frontmatter.tags.every(tag => tag.toLowerCase().includes(term.toLowerCase())))
-  || x.node.frontmatter.title.toLowerCase().includes(term.toLowerCase())
-  || x.node.excerpt.toLowerCase().includes(term.toLowerCase())
-  || !term
+// currying term with page node
+const filterFunc = term => ({ node }) => (node.frontmatter.tags
+  && node.frontmatter.tags.every(tag => tag.toLowerCase().includes(term.toLowerCase())))
+  || node.frontmatter.title.toLowerCase().includes(term.toLowerCase())
+  || node.excerpt.toLowerCase().includes(term.toLowerCase())
+  || !term;
 
 
 const handleEnter = (event) => {
   if (event.keyCode === 13) {
-    event.preventDefault()
+    event.preventDefault();
   }
-}
+};
 
-export default class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      pages: this.props.data.allMarkdownRemark.edges,
-      term: '',
-    }
-    this.searchHandler = this.searchHandler.bind(this)
-    this.focus = this.focus.bind(this)
-  }
+const Search = ({ data }) => {
+  const [term, setTerm] = useState('');
+  const inputRef = useRef();
+  const pages = data.allMarkdownRemark.edges;
 
-  componentDidMount() {
-    this.textInput.focus()
-  }
+  useEffect(() => {
+    inputRef.current.focus();
+  });
+  return (
+    <Layout>
+      <SearchFormContainer>
+        <input
+          type="text"
+          placeholder="search here"
+          onChange={e => setTerm(e.target.value)}
+          onKeyDown={handleEnter}
+          ref={inputRef}
+        />
+      </SearchFormContainer>
+      <div>
+        {pages
+          .filter(filterFunc(term))
+          .slice(0, 10)
+          .map(({ node }) => (
+            <SearchResultContainer key={node.id}>
+              <h2>
+                <Link to={node.fields.slug}>
+                  {node.frontmatter.title}
+                </Link>
+              </h2>
+              <p>{node.excerpt}</p>
+            </SearchResultContainer>
+          ))
+        }
+      </div>
+    </Layout>
+  );
+};
 
-  searchHandler(event) {
-    this.setState({ term: event.target.value })
-  }
+Search.defaultProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: [],
+    },
+  },
+};
 
-  focus() {
-    this.textInput.focus()
-  }
+Search.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array.isRequired,
+    }),
+  }),
+};
 
-  render() {
-    return (
-      <Layout>
-        <SearchFormContainer>
-          <input
-            type="text"
-            placeholder="search here"
-            onChange={this.searchHandler}
-            onKeyDown={handleEnter}
-            ref={(input) => {
-              this.textInput = input
-            }}
-          />
-        </SearchFormContainer>
-        <div>
-          {this.state.pages
-            .filter(searchingFor(this.state.term))
-            .slice(0, 10)
-            .map((page, i) => (
-              <SearchResultContainer key={i}>
-                <h2>
-                  <Link to={page.node.fields.slug}>
-                    {page.node.frontmatter.title}
-                  </Link>
-                </h2>
-                <p>{page.node.excerpt}</p>
-              </SearchResultContainer>
-            ))
-          }
-        </div>
-      </Layout>
-    )
-  }
-}
+export default Search;
 
 // eslint-disable-next-line
 export const searchpageQuery = graphql`
@@ -108,4 +109,4 @@ export const searchpageQuery = graphql`
       }
     }
   }
-`
+`;

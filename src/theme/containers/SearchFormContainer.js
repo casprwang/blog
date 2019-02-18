@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Colors } from 'theme/variables'
+import styled from 'styled-components';
+import { Colors } from 'theme/variables';
 
 
 export default styled.form`
@@ -42,4 +42,4 @@ export default styled.form`
       opacity: .3;
     }
   }
-`
+`;

@@ -3,4 +3,4 @@ export default width => `
   padding-right: ${width};
   margin-left: -${width};
   margin-right: -${width};
-`
+`;

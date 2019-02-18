@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import media from 'utils/media'
-import { Colors } from 'theme/variables'
+import styled from 'styled-components';
+import media from 'utils/media';
+import { Colors } from 'theme/variables';
 
 
 export const TagItem = styled.span`
@@ -9,7 +9,7 @@ export const TagItem = styled.span`
   border-right: 1px solid ${Colors.border};
   margin: 1em;
   padding: 0 1em;
-`
+`;
 
 export const SearchTagItem = styled(TagItem)`
   border: 1px solid ${Colors.code};
@@ -35,7 +35,7 @@ export const SearchTagItem = styled(TagItem)`
       border-radius: 0.1em;
     }
   }
-`
+`;
 
 export const TagIndex = styled.div`
   display: flex;
@@ -46,8 +46,8 @@ export const TagIndex = styled.div`
     padding-left: 0;
   }
   text-align: center;
-`
-export const TagWrapper = styled.div``
+`;
+export const TagWrapper = styled.div``;
 
 export const NoteTag = styled.div`
   color: ${Colors.h};
@@ -84,7 +84,7 @@ export const NoteTag = styled.div`
     margin-top: .3em;
     line-height 1.2;
   `};
-`
+`;
 
 export const InlineTag = styled.div`
   display: inline-block;
@@ -95,7 +95,7 @@ export const InlineTag = styled.div`
     // display: block;
     margin-top: .3em;
   `};
-`
+`;
 export const BlogInlineTag = styled(InlineTag)`
   line-height: 1.7;
   color: ${Colors.h};
@@ -122,7 +122,7 @@ export const BlogInlineTag = styled(InlineTag)`
       }
     }
   }
-`
+`;
 
 export const TimeTag = styled(InlineTag)`
   color: ${Colors.h};
@@ -132,4 +132,4 @@ export const TimeTag = styled(InlineTag)`
     content: "|";
     margin-left: 0.7em;
   }
-`
+`;

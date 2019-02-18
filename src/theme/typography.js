@@ -1,4 +1,4 @@
-import { Colors } from './variables'
+import { Colors } from './variables';
 
 
 export default `
@@ -71,4 +71,4 @@ export default `
     padding-right: 1em;
   }
 
-`
+`;

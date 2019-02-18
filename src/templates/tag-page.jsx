@@ -1,20 +1,21 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
 
-import NoteListContainer from 'theme/containers/NoteListContainer'
+import NoteListContainer from 'theme/containers/NoteListContainer';
 
-import Layout from 'components/Layout'
-import Header from 'components/Header'
-import SEO from 'components/SEO'
+import Layout from 'components/Layout';
+import Header from 'components/Header';
+import SEO from 'components/SEO';
 
 
-export default ({ pageContext, data }) => {
-  if (!data.allMarkdownRemark) return null
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+const TagPage = ({ pageContext, data }) => {
+  if (!data.allMarkdownRemark) return null;
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
-    } tagged with "${tag}"`
+  } tagged with "${tag}"`;
 
   return (
     <Layout>
@@ -28,11 +29,35 @@ export default ({ pageContext, data }) => {
             </Link>
           </h3>
         </NoteListContainer>
-        ))}
+      ))}
       <Link to="/tags">All tags</Link>
     </Layout>
-  )
-}
+  );
+};
+
+TagPage.defaultProps = {
+  pageContext: {
+    tag: '',
+  },
+  data: {
+    allMarkdownRemark: {
+      edges: [],
+    },
+  },
+};
+
+TagPage.propTypes = {
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+};
+
+export default TagPage;
 
 // eslint-disable-next-line
 export const tagpageQuery = graphql`
@@ -56,4 +81,4 @@ export const tagpageQuery = graphql`
       }
     }
   }
-`
+`;

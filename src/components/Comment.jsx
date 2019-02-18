@@ -1,8 +1,8 @@
-import React from 'react'
-import CommentContainer from 'theme/containers/CommentContainer'
+import React from 'react';
+import CommentContainer from 'theme/containers/CommentContainer';
 
 
-const URL = 'https://github.com/wangsongiam/songwang.io/issues/new'
+const URL = 'https://github.com/wangsongiam/songwang.io/issues/new';
 
 export default () => (
   <CommentContainer>
@@ -13,4 +13,4 @@ export default () => (
       </a>
     </p>
   </CommentContainer>
-)
+);
