@@ -4,9 +4,9 @@ date: '2017-08-06'
 ---
 Hello, my name is Song Wang.
 
-I am a full-stack software engineer at [TuSimple](http://www.tusimple.com/), living in ~~Beijing~~, ~~Chengdu~~, ~~Yokohama~~, ~~New York~~, San Diego.
+I am a software engineer at [Citadel](https://www.citadel.com/), previously [TuSimple](http://www.tusimple.com/) and [Sony](https://www.sony.com/). I live in ~~Beijing~~, ~~Chengdu~~, ~~Tokyo~~,  ~~San Diego~~, New York.
 
-I code Javascript, Python and Go; I'm also digging Lua, Vim Script.
+I am interested in coding and design, from infrastracture to application.
 
 I love open source, and I contribute from [my Github](https://github.com/wangsongiam/) as a hobby.
 
