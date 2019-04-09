@@ -6,7 +6,7 @@ Hello, my name is Song Wang.
 
 I am a software engineer at [Citadel](https://www.citadel.com/), previously [TuSimple](http://www.tusimple.com/) and [Sony](https://www.sony.com/). I live in ~~Beijing~~, ~~Chengdu~~, ~~Tokyo~~,  ~~San Diego~~, New York.
 
-I am interested in coding and design, from infrastracture to application.
+I am interested in coding and design, from infrastructure to application.
 
 I love open source, and I contribute from [my Github](https://github.com/wangsongiam/) as a hobby.
 
