@@ -7,7 +7,7 @@ const URL = 'https://github.com/wangsongiam/songwang.io/issues/new';
 export default () => (
   <CommentContainer>
     <p>
-      Questions, Comments, Suggestions?
+      Questions, Comments, Suggestions?&nbsp;
       <a rel="noopener noreferrer" target="__blank" href={URL}>
         Open an Issue
       </a>
