@@ -9,3 +9,4 @@ public/
 .intermediate-representation/
 .cache/
 package-lock.json
+yarn-error.log
