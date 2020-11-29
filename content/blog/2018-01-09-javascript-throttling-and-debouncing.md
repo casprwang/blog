@@ -8,30 +8,30 @@ tags:
   - event
 draft: true
 ---
-This is a question asked by an interviewer from Evernote. Event throttling avoids a massive event jamming in the browser. 
+
+This is a question asked by an interviewer from Evernote. Event throttling avoids a massive event jamming in the browser.
 
 ### Throttling
 
 ```js
-function displayCorrds (e) {
+function displayCorrds(e) {
   document.body.textContent = `${e.pageX}, ${e.pageY}`
   console.log(e)
 }
 
-
 let ready = true
 
-document.addEventListener("mousemove", function(e){
-  if(ready){
+document.addEventListener('mousemove', function (e) {
+  if (ready) {
     ready = false
-    setTimeout(function(){
+    setTimeout(function () {
       displayCorrds(e)
       ready = true
     }, 250)
   }
 })
-
 ```
+
 ### Debouncing
 
 ```js
@@ -39,22 +39,18 @@ document.addEventListener("mousemove", function(e){
 // the approach is to clear the timeout when another event got
 // fired before the threshold
 
-function displayCorrds (e) {
+function displayCorrds(e) {
   document.body.textContent = `${e.pageX}, ${e.pageY}`
   console.log(e)
 }
 
 let timer
 
-document.addEventListener("mousemove", function(e){
-
+document.addEventListener('mousemove', function (e) {
   clearTimeout(timer)
 
-  timer = setTimeout(function(){
+  timer = setTimeout(function () {
     displayCorrds(e)
   }, 1000)
 })
-
-
 ```
-

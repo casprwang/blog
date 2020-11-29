@@ -6,9 +6,11 @@ tags:
   - go
   - algorithm
 ---
- Fisher-Yates shuffle algorithm is a classic shuffling algorithm with great performance and mathematical correctness. Here is two implementation in Javascript and Go.
+
+Fisher-Yates shuffle algorithm is a classic shuffling algorithm with great performance and mathematical correctness. Here is two implementation in Javascript and Go.
 
 ### Javascript
+
 ```js
 // time: O(n)   space: O(n)
 function shuffle(arr) {
@@ -44,7 +46,6 @@ function shuffleInPlace(arr) {
 
   while (i <= end) {
     ran = ~~(Math.random() * (i + 1))
-
     ;[arr[ran], arr[i]] = [arr[i], arr[ran]]
 
     i++
@@ -52,7 +53,6 @@ function shuffleInPlace(arr) {
 
   return arr
 }
-
 ```
 
 ### Go
@@ -90,7 +90,6 @@ func Shuffle(arr []int) []int {
 
 ### Acknowledgements:
 
-* [leetcode: shuffle-an-array](https://leetcode.com/problems/shuffle-an-array/)
-* [Fisher-Yates shuffle](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle)
-* [hanzichi's solution](https://github.com/hanzichi/leetcode/blob/master/Algorithms/Shuffle%20an%20Array/shuffle-an-array.js)
-
+- [leetcode: shuffle-an-array](https://leetcode.com/problems/shuffle-an-array/)
+- [Fisher-Yates shuffle](https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle)
+- [hanzichi's solution](https://github.com/hanzichi/leetcode/blob/master/Algorithms/Shuffle%20an%20Array/shuffle-an-array.js)

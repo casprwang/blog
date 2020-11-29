@@ -5,6 +5,5 @@ tags:
   - quote
   - coding
 ---
-> the programmers spend 70% of their time not coding but reading and understanding the codes. 
 
-
+> the programmers spend 70% of their time not coding but reading and understanding the codes.

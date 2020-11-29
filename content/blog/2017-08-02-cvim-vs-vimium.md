@@ -6,26 +6,31 @@ tags:
   - cvim
   - chrome
 ---
+
 Let me just say this: CVim wins, hands down.
 
 I would say that the default settings from Vimium are more friendly to new in-browser vim users(less nerdy bars, smooth scrolling, etc.), but for advanced users, no smooth scroll feels more natural. And critically, Cvim can search strings with highlighting all the possibilities, which, Vimium has never accomplished(they claimed that it is a Chrome issue and I bought it, but who knows now...).
 
 ## Demos
 
-
 ### Open a url
-![url opening](images/uploads/Screen%20Shot%202017-07-26%20at%202.11.21%20PM.png)
+
+![url opening](./Screen%20Shot%202017-07-26%20at%202.11.21%20PM.png)
 
 ### Open from buffer
-![buffer opening](images/uploads/Screen%20Shot%202017-07-26%20at%202.11.37%20PM.png)
+
+![buffer opening](./Screen%20Shot%202017-07-26%20at%202.11.37%20PM.png)
 
 ### Open from history
-![image opening](images/uploads/Screen%20Shot%202017-07-26%20at%202.12.14%20PM.png)
+
+![image opening](./Screen%20Shot%202017-07-26%20at%202.12.14%20PM.png)
 
 ### Highlighting all the possibilities
-![highlighting](images/uploads/Screen%20Shot%202017-07-26%20at%203.04.04%20PM.png)
+
+![highlighting](./Screen%20Shot%202017-07-26%20at%203.04.04%20PM.png)
 
 ## Cvim config:
+
 ```
 set nosmoothscroll
 set noautofocus
@@ -42,11 +47,17 @@ map J goBack
 map K goForward
 map gb lastUsedTab
 ```
+
 ## Styling
 
 ```css
-#cVim-command-bar, #cVim-command-bar-mode, #cVim-command-bar-input, #cVim-command-bar-search-results,
-.cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left,
+#cVim-command-bar,
+#cVim-command-bar-mode,
+#cVim-command-bar-input,
+#cVim-command-bar-search-results,
+.cVim-completion-item,
+.cVim-completion-item .cVim-full,
+.cVim-completion-item .cVim-left,
 .cVim-completion-item .cVim-right {
   font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace, Arial;
   font-size: 16pt !important;
@@ -60,7 +71,7 @@ map gb lastUsedTab
   background-color: #bbb;
   display: none;
   box-sizing: content-box;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
   left: 0;
   width: 100%;
   height: 40px;
@@ -93,11 +104,14 @@ map gb lastUsedTab
   overflow: hidden;
   z-index: 2147483647;
   left: 0;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
   background-color: #bbb;
 }
 
-.cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right {
+.cVim-completion-item,
+.cVim-completion-item .cVim-full,
+.cVim-completion-item .cVim-left,
+.cVim-completion-item .cVim-right {
   text-overflow: ellipsis;
   padding: 1px;
   display: inline-block;
@@ -112,12 +126,14 @@ map gb lastUsedTab
 }
 
 .cVim-completion-item {
-  width: 100%; left: 0;
+  width: 100%;
+  left: 0;
   color: #bcbcbc;
 }
 
 .cVim-completion-item[active] {
-  width: 100%; left: 0;
+  width: 100%;
+  left: 0;
   color: #1b1d1e;
   background-color: #f1f1f1;
 }
@@ -137,9 +153,10 @@ map gb lastUsedTab
   width: 57%;
 }
 
-
-#cVim-link-container, .cVim-link-hint,
-#cVim-hud, #cVim-status-bar {
+#cVim-link-container,
+.cVim-link-hint,
+#cVim-hud,
+#cVim-status-bar {
   font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace, Arial;
   font-size: 10pt !important;
   -webkit-font-smoothing: antialiased !important;
@@ -148,8 +165,10 @@ map gb lastUsedTab
 #cVim-link-container {
   position: absolute;
   pointer-events: none;
-  width: 100%; left: 0;
-  height: 100%; top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
   z-index: 2147483647;
 }
 
@@ -166,7 +185,7 @@ map gb lastUsedTab
   display: inline-block !important;
   vertical-align: middle !important;
   text-align: center !important;
-  box-shadow: 2px 2px 1px rgba(0,0,0,0.25) !important;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25) !important;
 }
 
 .cVim-link-hint_match {
@@ -174,9 +193,8 @@ map gb lastUsedTab
   text-transform: uppercase !important;
 }
 
-
 #cVim-hud {
-  background-color: rgba(28,28,28,0.9);
+  background-color: rgba(28, 28, 28, 0.9);
   position: fixed !important;
   transition: right 0.2s ease-out;
   z-index: 24724289;
@@ -201,8 +219,4 @@ map gb lastUsedTab
   box-sizing: border-box;
   border: 3px solid yellow;
 }
-
 ```
-
-
-

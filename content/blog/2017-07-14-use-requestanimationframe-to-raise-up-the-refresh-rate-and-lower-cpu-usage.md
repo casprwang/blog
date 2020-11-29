@@ -6,29 +6,29 @@ tags:
   - javascript
   - JQuery
 ---
+
 ```js
-(function() {
-  var lastScrollY = 0;
-  var ticking = false;
+;(function () {
+  var lastScrollY = 0
+  var ticking = false
 
-  var update = function() {
+  var update = function () {
     // do your stuff
-    ticking = false;
-  };
+    ticking = false
+  }
 
-  var requestTick = function() {
+  var requestTick = function () {
     if (!ticking) {
-      window.requestAnimationFrame(update);
-      ticking = true;
+      window.requestAnimationFrame(update)
+      ticking = true
     }
-  };
+  }
 
-  var onScroll = function() {
-    lastScrollY = window.scrollY;
-    requestTick();
-  };
+  var onScroll = function () {
+    lastScrollY = window.scrollY
+    requestTick()
+  }
 
-  $(window).on('scroll', onScroll);
-})();
+  $(window).on('scroll', onScroll)
+})()
 ```
-

@@ -4,7 +4,8 @@ date: '2017-07-29T20:11:11-04:00'
 tags:
   - javascript
 ---
-Apparently, in declaring an obj, a child cannot be assign or refer to another child within the same obj which is being declared. 
+
+Apparently, in declaring an obj, a child cannot be assign or refer to another child within the same obj which is being declared.
 
 ```js
 let obj = {
@@ -12,24 +13,20 @@ let obj = {
   b: 3,
 }
 
-console.log(
-  obj.c
-) 
+console.log(obj.c)
 // => undefined
 ```
 
 Instead, declare function to re-access the obj like this
+
 ```js
 let obj2 = {
   a: 'it',
-  b (){
+  b() {
     return this.a + ' works'
-  }
+  },
 }
 
-console.log(
-  obj2.b()
-)
+console.log(obj2.b())
 // => it works
 ```
-

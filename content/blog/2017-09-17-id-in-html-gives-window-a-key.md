@@ -6,19 +6,17 @@ tags:
   - javascript
   - html
 ---
-Say you have a HTML tag like
-```html
-  <h1 id='lol'>Hello</h1>
-```
 
+Say you have a HTML tag like
+
+```html
+<h1 id="lol">Hello</h1>
+```
 
 This means you can access the elements with an id lol by
 
 ```
 window.lol
-//=> 
+//=>
 <h1 id=​"lol">​Hello​</h1>​
 ```
-
-
-

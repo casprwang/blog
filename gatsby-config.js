@@ -1,23 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: 'Song Wang',
-    author: 'Song Wang',
-    siteName: 'songwang.io',
-    bio:
-      'A software engineer who makes simple and stupid codes',
-    siteUrl: 'https://songwang.io/',
-    github: 'https://github.com/wangsongiam',
-    twitter: 'https://twitter.com/songwang33',
-    linkedin: 'https://www.linkedin.com/in/wangsongiam/',
-    homeCity: 'Beijing',
-    description: 'website about Song Wang',
+    title: 'Casper Wang',
+    author: {
+      name: 'Casper Wang',
+      summary: 'Software and more',
+    },
+    description: 'A starter blog demonstrating what Gatsby can do.',
+    siteUrl: 'https://gatsby-starter-blog-demo.netlify.app/',
+    social: {
+      twitter: 'casprwang',
+    },
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content`,
-        name: 'content',
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
       },
     },
     {
@@ -28,26 +27,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/uploads`,
-        name: 'uploads'
-      }
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
-          {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 590,
+              maxWidth: 630,
             },
           },
           {
@@ -57,24 +43,18 @@ module.exports = {
             },
           },
           'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            }
-          },
         ],
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-101324222-1'
-      }
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
     },
     'gatsby-plugin-feed',
     {
@@ -89,10 +69,9 @@ module.exports = {
         icon: 'content/assets/logo.png',
       },
     },
-    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-purgecss', // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

@@ -5,6 +5,7 @@ tags:
   - algorithm
   - sorting
 ---
+
 Using top-down pattern
 
 ```js
@@ -32,5 +33,4 @@ const merge = (left, right) => {
   }
   return [...array, ...left, ...right]
 }
-
 ```

@@ -8,4 +8,5 @@ tags:
   - neovim
   - tmux
 ---
-![newest screenshot of my terminal](images/uploads/Screen%20Shot%202017-07-27%20at%202.03.21%20PM.png)
+
+![newest screenshot of my terminal](./Screen%20Shot%202017-07-27%20at%202.03.21%20PM.png)

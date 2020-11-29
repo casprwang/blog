@@ -4,7 +4,9 @@ date: '2017-09-15T17:40:06-04:00'
 tags:
   - javascript
 ---
+
 ## Type
+
 ```js
 typeof null
 //=> "object"
@@ -15,10 +17,11 @@ typeof undefined
 typeof NaN
 //=> "number"
 ```
-undefined is undefined, null is an obejct standing for nothing, while undefined 
 
+undefined is undefined, null is an obejct standing for nothing, while undefined
 
 ## Expressions
+
 ```js
 null + ''
 //=> "null"
@@ -54,5 +57,3 @@ undefined + 3
 null + undefined
 //=> NaN
 ```
-
-

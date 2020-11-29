@@ -6,6 +6,5 @@ tags:
   - Netlify
   - CMS
 ---
+
 This blog is created from netlify CMS.
-
-

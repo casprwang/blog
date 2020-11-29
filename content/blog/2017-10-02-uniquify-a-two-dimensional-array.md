@@ -5,10 +5,11 @@ tags:
   - javascript
   - array
 ---
+
 Use the following function to get non-duplicate version of a two-dimensional​ array
 
 ```js
-const unique = (arr) => {
+const unique = arr => {
   let map = {}
   return arr.filter(item => {
     if (item in map) return false
@@ -19,11 +20,9 @@ const unique = (arr) => {
   })
 }
 
-uique([[1,2], [1,2]]) 
+uique([
+  [1, 2],
+  [1, 2],
+])
 //=> [[1,2]]
 ```
-
-
-
-
-

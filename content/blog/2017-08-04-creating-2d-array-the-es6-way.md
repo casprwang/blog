@@ -4,11 +4,11 @@ date: '2017-08-04T17:19:14-04:00'
 tags:
   - javascript
 ---
-```js
-const constructTwoD = ( columnNumber, rowNumber ) => [...Array(rowNumber)].map(row=>Array(columnNumber))
 
-constructTwoD(2,3)
+```js
+const constructTwoD = (columnNumber, rowNumber) =>
+  [...Array(rowNumber)].map(row => Array(columnNumber))
+
+constructTwoD(2, 3)
 // => [[ , , ], [ , , ]]
 ```
-
-

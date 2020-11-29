@@ -6,5 +6,5 @@ tags:
   - design
   - styling
 ---
-I took a look at this [tutorial](https://github.com/styled-components/styled-components/blob/master/docs/tips-and-tricks.md) from styled components. Apparently, it uses javascript extensively, eg., uses `object.keys`, `objects.assign` for mixins. That's one way to learn javascript I guess.​
 
+I took a look at this [tutorial](https://github.com/styled-components/styled-components/blob/master/docs/tips-and-tricks.md) from styled components. Apparently, it uses javascript extensively, eg., uses `object.keys`, `objects.assign` for mixins. That's one way to learn javascript I guess.​

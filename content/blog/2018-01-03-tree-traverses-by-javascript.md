@@ -5,10 +5,12 @@ tags:
   - javascript
   - algorithm
 ---
-Last week, I was asked by an interviewer by tree traverse with both recursion and iteration. Though I had done recursion on that topic, it took me some time to the iterative solution. I rethought the problems and reviewed the final solutions, on both preorder, in-order, and postorder. 
+
+Last week, I was asked by an interviewer by tree traverse with both recursion and iteration. Though I had done recursion on that topic, it took me some time to the iterative solution. I rethought the problems and reviewed the final solutions, on both preorder, in-order, and postorder.
 
 ### Building a tree
-``` js
+
+```js
 function TreeNode(val) {
   this.val = val
   this.left = this.right = null
@@ -31,6 +33,7 @@ module.exports = function buildTree(nodes) {
 ```
 
 ### Preorder
+
 ```js
 const buildTree = require('./build-tree.js')
 
@@ -47,7 +50,6 @@ const preorderRecursive = root => {
 }
 
 const preorderIterative = root => {
-
   if (root == null) return
 
   let stack = [root]
@@ -69,7 +71,6 @@ const tree = buildTree([1, 2, 3, 4, 5])
 
 preorderRecursive(tree)
 preorderIterative(tree)
-
 ```
 
 ### Inorder
@@ -88,7 +89,6 @@ const inorderRecursive = root => {
 
   walk(root)
 }
-
 
 const inorderIterative = root => {
   if (!root) return
@@ -111,8 +111,6 @@ const inorderIterative = root => {
     }
   }
 }
-
-
 ```
 
 ### Postorder
@@ -157,10 +155,10 @@ const postorderIterativeTwoStack = root => {
     console.log(node.val)
   }
 }
-
 ```
 
 ### Levelorder
+
 ```js
 const recursive = root => {
   let res = []
@@ -177,9 +175,8 @@ const recursive = root => {
 
   walk(root, 0)
 
-  return res 
+  return res
 }
-
 
 const iterative = root => {
   let queue = [root]
@@ -206,6 +203,4 @@ const iterative = root => {
 
   return res
 }
-
 ```
-

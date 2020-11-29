@@ -6,8 +6,7 @@ tags:
   - unix
   - shell
 ---
+
 ```shell
 cp ./{index.js,printShape.js} ~/dev/546-lab/lab2
 ```
-
-

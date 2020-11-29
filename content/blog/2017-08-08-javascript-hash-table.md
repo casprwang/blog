@@ -5,6 +5,7 @@ tags:
   - javascript
   - algorithm
 ---
+
 ```js
 const findTheDifference = (s, t) => {
   let hash = {}
@@ -15,11 +16,9 @@ const findTheDifference = (s, t) => {
     hash[v]--
   }
   for (let key in hash) {
-    if(hash[key] === 1) return key
+    if (hash[key] === 1) return key
   }
 }
 ```
 
 Ref: https://leetcode.com/problems/find-the-difference/description/
-
-

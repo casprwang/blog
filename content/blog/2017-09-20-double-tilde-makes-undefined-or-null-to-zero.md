@@ -5,16 +5,17 @@ tags:
   - javascript
   - bit manipulation
 ---
-```js
 
-~~(undefined)
+```js
+~~undefined
 //=> 0
 
-~~(null)
+~~null
 //=> 0
 ```
 
 ### Side note
+
 It's pretty useful for creating a Hashmap, since it doesn't change an integer except changing undefined to 0.
 
 ```js
