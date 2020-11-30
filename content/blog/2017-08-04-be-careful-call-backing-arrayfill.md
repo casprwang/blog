@@ -16,7 +16,7 @@ emptyTwoD[1][1] = 3
 // emptyTwoD = [['', 3,'']['', 3,'']['', 3,'']]
 ```
 
-wtf? I just assigned once!
+What? I just assigned once!
 
 better use map instead
 

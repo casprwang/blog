@@ -1,10 +1,12 @@
 ---
-title: Assigning primitives of an object
+title: Assigning primitives to an object
 date: '2017-07-22T14:20:28-04:00'
 tags:
   - object
   - javascript
 ---
+
+This is so hacky, but hey, it’s Javascript.
 
 ```js
 let v = 'st'

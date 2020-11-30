@@ -6,6 +6,6 @@ tags:
   - FP
 ---
 
-> Avoiding something that you understand it fully, but disagree with, is wisdom. Avoiding the same thing without understanding it is blind following and/or ignorance. --- MPJ
+> Avoiding something that you understand it fully, but disagree with, is wisdom. Avoiding the same thing without understanding it is blind following and/or ignorance. 
 
-I choose wisdom over ignorance.
+Better choose wisdom over ignorance.

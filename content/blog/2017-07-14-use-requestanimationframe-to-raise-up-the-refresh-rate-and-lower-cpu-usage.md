@@ -1,10 +1,10 @@
 ---
-title: 'How to raise up the refresh rate and lower CPU usage '
+title: How to raise the refresh rate and lower CPU usage
 date: '2017-07-14T13:36:10-04:00'
 tags:
   - DOM
   - javascript
-  - JQuery
+  - jQuery
 ---
 
 ```js

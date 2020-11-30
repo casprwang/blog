@@ -6,7 +6,7 @@ tags:
   - chrome
 ---
 
-I did this simply because Cvim is more powerful on all aspects. I would say that the default settings from Vimium are more friendly to new in-browser vim users(less nerdy bars, smooth scrolling, etc.), but for advanced users, no smooth scroll feels more natural.
+I did this simply because Cvim is more powerful on all aspects. I would say that the default settings from Vimium are more friendly to new in-browser vim users(less nerdy bars, smooth scrolling), but for advanced users, no smooth scroll feels more natural.
 
 New Cvim config:
 

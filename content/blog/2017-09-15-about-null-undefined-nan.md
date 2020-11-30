@@ -1,5 +1,5 @@
 ---
-title: 'About null, undefined, NaN'
+title: Playing with null, undefined and NaN
 date: '2017-09-15T17:40:06-04:00'
 tags:
   - javascript

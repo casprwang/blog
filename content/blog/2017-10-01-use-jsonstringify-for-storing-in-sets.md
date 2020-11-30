@@ -6,7 +6,7 @@ tags:
   - set
 ---
 
-Set can store different kinds of element, but specifically for storing Arrays, you will have to use `JSON.stringify()` to avoid duplication.
+Set can store kinds of element, but specifically for storing Arrays, you will have to use `JSON.stringify()` to avoid duplication.
 
 without stringify:
 

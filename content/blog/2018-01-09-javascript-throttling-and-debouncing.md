@@ -3,9 +3,6 @@ title: Javascript throttling and debouncing
 date: '2018-01-09T00:54:48-05:00'
 tags:
   - javascript
-  - throttling
-  - debouncing
-  - event
 draft: true
 ---
 

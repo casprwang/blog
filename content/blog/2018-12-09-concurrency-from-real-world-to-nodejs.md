@@ -9,11 +9,11 @@ tags:
 
 Recently I had an interesting conversation with a cool guy named Chris, where he asked if I can explain how Node.js works to some nontechnical people. I found it pretty interesting and challenging at the same time given that some of the abstractions I usually based on are probably not in audience's knowledge. After some thoughts, I found one of the ways I could do is starting from the connections in the real world and how the operating system simulates in the lower level, then moving up to Node.js.
 
-Following the thoughts with some lookups, I eventually put up some words and scratches as bellows, explaining some common concurrent programming terminologies, e.g., event loop, promise, etc. in Unix and Node.js.
+Following the thoughts with some lookups, I eventually put up some words and scratches as bellows, explaining some common concurrent programming terminologies, e.g., event loop, promise. in Unix and Node.js.
 
 ## How concurrency works in the real world
 
-For starters, it's quite important to know that almost all of the things in the real world, are already happening concurrently.
+For starters, it's quite important to know that almost all the things in the real world, are already happening concurrently.
 
 Taking a simple real-world example: every morning, I open my phone, order one cup of coffee and one sandwich before going to pick up, they both need about 4 mins to prepare. After 5 minutes, I get a message from the coffee shop: the manager texted me confirming the sandwich and coffee are all done by two different cooks already, I can pick up anytime I want. Time saved.
 

@@ -34,4 +34,4 @@ const makeEmployee = name => {
 }
 ```
 
-but apparently, arrow functions are made for one liner things, not without a function name or returning a normal function.
+apparently, arrow functions are made for one liner things, not without a function name or returning a normal function.

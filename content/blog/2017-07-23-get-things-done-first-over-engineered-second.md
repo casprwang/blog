@@ -5,4 +5,4 @@ tags:
   - thinking
 ---
 
-I spent a lot of time micro engineering and forgot to make things work first. I shouldn't do that again. Overengineering in small parts is addictive to me but takes too much time for final goals. And in my current situation, where finishing matter more than refining, I will trade that off.
+I spent a lot of time micro engineering and forgot to make things work first. I shouldn't do that again. Over-engineering in small parts is addictive to me but takes too much time for final goals. And in my current situation, where finishing matter more than refining, I will trade that off.

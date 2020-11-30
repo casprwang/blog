@@ -5,7 +5,7 @@ tags:
   - Internet
 ---
 
-Recently, as the so-called [Internet of action day](https://www.battleforthenet.com/july12/) comes, lots of tech companies are promoting the saving Internet Neutrality action. I couldn't help pay some attention to the related links, like Blake(CEO of Godaddy)'s blog [The Free and Open Net Is Under Attack, Again](https://blakesblog.com/2017/07/netneutrality/), the [Internet Association website](https://www.battleforthenet.com/july12/), etc. I have to say I love their articles. And I love the Internet the same as they do. I want the Internet Neutrality stays the same way.
+Recently, as the so-called [Internet of action day](https://www.battleforthenet.com/july12/) comes, lots of tech companies are promoting the saving Internet Neutrality action. I couldn't help pay some attention to the related links, like Blake(CEO of GoDaddy)'s blog [The Free and Open Net Is Under Attack, Again](https://blakesblog.com/2017/07/netneutrality/), the [Internet Association website](https://www.battleforthenet.com/july12/), etc. I have to say I love their articles. And I love the Internet the same as they do. I want the Internet Neutrality stays the same way.
 
 I want the Internet Neutrality remains the way it is, cause I've seen the opposite case in China.
 

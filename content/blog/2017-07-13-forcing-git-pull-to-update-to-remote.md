@@ -20,4 +20,4 @@ $ git reset --hard HEAD
 $ git pull
 ```
 
-And done.
+All good.
