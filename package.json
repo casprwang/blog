@@ -1,9 +1,9 @@
 {
-  "name": "songwang.io",
-  "description": "a website about Song Wang",
-  "private": true,
+  "name": "blog",
+  "description": "a website about Casper Wang",
+  "private": false,
   "version": "3.0.1",
-  "author": "Song Wang <wangsongiam@gmail.com>",
+  "author": "Casper Wang <casprwang@gmail.com>",
   "dependencies": {
     "gatsby": "^2.15.36",
     "gatsby-image": "^2.2.27",
@@ -30,25 +30,31 @@
     "netlify-cms": "^2.9.7",
     "netlify-cms-app": "^2.9.7",
     "prismjs": "^1.17.1",
-    "react": "16.10.2",
-    "react-dom": "16.10.2",
-    "react-helmet": "5.2.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
     "styled-components": "^4.4.0",
     "typeface-source-code-pro": "^0.0.71"
   },
   "devDependencies": {
     "prettier": "2.1.2"
   },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "0BSD",
   "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
   "scripts": {
-    "dev": "yarn develop",
+    "build": "gatsby build",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "develop": "rm -rf .cache && ./node_modules/.bin/gatsby develop",
-    "start": "yarn develop",
-    "build": "rm -rf .cache && ./node_modules/.bin/gatsby build"
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   }
 }
