@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import Layout from 'components/Layout';
@@ -30,16 +29,6 @@ Blog.defaultProps = {
   },
 };
 
-Blog.propTypes = {
-  data: PropTypes.shape({
-    site: {
-      siteMetadata: PropTypes.string,
-    },
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-};
 
 export default Blog;
 

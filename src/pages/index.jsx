@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import Layout from 'components/Layout';
@@ -33,30 +32,6 @@ Index.defaultProps = {
   },
 };
 
-Index.propTypes = {
-  data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string,
-        bio: PropTypes.string,
-      }),
-    }),
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.arrayOf(PropTypes.shape({
-        node: PropTypes.shape({
-          excerpt: PropTypes.string,
-          fields: PropTypes.shape({
-            slug: PropTypes.string,
-          }),
-          frontematter: PropTypes.shape({
-            date: PropTypes.string,
-            title: PropTypes.string,
-          }),
-        }),
-      })),
-    }),
-  }),
-};
 
 export default Index;
 

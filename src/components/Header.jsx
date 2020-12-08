@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import HeaderContainer from 'theme/containers/HeaderContainer';
-
 
 const Header = ({ title, subtitle }) => (
   <HeaderContainer>
@@ -18,9 +16,5 @@ Header.defaultProps = {
 };
 
 
-Header.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-};
 
 export default Header;

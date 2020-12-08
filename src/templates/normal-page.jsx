@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import MainContainer from 'theme/containers/MainContainer';
@@ -42,24 +41,6 @@ NormalPage.defaultProps = {
   },
 };
 
-NormalPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      html: PropTypes.string,
-      excerpt: PropTypes.string,
-      fields: PropTypes.shape({
-        slug: PropTypes.string,
-        tagSlugs: PropTypes.array,
-      }),
-      frontmatter: PropTypes.shape({
-        title: PropTypes.string,
-        tags: PropTypes.array,
-        description: PropTypes.string,
-        date: PropTypes.string,
-      }),
-    }),
-  }),
-};
 
 export default NormalPage;
 

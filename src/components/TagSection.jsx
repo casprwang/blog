@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import TagSectionContainer from 'theme/containers/TagSectionContainer';
 
@@ -37,17 +36,5 @@ TagSection.defaultProps = {
   },
 };
 
-TagSection.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape({
-        tags: PropTypes.arrayOf(PropTypes.string),
-      }),
-      fields: PropTypes.shape({
-        tagSlugs: PropTypes.string,
-      }),
-    }),
-  }),
-};
 
 export default TagSection;

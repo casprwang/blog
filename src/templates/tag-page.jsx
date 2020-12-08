@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import NoteListContainer from 'theme/containers/NoteListContainer';
@@ -46,16 +45,6 @@ TagPage.defaultProps = {
   },
 };
 
-TagPage.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string,
-  }),
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-};
 
 export default TagPage;
 

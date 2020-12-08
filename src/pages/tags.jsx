@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import TagListContainer from 'theme/containers/TagListContainer';
@@ -64,23 +63,6 @@ Tags.defaultProps = {
       },
     },
   },
-};
-
-Tags.propTypes = {
-  data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string,
-        siteName: PropTypes.string,
-      }),
-    }),
-    allMarkdownRemark: PropTypes.shape({
-      group: PropTypes.shape({
-        fieldValue: PropTypes.string,
-        totalCount: PropTypes.number,
-      }),
-    }),
-  }),
 };
 
 export default Tags;

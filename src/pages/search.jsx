@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import SearchFormContainer from 'theme/containers/SearchFormContainer';
 import SearchResultContainer from 'theme/containers/SearchResultContainer';
@@ -67,13 +66,6 @@ Search.defaultProps = {
   },
 };
 
-Search.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array.isRequired,
-    }),
-  }),
-};
 
 export default Search;
 
