@@ -1,20 +1,11 @@
-import React from 'react';
-import HeaderContainer from 'theme/containers/HeaderContainer';
+import React from "react";
 
 const Header = ({ title, subtitle }) => (
-  <HeaderContainer>
-    <div>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-    </div>
-  </HeaderContainer>
+  <div>
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
+  </div>
 );
-
-Header.defaultProps = {
-  title: '',
-  subtitle: '',
-};
-
 
 
 export default Header;

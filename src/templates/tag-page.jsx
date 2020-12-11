@@ -1,19 +1,17 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import NoteListContainer from 'theme/containers/NoteListContainer';
 
-import Layout from 'components/Layout';
-import Header from 'components/Header';
-import SEO from 'components/SEO';
-
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import SEO from "../components/SEO";
 
 const TagPage = ({ pageContext, data }) => {
   if (!data.allMarkdownRemark) return null;
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
+    totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`;
 
   return (
@@ -21,28 +19,15 @@ const TagPage = ({ pageContext, data }) => {
       <SEO title={tag} description={tagHeader} />
       <Header title={tag} subtitle={tagHeader} />
       {edges.map(({ node }) => (
-        <NoteListContainer key={node.fields.slug}>
+        <li key={node.fields.slug}>
           <h3>
-            <Link to={node.fields.slug}>
-              {node.frontmatter.title}
-            </Link>
+            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
           </h3>
-        </NoteListContainer>
+        </li>
       ))}
       <Link to="/tags">All tags</Link>
     </Layout>
   );
-};
-
-TagPage.defaultProps = {
-  pageContext: {
-    tag: '',
-  },
-  data: {
-    allMarkdownRemark: {
-      edges: [],
-    },
-  },
 };
 
 

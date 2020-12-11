@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, graphql } from 'gatsby';
-import SearchFormContainer from 'theme/containers/SearchFormContainer';
-import SearchResultContainer from 'theme/containers/SearchResultContainer';
-import Layout from 'components/Layout';
-
+import React, { useState, useEffect, useRef } from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/Layout";
 
 // currying term with page node
-const filterFunc = term => ({ node }) => (node.frontmatter.tags
-  && node.frontmatter.tags.every(tag => tag.toLowerCase().includes(term.toLowerCase())))
-  || node.frontmatter.title.toLowerCase().includes(term.toLowerCase())
-  || node.excerpt.toLowerCase().includes(term.toLowerCase())
-  || !term;
-
+const filterFunc = (term) => ({ node }) =>
+  (node.frontmatter.tags &&
+    node.frontmatter.tags.every((tag) =>
+      tag.toLowerCase().includes(term.toLowerCase())
+    )) ||
+  node.frontmatter.title.toLowerCase().includes(term.toLowerCase()) ||
+  node.excerpt.toLowerCase().includes(term.toLowerCase()) ||
+  !term;
 
 const handleEnter = (event) => {
   if (event.keyCode === 13) {
@@ -20,7 +19,7 @@ const handleEnter = (event) => {
 };
 
 const Search = ({ data }) => {
-  const [term, setTerm] = useState('');
+  const [term, setTerm] = useState("");
   const inputRef = useRef();
   const pages = data.allMarkdownRemark.edges;
 
@@ -29,41 +28,30 @@ const Search = ({ data }) => {
   });
   return (
     <Layout>
-      <SearchFormContainer>
+      <div>
         <input
           type="text"
           placeholder="search here"
-          onChange={e => setTerm(e.target.value)}
+          onChange={(e) => setTerm(e.target.value)}
           onKeyDown={handleEnter}
           ref={inputRef}
         />
-      </SearchFormContainer>
+      </div>
       <div>
         {pages
           .filter(filterFunc(term))
           .slice(0, 10)
           .map(({ node }) => (
-            <SearchResultContainer key={node.id}>
+            <li key={node.id}>
               <h2>
-                <Link to={node.fields.slug}>
-                  {node.frontmatter.title}
-                </Link>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
               </h2>
               <p>{node.excerpt}</p>
-            </SearchResultContainer>
-          ))
-        }
+            </li>
+          ))}
       </div>
     </Layout>
   );
-};
-
-Search.defaultProps = {
-  data: {
-    allMarkdownRemark: {
-      edges: [],
-    },
-  },
 };
 
 
@@ -75,15 +63,15 @@ export const searchpageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {frontmatter: {draft: {ne: true } } }
+      filter: { frontmatter: { draft: { ne: true } } }
     ) {
-        edges {
-          node {
-            id
-            excerpt
-            timeToRead
-            internal {
-              content
+      edges {
+        node {
+          id
+          excerpt
+          timeToRead
+          internal {
+            content
           }
           headings {
             value

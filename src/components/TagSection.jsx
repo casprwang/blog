@@ -1,7 +1,5 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import TagSectionContainer from 'theme/containers/TagSectionContainer';
-
+import React from "react";
+import { Link } from "gatsby";
 
 const TagRow = ({ data }) => {
   let tags;
@@ -20,21 +18,11 @@ const TagRow = ({ data }) => {
   return tags;
 };
 
-
 const TagSection = ({ data }) => (
-  <TagSectionContainer>
+  <div>
     <span>Tagged with</span>
     <TagRow data={data} />
-  </TagSectionContainer>
+  </div>
 );
-
-TagSection.defaultProps = {
-  data: {
-    markdownRemark: {
-      fields: {},
-    },
-  },
-};
-
 
 export default TagSection;

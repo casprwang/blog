@@ -1,10 +1,11 @@
 ---
 title: About
-date: '2017-08-06'
+date: "2017-08-06"
 ---
+
 Hello, my name is Song Wang.
 
-I am a software engineer at [Citadel](https://www.citadel.com/), previously [TuSimple](http://www.tusimple.com/) and [Sony](https://www.sony.com/). I live in ~~Beijing~~, ~~Chengdu~~, ~~Tokyo~~,  ~~San Diego~~, New York.
+I am a software engineer at [Citadel](https://www.citadel.com/), previously [TuSimple](http://www.tusimple.com/) and [Sony](https://www.sony.com/). I live in ~~Beijing~~, ~~Chengdu~~, ~~Tokyo~~, ~~San Diego~~, New York.
 
 I am interested in coding and design, from infrastructure to application.
 

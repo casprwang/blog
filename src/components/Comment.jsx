@@ -1,16 +1,12 @@
-import React from 'react';
-import CommentContainer from 'theme/containers/CommentContainer';
+import React from "react";
 
-
-const URL = 'https://github.com/wangsongiam/songwang.io/issues/new';
+const URL = "https://github.com/casprwang/blog/issues/new";
 
 export default () => (
-  <CommentContainer>
-    <p>
-      Questions, Comments, Suggestions?&nbsp;
-      <a rel="noopener noreferrer" target="__blank" href={URL}>
-        Open an Issue
-      </a>
-    </p>
-  </CommentContainer>
+  <p>
+    Questions, Comments, Suggestions?&nbsp;
+    <a rel="noopener noreferrer" target="__blank" href={URL}>
+      Open an Issue
+    </a>
+  </p>
 );

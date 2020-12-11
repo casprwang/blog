@@ -1,7 +1,6 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
-
+import React from "react";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
 const detailsQuery = graphql`
   query {
@@ -15,9 +14,7 @@ const detailsQuery = graphql`
   }
 `;
 
-const SEO = ({
-  description, lang, meta, keywords, title,
-}) => (
+const SEO = ({ description, lang, meta, keywords, title }) => (
   <StaticQuery
     query={detailsQuery}
     render={(data) => {
@@ -31,45 +28,45 @@ const SEO = ({
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}
           meta={[
             {
-              name: 'description',
+              name: "description",
               content: metaDescription,
             },
             {
-              property: 'og:title',
+              property: "og:title",
               content: title,
             },
             {
-              property: 'og:description',
+              property: "og:description",
               content: metaDescription,
             },
             {
-              property: 'og:type',
-              content: 'website',
+              property: "og:type",
+              content: "website",
             },
             {
-              name: 'twitter:card',
-              content: 'summary',
+              name: "twitter:card",
+              content: "summary",
             },
             {
-              name: 'twitter:creator',
+              name: "twitter:creator",
               content: data.site.siteMetadata.author,
             },
             {
-              name: 'twitter:title',
+              name: "twitter:title",
               content: title,
             },
             {
-              name: 'twitter:description',
+              name: "twitter:description",
               content: metaDescription,
             },
           ]
             .concat(
               keywords.length > 0
                 ? {
-                  name: 'keywords',
-                  content: keywords.join(', '),
-                }
-                : [],
+                    name: "keywords",
+                    content: keywords.join(", "),
+                  }
+                : []
             )
             .concat(meta)}
         />
@@ -79,11 +76,10 @@ const SEO = ({
 );
 
 SEO.defaultProps = {
-  description: '',
-  lang: 'en',
+  description: "",
+  lang: "en",
   meta: [],
   keywords: [],
 };
-
 
 export default SEO;

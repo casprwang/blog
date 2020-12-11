@@ -1,13 +1,15 @@
 ---
 title: Migrated from Vimium to Cvim
-date: '2017-07-26T00:00:53-04:00'
+date: "2017-07-26T00:00:53-04:00"
 tags:
   - vim
   - chrome
 ---
+
 I did this simply because Cvim is more powerful on all aspects. I would say that the default settings from Vimium are more friendly to new in-browser vim users(less nerdy bars, smooth scrolling, etc.), but for advanced users, no smooth scroll feels more natural.
 
 New Cvim config:
+
 ```
 set nosmoothscroll
 set noautofocus

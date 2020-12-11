@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: wangsongiam/songwang.io 
+  repo: casprwang/blog
   branch: master
 
 publish_mode: editorial_workflow
