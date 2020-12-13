@@ -5,8 +5,8 @@ module.exports = {
       name: 'Casper Wang',
       summary: 'Software and more',
     },
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsby-starter-blog-demo.netlify.app/',
+    description: 'A Blog site from Casper Wang',
+    siteUrl: 'casprwang.com',
     social: {
       twitter: 'casprwang',
     },
