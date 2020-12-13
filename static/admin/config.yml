@@ -20,7 +20,7 @@ collections:
     label: "Blog"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     create: true
-    searchFields: ["title", "body", "tags"]
+    sortable_fields: ["date"]
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
