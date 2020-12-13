@@ -1,12 +1,11 @@
 ---
 title: Concurrency from real world to Node.js
-date: "2018-12-09T19:21:51-08:00"
+date: 2018-12-09T19:21:51-08:00
 tags:
   - node
   - javascript
   - concurrency
 ---
-
 Recently I had an interesting conversation with a cool guy named Chris, where he asked if I can explain how Node.js works to some nontechnical people. I found it pretty interesting and challenging at the same time given that some of the abstractions I usually based on are probably not in audience's knowledge. After some thoughts, I found one of the ways I could do is starting from the connections in the real world and how the operating system simulates in the lower level, then moving up to Node.js.
 
 Following the thoughts with some lookups, I eventually put up some words and scratches as bellows, explaining some common concurrent programming terminologies, e.g., event loop, promise, etc. in Unix and Node.js.
@@ -35,7 +34,7 @@ A server is where we do our tasks; it's like the kitchen for our cooks working o
 
 A socket is like a phone connection when it's connected between one cook in the kitchen and the manager from the front desk. The manager and the cook can talk with each other in either way. For this case, most of the case would be our scheduler checking every socket to see if anything has been done, the worker will then answer with the status at that moment. You can picture the scene that a manager keep asking workers, "Hey, have you done with the coffee?", "Not yet," "Hey, have you done with the sandwich?", "Not yet" over and over.
 
-![epoll and kqueue](epoll.png)
+![epoll and kqueue](epoll.png "epoll and kqueue")
 
 ### Looping and Polling to check workers' status
 
