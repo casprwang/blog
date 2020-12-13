@@ -11,16 +11,21 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/uploads"
-public_folder: "uploads"
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: "blog"
-    folder: "content/blog"
     label: "Blog"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
+    folder: "content/blog"
+    slug: "index" 
+    media_folder: ''
+    public_folder: ''
     create: true
+    path: '{{title}}/index'
     sortable_fields: ["date"]
+    editor:
+      preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "string", default: ""}
@@ -28,6 +33,8 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
+    editor:
+      preview: false
     files:
       - file: "content/about/index.md"
         label: "About"

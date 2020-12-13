@@ -35,7 +35,7 @@ A server is where we do our tasks; it's like the kitchen for our cooks working o
 
 A socket is like a phone connection when it's connected between one cook in the kitchen and the manager from the front desk. The manager and the cook can talk with each other in either way. For this case, most of the case would be our scheduler checking every socket to see if anything has been done, the worker will then answer with the status at that moment. You can picture the scene that a manager keep asking workers, "Hey, have you done with the coffee?", "Not yet," "Hey, have you done with the sandwich?", "Not yet" over and over.
 
-![epoll and kqueue](uploads/epoll.png)
+![epoll and kqueue](epoll.png)
 
 ### Looping and Polling to check workers' status
 
