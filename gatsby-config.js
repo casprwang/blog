@@ -6,7 +6,7 @@ module.exports = {
       summary: 'Software and more',
     },
     description: 'A Blog site from Casper Wang',
-    siteUrl: 'casprwang.com',
+    siteUrl: 'https://casprwang.com',
     social: {
       twitter: 'casprwang',
     },
