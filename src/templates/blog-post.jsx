@@ -1,49 +1,105 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Comment from "../components/Comment";
-import SEO from "../components/SEO";
-import TagSection from "../components/TagSection";
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 
-const BlogPost = ({ data }) => {
-  const post = data.markdownRemark;
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+
+const BlogPostTemplate = ({ data, location }) => {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const { previous, next } = data
+
   return (
-    <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <Header title={post.frontmatter.title} subtitle={post.frontmatter.date} />
-      <main dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <TagSection data={data} />
-      <Comment />
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <article
+        className="blog-post"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        <header>
+          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
+        </header>
+        <section
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        />
+        <hr />
+        <footer>
+        </footer>
+      </article>
+      <nav className="blog-post-nav">
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPostTemplate
 
-// eslint-disable-next-line
-export const blogpageQuery = graphql`
-  query($slug: String!) {
+export const pageQuery = graphql`
+  query BlogPostBySlug(
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
     site {
       siteMetadata {
-        author
-        homeCity
+        title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      excerpt(pruneLength: 160)
       html
-      excerpt
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        description
+      }
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
         slug
-        tagSlugs
       }
       frontmatter {
         title
-        tags
-        description
-        date(formatString: "MMMM DD, YYYY")
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
       }
     }
   }
-`;
+`

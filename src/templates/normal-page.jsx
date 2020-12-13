@@ -1,43 +1,84 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Comment from "../components/Comment";
-import SEO from "../components/SEO";
+const SEO = ({ description, lang, meta, title }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            social {
+              twitter
+            }
+          }
+        }
+      }
+    `
+  )
 
-const NormalPage = ({ data }) => {
-  const post = data.markdownRemark;
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+
   return (
-    <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <Header title={post.frontmatter.title} subtitle="" />
-      <main dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <Comment />
-    </Layout>
-  );
-};
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.social?.twitter || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
+    />
+  )
+}
 
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
 
-export default NormalPage;
+SEO.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
 
-// eslint-disable-next-line
-export const blogpageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      excerpt
-      fields {
-        slug
-        tagSlugs
-      }
-      frontmatter {
-        title
-        tags
-        description
-        date(formatString: "MMMM DD, YYYY")
-      }
-    }
-  }
-`;
+export default SEO
