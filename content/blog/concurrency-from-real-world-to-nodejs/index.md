@@ -45,7 +45,7 @@ As mentioned earlier, the manager will constantly be calling into the workers th
 
 Concurrency in Node.js is another abstraction based on synchronous programming while utilizing epoll/kqueue for asynchronous tasks.
 
-![node runtime](uploads/node.png)
+![node runtime](node.png)
 
 ## Further explanation for some abstract terms
 

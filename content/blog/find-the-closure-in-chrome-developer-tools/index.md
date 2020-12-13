@@ -31,4 +31,4 @@ console.log(x)
 
 ```
 
-![Closure in Chrome](images/uploads/11-11.png)
+![Closure in Chrome](11-11.png)

@@ -15,19 +15,19 @@ I would say that the default settings from Vimium are more friendly to new in-br
 
 ### Open a url
 
-![url opening](images/uploads/Screen%20Shot%202017-07-26%20at%202.11.21%20PM.png)
+![url opening](Screen%20Shot%202017-07-26%20at%202.11.21%20PM.png)
 
 ### Open from buffer
 
-![buffer opening](images/uploads/Screen%20Shot%202017-07-26%20at%202.11.37%20PM.png)
+![buffer opening](Screen%20Shot%202017-07-26%20at%202.11.37%20PM.png)
 
 ### Open from history
 
-![image opening](images/uploads/Screen%20Shot%202017-07-26%20at%202.12.14%20PM.png)
+![image opening](Screen%20Shot%202017-07-26%20at%202.12.14%20PM.png)
 
 ### Highlighting all the possibilities
 
-![highlighting](images/uploads/Screen%20Shot%202017-07-26%20at%203.04.04%20PM.png)
+![highlighting](Screen%20Shot%202017-07-26%20at%203.04.04%20PM.png)
 
 ## Cvim config:
 
