@@ -7,5 +7,4 @@ const Header = ({ title, subtitle }) => (
   </div>
 );
 
-
 export default Header;
