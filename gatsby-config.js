@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: "G-CJVRF7MCRX",
       },
     },
     "gatsby-plugin-feed",
@@ -70,11 +70,11 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-offline",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-purgecss", // must be after other CSS plugins
     "gatsby-plugin-netlify", // make sure to keep it last in the array
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
