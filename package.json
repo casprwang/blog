@@ -1,6 +1,6 @@
 {
   "name": "blog",
-  "description": "a website about Casper Wang",
+  "description": "A website about Casper Wang",
   "private": false,
   "version": "3.0.1",
   "author": "Casper Wang <casprwang@gmail.com>",
@@ -40,15 +40,15 @@
   "devDependencies": {
     "prettier": "2.1.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://casperwang.com/",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/casprwang/blog.git"
   },
   "scripts": {
     "build": "gatsby build",

@@ -60,8 +60,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Song Wang",
-        short_name: "SW",
+        name: "Casper Wang",
+        short_name: "CW",
         start_url: "/",
         background_color: "#f4f4f2",
         theme_color: "#43678a",
