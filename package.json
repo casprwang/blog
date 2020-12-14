@@ -33,7 +33,8 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.4.0",
+    "typeface-open-sans": "^1.1.13",
+    "typeface-roboto-slab": "^1.1.13",
     "typeface-source-code-pro": "^0.0.71"
   },
   "devDependencies": {

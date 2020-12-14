@@ -63,8 +63,8 @@ module.exports = {
         name: "Song Wang",
         short_name: "SW",
         start_url: "/",
-        background_color: "#ffffff",
-        theme_color: "#663399",
+        background_color: "#f4f4f2",
+        theme_color: "#43678a",
         display: "minimal-ui",
         icon: "content/assets/logo.png",
       },
@@ -74,7 +74,5 @@ module.exports = {
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-purgecss", // must be after other CSS plugins
     "gatsby-plugin-netlify", // make sure to keep it last in the array
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
   ],
 };
