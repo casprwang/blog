@@ -2,7 +2,7 @@
 title: About
 date: 2017-08-06
 ---
-![](/img/fullsizerender-4.jpg)
+![Casper Wang](/img/fullsizerender-4.jpg "Casper Wang")
 
 Hello, Casper Wang here. Nice to meet you!
 
