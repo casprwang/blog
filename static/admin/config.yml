@@ -38,6 +38,8 @@ collections:
     files:
       - file: "content/about/index.md"
         label: "About"
+        media_folder: ''
+        public_folder: ''
         name: "about"
         fields:
           - {label: "Title", name: "title", widget: "string"}

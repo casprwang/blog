@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/content/blog`,
-        name: "blog",
+        path: `${__dirname}/content`,
+        name: "pages",
       },
     },
     {
@@ -26,6 +26,8 @@ module.exports = {
         name: "assets",
       },
     },
+    "gatsby-plugin-sharp",
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -33,7 +35,8 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 630,
+              maxWidth: 600,
+              showCaptions: true,
             },
           },
           {
@@ -48,8 +51,6 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
