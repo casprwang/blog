@@ -13,7 +13,6 @@
     "gatsby-plugin-netlify": "^2.1.19",
     "gatsby-plugin-netlify-cms": "^4.1.23",
     "gatsby-plugin-offline": "^3.4.0",
-    "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-remark-images": "^3.5.1",
