@@ -1,11 +1,9 @@
 ---
 title: About
-date: 2017-08-06
 ---
-![Casper Wang](FullSizeRender 4.jpg "Casper Wang")
 
-Hello, Casper Wang here. Nice to meet you!
+![Casper Wang](FullSizeRender 4.jpg "From GraphQL Summit. Hello!")
 
-I work at TuSimple, previously at Citadel.
+Hi, Casper here. Nice to meet you!
 
-I enjoy making elegant things.
+I enjoy making elegant things. Currently I'm working at TuSimple, previously at Citadel.

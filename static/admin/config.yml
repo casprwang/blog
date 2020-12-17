@@ -43,5 +43,4 @@ collections:
         name: "about"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date", name: "date", widget: "string", default: ""}
           - {label: "Body", name: "body", widget: "markdown"}

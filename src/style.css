@@ -57,7 +57,7 @@
   --color-background: #f4f4f2;
   --color-primary: #43678a;
   --color-text: #495464;
-  --color-text-light: #4f5969;
+  --color-text-light: #6e7c91;
   --color-heading: #495464;
   --color-heading-black: #404852;
   --color-accent: #d1dce5;
@@ -319,6 +319,18 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+
+/* figure */
+figure {
+  margin: 1em 0;
+}
+
+figcaption {
+  color: var(--color-text-light);
+  font-size: var(--fontSize-1);
+  text-align: center;
 }
 
 /* Media queries */
