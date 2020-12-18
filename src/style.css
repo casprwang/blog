@@ -40,7 +40,7 @@
   --fontWeight-bold: 700;
   --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
-  --fontSize-root: 16px;
+  --fontSize-root: 18px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
@@ -57,7 +57,7 @@
   --color-background: #f4f4f2;
   --color-primary: #43678a;
   --color-text: #495464;
-  --color-text-light: #6e7c91;
+  --color-text-light: #91969e;
   --color-heading: #495464;
   --color-heading-black: #404852;
   --color-accent: #d1dce5;
@@ -281,6 +281,10 @@ a:focus {
   margin-bottom: var(--spacing-4);
 }
 
+.post-list-item header small {
+  color: var(--color-text-light);
+}
+
 .header-link-home {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
@@ -305,11 +309,12 @@ a:focus {
 }
 
 .blog-post header h1 {
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
 }
 
-.blog-post header p {
-  font-size: var(--fontSize-2);
+.blog-post header span {
+  font-size: var(--fontSize-1);
+  color: var(--color-text-light);
   font-family: var(--font-heading);
 }
 
