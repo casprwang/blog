@@ -1,6 +1,6 @@
 ---
-title: "How to raise up the refresh rate and lower CPU usage "
-date: "2017-07-14T13:36:10-04:00"
+title: "Bumping refresh rate with less CPU usage "
+date: 2016-04-14T13:36:10-04:00
 tags:
   - DOM
   - javascript
