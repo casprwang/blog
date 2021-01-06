@@ -1,6 +1,6 @@
 ---
 title: Javascript throttling and debouncing
-date: "2018-01-09T00:54:48-05:00"
+date: 2018-01-09T00:54:48-05:00
 tags:
   - javascript
   - throttling
@@ -8,7 +8,6 @@ tags:
   - event
 draft: true
 ---
-
 This is a question asked by an interviewer from Evernote. Event throttling avoids a massive event jamming in the browser.
 
 ### Throttling
