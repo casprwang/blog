@@ -186,6 +186,10 @@ h6 > a {
   color: inherit;
 }
 
+.heading-blog-index {
+  margin-top: var(--spacing-5);
+}
+
 /* Prose */
 
 p {
