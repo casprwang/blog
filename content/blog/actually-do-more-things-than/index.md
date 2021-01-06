@@ -1,11 +1,12 @@
 ---
-title: == actually does more jobs than ===
-date: "2017-10-19T01:25:43-04:00"
+title: == does more jobs than ===
+date: 2017-10-19T01:25:43-04:00
 tags:
   - javascript
 ---
+I believed that the triple equal checks on both the type and equality, whereas double equal only checks for equality, making triple equal more strict and doing more jobs. 
 
-I used to believe that the triple equal checks both type and equality whereas double equal only checks for equality, which makes triple equal more strict and does more jobs. But I just found out that I was wrong after reading this.
+But apparently, I was wrong after reading this.
 
 > It's not that === checks for type, it's that == additionally converts into compatible types.
 
