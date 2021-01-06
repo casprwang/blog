@@ -22,6 +22,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <span>{post.frontmatter.date}</span>
+          {location.pathname === "/about" ? <br /> : null}
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
         </header>
         <section

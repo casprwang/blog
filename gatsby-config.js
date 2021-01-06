@@ -3,12 +3,14 @@ module.exports = {
     title: "Casper Wang",
     author: {
       name: "Casper Wang",
-      summary: "Software and more",
+      summary: "Full stack engineering, coding and design",
     },
     description: "A Blog site from Casper Wang",
     siteUrl: "https://casprwang.com",
     social: {
-      twitter: "casprwang",
+      github: "https://github.com/casprwang",
+      twitter: "https://twitter.com/casprwang",
+      linkedin: "https://www.linkedin.com/in/casprwang/"
     },
   },
   plugins: [
