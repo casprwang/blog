@@ -424,7 +424,7 @@ figcaption {
   margin-top: var(--spacing-1);
   color: var(--color-text-light);
   font-size: var(--fontSize-1);
-  text-align: left;
+  text-align: center;
 }
 
 /* Media queries */
