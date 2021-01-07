@@ -10,7 +10,7 @@ module.exports = {
     social: {
       github: "https://github.com/casprwang",
       twitter: "https://twitter.com/casprwang",
-      linkedin: "https://www.linkedin.com/in/casprwang/"
+      linkedin: "https://www.linkedin.com/in/casprwang/",
     },
   },
   plugins: [
@@ -47,6 +47,7 @@ module.exports = {
               wrapperStyle: "margin-bottom: 1.0725rem",
             },
           },
+          "gatsby-remark-external-links",
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",
