@@ -3,7 +3,7 @@ title: One year of GraphQL in production
 date: 2020-02-06T17:07:13-08:00
 tags: []
 ---
-2019 has become an interesting year since I commit to GraphQL in production. I am proud that many applications has been working smoothly, with aggregated micro-services stiched to a single Graph. Here are some reflections.
+2019 has become an interesting year since I commit to GraphQL in production. I am proud that many applications have been working smoothly, with aggregated micro-services stiched to a single Graph. Here are some reflections.
 
 ## Good foundation
 
