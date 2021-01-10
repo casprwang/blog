@@ -12,7 +12,7 @@ This is a question asked by an interviewer from Evernote. Throttling and debounc
 
 ### Throttling
 
-To allow only one event able to be fired in a fixed interval, throttling is the way to go. For example, the `mousemove` event is fired in a high frequency, and thus we drop some events to get a lower rate. Here's one example. 
+To allow only one event able to be consumed in a fixed interval, throttling is the way to go. For example, the `mousemove` event is fired in a high frequency, and thus we drop some events to get a lower rate. Here's one example. 
 
 ```js
 function displayCorrds(e) {
