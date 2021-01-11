@@ -1,6 +1,6 @@
 ---
 title: Find duplicated Vim key-maps
-date: 2018-01-10T18:14:10-08:00
+date: 2019-01-10T18:14:10-08:00
 ---
 Vim is not a typed language and it allows keymapping multiple handlers onto the same key, which sometimes leads to unexpected behavior. Here's a simple way to find conflicts. 
 
