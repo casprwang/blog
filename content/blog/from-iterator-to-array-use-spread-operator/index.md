@@ -1,10 +1,10 @@
 ---
-title: From iterators, to Array, use spread operator
+title: Using spread operator on Iterable object
 date: 2017-08-09T18:47:11-04:00
 tags:
   - javascript
 ---
-For all iterable typed data, we can iterator through the rest operator or  `for...of`
+For all iterable typed data, we can iterator through the spread operator or  `for...of`
 
 ```javascript
 // Set =>
