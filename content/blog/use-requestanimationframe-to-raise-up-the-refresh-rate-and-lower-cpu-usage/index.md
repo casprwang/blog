@@ -1,11 +1,12 @@
 ---
-title: "Bumping refresh rate with less CPU usage "
+title: Bumping refresh rate when scrolling
 date: 2016-04-14T13:36:10-04:00
 tags:
   - DOM
   - javascript
   - JQuery
 ---
+We can manually call `window.equestAnimationFrame` from the scroll event in each tick. Tested on Firefox 23. 
 
 ```js
 (function () {
