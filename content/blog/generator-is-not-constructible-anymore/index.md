@@ -8,5 +8,5 @@ Apparently, the committee made some modifications on ES6, making the generator f
 function* myGen(a) { yield a }
 
 const gen = new myGen(1) // VM639:1 Uncaught TypeError: myGen is not a constructor
-
+const gen = myGen(1) // -> a Generator instance
 ```
