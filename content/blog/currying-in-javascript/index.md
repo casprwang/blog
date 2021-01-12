@@ -27,9 +27,7 @@ const autoCurry = fn => {
       return fn(...args)
     }
     // curry further
-    return function (...args2) {
-      return curried(...args, ...args2)
-    }
+    return curried.bind(this, ...args)
   }
   return curried
 }
