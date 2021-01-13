@@ -19,7 +19,7 @@ The specification envisions a well-structured endpoint that comes with many bene
 
 ## Fast-changing practices
 
-The frontend world has been fast-evolving, and it exhibits little sign of slowing down. To keep up the "best practice," we would need frequent refactors, adopting new APIs from Browsers, Javascript, Typescript, React, Vue, Node.js, Apollo Server and Client, code generators, even editor plugins. There are always better ways to do things, and the community adopts them quite aggressively.
+The frontend world has been fast-evolving, and it exhibits little sign of slowing down. To keep up the "best practice," we would need frequent refactors, adopting new APIs from browsers, Javascript, Typescript, React, Vue, Node.js, Apollo Server and Client, code generators, even editor plugins. There are always better ways to do things, and the community adopts them quite aggressively.
 
 ## Some uncertainties
 
