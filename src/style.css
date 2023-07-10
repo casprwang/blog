@@ -1,7 +1,7 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-  --maxWidth-none: "none";
+  --maxWidth-none: 'none';
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
   --maxWidth-md: 28rem;
@@ -10,9 +10,9 @@
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
-  --maxWidth-full: "100%";
+  --maxWidth-full: '100%';
   --maxWidth-wrapper: 80ch;
-  --spacing-px: "1px";
+  --spacing-px: '1px';
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -27,10 +27,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Roboto Slab", "Georgia", Cambria, "Times New Roman",
+  --fontFamily-sans: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --fontFamily-serif: 'Roboto Slab', 'Georgia', Cambria, 'Times New Roman',
     Times, serif;
   --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-serif);
@@ -265,6 +265,7 @@ table thead tr th {
 a {
   color: var(--color-primary);
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover,
@@ -273,7 +274,7 @@ a:focus {
 }
 
 a:active {
-  filter: opacity(70%);
+  filter: opacity(100%);
 }
 
 a.link-about {
@@ -296,7 +297,6 @@ a.link-latest-post {
   font-weight: var(--fontWeight-semibold);
   margin-right: var(--spacing-2);
 }
-
 
 /* Custom classes */
 
